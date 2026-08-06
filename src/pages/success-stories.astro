@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Success Stories | Cloudino">
+  <main class="pt-[101px] bg-black">
+    <section class="py-[137px]">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <h1 class="text-[96px] font-light text-white">Success stories</h1>
+        <p class="mt-0 max-w-2xl text-base text-white/60">
+          We accompany our customers on their innovation journey. Explore
+          cloudino&apos;s DX capabilities through customer success stories across
+          industries.
+        </p>
+        <div class="mt-12 flex gap-4">
+          {["All", "Cloud Strategy", "AI & Data", "Security", "DevOps"].map((tag) => (
+            <button class="rounded-full border border-white/20 px-6 py-2 text-base text-white/70 hover:border-primary hover:text-white">
+              {tag}
+            </button>
+          ))}
+        </div>
+        <div class="mt-16 grid gap-8 md:grid-cols-3">
+          {Array.from({ length: 9 }, (_, i) => (
+            <a href={`/success-stories/${i + 1}`} class="group rounded-xl border border-white/10 p-6 transition-colors hover:border-primary/40">
+              <div class="aspect-video rounded-lg bg-white/5" />
+              <p class="mt-4 text-xl text-white group-hover:text-primary">Success story {i + 1}</p>
+              <p class="mt-2 text-base text-white/50">Service</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

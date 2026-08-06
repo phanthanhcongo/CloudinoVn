@@ -1,0 +1,33 @@
+---
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import "../styles/global.css";
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Cloudino",
+  description = "Powering Business Beyond the Cloud",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="bg-black text-white antialiased">
+    <Header client:load />
+    <slot />
+    <Footer client:load />
+  </body>
+</html>

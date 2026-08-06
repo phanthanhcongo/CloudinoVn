@@ -1,0 +1,36 @@
+---
+import Layout from "../../layouts/Layout.astro";
+---
+
+<Layout title="Solutions - Services | Cloudino">
+  <main class="pt-[101px] bg-black">
+    <section class="py-[137px]">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <h1 class="text-[96px] font-light text-white">Solutions</h1>
+        <p class="mt-0 max-w-2xl text-base text-white/60">
+          lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
+        </p>
+        <div class="mt-[120px] grid grid-cols-4 gap-10">
+          {[
+            { title: "Cloud Strategy", desc: "Planning your cloud journey" },
+            { title: "AI & Data", desc: "Unlock business intelligence" },
+            { title: "Security", desc: "Protect your cloud environment" },
+            { title: "Digital Workplace", desc: "Empower modern collaboration" },
+            { title: "DevOps", desc: "Accelerate software delivery" },
+            { title: "FinOps", desc: "Optimize cloud spending" },
+            { title: "Migration & Modernization", desc: "Move workloads with confidence" },
+            { title: "Managed Cloud", desc: "24/7 monitoring & management" },
+          ].map((s) => (
+            <a
+              href={`/solutions/services/${s.title.toLowerCase().replace(/\s+/g, "-")}`}
+              class="rounded-xl border border-white/10 p-8 transition-colors hover:border-primary/40"
+            >
+              <h3 class="text-2xl font-normal text-white">{s.title}</h3>
+              <p class="mt-2 text-base text-white/60">{s.desc}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

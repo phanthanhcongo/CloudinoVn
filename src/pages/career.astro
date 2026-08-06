@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Career | Cloudino">
+  <main class="pt-[101px] bg-black">
+    <section class="py-[137px]">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <h1 class="text-[96px] font-light text-white">Career</h1>
+        <p class="mt-0 max-w-3xl text-base text-white/60">
+          We&apos;re hiring people who live our vision - Transform. Tomorrow.
+          Together. Be part of what&apos;s next at Cloudino.
+        </p>
+        <div class="mt-20 grid gap-8 md:grid-cols-2">
+          {Array.from({ length: 6 }, (_, i) => (
+            <a href={`/career/${i + 1}`} class="group rounded-xl border border-white/10 p-8 transition-colors hover:border-primary/40">
+              <h3 class="text-2xl text-white group-hover:text-primary">Job Position {i + 1}</h3>
+              <p class="mt-2 text-base text-white/50">Hà Nội, Vietnam</p>
+              <p class="mt-1 text-base text-white/50">Full-time</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

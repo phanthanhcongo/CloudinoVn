@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero";
+import ServiceCards from "../components/ServiceCards";
+import PartnerLogos from "../components/PartnerLogos";
+import StatsGrid from "../components/StatsGrid";
+import GoalOptions from "../components/GoalOptions";
+import SolutionGrid from "../components/SolutionGrid";
+import IndustryGrid from "../components/IndustryGrid";
+import SuccessStories from "../components/SuccessStories";
+import TestimonialCarousel from "../components/TestimonialCarousel";
+import ResourceCards from "../components/ResourceCards";
+import AWSPartnerBanner from "../components/AWSPartnerBanner";
+---
+
+<Layout
+  title="Cloudino - Powering Business Beyond the Cloud"
+  description="Cloudino is a cloud solutions provider powering business beyond the cloud with AWS, DigitalOcean, and Lark."
+>
+  <main class="tracking-tighter">
+    <Hero client:load />
+    <ServiceCards client:load />
+    <PartnerLogos client:load />
+    <StatsGrid client:load />
+    <GoalOptions client:load />
+    <SolutionGrid client:load />
+    <IndustryGrid client:load />
+    <SuccessStories client:load />
+    <TestimonialCarousel client:load />
+    <ResourceCards client:load />
+    <AWSPartnerBanner client:load />
+  </main>
+</Layout>
