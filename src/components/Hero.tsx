@@ -58,7 +58,7 @@ export default function Hero() {
 
       {/* Cube image - LIGHTEN blend */}
       <img
-        src="/images/hero/hero-icon-6.png"
+        src="/images/backgrounds/Data&AI.gif"
         alt=""
         className="absolute left-[645px] top-[149px] h-auto w-[631px] object-contain mix-blend-lighten max-lg:hidden"
       />

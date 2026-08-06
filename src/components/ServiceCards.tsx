@@ -1,24 +1,24 @@
 export default function ServiceCards() {
   const services = [
     {
-      title: "AWS Enterprise Cloud",
-      desc: "lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt ut",
+      title: "AWS",
+      desc: "Cloudino – Đội ngũ kiến trúc sư giải pháp cloud dày dạn kinh nghiệm từ 2010, được bảo chứng bởi chứng chỉ quốc tế từ Amazon Web Services (AWS). ",
       icon: "/images/services/icon-1.png",
     },
     {
-      title: "DigitalOcean Cloud Server",
-      desc: "lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt ut",
+      title: "Digital Ocean",
+      desc: "Cloudino là đối tác chiến lược của DigitalOcean tại Việt Nam — giúp doanh nghiệp triển khai hạ tầng cloud nhanh hơn, với chi phí minh bạch và hỗ trợ thương mại địa phương.",
       icon: "/images/services/icon-2.png",
     },
     {
-      title: "Lark Digital Workplace",
-      desc: "lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt ut",
+      title: "Lark",
+      desc: "Cloudino là Đối tác chiến lược bậc Platinum của LarkSuite tại Việt Nam — đồng hành cùng doanh nghiệp kiến tạo không gian làm việc số toàn diện, triển khai nhanh chóng với chi phí minh bạch và dịch vụ hỗ trợ nội địa tận tâm.",
       icon: "/images/services/icon-3.png",
     },
   ];
 
   return (
-    <section className="relative z-10 -mt-[429px] bg-transparent">
+    <section className="relative z-10 bg-transparent">
       <div className="mx-auto max-w-[1920px] px-[330px]">
         <div className="flex gap-[105px]">
           {services.map(s => (

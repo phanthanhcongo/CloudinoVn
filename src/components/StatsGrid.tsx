@@ -85,10 +85,10 @@ export default function StatsGrid() {
         {/* Stats */}
         <div className="mt-[120px] grid grid-cols-4 gap-10">
           {[
-            { value: "99+", label: "Cloud Projects" },
-            { value: "9+", label: "Certified Experts" },
-            { value: "999+", label: "Global Technology Partners" },
-            { value: "99%", label: "Service Availability" },
+            { value: "1000+", label: "Khách hàng doanh nghiệp" },
+            { value: "200K+", label: "Tài khoản đã đăng ký" },
+            { value: "1M$+", label: "Tín dụng hỗ trợ doanh nghiệp hàng năm" },
+            { value: "900+", label: "Dự án" },
           ].map(s => (
             <div key={s.label} className="text-center">
               <span className="text-[96px] font-light leading-none text-accent">

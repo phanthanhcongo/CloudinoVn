@@ -108,7 +108,7 @@ export default function SolutionGrid() {
           })}
 
           <a
-            href="/solutions/services"
+            href="/solutions"
             className="absolute left-1/2 top-1/2 flex h-[49px] w-[161px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all bg-white/5 hover:bg-white hover:text-accent uppercase"
           >
             View all →

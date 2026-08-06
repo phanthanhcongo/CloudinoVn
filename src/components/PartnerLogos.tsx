@@ -28,11 +28,13 @@ export default function PartnerLogos() {
               {Array.from({ length: 8 }, (_, i) => (
                 <div
                   key={i}
-                  className="flex h-[54px] w-[220px] items-center justify-center"
+                  className="flex h-[108px] w-[440px] items-center justify-center"
                 >
-                  <span className="text-4xl font-normal text-white/40">
-                    Logo
-                  </span>
+                  <img
+                    src={`/images/logos-cleaned/${row * 8 + i + 1}.png`}
+                    alt={`Partner ${row * 8 + i + 1}`}
+                    className="max-h-full max-w-full object-contain"
+                  />
                 </div>
               ))}
             </div>

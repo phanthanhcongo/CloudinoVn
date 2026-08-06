@@ -10,7 +10,7 @@ export default function Header() {
         <div className="relative mx-auto flex h-[101px] max-w-[1922px] items-center justify-center px-4">
           <nav className="flex items-center">
             <a
-              href="/solutions/services"
+              href="/solutions"
               className="rounded-full px-2 py-1 text-base font-normal text-white transition-colors hover:bg-[#7D51D3]/60 hover:shadow-[0_0_15px_rgba(255,255,255,0.12)]"
             >
               Solutions
@@ -78,7 +78,7 @@ export default function Header() {
         <div className="border-t border-white/10 bg-black/90 backdrop-blur-md hidden max-md:block">
           <nav className="flex flex-col px-6 py-4">
             <a
-              href="/solutions/services"
+              href="/solutions"
               className="py-3 text-base text-white"
               onClick={() => setMobileOpen(false)}
             >

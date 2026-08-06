@@ -3,43 +3,250 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="About us | Cloudino">
-  <main class="pt-[101px] bg-black">
-    <section class="py-[137px]">
+  <main class="bg-black">
+    <section class="relative flex h-[930px] items-center overflow-hidden bg-[#080808]">
+      <img src="/images/backgrounds/image119.png" alt="" class="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-lighten" />
+      <div class="relative mx-auto w-full max-w-[1920px] px-[285px]">
+        <div class="max-w-[740px]">
+          <h1 class="flex justify-start">
+            <svg viewBox="0 0 740 144" class="h-auto w-full max-w-[740px]" role="img" aria-label="About us">
+              <defs>
+                <linearGradient id="aboutGrad" x1="0" y1="1" x2="1" y2="0">
+                  <stop offset="0%" stopColor="#5B6FF5" />
+                  <stop offset="52.6%" stopColor="#D4CB7B" />
+                  <stop offset="100%" stopColor="#DA3FF0" />
+                </linearGradient>
+              </defs>
+              <text x="0" y="120" fontFamily="Poppins, sans-serif" fontWeight="700" fontSize="96" fill="url(#aboutGrad)">About us</text>
+            </svg>
+          </h1>
+          <p class="mt-0 text-2xl font-normal text-white">
+            Countless companies have achieved digital innovation with Cloudino. We support customers in innovating faster and smarter—from on-premises to cloud-native, and now to AI-native—with proven technology and expertise.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black py-8">
       <div class="mx-auto max-w-[1920px] px-[285px]">
-        <h1 class="text-[96px] font-light text-white">About us</h1>
-        <p class="mt-0 max-w-3xl text-base text-white/60">
-          Countless companies have achieved digital innovation with Cloudino. We
-          support customers in innovating faster and smarter—from on-premises to
-          cloud-native.
+        <h2 class="text-5xl font-bold text-white">Cloudino</h2>
+      </div>
+    </section>
+
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <div class="flex items-start gap-20">
+          <h3 class="text-5xl font-light text-white max-w-[613px]">A Journey of Innovation from Cloud to AI</h3>
+          <p class="max-w-[480px] text-2xl font-normal text-white/80">
+            Based on our cloud innovation experience, Cloudino is a trusted partner that leads customers&apos; proactive growth in the AI era.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="overflow-hidden bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <div class="flex gap-0">
+          {["Cloudino","Cloudino","Cloudino"].map((w, i) => (
+            <h2 class="text-[150px] font-bold leading-none tracking-tighter" style={{
+              background: "linear-gradient(90deg, #312E81, #7D51D3)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+              backgroundClip: "text",
+              opacity: 0.3 + i * 0.1,
+            }}>{w}</h2>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <div class="flex items-start gap-20">
+          <h3 class="text-5xl font-light text-white max-w-[613px]">A Journey of Innovation from Cloud to AI</h3>
+          <p class="max-w-[480px] text-2xl font-normal text-white/80">
+            Based on our cloud innovation experience, Cloudino is a trusted partner that leads customers&apos; proactive growth in the AI era.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <h2 class="text-5xl font-light text-white">Our Mission &amp; Vision</h2>
+        <h3 class="mt-4 flex justify-start">
+          <svg viewBox="0 0 876 192" class="h-auto w-full max-w-[876px]" role="img">
+            <defs>
+              <linearGradient id="mvGrad" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0%" stopColor="#312E81" />
+                <stop offset="100%" stopColor="#7D51D3" />
+              </linearGradient>
+            </defs>
+            <text x="0" y="80" fontFamily="Poppins, sans-serif" fontWeight="700" fontSize="64" fill="url(#mvGrad)">
+              <tspan x="0" dy="0">Transform Tomorrow,</tspan>
+              <tspan x="0" dy="96">Together</tspan>
+            </text>
+          </svg>
+        </h3>
+        <p class="mt-6 max-w-[740px] text-2xl font-normal text-white/80">
+          As a leader in cloud innovation, we leverage our accumulated expertise and insights to now help customers proactively respond to and grow in the AI era, innovating their tomorrow together.
+        </p>
+        <p class="mt-4 max-w-[740px] text-2xl font-normal text-white/80">
+          Digital transformation is not just a matter of technology, but a shift in business paradigm. We will be your most trusted leader and partner on the journey toward the AI era.
         </p>
       </div>
     </section>
-    <section class="border-t border-white/20 py-[137px]">
+
+    <section class="bg-black py-24">
       <div class="mx-auto max-w-[1920px] px-[285px]">
-        <h2 class="text-5xl font-light text-white">Cloudino</h2>
-        <p class="mt-0 text-2xl text-white/80">
-          A Journey of Innovation from Cloud to AI
-        </p>
-        <p class="mt-0 max-w-3xl text-base text-white/60">
-          Based on our cloud innovation experience, Cloudino is a trusted
-          partner that leads customers&apos; proactive growth in the AI era.
-        </p>
+        <h2 class="text-[96px] font-light text-white">Why Cloudino</h2>
       </div>
     </section>
-    <section class="border-t border-white/20 py-[137px]">
+
+    <section class="bg-black py-24">
       <div class="mx-auto max-w-[1920px] px-[285px]">
-        <div class="grid grid-cols-4 gap-10">
+        <h2 class="text-[96px] font-light text-white">Cloud In Numbers</h2>
+        <div class="mt-16 grid grid-cols-4 gap-10">
           {[
-            { value: "99+", label: "Cloud Projects" },
-            { value: "9+", label: "Certified Experts" },
-            { value: "999+", label: "Global Technology Partners" },
-            { value: "99%", label: "Service Availability" },
-          ].map((stat) => (
-            <div>
-              <span class="text-[96px] font-light text-white">{stat.value}</span>
-              <p class="mt-3 text-2xl text-white/50">{stat.label}</p>
+            { value: "999+", label: "Clients" },
+            { value: "99+", label: "Employees" },
+            { value: "9", label: "Global Offices" },
+            { value: "9", label: "Years of experience" },
+          ].map((s) => (
+            <div class="text-center">
+              <span class="text-[96px] font-light leading-none" style={{
+                background: "linear-gradient(90deg, #312E81, #7D51D3)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                backgroundClip: "text",
+              }}>{s.value}</span>
+              <p class="mt-3 text-2xl font-normal text-white/70">{s.label}</p>
             </div>
           ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <div class="flex gap-20">
+          <h2 class="text-[96px] font-light leading-tight text-white max-w-[628px]">
+            Solutions Provided by<br />Cloudino
+          </h2>
+          <p class="max-w-[870px] text-2xl font-normal text-white/80">
+            From cloud adoption to operations, and AI-based intelligent transformation. Cloudino provides a wide range of solutions that lead customers&apos; digital journeys to success.
+          </p>
+        </div>
+        <div class="mt-16 grid grid-cols-2 gap-10">
+          {["AI & Data","Security","Cloud","Product"].map((item) => (
+            <div class="rounded-2xl border border-white/10 p-8" style="background:rgba(255,255,255,0.02)">
+              <h3 class="text-4xl font-normal text-white">{item}</h3>
+              <p class="mt-2 text-base font-normal text-white/60">lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <div class="flex gap-20">
+          <div class="max-w-[629px]">
+            <h2 class="text-5xl font-light text-white">Promise beyond Technology</h2>
+            <p class="mt-6 text-base font-normal text-white/70">
+              Customer data and IT infrastructure are the most sensitive and important assets in the cloud and AI era. Cloudino is a trusted digital partner that goes beyond simple technical security to safeguard customer assets most securely based on strict ethical consciousness.
+            </p>
+            <p class="mt-4 text-base font-normal text-white/70">
+              Cloudino places "ethics" as the top priority in all management activities.
+            </p>
+          </div>
+          <img src="/images/hero/hero-graphic.png" alt="" class="h-[571px] w-[870px] rounded-lg object-cover opacity-40" />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <h2 class="text-[96px] font-light text-white">Leadership team</h2>
+        <div class="mt-16 grid grid-cols-4 gap-10">
+          {Array.from({ length: 4 }, (_, i) => (
+            <div class="w-[350px]">
+              <div class="h-[500px] w-full rounded-lg" style="background:rgba(255,255,255,0.03)" />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <div class="relative flex justify-between border-t border-white/20 pt-8">
+          {[
+            { date: "06/11\n1990", year: "1990" },
+            { date: "18/10\n1992", year: "1992" },
+            { date: "27/07\n1993", year: "1993" },
+            { date: "16/11\n2009", year: "2009" },
+            { date: "27/04\n2012", year: "2012" },
+          ].map((item) => (
+            <div class="relative flex flex-col items-center">
+              <div class="absolute -top-4 flex h-7 w-7 items-center justify-center rounded-full border border-white/30 bg-black">
+                <div class="h-5 w-5 rounded-full bg-white" />
+              </div>
+              <p class="mt-8 whitespace-pre text-center text-[64px] font-semibold leading-tight text-white">{item.date}</p>
+              <p class="mt-2 text-2xl font-normal text-white/50">{item.year}</p>
+              <p class="mt-4 max-w-[350px] text-base font-normal text-white/70">
+                lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt ut
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <div class="grid grid-cols-4 gap-10">
+          {Array.from({ length: 12 }, (_, i) => (
+            <div class="w-[350px] rounded-2xl border border-white/10 p-6 backdrop-blur-sm" style="background:rgba(255,255,255,0.02)">
+              <div class="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-white/10" />
+              <p class="mt-6 max-w-[288px] text-base font-normal text-white/70">
+                Certified engineers with deep expertise across AWS, DigitalOcean, and Lark Suite.
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section class="relative bg-black py-32">
+      <img src="/images/backgrounds/image119.png" alt="" class="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-lighten" />
+      <div class="relative mx-auto max-w-[1920px] px-[285px]">
+        <h2 class="text-[96px] font-light text-white">Careers</h2>
+        <p class="mt-4 text-base font-normal text-white/70">Where Innovation Meets Collaboration</p>
+        <h3 class="mt-12 text-5xl font-light text-white">We&apos;re Hiring</h3>
+        <p class="mt-2 text-base font-normal text-white/70">Shape the future of Cloudino with your talent.</p>
+        <a href="/career" class="mt-8 inline-flex h-[60px] w-[266px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black" style="background:rgba(255,255,255,0.05)">
+          Search open roles →
+        </a>
+      </div>
+    </section>
+
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <div class="flex gap-20">
+          <div class="w-[740px] rounded-2xl border border-white/10 p-10 backdrop-blur-sm" style="background:rgba(255,255,255,0.02)">
+            <h3 class="text-2xl font-normal text-white">Contact us</h3>
+            <div class="mt-8 space-y-4">
+              <div class="rounded-lg border border-white/10 px-4 py-5 text-base font-normal text-white/40" style="background:rgba(255,255,255,0.02)">Full name</div>
+              <div class="rounded-lg border border-white/10 px-4 py-5 text-base font-normal text-white/40" style="background:rgba(255,255,255,0.02)">Email</div>
+              <div class="rounded-lg border border-white/10 px-4 py-5 text-base font-normal text-white/40" style="background:rgba(255,255,255,0.02)">Phone</div>
+            </div>
+            <p class="mt-6 text-base font-normal text-white/50">Please leave your information so we can advise you</p>
+            <button class="mt-6 flex h-[60px] w-[201px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black" style="background:rgba(255,255,255,0.05)">
+              CONTACT US →
+            </button>
+          </div>
+          <img src="/images/hero/hero-graphic.png" alt="" class="h-[650px] w-[858px] rounded-lg object-cover opacity-40" />
         </div>
       </div>
     </section>

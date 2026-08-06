@@ -1,0 +1,31 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import SolutionsTabs from "../../components/SolutionsTabs";
+---
+
+<Layout title="Solutions | Cloudino">
+  {/* Hero */}
+  <section
+    class="relative flex h-[930px] items-center overflow-hidden bg-black"
+  >
+    <img
+      src="/images/backgrounds/Data&AI.gif"
+      alt=""
+      class="absolute inset-0 h-full w-full object-cover mix-blend-lighten"
+    />
+    <div
+      class="animate-spin-slow absolute left-1/2 top-1/2 h-[932px] w-[932px] rounded-full border border-dashed border-white"
+    >
+    </div>
+    <img
+      src="/images/hero/hero-graphic.png"
+      alt=""
+      class="animate-float absolute left-1/2 top-1/2 ml-80 h-[660px] w-[660px] mt-80 -translate-y-1/2 object-contain"
+    />
+    <div class="relative mx-auto w-full max-w-[1920px] px-[285px] text-center">
+      <h1 class="text-[128px] font-bold text-white">Solutions</h1>
+    </div>
+  </section>
+
+  <SolutionsTabs client:load />
+</Layout>

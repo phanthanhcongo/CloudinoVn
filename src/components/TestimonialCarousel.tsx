@@ -1,28 +1,28 @@
 const testimonials = [
   {
-    avatar: "/images/testimonials/avatar-1.png",
+    avatar: "/images/testimonials/Mr. Khanh Cao.jpg",
     quote:
-      "Cloudino exceeded our expectations in being able to bring our ideas to life. It has been a joy to collaborate with them. They were able to translate some pretty technical anatomy concepts into fun animations.",
-    name: "Tim Doeke",
-    role: "Marketing Project Manager, Christian Vision",
+      "Với sự hợp tác chiến lược cùng Cloudino – AWS Advanced Consulting Partner chúng tôi đã triển khai thành công được ứng dụng tự động hóa quy trình phiên âm và tóm tắt cuộc họp đa ngôn ngữ có độ chính xác cao nhờ công nghệ Generative AI từ AWS. Doanh nghiệp đã tối ưu hoá được năng suất công việc và nâng cao chất lượng ra quyết định.",
+    name: "Mr. Khanh Cao",
+    role: "Founder & CEO at ViMeeting+",
     mt: "128px",
   },
-  {
-    avatar: "/images/testimonials/avatar-2.png",
-    quote:
-      "Sean and his team were great to work with! He went out of his way to make sure the final product was excellent. He was also great to work with in a creative sense and I felt I could voice ideas.",
-    name: "Tom Oeke",
-    role: "Marketing Project Manager",
-    mt: "226px",
-  },
-  {
-    avatar: "/images/testimonials/avatar-3.png",
-    quote:
-      "The collaboration went well beyond the creation of a great cartoon animation. It can be difficult to explain, but Sean and his team guided us to find the essence of what we offer.",
-    name: "Geoff Lawton",
-    role: "Founder, Permaculture Sustainable Consulting",
-    mt: "0",
-  },
+  // {
+  //   avatar: "/images/testimonials/avatar-2.png",
+  //   quote:
+  //     "Giải pháp Chatbot của AIGENX không chỉ giúp tăng cường trải nghiệm khách hàng mà còn tối ưu hóa hiệu suất vận hành và bảo mật, đáp ứng nhu cầu phát triển nhanh chóng của thị trường. Với sự hỗ trợ từ đội ngũ nhiều kinh nghiệm của Cloudino, đến thời điểm hiện tại, dự án Start-up AIGENX của MaxcomGroup đã phục vụ khoảng 1.400 khách hàng, trong đó 90% là doanh nghiệp vừa và nhỏ cùng các hộ kinh doanh cá thể, và 10% là khách hàng cá nhân – điều này thể hiện sự linh hoạt và khả năng đáp ứng đa dạng nhu cầu thị trường.",
+  //   name: "Mr.Khang Nguyễn",
+  //   role: "Đại diện AIGENX",
+  //   mt: "226px",
+  // },
+  // {
+  //   avatar: "/images/testimonials/avatar-3.png",
+  //   quote:
+  //     "The collaboration went well beyond the creation of a great cartoon animation. It can be difficult to explain, but Sean and his team guided us to find the essence of what we offer.",
+  //   name: "Geoff Lawton",
+  //   role: "Founder, Permaculture Sustainable Consulting",
+  //   mt: "0",
+  // },
 ];
 
 export default function TestimonialCarousel() {
