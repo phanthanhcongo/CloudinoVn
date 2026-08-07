@@ -1,0 +1,391 @@
+---
+import Stats from "../../../components/Stats";
+import Layout from "../../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { platform: "aws" } },
+    { params: { platform: "digital-ocean" } },
+    { params: { platform: "lark" } },
+  ];
+}
+
+const pages = [
+  {
+    slug: "aws",
+    title: "AWS CLOUD & AI TRANSFORMATION",
+    subtitle:
+      "Đồng hành cùng doanh nghiệp từng bước trên hành trình chuyển đổi số với các giải pháp tối ưu hạ tầng, giúp tăng tốc đổi mới, nâng cao hiệu quả vận hành và tối ưu chi phí.",
+    cta: "TƯ VẤN NGAY",
+    aboutUs: {
+      title: "VỀ CHÚNG TÔI",
+      text: "Cung cấp dịch vụ tư vấn, triển khai, tối ưu và quản lý hạ tầng điện toán đám mây với đội ngũ chuyên gia được chứng nhận bởi AWS.",
+      subtext:
+        "Đơn vị Tư vấn & Cung cấp dịch vụ Điện toán đám mây hàng đầu Châu Á",
+    },
+  },
+];
+
+const { platform } = Astro.props;
+
+const stats = [
+  {
+    value: "999+",
+    label: "Cloud-based AI/ML and\ndata projects delivery",
+  },
+  { value: "999+", label: "Clients served\nin AI & Data projects" },
+  { value: "999+", label: "Specialized AI &\nData engineers" },
+];
+---
+
+<Layout title="AWS Enterprise Cloud | Cloudino">
+  <main class="bg-black">
+    {/* Hero */}
+    <section
+      class="relative flex h-[930px] items-center overflow-hidden bg-black"
+    >
+      <img
+        src="/images/backgrounds/AICC.gif"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover opacity-30 mix-blend-lighten"
+      />
+      <img
+        src="/images/backgrounds/M&M.gif"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-lighten"
+      />
+      <div
+        class="relative mx-auto w-full max-w-[1920px] px-[285px] text-center"
+      >
+        <div class="mx-auto max-w-[1519px]">
+          <h1
+            class="text-[128px] font-bold leading-none text-transparent bg-clip-text"
+            style="background-image:linear-gradient(45deg,#5B6FF5,#D4CB7B 52.6%,#DA3FF0)"
+          >
+            AWS Enterprise Cloud
+          </h1>
+          <p
+            class="mt-6 mx-auto max-w-[740px] text-base font-normal text-white"
+          >
+            Just as air is essential to our lives, AI is the core engine of
+            business. AI naturally permeates every part of the enterprise,
+            providing smart operations, rapid decision-making, and powerful new
+            growth energy.
+          </p>
+          <a
+            href="/contact"
+            class="mt-8 mx-auto inline-flex h-[60px] w-[201px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black"
+            style="background:rgba(255,255,255,0.05)"
+          >
+            CONTACT US →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* Customer Success Story */}
+    <section class="relative bg-black py-16">
+      <img
+        src="/images/backgrounds/image119.png"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover mix-blend-lighten"
+      />
+      <div class="relative mx-auto max-w-[1920px] px-[285px]">
+        <div
+          class="flex gap-10 rounded-4xl p-16"
+          style="background:linear-gradient(135deg,rgba(49,46,129,0.3),rgba(125,81,211,0.15))"
+        >
+          <div
+            class="flex-1 flex-col justify-start items-start max-w-[870px] my-auto"
+          >
+            <p class="text-base font-normal text-white/70 max-w-[548px]">
+              lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
+              nonummy nibh euismod tincidunt ut
+            </p>
+            <h2 class="mt-2 text-5xl font-light text-white">
+              lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
+              nonummy nibh euismod tincidunt ut
+            </h2>
+            <p class="mt-4 text-base font-normal text-white/70 max-w-[548px]">
+              lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
+              nonummy nibh euismod tincidunt ut
+            </p>
+          </div>
+          <img
+            src="/images/icons/image 141.png"
+            alt=""
+            class="h-[480px] w-[480px] shrink-0 object-contain"
+          />
+        </div>
+      </div>
+    </section>
+
+    {/* Large text */}
+    <section class="bg-black py-16">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <h2 class="text-5xl font-light text-white max-w-[1520px]">
+          lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
+          nonummy nibh euismod tincidunt ut
+        </h2>
+      </div>
+    </section>
+
+    {/* Feature Cards */}
+    <section class="bg-black pb-12">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <div class="grid grid-cols-3 gap-10">
+          {
+            Array.from({ length: 3 }, (_, i) => (
+              <div class="h-[250px] w-[420px] rounded-2xl border border-white/10 p-8 backdrop-blur-sm text-wrap bg-linear-to-r from-[#312E81] to-accent ">
+                <h3 class="text-2xl font-normal text-white text-center text-wrap tracking-tighter">
+                  lorem ipsum dolor sit amet consectetuer adipiscing elit sed
+                  diam nonummy nibh euismod
+                </h3>
+                <p class="mt-2 text-base font-normal text-white text-center text-wrap tracking-tighter">
+                  lorem ipsum dolor sit amet consectetuer adipiscing elit sed
+                  diam nonummy nibh euismod tincidunt ut
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    {/* Customer Success Story 2 */}
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <div class="max-w-[870px]">
+          <p class="text-base font-normal text-white/70">
+            lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
+            nonummy nibh euismod tincidunt ut
+          </p>
+          <h2 class="mt-2 text-5xl font-light text-white">
+            lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
+            nonummy nibh euismod tincidunt ut
+          </h2>
+          <p class="mt-4 text-base font-normal text-white/70 max-w-[548px]">
+            lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
+            nonummy nibh euismod tincidunt ut
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* Solution Cards */}
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <div class="grid grid-cols-3 gap-10">
+          {
+            Array.from({ length: 3 }, (_, i) => (
+              <div
+                class="w-[480px] rounded-2xl border border-white/10 p-8 backdrop-blur-sm"
+                style="background:linear-gradient(135deg,rgba(49,46,129,0.1),rgba(125,81,211,0.05))"
+              >
+                <img
+                  src={`/images/backgrounds/deco-${i + 1}.png`}
+                  alt=""
+                  class="h-[235px] w-[418px] rounded-lg object-cover"
+                />
+                <h3 class="mt-4 text-2xl font-normal text-white">
+                  lorem ipsum dolor sit amet consectetuer adipiscing elit sed
+                  diam nonummy nibh euismod
+                </h3>
+                <p class="mt-2 text-base font-normal text-white/60">
+                  lorem ipsum dolor sit amet consectetuer adipiscing elit sed
+                  diam nonummy nibh euismod tincidunt ut lorem ipsum dolor sit
+                  amet consectetuer adipiscing elit sed diam nonummy nibh
+                  euismod tincidunt ut
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    {/* Customer Success Story 3 - image left, text right */}
+    <section class="relative bg-black py-16">
+      <img
+        src="/images/backgrounds/image119.png"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-lighten"
+      />
+      <div class="relative mx-auto max-w-[1920px] px-[285px]">
+        <div
+          class="flex gap-10 rounded-2xl p-16"
+          style="background:linear-gradient(135deg,rgba(49,46,129,0.3),rgba(125,81,211,0.15))"
+        >
+          <img
+            src="/images/hero/hero-graphic.png"
+            alt=""
+            class="h-[480px] w-[480px] shrink-0 object-contain opacity-60"
+          />
+          <div class="flex-1 max-w-[870px]">
+            <p class="text-base font-normal text-white/70">
+              lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
+              nonummy nibh euismod tincidunt ut
+            </p>
+            <h2 class="mt-2 text-5xl font-light text-white">
+              lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
+              nonummy nibh euismod tincidunt ut
+            </h2>
+            <p
+              class="mt-4 text-base font-normal text-white/70 max-w-[548px] ml-[356px]"
+            >
+              lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
+              nonummy nibh euismod tincidunt ut
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Case Stories */}
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <div class="mb-8 flex items-center">
+          <div class="flex items-center gap-3">
+            <div class="relative flex h-4 w-4 items-center justify-center">
+              <div
+                class="absolute h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]"
+              >
+              </div>
+              <div class="absolute h-2 w-2 rounded-full bg-white opacity-40">
+              </div>
+            </div>
+            <h2 class="text-5xl font-light text-white">Case Stories</h2>
+            <div class="relative flex h-4 w-4 items-center justify-center">
+              <div
+                class="absolute h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]"
+              >
+              </div>
+              <div class="absolute h-2 w-2 rounded-full bg-white opacity-40">
+              </div>
+            </div>
+          </div>
+          <div class="ml-0 flex-1 border-t border-white/20"></div>
+        </div>
+        <div class="grid grid-cols-3 gap-10">
+          {
+            Array.from({ length: 3 }, (_, i) => (
+              <a
+                href="/success-stories"
+                class="group w-[480px] rounded-2xl border border-white/10 p-8 backdrop-blur-sm"
+                style="background:linear-gradient(135deg,rgba(49,46,129,0.1),rgba(125,81,211,0.05))"
+              >
+                <div class="h-[440px] w-full overflow-hidden rounded-lg">
+                  <img
+                    src={`/images/backgrounds/deco-${i + 1}.png`}
+                    alt=""
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <h3 class="mt-4 text-2xl font-bold text-white group-hover:text-primary">
+                  lorem ipsum dolor sit amet consectet adipiscing elit sed diam
+                </h3>
+                <p class="mt-2 text-base font-normal text-white">
+                  lorem ipsum dolor sit amet consectetuer adipiscing elit sed
+                  diam nonummy nibh euismod tincidunt ut
+                </p>
+                <div
+                  class="mt-6 flex h-[60px] w-[194px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black"
+                  style="background:rgba(255,255,255,0.05)"
+                >
+                  LEARN MORE →
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    {/* Stats */}
+    <section class="bg-black py-16">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <Stats stats={stats} />
+      </div>
+
+      {/* Insights */}
+      <!-- <section class="bg-black py-24">
+        <div class="mx-auto max-w-[1920px] px-[285px]">
+          <div class="mb-8 flex items-center">
+            <div class="flex items-center gap-3">
+              <div class="relative flex h-4 w-4 items-center justify-center">
+                <div
+                  class="absolute h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]"
+                >
+                </div>
+                <div class="absolute h-2 w-2 rounded-full bg-white opacity-40">
+                </div>
+              </div>
+              <h2 class="text-5xl font-light text-white">Insights</h2>
+              <div class="relative flex h-4 w-4 items-center justify-center">
+                <div
+                  class="absolute h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]"
+                >
+                </div>
+                <div class="absolute h-2 w-2 rounded-full bg-white opacity-40">
+                </div>
+              </div>
+            </div>
+            <div class="ml-0 flex-1 border-t border-white/20"></div>
+          </div>
+          <div class="grid grid-cols-4 gap-10">
+            {
+              Array.from({ length: 4 }, (_, i) => (
+                <a href="/resources" class="group w-[350px]">
+                  <p class="text-base font-normal text-white/50">26/07/2026</p>
+                  <div class="mt-4 h-[200px] w-[288px] overflow-hidden rounded-lg">
+                    <img
+                      src={`/images/backgrounds/deco-${i + 1}.png`}
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <h3 class="mt-4 max-w-[288px] text-xl font-normal text-white group-hover:text-primary">
+                    lorem ipsum dolor sit amet consecte adipiscing elit sed...
+                  </h3>
+                </a>
+              ))
+            }
+          </div>
+        </div>
+      </section> -->
+
+      {/* CTA */}
+      <section class="relative bg-black py-24">
+        <img
+          src="/images/backgrounds/image119.png"
+          alt=""
+          class="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-lighten"
+        />
+        <div class="relative mx-auto max-w-[1920px] px-[285px]">
+          <div class="max-w-[1258px]">
+            <p class="text-base font-normal text-white/70 text-center">
+              Ready to unlock your data&apos;s potential?
+            </p>
+            <h2 class="mt-2 text-5xl font-light text-white text-center">
+              Let&apos;s build intelligent data solutions that drive real
+              business value through advanced analytics and AI.
+            </h2>
+            <p
+              class="mt-4 ml-[356px] max-w-[548px] text-base font-normal text-white/70 text-center"
+            >
+              lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
+              nonummy nibh euismod tincidunt ut
+            </p>
+            <a
+              href="/contact"
+              class="mt-8 ml-[529px] inline-flex h-[60px] w-[201px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black"
+              style="background:rgba(255,255,255,0.05)"
+            >
+              CONTACT US →
+            </a>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+</Layout>

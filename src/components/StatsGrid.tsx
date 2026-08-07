@@ -1,3 +1,12 @@
+import Stats from "./Stats";
+
+const stats = [
+  { value: "1000+", label: "Khách hàng doanh nghiệp" },
+  { value: "200K+", label: "Tài khoản đã đăng ký" },
+  { value: "1M$+", label: "Tín dụng hỗ trợ doanh nghiệp hàng năm" },
+  { value: "900+", label: "Dự án" },
+];
+
 export default function StatsGrid() {
   return (
     <section className="relative overflow-hidden bg-black pt-[100px] pb-[49px]">
@@ -62,14 +71,14 @@ export default function StatsGrid() {
               </h3>
               <div className="mt-0 max-w-120 text-base font-normal leading-relaxed text-white">
                 <p className="mb-4">
-                  We – Cloudinoers – are solutions architects who have been
-                  constantly seeking and conquering cloud computing technology
-                  challenges since 2010.
+                  Chúng tôi – những Cloudinoer – là đội ngũ kiến ​​trúc sư giải
+                  pháp luôn không ngừng tìm kiếm và chinh phục các thách thức về
+                  công nghệ điện toán đám mây kể từ năm 2010.
                 </p>
                 <p>
-                  Cloudino is operated by a team of globally certified experts
-                  by Amazon Web Services, ensuring the delivery of the best
-                  cloud computing solutions for our clients.
+                  Cloudino được vận hành bởi đội ngũ chuyên gia sở hữu chứng chỉ
+                  quốc tế từ Amazon Web Services, cam kết mang đến những giải
+                  pháp điện toán đám mây tối ưu nhất cho khách hàng.
                 </p>
               </div>
               <a
@@ -83,20 +92,8 @@ export default function StatsGrid() {
         </div>
 
         {/* Stats */}
-        <div className="mt-[120px] grid grid-cols-4 gap-10">
-          {[
-            { value: "1000+", label: "Khách hàng doanh nghiệp" },
-            { value: "200K+", label: "Tài khoản đã đăng ký" },
-            { value: "1M$+", label: "Tín dụng hỗ trợ doanh nghiệp hàng năm" },
-            { value: "900+", label: "Dự án" },
-          ].map(s => (
-            <div key={s.label} className="text-center">
-              <span className="text-[96px] font-light leading-none text-accent">
-                {s.value}
-              </span>
-              <p className="mt-3 text-2xl font-normal text-white">{s.label}</p>
-            </div>
-          ))}
+        <div>
+          <Stats stats={stats} />
         </div>
       </div>
     </section>

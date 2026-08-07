@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative flex h-[1150px] overflow-visible bg-black">
+    <section className="relative flex h-[1150px] overflow-hidden bg-black">
       {/* Solid black base - Rectangle 969 */}
       <div className="absolute inset-0 bg-black" />
 
@@ -109,7 +109,7 @@ export default function Hero() {
               x="465"
               y="120"
               textAnchor="middle"
-              fontFamily="Poppins, sans-serif"
+              fontFamily="Amazon Ember, sans-serif"
               fontWeight="700"
               fontSize="96"
               letterSpacing="-4.8"

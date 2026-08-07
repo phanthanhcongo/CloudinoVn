@@ -16,7 +16,7 @@ export default function PartnerLogos() {
         </div>
 
         <div
-          className="mt-[100px] flex flex-col gap-[100px] overflow-visible"
+          className="mt-25 flex flex-col overflow-visible"
           style={{
             marginLeft: "-60px",
             marginRight: "-60px",
@@ -28,12 +28,12 @@ export default function PartnerLogos() {
               {Array.from({ length: 8 }, (_, i) => (
                 <div
                   key={i}
-                  className="flex h-[108px] w-[440px] items-center justify-center"
+                  className="flex h-36 w-110 items-center justify-center"
                 >
                   <img
                     src={`/images/logos-cleaned/${row * 8 + i + 1}.png`}
                     alt={`Partner ${row * 8 + i + 1}`}
-                    className="max-h-full max-w-full object-contain"
+                    className="max-h-full max-w-full object-fit"
                   />
                 </div>
               ))}

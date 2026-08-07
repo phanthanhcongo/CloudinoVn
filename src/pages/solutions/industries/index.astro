@@ -1,0 +1,233 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+---
+
+<Layout title="Finance | Cloudino">
+  <main class="bg-black">
+    {/* Hero */}
+    <section
+      class="relative flex h-[930px] items-center overflow-hidden bg-black"
+    >
+      <img
+        src="/images/backgrounds/A&D.gif"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover opacity-30 mix-blend-lighten"
+      />
+      <!-- <img
+        src="/images/backgrounds/M&M.gif"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-lighten"
+      /> -->
+      <div
+        class="relative mx-auto w-full max-w-[1920px] px-[285px] text-center"
+      >
+        <div class="mx-auto max-w-[1519px]">
+          <h1
+            class="text-[128px] font-bold leading-none text-transparent bg-clip-text"
+            style="background-image:linear-gradient(45deg,#5B6FF5,#D4CB7B 52.6%,#DA3FF0)"
+          >
+            Finance
+          </h1>
+          <p
+            class="mt-6 mx-auto max-w-[740px] text-base font-normal text-white"
+          >
+            Cloud Innovation for the Finance Industry
+          </p>
+          <h2 class="mt-6 mx-auto text-white text-3xl">
+            Cloudino thúc đẩy quá trình chuyển đổi số trong lĩnh vực tài chính,
+            tăng cường tính tuân thủ và bảo mật, đồng thời mang đến những trải
+            nghiệm đột phá cho khách hàng.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    {/* Trusted Partner */}
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <div class="flex gap-10">
+          <div class="w-[480px] shrink-0">
+            <h2 class="text-5xl font-light text-white leading-20">
+              Đối tác Tin cậy cho Chuyển đổi Số ngành Tài chính
+            </h2>
+            <a
+              href="/contact"
+              class="mt-8 inline-flex h-[60px] w-[201px] items-center justify-center rounded-full border border-accent/80 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-accent bg-accent/40"
+            >
+              CONTACT US →
+            </a>
+          </div>
+          <div class="flex-1 space-y-10">
+            {
+              [
+                {
+                  title: "Minh bạch và phân bổ chi phí",
+                  desc: "Xây dựng nguồn dữ liệu đáng tin cậy, cung cấp báo cáo trực quan và triển khai chiến lược gắn thẻ thông minh — đảm bảo minh bạch chi phí toàn diện. ",
+                },
+                {
+                  title: "Tối ưu hóa Chi phí & Hiệu năng",
+                  desc: "Rightsizing, quản lý tài nguyên nhàn rỗi, tối ưu hóa hợp đồng (Savings Plans, RI, CUDs), tái kiến trúc hiệu quả – đảm bảo hiệu suất tối đa với chi phí tối thiểu.",
+                },
+                {
+                  title: "Quản trị & Kiểm soát Chủ động",
+                  desc: "Quản lý ngân sách thông minh, dự báo AI/ML, thực thi chính sách tự động (SCPs, Cloud Custodian) – kiểm soát chặt chẽ, ngăn ngừa lãng phí.",
+                },
+                {
+                  title: "Xây dựng văn hóa & đội ngũ",
+                  desc: "Thành lập đội ngũ chuyên trách, quy trình vận hành chuẩn hóa, đào tạo và chuyển giao tri thức - tạo nên sự thay đổi bền vững từ bên trong.",
+                },
+              ].map(item => (
+                <div>
+                  <h3 class="text-4xl font-normal text-white">{item.title}</h3>
+                  <p class="mt-2 text-base font-normal text-white/70">
+                    {item.desc}
+                  </p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* Case Stories */}
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <div class="mb-8 flex items-center">
+          <div class="flex items-center gap-3">
+            <div class="relative flex h-4 w-4 items-center justify-center">
+              <div
+                class="absolute h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]"
+              >
+              </div>
+              <div class="absolute h-2 w-2 rounded-full bg-white opacity-40">
+              </div>
+            </div>
+            <h2 class="text-5xl font-light text-white">Case Stories</h2>
+            <div class="relative flex h-4 w-4 items-center justify-center">
+              <div
+                class="absolute h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]"
+              >
+              </div>
+              <div class="absolute h-2 w-2 rounded-full bg-white opacity-40">
+              </div>
+            </div>
+          </div>
+          <div class="ml-0 flex-1 border-t border-white/20"></div>
+        </div>
+        <div class="grid grid-cols-3 gap-10">
+          {
+            Array.from({ length: 3 }, (_, i) => (
+              <a
+                href="/success-stories"
+                class="group w-[480px] rounded-2xl border border-white/10 p-8 backdrop-blur-sm"
+                style="background:linear-gradient(135deg,rgba(49,46,129,0.1),rgba(125,81,211,0.05))"
+              >
+                <div class="h-[440px] w-full overflow-hidden rounded-lg">
+                  <img
+                    src={`/images/backgrounds/deco-${i + 1}.png`}
+                    alt=""
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <h3 class="mt-4 text-2xl font-bold text-white group-hover:text-primary">
+                  lorem ipsum dolor sit amet consectet adipiscing elit sed diam
+                </h3>
+                <p class="mt-2 text-base font-normal text-white">
+                  lorem ipsum dolor sit amet consectetuer adipiscing elit sed
+                  diam nonummy nibh euismod tincidunt ut
+                </p>
+                <div
+                  class="mt-6 flex h-[60px] w-[194px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black"
+                  style="background:rgba(255,255,255,0.05)"
+                >
+                  LEARN MORE →
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    {/* Insights */}
+    <section class="bg-black py-24">
+      <div class="mx-auto max-w-[1920px] px-[285px]">
+        <div class="mb-8 flex items-center">
+          <div class="flex items-center gap-3">
+            <div class="relative flex h-4 w-4 items-center justify-center">
+              <div
+                class="absolute h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]"
+              >
+              </div>
+              <div class="absolute h-2 w-2 rounded-full bg-white opacity-40">
+              </div>
+            </div>
+            <h2 class="text-5xl font-light text-white">Insights</h2>
+            <div class="relative flex h-4 w-4 items-center justify-center">
+              <div
+                class="absolute h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]"
+              >
+              </div>
+              <div class="absolute h-2 w-2 rounded-full bg-white opacity-40">
+              </div>
+            </div>
+          </div>
+          <div class="ml-0 flex-1 border-t border-white/20"></div>
+        </div>
+        <div class="grid grid-cols-4 gap-10">
+          {
+            Array.from({ length: 4 }, (_, i) => (
+              <a href="/resources" class="group w-[350px]">
+                <p class="text-base font-normal text-white/50">26/07/2026</p>
+                <div class="mt-4 h-[200px] w-[288px] overflow-hidden rounded-lg">
+                  <img
+                    src={`/images/backgrounds/deco-${i + 1}.png`}
+                    alt=""
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+                <h3 class="mt-4 max-w-[288px] text-xl font-normal text-white group-hover:text-primary">
+                  lorem ipsum dolor sit amet consecte adipiscing elit sed...
+                </h3>
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    {/* CTA */}
+    <section class="relative bg-black py-24">
+      <img
+        src="/images/backgrounds/image119.png"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-lighten"
+      />
+      <div class="relative mx-auto max-w-[1920px] px-[285px]">
+        <div class="max-w-[1258px]">
+          <p class="text-base font-normal text-white/70">
+            Ready to unlock your data&apos;s potential?
+          </p>
+          <h2 class="mt-2 text-5xl font-light text-white">
+            Let&apos;s build intelligent data solutions that drive real business
+            value through advanced analytics and AI.
+          </h2>
+          <p
+            class="mt-4 ml-[356px] max-w-[548px] text-base font-normal text-white/70"
+          >
+            lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
+            nonummy nibh euismod tincidunt ut
+          </p>
+          <a
+            href="/contact"
+            class="mt-8 ml-[529px] inline-flex h-[60px] w-[201px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black"
+            style="background:rgba(255,255,255,0.05)"
+          >
+            CONTACT US →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,127 @@
+---
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  heroImage?: string;
+  backUrl?: string;
+  client?: string;
+  industry?: string;
+  serviceArea?: string;
+  solution?: string;
+  sections?: {
+    title: string;
+    content: string;
+  }[];
+}
+
+const {
+  title = "Case Study Title",
+  subtitle = "lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt ut",
+  heroImage = "/images/hero/hero-graphic.png",
+  backUrl = "/success-stories",
+  client = "Client: Doalltech",
+  industry = "Industry: Construction / Software",
+  serviceArea = "Service Area: Cloud Migration & App Modernization / B2B SaaS Transformation / Container Architecture & DevOps / Cloud Cost Optimization",
+  solution = "Applied Solution: Amazon ECS (Container Orchestration) / AWS Cognito (Multi-tenant Authentication) / AWS CodePipeline & CodeDeploy (CI/CD, Blue-Green Deployment) / Terraform (Infrastructure as Code) / Amazon ECR, ALB, EC2 Auto Scaling",
+  sections = [
+    { title: "1. Overview (Project Background)", content: "DoAllTech is a B2B SaaS company supporting digital transformation in the construction industry, providing various solutions including project management, access control, and drawing management. With increasing customer numbers and SaaS business expansion, the existing legacy architecture centered on Windows-based EC2 faced limitations in service scalability, deployment speed, and cost efficiency." },
+    { title: "2. Challenge (Problem Definition)", content: "Prior to the project, DoAllTech faced the following business and technical challenges. Slow service deployment speed taking days to reflect customer requirements and improve features. Concerns about service stability degradation due to traffic spikes. Need to secure multi-tenancy structure and revenue scalability for SaaS model transition." },
+    { title: "3. Solution (Resolution Approach)", content: "DoAllTech, together with Megazone Cloud, established a phased SaaS transition strategy and reorganized services centered on AWS-based container architecture and DevOps automation. Architecture diagnosis and redesign through AWS Well-Architected Review. Container-based service transition of existing Windows/.NET workloads to Linux container-based ECS architecture." },
+    { title: "4. Result (Achievements)", content: "Through SaaS transition and infrastructure modernization, DoAllTech achieved: 60% reduction in service deployment cycle. Reduced infrastructure operations burden on development team. Secured scalable SaaS architecture based on multi-tenancy. Established foundation for future growth through cost-effective and stable operations structure." },
+  ],
+} = Astro.props;
+---
+
+<div class="bg-black">
+  {/* Hero */}
+  <section class="relative flex h-[500px] items-end overflow-hidden bg-black pb-12">
+    <img src="/images/backgrounds/image119.png" alt="" class="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-lighten" />
+    <div class="relative mx-auto w-full max-w-[1920px] px-[285px]">
+      <a href={backUrl} class="mb-6 inline-flex h-[60px] w-[134px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black" style="background:rgba(255,255,255,0.05)">
+        &larr; BACK
+      </a>
+      <h1 class="text-5xl font-light text-white">{title}</h1>
+    </div>
+  </section>
+
+  {/* Case Story */}
+  <section class="bg-black py-16">
+    <div class="mx-auto max-w-[1920px] px-[285px]">
+      <div class="flex gap-10 rounded-2xl p-16" style="background:linear-gradient(135deg,rgba(49,46,129,0.3),rgba(125,81,211,0.15))">
+        <div class="flex-1 max-w-[1258px]">
+          <p class="text-base font-normal text-white/70">{subtitle}</p>
+          <h2 class="mt-2 text-5xl font-light text-white">{subtitle}</h2>
+          <p class="mt-4 ml-[356px] max-w-[548px] text-base font-normal text-white/70">{subtitle}</p>
+        </div>
+        <img src={heroImage} alt="" class="h-[490px] w-[490px] shrink-0 rounded-lg object-cover" />
+      </div>
+    </div>
+  </section>
+
+  {/* Detail Content */}
+  <section class="bg-black py-16">
+    <div class="mx-auto max-w-[1920px] px-[285px]">
+      <div class="mx-auto max-w-[1260px]">
+        <h2 class="text-5xl font-light text-white">{title}</h2>
+        <div class="mt-4 space-y-1 text-base font-normal text-white/70">
+          <p>{client}</p>
+          <p>{industry}</p>
+          <p>{serviceArea}</p>
+          <p>{solution}</p>
+        </div>
+
+        <div class="mt-12 space-y-0">
+          {sections.map((section, i) => (
+            <div>
+              {i > 0 && <div class="border-t border-white/10 py-8" />}
+              <div class={i === 0 ? "pt-0" : ""}>
+                <h3 class="text-4xl font-normal text-white">{section.title}</h3>
+                <p class="mt-4 whitespace-pre-line text-base font-normal leading-relaxed text-white/70">{section.content}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div class="mt-12 flex justify-center">
+          <a href="/contact" class="inline-flex h-[60px] w-[201px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black" style="background:rgba(255,255,255,0.05)">
+            CONTACT US &rarr;
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Case Stories */}
+  <section class="bg-black py-24">
+    <div class="mx-auto max-w-[1920px] px-[285px]">
+      <div class="mb-8 flex items-center">
+        <div class="flex items-center gap-3">
+          <div class="relative flex h-4 w-4 items-center justify-center">
+            <div class="absolute h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]" />
+            <div class="absolute h-2 w-2 rounded-full bg-white opacity-40" />
+          </div>
+          <h2 class="text-5xl font-light text-white">Case Stories</h2>
+          <div class="relative flex h-4 w-4 items-center justify-center">
+            <div class="absolute h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]" />
+            <div class="absolute h-2 w-2 rounded-full bg-white opacity-40" />
+          </div>
+        </div>
+        <div class="ml-0 flex-1 border-t border-white/20" />
+      </div>
+      <div class="grid grid-cols-3 gap-10">
+        {Array.from({ length: 3 }, (_, i) => (
+          <a href="/success-stories" class="group w-[480px] rounded-2xl border border-white/10 p-8 backdrop-blur-sm" style="background:linear-gradient(135deg,rgba(49,46,129,0.1),rgba(125,81,211,0.05))">
+            <div class="h-[440px] w-full overflow-hidden rounded-lg">
+              <img src={`/images/backgrounds/deco-${i + 1}.png`} alt="" class="h-full w-full object-cover" />
+            </div>
+            <h3 class="mt-4 text-2xl font-bold text-white group-hover:text-primary">lorem ipsum dolor sit amet consectet adipiscing elit sed diam</h3>
+            <p class="mt-2 text-base font-normal text-white">lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam nonummy nibh euismod tincidunt ut</p>
+            <div class="mt-6 flex h-[60px] w-[194px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black" style="background:rgba(255,255,255,0.05)">
+              LEARN MORE &rarr;
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</div>

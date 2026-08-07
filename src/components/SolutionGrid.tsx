@@ -6,7 +6,13 @@ const solutions = [
     x: 280,
     y: 220,
   },
-  { title: "AI & Data", desc: "Unlock business intelligence", x: 980, y: 125 },
+  {
+    title: "AI & Data",
+    desc: "Unlock business intelligence",
+    link: "/solutions/services/ai-data",
+    x: 980,
+    y: 125,
+  },
   {
     title: "Security",
     desc: "Protect your cloud environment",
@@ -94,16 +100,17 @@ export default function SolutionGrid() {
 
           {solutions.map(s => {
             return (
-              <div
+              <a
+                href={s.link ? s.link : "/solutions"}
                 key={s.title}
-                className="absolute text-left}"
+                className="absolute text-left hover:border-accent hover:bg-accent/30 p-2 border-2 border-transparent rounded-xl"
                 style={{ left: `${s.x}px`, top: `${s.y}px` }}
               >
                 <h3 className="text-2xl font-normal text-white">{s.title}</h3>
                 <p className="mt-0 text-base font-normal text-white/60">
                   {s.desc}
                 </p>
-              </div>
+              </a>
             );
           })}
 

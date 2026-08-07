@@ -4,16 +4,19 @@ export default function ServiceCards() {
       title: "AWS",
       desc: "Cloudino – Đội ngũ kiến trúc sư giải pháp cloud dày dạn kinh nghiệm từ 2010, được bảo chứng bởi chứng chỉ quốc tế từ Amazon Web Services (AWS). ",
       icon: "/images/services/icon-1.png",
+      link: "/solutions/platforms/aws",
     },
     {
       title: "Digital Ocean",
       desc: "Cloudino là đối tác chiến lược của DigitalOcean tại Việt Nam — giúp doanh nghiệp triển khai hạ tầng cloud nhanh hơn, với chi phí minh bạch và hỗ trợ thương mại địa phương.",
       icon: "/images/services/icon-2.png",
+      link: "/solutions/platforms/digital-ocean",
     },
     {
       title: "Lark",
       desc: "Cloudino là Đối tác chiến lược bậc Platinum của LarkSuite tại Việt Nam — đồng hành cùng doanh nghiệp kiến tạo không gian làm việc số toàn diện, triển khai nhanh chóng với chi phí minh bạch và dịch vụ hỗ trợ nội địa tận tâm.",
       icon: "/images/services/icon-3.png",
+      link: "/solutions/platforms/lark",
     },
   ];
 
@@ -56,7 +59,7 @@ export default function ServiceCards() {
                 />
               </div>
               <a
-                href="#"
+                href={s.link}
                 className="flex h-[50px] w-[194px] items-center justify-center rounded-full text-xl font-normal tracking-[-1px] text-white backdrop-blur-sm"
                 style={{
                   background:
