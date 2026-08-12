@@ -2,6 +2,10 @@
 import Stats from "../../../components/Stats";
 import Layout from "../../../layouts/Layout.astro";
 
+export function getStaticPaths() {
+  return [{ params: { service: "ai-data" } }];
+}
+
 const stats = [
   { value: "1000+", label: "Cloud-based AI/ML and data projects delivery" },
   { value: "200K+", label: "Clients served in AI & Data projects" },

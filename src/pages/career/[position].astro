@@ -1,0 +1,24 @@
+---
+import Layout from "../../layouts/Layout.astro";
+export function getStaticPaths() {
+  return [
+    { params: { position: "devops" } },
+    { params: { position: "ai-engineer" } },
+    { params: { position: "cloud-engineer" } },
+  ];
+}
+
+const { position } = Astro.params;
+
+const pages = [
+  {
+    position: "",
+  },
+];
+
+const page = pages.find(page => page.position === position);
+
+if (!page) return Astro.redirect("/404");
+---
+
+<Layout title="Career" />

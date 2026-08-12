@@ -21,6 +21,13 @@ const stats = [
     label: "Năm kinh nghiệm",
   },
 ];
+
+const whyCloudino = [
+  "Đội ngũ kỹ sư đạt chứng chỉ với chuyên môn sâu rộng về các nền tảng AWS, DigitalOcean và Lark Suite",
+  "Thiết kế và tối ưu hạ tầng linh hoạt theo đúng bài toán và quy mô của từng tổ chức.",
+  "Lên chiến lược phân bổ tài nguyên thông minh (Cloud Cost Optimization) giúp tiết kiệm ngân sách.",
+  "Cung cấp hạ tầng đạt các tiêu chuẩn an toàn dữ liệu",
+];
 ---
 
 <Layout title="About us | Cloudino">
@@ -211,18 +218,21 @@ const stats = [
         {/* Engineer cards */}
         <div class="mt-16 flex justify-between gap-10">
           {
-            Array.from({ length: 4 }, (_, i) => (
+            whyCloudino.map((item, i) => (
               <div class="w-[300px] rounded-2xl p-6 backdrop-blur-sm bg-accent/20 border-2 border-accent/80 flex flex-col items-center">
-                <div class="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-white/10" />
+                <img
+                  src="/images/icons/service-card.png"
+                  alt=""
+                  class="h-24 object-contain "
+                />
                 <p class="mt-6 max-w-[288px] text-base font-normal text-white/70">
-                  Certified engineers with deep expertise across AWS,
-                  DigitalOcean, and Lark Suite.
+                  {item}
                 </p>
               </div>
             ))
           }
         </div>
-        <div class="mt-16 flex justify-between gap-10">
+        <!-- <div class="mt-16 flex justify-between gap-10">
           {
             Array.from({ length: 2 }, (_, i) => (
               <div class="w-[300px] rounded-2xl p-6 backdrop-blur-sm bg-accent/20 border-2 border-accent/80 flex flex-col items-center">
@@ -234,7 +244,7 @@ const stats = [
               </div>
             ))
           }
-        </div>
+        </div> -->
       </div>
     </section>
 

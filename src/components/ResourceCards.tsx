@@ -13,22 +13,32 @@ export default function ResourceCards() {
 
       <div className="mx-auto max-w-[1920px] px-[285px]">
         <div className="mb-[25px] flex items-center">
-          <div className="flex items-center gap-3">
-            <div className="relative flex h-4 w-4 items-center justify-center">
-              <div className="absolute h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]" />
-              <div className="absolute h-2 w-2 rounded-full bg-white opacity-40" />
+          <div
+            className="relative flex items-center overflow-hidden rounded-full border border-accent px-6 py-3"
+            style={{
+              background: "rgba(49,46,129,0.25)",
+              backdropFilter: "blur(16px)",
+            }}
+          >
+            <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2">
+              <div className="h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="h-2 w-2 rounded-full bg-white opacity-40" />
+              </div>
             </div>
             <h2 className="text-5xl font-light text-white">Resources</h2>
-            <div className="relative flex h-4 w-4 items-center justify-center">
-              <div className="absolute h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]" />
-              <div className="absolute h-2 w-2 rounded-full bg-white opacity-40" />
+            <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2">
+              <div className="h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="h-2 w-2 rounded-full bg-white opacity-40" />
+              </div>
             </div>
           </div>
-          <div className="ml-0 flex-1 border-t border-white/20" />
+          <div className="ml-0 flex-1 border-dashed border border-white/20" />
           <img
-            src="/images/partners/logo-4.png"
+            src="/images/partners/logo-1.png"
             alt=""
-            className="ml-0 h-[50px] w-[296px] object-contain opacity-50"
+            className="ml-0 h-[50px] w-[296px] object-contain"
           />
         </div>
 

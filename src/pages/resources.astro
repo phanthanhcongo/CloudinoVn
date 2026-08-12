@@ -4,60 +4,99 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Resources | Cloudino">
   <main class="bg-black">
-    <section class="relative flex h-[930px] items-center overflow-hidden bg-black">
-      <img src="/images/backgrounds/image119.png" alt="" class="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-lighten" />
-      <div class="absolute left-1/2 top-1/2 h-[930px] w-[930px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-white/[0.04]" />
-      <div class="relative mx-auto w-full max-w-[1920px] px-[285px] text-center">
-        <h1 class="flex justify-center">
-          <svg viewBox="0 0 475 144" class="h-auto w-full max-w-[475px]" role="img" aria-label="Resources">
-            <defs>
-              <linearGradient id="resGrad" x1="0" y1="1" x2="1" y2="0">
-                <stop offset="0%" stopColor="#5B6FF5" />
-                <stop offset="52.6%" stopColor="#D4CB7B" />
-                <stop offset="100%" stopColor="#DA3FF0" />
-              </linearGradient>
-            </defs>
-            <text x="237" y="120" textAnchor="middle" fontFamily="Amazon Ember, sans-serif" fontWeight="700" fontSize="96" fill="url(#resGrad)">Resources</text>
-          </svg>
-        </h1>
+    <section
+      class="relative flex h-[930px] items-center overflow-hidden bg-black"
+    >
+      <img
+        src="/images/backgrounds/Data&AI.gif"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover mix-blend-lighten"
+      />
+      <div
+        class="animate-spin-slow absolute left-1/2 top-1/2 h-[932px] w-[932px] rounded-full border border-dashed border-white"
+      >
+      </div>
+      <!-- <img
+        src="/images/hero/hero-graphic.png"
+        alt=""
+        class="animate-float absolute left-1/2 top-1/2 ml-80 h-[660px] w-[660px] mt-80 -translate-y-1/2 object-contain"
+      /> -->
+      <div
+        class="relative mx-auto w-full max-w-[1920px] px-[285px] text-center"
+      >
+        <h1 class="text-[128px] font-bold text-white">Resources</h1>
       </div>
     </section>
 
-    <section class="bg-black pb-8">
+    <section
+      class="relative flex h-[930px] items-center overflow-hidden bg-black"
+    >
+      <!-- <img
+        src="/images/backgrounds/Data&AI.gif"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover mix-blend-lighten"
+      /> -->
+      <!-- <div
+        class="animate-spin-slow absolute left-1/2 top-1/2 h-[932px] w-[932px] rounded-full border border-dashed border-white"
+      >
+      </div> -->
+      <!-- <img
+        src="/images/hero/hero-graphic.png"
+        alt=""
+        class="animate-float absolute left-1/2 top-1/2 ml-80 h-[660px] w-[660px] mt-80 -translate-y-1/2 object-contain"
+      /> -->
+      <div
+        class="relative mx-auto w-full max-w-[1920px] px-[285px] text-center"
+      >
+        <h1 class="text-[128px] font-bold text-white">Coming soon</h1>
+      </div>
+    </section>
+
+    <!-- <section class="bg-black pb-8">
       <div class="mx-auto max-w-[1920px] px-[285px]">
         <div class="flex gap-4">
-          {["All", "Blog", "New", "Event"].map((tag) => (
-            <button class="flex flex-col items-start rounded-full border border-white/20 px-6 py-3 text-white/70 transition-all hover:border-white/40 hover:text-white">
-              <span class="text-2xl font-normal">{tag}</span>
-              <span class="text-base font-normal opacity-50">Optimize cloud spending</span>
-            </button>
-          ))}
+          {
+            ["All", "Blog", "New", "Event"].map(tag => (
+              <button class="flex flex-col items-start rounded-full border border-white/20 px-6 py-3 text-white/70 transition-all hover:border-white/40 hover:text-white">
+                <span class="text-2xl font-normal">{tag}</span>
+                <span class="text-base font-normal opacity-50">
+                  Optimize cloud spending
+                </span>
+              </button>
+            ))
+          }
         </div>
       </div>
     </section>
 
-    {["AWS", "Digital Ocean", "Lark"].map((category) => (
-      <section class="bg-black py-16">
-        <div class="mx-auto max-w-[1920px] px-[285px]">
-          <div class="mb-8 flex items-center">
-            <h2 class="text-5xl font-light text-white">{category}</h2>
-            <div class="ml-0 flex-1 border-t border-white/20" />
+    {
+      ["AWS", "Digital Ocean", "Lark"].map(category => (
+        <section class="bg-black py-16">
+          <div class="mx-auto max-w-[1920px] px-[285px]">
+            <div class="mb-8 flex items-center">
+              <h2 class="text-5xl font-light text-white">{category}</h2>
+              <div class="ml-0 flex-1 border-t border-white/20" />
+            </div>
+            <div class="grid grid-cols-4 gap-10">
+              {Array.from({ length: 4 }, (_, i) => (
+                <a href={`/resources/${i + 1}`} class="group w-[350px]">
+                  <p class="text-base font-normal text-white/50">26/07/2026</p>
+                  <div class="mt-4 h-[200px] w-[288px] overflow-hidden rounded-lg">
+                    <img
+                      src={`/images/backgrounds/deco-${(i % 8) + 1}.png`}
+                      alt=""
+                      class="h-full w-full object-cover"
+                    />
+                  </div>
+                  <h3 class="mt-4 max-w-[288px] text-xl font-normal text-white group-hover:text-primary">
+                    lorem ipsum dolor sit amet consecte adipiscing elit sed...
+                  </h3>
+                </a>
+              ))}
+            </div>
           </div>
-          <div class="grid grid-cols-4 gap-10">
-            {Array.from({ length: 4 }, (_, i) => (
-              <a href={`/resources/${i + 1}`} class="group w-[350px]">
-                <p class="text-base font-normal text-white/50">26/07/2026</p>
-                <div class="mt-4 h-[200px] w-[288px] overflow-hidden rounded-lg">
-                  <img src={`/images/backgrounds/deco-${(i % 8) + 1}.png`} alt="" class="h-full w-full object-cover" />
-                </div>
-                <h3 class="mt-4 max-w-[288px] text-xl font-normal text-white group-hover:text-primary">
-                  lorem ipsum dolor sit amet consecte adipiscing elit sed...
-                </h3>
-              </a>
-            ))}
-          </div>
-        </div>
-      </section>
-    ))}
+        </section>
+      ))
+    } -->
   </main>
 </Layout>

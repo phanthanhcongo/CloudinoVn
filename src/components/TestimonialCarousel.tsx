@@ -5,16 +5,16 @@ const testimonials = [
       "Với sự hợp tác chiến lược cùng Cloudino – AWS Advanced Consulting Partner chúng tôi đã triển khai thành công được ứng dụng tự động hóa quy trình phiên âm và tóm tắt cuộc họp đa ngôn ngữ có độ chính xác cao nhờ công nghệ Generative AI từ AWS. Doanh nghiệp đã tối ưu hoá được năng suất công việc và nâng cao chất lượng ra quyết định.",
     name: "Mr. Khanh Cao",
     role: "Founder & CEO at ViMeeting+",
-    mt: "128px",
+    mt: "114px",
   },
-  // {
-  //   avatar: "/images/testimonials/avatar-2.png",
-  //   quote:
-  //     "Giải pháp Chatbot của AIGENX không chỉ giúp tăng cường trải nghiệm khách hàng mà còn tối ưu hóa hiệu suất vận hành và bảo mật, đáp ứng nhu cầu phát triển nhanh chóng của thị trường. Với sự hỗ trợ từ đội ngũ nhiều kinh nghiệm của Cloudino, đến thời điểm hiện tại, dự án Start-up AIGENX của MaxcomGroup đã phục vụ khoảng 1.400 khách hàng, trong đó 90% là doanh nghiệp vừa và nhỏ cùng các hộ kinh doanh cá thể, và 10% là khách hàng cá nhân – điều này thể hiện sự linh hoạt và khả năng đáp ứng đa dạng nhu cầu thị trường.",
-  //   name: "Mr.Khang Nguyễn",
-  //   role: "Đại diện AIGENX",
-  //   mt: "226px",
-  // },
+  {
+    avatar: "/images/testimonials/AI GENX.jpg",
+    quote:
+      "Với sự hỗ trợ từ đội ngũ nhiều kinh nghiệm của Cloudino, đến thời điểm hiện tại, dự án Start-up AIGENX của MaxcomGroup đã phục vụ khoảng 1.400 khách hàng, trong đó 90% là doanh nghiệp vừa và nhỏ cùng các hộ kinh doanh cá thể, và 10% là khách hàng cá nhân – điều này thể hiện sự linh hoạt và khả năng đáp ứng đa dạng nhu cầu thị trường.",
+    name: "Mr.Khang Nguyễn",
+    role: "Đại diện AIGENX",
+    mt: "22px",
+  },
   // {
   //   avatar: "/images/testimonials/avatar-3.png",
   //   quote:
@@ -45,7 +45,7 @@ export default function TestimonialCarousel() {
         {/* Heading */}
         <div className="mb-[25px] flex items-center">
           <div
-            className="relative flex items-center overflow-hidden rounded-full border border-white/10 px-6 py-3"
+            className="relative flex items-center overflow-hidden rounded-full border border-accent px-6 py-3"
             style={{
               background: "rgba(49,46,129,0.25)",
               backdropFilter: "blur(16px)",
@@ -67,7 +67,7 @@ export default function TestimonialCarousel() {
               </div>
             </div>
           </div>
-          <div className="ml-0 flex-1 border-t border-white/20" />
+          <div className="ml-0 flex-1 border-dashed border border-white/20" />
           <img
             src="/images/partners/logo-1.png"
             alt=""
@@ -99,6 +99,7 @@ export default function TestimonialCarousel() {
             <div
               className="flex flex-col items-center"
               style={{ marginTop: t.mt }}
+              key={i}
             >
               <div
                 className={`flex items-center gap-4 ${i % 2 === 1 ? "flex-col justify-center" : ""}`}

@@ -12,30 +12,207 @@ export function getStaticPaths() {
 
 const pages = [
   {
-    slug: "aws",
+    platform: "aws",
     title: "AWS CLOUD & AI TRANSFORMATION",
     subtitle:
       "Đồng hành cùng doanh nghiệp từng bước trên hành trình chuyển đổi số với các giải pháp tối ưu hạ tầng, giúp tăng tốc đổi mới, nâng cao hiệu quả vận hành và tối ưu chi phí.",
-    cta: "TƯ VẤN NGAY",
+    button: "TƯ VẤN NGAY",
     aboutUs: {
       title: "VỀ CHÚNG TÔI",
       text: "Cung cấp dịch vụ tư vấn, triển khai, tối ưu và quản lý hạ tầng điện toán đám mây với đội ngũ chuyên gia được chứng nhận bởi AWS.",
       subtext:
         "Đơn vị Tư vấn & Cung cấp dịch vụ Điện toán đám mây hàng đầu Châu Á",
+      cards: [
+        {
+          title: "10+ Năm Kinh Nghiệm",
+          text: "Đồng hành cùng doanh nghiệp trên hành trình chuyển đổi Cloud.",
+        },
+        {
+          title: "AWS Certified Team",
+          text: "Đội ngũ chuyên gia sở hữu các chứng chỉ quốc tế từ AWS.",
+        },
+        {
+          title: "Vietnam Cloud Community",
+          text: "Kết nối và phát triển cộng đồng Cloud lớn mạnh tại Việt Nam.",
+        },
+      ],
+      cta: {
+        title: "Cloudino Engineers",
+        text: "Tư vấn, triển khai và tối ưu hạ tầng AWS bởi đội ngũ chuyên gia được chứng nhận.",
+        subtext: "Kiến Tạo Nền Tảng Cloud Cho Tăng Trưởng Bền Vững",
+      },
+    },
+    features: {
+      cards: [
+        {
+          title: "Dịch Vụ Quản Lý Đám Mây: AWS Managed Services",
+          text: "Dịch vụ quản lý hệ thống đám mây toàn diện, được thiết kế riêng cho từng khách hàng, giúp doanh nghiệp tập trung hoàn toàn vào phát triển kinh doanh, không còn lo lắng về hệ thống.",
+        },
+        {
+          title: "Dịch vụ Thanh toán hóa đơn: AWS Billing Services",
+          text: "Dễ dàng tìm thấy hóa đơn và dữ liệu thanh toán để phân tích hoặc kiểm tra lịch sử. Giúp doanh nghiệp quản lý chi phí đám mây hiệu quả, minh bạch và tiếp cận mức chi phí hợp lý.",
+        },
+        {
+          title: "Cách mạng hóa ngành bán lẻ với AI Tạo sinh bảo mật tuyệt đối",
+          text: '"The Turk" là giải pháp chatbot và callbot AI được thiết kế riêng, vận hành trên nền tảng Amazon Bedrock, nhằm mang đến trải nghiệm khách hàng chân thực, bảo mật và cá nhân hóa cho ngành thương mại điện tử.',
+        },
+      ],
+    },
+    cta: {
+      title: "Sẵn sàng “Lên mây” cùng Cloudino?",
+      text: "Đối tác AWS Well-Architected đầu tiên tại Việt Nam",
+      subtext:
+        "Chúng tôi hỗ trợ khách hàng của mình áp dụng những phương pháp thực hành tốt nhất cho cơ sở hạ tầng của họ, dựa trên sáu trụ cột: hoạt động xuất sắc, bảo mật, độ tin cậy, hiệu quả hoạt động, tối ưu chi phí và tính bền vững.",
+    },
+    stats: [
+      {
+        value: "1000+",
+        label: "Khách hàng doanh nghiệp",
+      },
+      { value: "200K+", label: "Tài khoản đã đăng ký" },
+      { value: "900+", label: "Dự án" },
+    ],
+    bottomCta: {
+      text: "Đối tác AWS Well-Architected đầu tiên tại Việt Nam",
+      subtext: "Sẵn sàng “Lên mây” cùng Cloudino?",
+    },
+  },
+  {
+    platform: "digital-ocean",
+    title: "Digital Ocean",
+    subtitle:
+      "Cloudino là đối tác chiến lược của DigitalOcean tại Việt Nam — giúp doanh nghiệp triển khai hạ tầng cloud nhanh hơn, với chi phí minh bạch và hỗ trợ thương mại địa phương.",
+    button: "TƯ VẤN NGAY",
+    aboutUs: {
+      title: "VỀ CHÚNG TÔI",
+      text: "Cloudino được thành lập với một sứ mệnh rõ ràng: giúp doanh nghiệp Việt Nam tiếp cận hạ tầng cloud toàn cầu một cách đơn giản, minh bạch và có người đồng hành thực sự.",
+      subtext:
+        "Chúng tôi không chỉ bán license. Chúng tôi tư vấn đúng giải pháp, hỗ trợ triển khai, và ở lại cùng bạn khi doanh nghiệp lớn lên.",
+      cards: [
+        {
+          title: "GenAI Launchpad",
+          text: "Template sẵn có để bắt đầu AI app trong vài phút",
+        },
+        {
+          title: "Model Inference",
+          text: "Gọi AI models qua API — không cần GPU",
+        },
+        {
+          title: "Agent Platform",
+          text: "Deploy AI agents tự động hóa quy trình, tích hợp hệ thống hiện tại",
+        },
+      ],
+      cta: {
+        title: "",
+        text: "600,000+ Developers dùng DigitalOcean toàn cầu",
+        subtext: "",
+      },
+    },
+    features: {
+      cards: [
+        {
+          title: "Bộ dịch vụ nền tảng hoàn chỉnh",
+          text: "Dịch vụ linh hoạt, tích hợp toàn bộ giải pháp cho các nhu cầu điện toán, mạng, lưu trữ và cơ sở dữ liệu của ứng dụng",
+        },
+        {
+          title: "Nền tảng tích hợp AI",
+          text: "Cung cấp khả năng truy cập liền mạch vào các GPU và TPU mạnh mẽ cùng với các công cụ và dịch vụ AI toàn diện.",
+        },
+        {
+          title: "Hệ thống quản lý nội dung (CMS)",
+          text: "Nền tảng thương mại điện tử, khung phát triển ứng dụng web và công cụ dành cho nhà phát triển để đẩy nhanh quá trình xây dựng ứng dụng.",
+        },
+      ],
+    },
+    cta: {
+      title: "",
+      text: "Hơn cả một nhà phân phối — chúng tôi là đội ngũ đảm bảo DigitalOcean hoạt động đúng cho doanh nghiệp của bạn tại Việt Nam.",
+      subtext: "",
+    },
+    stats: [
+      {
+        value: "1000+",
+        label: "Khách hàng doanh nghiệp",
+      },
+      { value: "200K+", label: "Tài khoản đã đăng ký" },
+      { value: "900+", label: "Dự án" },
+    ],
+    bottomCta: {
+      text: "Giải pháp đám mây tiết kiệm, phù hợp cho doanh nghiệp",
+      subtext: "",
+    },
+  },
+  {
+    platform: "lark",
+    title: "Larksuite",
+    subtitle:
+      "Cloudino là Đối tác chiến lược Platinum của LarkSuite tại Việt Nam — đồng hành cùng doanh nghiệp kiến tạo không gian làm việc số toàn diện, triển khai nhanh chóng với chi phí minh bạch và dịch vụ hỗ trợ nội địa tận tâm.",
+    button: "TƯ VẤN NGAY",
+    aboutUs: {
+      title: "VỀ CHÚNG TÔI",
+      text: "Cloudino được thành lập với một sứ mệnh rõ ràng: giúp doanh nghiệp Việt Nam tiếp cận nền tảng làm việc số toàn cầu một cách đơn giản, minh bạch và có người đồng hành thực sự.",
+      subtext:
+        "Chúng tôi không chỉ bán license. Chúng tôi tư vấn đúng giải pháp, hỗ trợ triển khai, và ở lại cùng bạn khi doanh nghiệp lớn lên.",
+      cards: [
+        {
+          title: "Lark Messenger",
+          text: "Nền tảng giao tiếp trung tâm, hỗ trợ chat nhóm quy mô lớn, phân luồng tin nhắn (threads) thông minh và bảo mật cấp doanh nghiệp.",
+        },
+        {
+          title: "Lark Meetings",
+          text: "Giải pháp họp trực tuyến mượt mà hỗ trợ lên đến 1,000 người tham gia, tích hợp chia sẻ màn hình và đồng chỉnh sửa tài liệu ngay trong cuộc họp.",
+        },
+        {
+          title: "Lark Base AI & Smart Search",
+          text: "AI phân tích và tự động tạo bảng biểu, biểu đồ từ dữ liệu thô trong Lark Base. Đồng thời, công cụ tìm kiếm thông minh giúp trích xuất tức thì thông tin từ tin nhắn, tài liệu trên toàn bộ hệ thống",
+        },
+      ],
+      cta: {
+        title: "Implementation & Advisory",
+        text: "Đội ngũ chuyên gia sẽ phân tích quy trình thực tế để tư vấn cách thiết lập LarkSuite chuẩn xác nhất, đảm bảo nhân sự của bạn dễ dàng thích ứng và ứng dụng hiệu quả.",
+        subtext: "",
+      },
+    },
+    features: {
+      cards: [
+        {
+          title: "Đối tác chiến lược bậc cao nhất",
+          text: "Cloudino làm việc trực tiếp với hãng — mang đến cho bạn chính sách giá tốt nhất, đặc quyền hỗ trợ ưu tiên và cơ hội tiếp cận sớm các tính năng mới.",
+        },
+        {
+          title: "Hỗ trợ thanh toán nội địa",
+          text: "Thanh toán bằng VND, xuất hóa đơn VAT hợp lệ đầy đủ — không cần thẻ ngoại tệ hay đau đầu với thủ tục thanh toán quốc tế. Chúng tôi xử lý mọi hồ sơ thương mại để đội ngũ kế toán của bạn luôn an tâm",
+        },
+        {
+          title: "Đồng hành phát triển dài hạn",
+          text: "Có ngay một đầu mối hỗ trợ chuyên trách trực tiếp bằng tiếng Việt. Chúng tôi liên tục đồng hành đào tạo và tối ưu hệ thống khi doanh nghiệp mở rộng quy mô — cam kết thành công cùng bạn trong dài hạn.",
+        },
+      ],
+    },
+    cta: {
+      title: "",
+      text: "Hơn cả một nhà phân phối — chúng tôi là đội ngũ chuyên gia đảm bảo LarkSuite được triển khai tối ưu và giải quyết đúng bài toán vận hành của doanh nghiệp bạn tại Việt Nam.",
+      subtext: "",
+    },
+    stats: [
+      {
+        value: "1000+",
+        label: "Khách hàng doanh nghiệp",
+      },
+      { value: "200K+", label: "Tài khoản đã đăng ký" },
+      { value: "900+", label: "Dự án" },
+    ],
+    bottomCta: {
+      text: "Mọi công cụ bạn cần - Tất cả trong một nền tảng duy nhất",
+      subtext: "",
     },
   },
 ];
 
-const { platform } = Astro.props;
+const { platform } = Astro.params;
 
-const stats = [
-  {
-    value: "999+",
-    label: "Cloud-based AI/ML and\ndata projects delivery",
-  },
-  { value: "999+", label: "Clients served\nin AI & Data projects" },
-  { value: "999+", label: "Specialized AI &\nData engineers" },
-];
+const page = pages.find(page => page.platform === platform);
+if (!page) return Astro.redirect("/404");
 ---
 
 <Layout title="AWS Enterprise Cloud | Cloudino">
@@ -62,22 +239,18 @@ const stats = [
             class="text-[128px] font-bold leading-none text-transparent bg-clip-text"
             style="background-image:linear-gradient(45deg,#5B6FF5,#D4CB7B 52.6%,#DA3FF0)"
           >
-            AWS Enterprise Cloud
+            {page.title}
           </h1>
           <p
             class="mt-6 mx-auto max-w-[740px] text-base font-normal text-white"
           >
-            Just as air is essential to our lives, AI is the core engine of
-            business. AI naturally permeates every part of the enterprise,
-            providing smart operations, rapid decision-making, and powerful new
-            growth energy.
+            {page.subtitle}
           </p>
           <a
             href="/contact"
-            class="mt-8 mx-auto inline-flex h-[60px] w-[201px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black"
-            style="background:rgba(255,255,255,0.05)"
+            class="mt-8 mx-auto inline-flex h-[60px] w-[201px] items-center justify-center rounded-full border border-accent text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-accent bg-accent/40"
           >
-            CONTACT US →
+            {page.button} →
           </a>
         </div>
       </div>
@@ -99,16 +272,13 @@ const stats = [
             class="flex-1 flex-col justify-start items-start max-w-[870px] my-auto"
           >
             <p class="text-base font-normal text-white/70 max-w-[548px]">
-              lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
-              nonummy nibh euismod tincidunt ut
+              {page.aboutUs.title}
             </p>
             <h2 class="mt-2 text-5xl font-light text-white">
-              lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
-              nonummy nibh euismod tincidunt ut
+              {page.aboutUs.text}
             </h2>
             <p class="mt-4 text-base font-normal text-white/70 max-w-[548px]">
-              lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
-              nonummy nibh euismod tincidunt ut
+              {page.aboutUs.subtext}
             </p>
           </div>
           <img
@@ -120,7 +290,7 @@ const stats = [
       </div>
     </section>
 
-    {/* Large text */}
+    <!-- {/* Large text */}
     <section class="bg-black py-16">
       <div class="mx-auto max-w-[1920px] px-[285px]">
         <h2 class="text-5xl font-light text-white max-w-[1520px]">
@@ -128,22 +298,20 @@ const stats = [
           nonummy nibh euismod tincidunt ut
         </h2>
       </div>
-    </section>
+    </section> -->
 
     {/* Feature Cards */}
     <section class="bg-black pb-12">
       <div class="mx-auto max-w-[1920px] px-[285px]">
         <div class="grid grid-cols-3 gap-10">
           {
-            Array.from({ length: 3 }, (_, i) => (
+            page.aboutUs.cards.map((card, i) => (
               <div class="h-[250px] w-[420px] rounded-2xl border border-white/10 p-8 backdrop-blur-sm text-wrap bg-linear-to-r from-[#312E81] to-accent ">
                 <h3 class="text-2xl font-normal text-white text-center text-wrap tracking-tighter">
-                  lorem ipsum dolor sit amet consectetuer adipiscing elit sed
-                  diam nonummy nibh euismod
+                  {card.title}
                 </h3>
                 <p class="mt-2 text-base font-normal text-white text-center text-wrap tracking-tighter">
-                  lorem ipsum dolor sit amet consectetuer adipiscing elit sed
-                  diam nonummy nibh euismod tincidunt ut
+                  {card.text}
                 </p>
               </div>
             ))
@@ -157,16 +325,13 @@ const stats = [
       <div class="mx-auto max-w-[1920px] px-[285px]">
         <div class="max-w-[870px]">
           <p class="text-base font-normal text-white/70">
-            lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
-            nonummy nibh euismod tincidunt ut
+            {page.aboutUs.cta.title}
           </p>
           <h2 class="mt-2 text-5xl font-light text-white">
-            lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
-            nonummy nibh euismod tincidunt ut
+            {page.aboutUs.cta.text}
           </h2>
           <p class="mt-4 text-base font-normal text-white/70 max-w-[548px]">
-            lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
-            nonummy nibh euismod tincidunt ut
+            {page.aboutUs.cta.subtext}
           </p>
         </div>
       </div>
@@ -177,25 +342,18 @@ const stats = [
       <div class="mx-auto max-w-[1920px] px-[285px]">
         <div class="grid grid-cols-3 gap-10">
           {
-            Array.from({ length: 3 }, (_, i) => (
-              <div
-                class="w-[480px] rounded-2xl border border-white/10 p-8 backdrop-blur-sm"
-                style="background:linear-gradient(135deg,rgba(49,46,129,0.1),rgba(125,81,211,0.05))"
-              >
+            page.features.cards.map((card, i) => (
+              <div class="rounded-2xl border border-accent bg-accent/40 p-8 backdrop-blur-sm">
                 <img
                   src={`/images/backgrounds/deco-${i + 1}.png`}
                   alt=""
                   class="h-[235px] w-[418px] rounded-lg object-cover"
                 />
                 <h3 class="mt-4 text-2xl font-normal text-white">
-                  lorem ipsum dolor sit amet consectetuer adipiscing elit sed
-                  diam nonummy nibh euismod
+                  {card.title}
                 </h3>
                 <p class="mt-2 text-base font-normal text-white/60">
-                  lorem ipsum dolor sit amet consectetuer adipiscing elit sed
-                  diam nonummy nibh euismod tincidunt ut lorem ipsum dolor sit
-                  amet consectetuer adipiscing elit sed diam nonummy nibh
-                  euismod tincidunt ut
+                  {card.text}
                 </p>
               </div>
             ))
@@ -213,28 +371,24 @@ const stats = [
       />
       <div class="relative mx-auto max-w-[1920px] px-[285px]">
         <div
-          class="flex gap-10 rounded-2xl p-16"
-          style="background:linear-gradient(135deg,rgba(49,46,129,0.3),rgba(125,81,211,0.15))"
+          class="flex gap-10 rounded-2xl p-16 text-right bg-accent/40 border border-accent"
         >
           <img
             src="/images/hero/hero-graphic.png"
             alt=""
-            class="h-[480px] w-[480px] shrink-0 object-contain opacity-60"
+            class="h-[480px] w-[480px] shrink-0 object-contain"
           />
           <div class="flex-1 max-w-[870px]">
             <p class="text-base font-normal text-white/70">
-              lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
-              nonummy nibh euismod tincidunt ut
+              {page.cta.title}
             </p>
             <h2 class="mt-2 text-5xl font-light text-white">
-              lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
-              nonummy nibh euismod tincidunt ut
+              {page.cta.text}
             </h2>
             <p
               class="mt-4 text-base font-normal text-white/70 max-w-[548px] ml-[356px]"
             >
-              lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
-              nonummy nibh euismod tincidunt ut
+              {page.cta.subtext}
             </p>
           </div>
         </div>
@@ -271,7 +425,7 @@ const stats = [
             Array.from({ length: 3 }, (_, i) => (
               <a
                 href="/success-stories"
-                class="group w-[480px] rounded-2xl border border-white/10 p-8 backdrop-blur-sm"
+                class="group w-[400px] rounded-2xl border border-white/10 p-8 backdrop-blur-sm"
                 style="background:linear-gradient(135deg,rgba(49,46,129,0.1),rgba(125,81,211,0.05))"
               >
                 <div class="h-[440px] w-full overflow-hidden rounded-lg">
@@ -304,7 +458,7 @@ const stats = [
     {/* Stats */}
     <section class="bg-black py-16">
       <div class="mx-auto max-w-[1920px] px-[285px]">
-        <Stats stats={stats} />
+        <Stats stats={page.stats} />
       </div>
 
       {/* Insights */}
@@ -363,25 +517,21 @@ const stats = [
         />
         <div class="relative mx-auto max-w-[1920px] px-[285px]">
           <div class="max-w-[1258px]">
-            <p class="text-base font-normal text-white/70 text-center">
-              Ready to unlock your data&apos;s potential?
-            </p>
+            <p class="text-base font-normal text-white/70 text-center"></p>
             <h2 class="mt-2 text-5xl font-light text-white text-center">
-              Let&apos;s build intelligent data solutions that drive real
-              business value through advanced analytics and AI.
+              {page.bottomCta.text}
             </h2>
             <p
               class="mt-4 ml-[356px] max-w-[548px] text-base font-normal text-white/70 text-center"
             >
-              lorem ipsum dolor sit amet consectetuer adipiscing elit sed diam
-              nonummy nibh euismod tincidunt ut
+              {page.bottomCta.subtext}
             </p>
             <a
               href="/contact"
               class="mt-8 ml-[529px] inline-flex h-[60px] w-[201px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black"
               style="background:rgba(255,255,255,0.05)"
             >
-              CONTACT US →
+              {page.button} →
             </a>
           </div>
         </div>

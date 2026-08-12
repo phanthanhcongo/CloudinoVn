@@ -4,7 +4,7 @@ export default function PartnerLogos() {
       <div className="absolute top-0 left-0 right-0 h-px bg-white/20" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-white/20" />
 
-      <div className="mx-auto max-w-[1920px] px-[285px]">
+      <div className="mx-auto max-w-[1920px] px-12">
         <div className="text-center">
           <h2 className="whitespace-nowrap text-[96px] font-light leading-[1] text-white mb-6">
             Trusted by Global Partners
@@ -28,7 +28,7 @@ export default function PartnerLogos() {
               {Array.from({ length: 8 }, (_, i) => (
                 <div
                   key={i}
-                  className="flex h-36 w-110 items-center justify-center"
+                  className="flex h-48 w-110 items-center justify-center"
                 >
                   <img
                     src={`/images/logos-cleaned/${row * 8 + i + 1}.png`}

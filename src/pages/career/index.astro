@@ -1,0 +1,79 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const positions = [
+  {
+    title: "Devops Engineer (Junior)",
+    location: "Hà Nội",
+    salary: "Thỏa thuận theo năng lực",
+    link: "devops",
+  },
+  {
+    title: "AI Engineer (Junior/Middle)",
+    location: "Hà Nội",
+    salary: "Thỏa thuận theo năng lực",
+    link: "ai-engineer",
+  },
+  {
+    title: "Cloud Engineer (Junior)",
+    location: "Hà Nội",
+    salary: "Thỏa thuận theo năng lực",
+    link: "cloud-engineer",
+  },
+];
+---
+
+<Layout title="Career | Cloudino">
+  <main class="pt-[101px] bg-black">
+    <section
+      class="relative flex flex-col items-center overflow-hidden bg-[#080808] border-b border-accent py-12"
+    >
+      <img
+        src="/images/backgrounds/image119.png"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover mix-blend-lighten -z-10"
+      />
+      <div
+        class="relative mx-auto w-full max-w-[1920px] px-[285px] text-center"
+      >
+        <div class="mx-auto max-w-[740px]">
+          <h1
+            class="text-[96px] font-bold leading-none text-transparent bg-clip-text uppercase"
+            style="background-image:linear-gradient(45deg,#5B6FF5,#D4CB7B 52.6%,#DA3FF0)"
+          >
+            Career
+          </h1>
+          <p class="mt-0 text-2xl font-normal text-white">
+            Chúng tôi đang tìm kiếm những cộng sự cùng chia sẻ tầm nhìn: Đổi mới
+            Tương lai, Cùng nhau kiến tạo.<br /> Hãy trở thành một phần trong hành
+            trình tiếp theo tại Cloudino.
+          </p>
+        </div>
+      </div>
+      <img src="/images/backgrounds/image 148.png" class="mx-auto my-36" />
+      <div class="mt-20 grid grid-cols-3 gap-8">
+        {
+          positions.map((item, i) => (
+            <div class="group rounded-xl border border-accent bg-accent/40 p-8">
+              <h3 class="text-2xl text-white">{item.title}</h3>
+              <p class="mt-2 text-base text-white/50">
+                <b>Location: </b>
+                {item.location}
+              </p>
+              <p class="mt-1 text-base text-white/50">
+                <b>Lương: </b>
+                {item.salary}
+              </p>
+              <a
+                class="p-4 rounded-4xl bg-accent/40 border inline-block border-accent uppercase mt-4 hover:bg-white hover:text-accent z-10 w-28 cursor-pointer"
+                href={`/career/${item.link}`}
+              >
+                Detail →
+              </a>
+            </div>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
