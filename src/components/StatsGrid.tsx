@@ -1,5 +1,6 @@
 import Stats from "./Stats";
 import PurpleOrb from "./PurpleOrb";
+import SectionHeader from "./SectionHeader";
 
 const stats = [
   { value: "1000+", label: "Khách hàng doanh nghiệp" },
@@ -22,38 +23,7 @@ export default function StatsGrid() {
       <PurpleOrb size={450} blur={180} opacity={0.3} />
 
       <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-[285px]">
-        {/* Heading: "Who we are" Badge & Partner Logo */}
-        <div className="mb-8 sm:mb-12 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6">
-          <div
-            className="relative flex items-center overflow-hidden rounded-full border border-white/10 px-5 py-2.5 sm:px-6 sm:py-3 shrink-0"
-            style={{
-              background: "rgba(49,46,129,0.25)",
-              backdropFilter: "blur(16px)",
-            }}
-          >
-            <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2">
-              <div className="h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-2 w-2 rounded-full bg-white opacity-40" />
-              </div>
-            </div>
-            <h2 className="text-xl sm:text-3xl lg:text-4xl font-light text-white">Who we are</h2>
-            <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2">
-              <div className="h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-2 w-2 rounded-full bg-white opacity-40" />
-              </div>
-            </div>
-          </div>
-
-          <div className="hidden sm:block flex-1 border-t border-white/20" />
-
-          <img
-            src="/images/partners/logo-1.png"
-            alt="AWS Partner Badge"
-            className="h-[36px] sm:h-[48px] lg:h-[50px] w-auto max-w-[240px] sm:max-w-[296px] object-contain"
-          />
-        </div>
+        <SectionHeader title="Who we are" leftPercent={10} />
 
         {/* Content Section: 3D Graphic + Text */}
         <div className="relative flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
