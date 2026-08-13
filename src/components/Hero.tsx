@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative flex h-[600px] overflow-hidden bg-black md:h-[1150px]">
+    <section className="relative flex min-h-[500px] h-[550px] overflow-hidden bg-black sm:h-[700px] md:h-[1150px]">
       {/* Solid black base - Rectangle 969 */}
       <div className="absolute inset-0 bg-black" />
 
@@ -11,8 +11,8 @@ export default function Hero() {
         className="absolute inset-0 h-full w-full object-cover mix-blend-lighten"
       />
 
-      {/* Concentric Decorative Rings, Orbs & Dots Container - Centered on Row 1 */}
-      <div className="absolute left-1/2 top-[300px] md:top-[400px] -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+      {/* Concentric Decorative Rings, Orbs & Dots Container - Centered on Row 1 with Responsive Scaling */}
+      <div className="absolute left-1/2 top-[240px] sm:top-[300px] md:top-[400px] -translate-x-1/2 -translate-y-1/2 scale-[0.45] sm:scale-[0.7] md:scale-100 origin-center transition-transform pointer-events-none">
         {/* Glowing gradient orb - Ellipse 15 */}
         <div
           className="absolute left-1/2 top-1/2 h-[444px] w-[435px] -translate-x-1/2 -translate-y-1/2 rounded-full"
@@ -34,22 +34,22 @@ export default function Hero() {
         <div className="absolute left-1/2 top-1/2 h-[25px] w-[25px] translate-x-[545px] translate-y-[103px] rounded-full bg-white" />
       </div>
 
-      {/* Top-left decorative image 129 */}
+      {/* Top-left decorative image 129 (Scaled for Mobile) */}
       <img
         src="/images/hero/hero-icon-4.png"
         alt=""
-        className="absolute left-0 top-0 h-auto w-[341px] object-contain"
+        className="absolute left-0 top-0 h-auto w-[140px] sm:w-[220px] md:w-[341px] object-contain opacity-70 sm:opacity-100"
       />
 
       {/* Cube image - LIGHTEN blend (Centered in Row 1 over Title text) */}
       <img
         src="/images/backgrounds/Data&AI.gif"
         alt=""
-        className="absolute left-1/2 top-[300px] md:top-[400px] -translate-x-1/2 -translate-y-1/2 h-auto w-[80vw] max-w-[631px] sm:w-[55vw] md:w-[35vw] object-contain mix-blend-lighten pointer-events-none max-lg:hidden"
+        className="absolute left-1/2 top-[240px] sm:top-[300px] md:top-[400px] -translate-x-1/2 -translate-y-1/2 h-auto w-[75vw] sm:w-[55vw] md:w-[35vw] max-w-[631px] object-contain mix-blend-lighten pointer-events-none opacity-80 sm:opacity-100"
       />
 
-      {/* Bottom wave vectors */}
-      <div className="absolute bottom-0 left-0 right-0 h-[269px] overflow-hidden">
+      {/* Bottom wave vectors (Scaled Height for Mobile) */}
+      <div className="absolute bottom-0 left-0 right-0 h-[100px] sm:h-[180px] md:h-[269px] overflow-hidden">
         <svg
           viewBox="0 0 1920 269"
           className="h-full w-full"
@@ -63,11 +63,11 @@ export default function Hero() {
       </div>
 
       {/* Text content */}
-      <div className="relative z-10 mx-auto w-full max-w-[1920px] px-6 pt-[120px] text-center md:px-[285px] md:pt-[260px]">
-        <p className="text-base font-normal leading-[30px] tracking-[-1px] text-white md:text-xl">
+      <div className="relative z-10 mx-auto w-full max-w-[1920px] px-4 pt-[75px] text-center sm:px-8 sm:pt-[140px] md:px-[285px] md:pt-[260px]">
+        <p className="text-sm font-normal leading-[24px] tracking-[-0.5px] text-white sm:text-base sm:leading-[30px] md:text-xl">
           Empowering Your Digital Future
         </p>
-        <h1 className="mt-0 flex justify-center">
+        <h1 className="mt-2 sm:mt-4 flex justify-center">
           <svg
             viewBox="0 0 930 288"
             className="h-auto w-full max-w-[930px]"

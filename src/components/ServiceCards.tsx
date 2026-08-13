@@ -27,13 +27,13 @@ export default function ServiceCards() {
   ];
 
   return (
-    <section className="relative z-10 bg-transparent w-full">
-      <div className="mx-auto max-w-[1920px] px-auto">
-        <div className="flex gap-[105px] justify-center">
+    <section className="relative z-10 bg-transparent w-full px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1920px]">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-[105px]">
           {services.map(s => (
             <div
               key={s.title}
-              className={`relative flex w-[350px] flex-col items-center gap-[10px] overflow-hidden rounded-[25px] p-[30px] px-6 text-center justify-between border ${s.color} ${s.border}`}
+              className={`relative flex w-full max-w-[350px] lg:w-[350px] h-auto lg:min-h-[440px] flex-col items-center gap-6 lg:gap-4 overflow-hidden rounded-[25px] p-6 lg:p-[30px] text-center justify-between border ${s.color} ${s.border}`}
               style={{
                 backdropFilter: "blur(24px) saturate(180%)",
                 WebkitBackdropFilter: "blur(24px) saturate(180%)",
@@ -50,15 +50,15 @@ export default function ServiceCards() {
                 }}
               />
               <div className="flex flex-col gap-2.5">
-                <h3 className="text-4xl font-normal leading-tight text-white">
+                <h3 className="text-3xl lg:text-4xl font-normal leading-tight text-white">
                   {s.title}
                 </h3>
-                <p className="text-base font-normal leading-relaxed text-white/70">
+                <p className="text-sm lg:text-base font-normal leading-relaxed text-white/70">
                   {s.desc}
                 </p>
               </div>
-              <div className="flex flex-col items-center gap-2.5">
-                <div className="flex h-[76px] w-[76px] items-center justify-center">
+              <div className="flex flex-col items-center gap-3">
+                <div className="flex h-[60px] w-[60px] lg:h-[76px] lg:w-[76px] items-center justify-center">
                   <img
                     src={s.icon}
                     alt=""
@@ -67,7 +67,7 @@ export default function ServiceCards() {
                 </div>
                 <a
                   href={s.link}
-                  className="flex h-[50px] w-[194px] items-center justify-center rounded-full text-xl font-normal tracking-[-1px] text-white backdrop-blur-sm"
+                  className="flex h-[46px] sm:h-[50px] w-[180px] sm:w-[194px] items-center justify-center rounded-full text-lg sm:text-xl font-normal tracking-[-1px] text-white backdrop-blur-sm transition-transform hover:scale-105"
                   style={{
                     background:
                       "linear-gradient(90deg, rgba(49,46,129,0.75) 0%, rgba(125,81,211,0.75) 100%)",
