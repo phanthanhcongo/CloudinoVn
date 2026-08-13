@@ -8,7 +8,7 @@ export default function Header() {
       <div className="relative border-b border-white/5 backdrop-blur-3xl" style={{ background: "linear-gradient(90deg, rgba(49, 46, 129, 0.15) 0%, rgba(125, 81, 211, 0.15) 100%)", backdropFilter: "blur(24px) saturate(180%) brightness(1.05)" }}>
         <div className="absolute inset-0 bg-gradient-to-b from-white/[0.03] to-transparent" />
         <div className="relative mx-auto flex h-[101px] max-w-[1922px] items-center justify-center px-4">
-          <nav className="flex items-center">
+          <nav className="hidden items-center md:flex">
             <a
               href="/solutions"
               className="rounded-full px-2 py-1 text-base font-normal text-white transition-colors hover:bg-[#7D51D3]/60 hover:shadow-[0_0_15px_rgba(255,255,255,0.12)]"

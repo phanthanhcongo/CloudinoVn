@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative flex h-[1150px] overflow-hidden bg-black">
+    <section className="relative flex h-[600px] overflow-hidden bg-black md:h-[1150px]">
       {/* Solid black base - Rectangle 969 */}
       <div className="absolute inset-0 bg-black" />
 
@@ -11,43 +11,28 @@ export default function Hero() {
         className="absolute inset-0 h-full w-full object-cover mix-blend-lighten"
       />
 
-      {/* Glowing gradient orb - Ellipse 15, 284px blur */}
-      <div
-        className="absolute left-[738px] top-[248px] h-[444px] w-[435px] rounded-full"
-        style={{
-          background: "linear-gradient(90deg, #312E81 0%, #7D51D3 100%)",
-          filter: "blur(284px)",
-        }}
-      />
+      {/* Concentric Decorative Rings, Orbs & Dots Container - Centered on Row 1 */}
+      <div className="absolute left-1/2 top-[300px] md:top-[400px] -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+        {/* Glowing gradient orb - Ellipse 15 */}
+        <div
+          className="absolute left-1/2 top-1/2 h-[444px] w-[435px] -translate-x-1/2 -translate-y-1/2 rounded-full"
+          style={{
+            background: "linear-gradient(90deg, #312E81 0%, #7D51D3 100%)",
+            filter: "blur(284px)",
+          }}
+        />
 
-      {/* Large dashed circles - Ellipse 13 x2, 35% opacity */}
-      <div className="absolute left-[513px] top-[17px] h-[895px] w-[895px] rounded-full border border-dashed border-white/35" />
-      <div className="absolute left-[274px] top-[-222px] h-[1373px] w-[1373px] rounded-full border border-dashed border-white/35" />
+        {/* Concentric dashed circles */}
+        <div className="absolute left-1/2 top-1/2 h-[895px] w-[895px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-white/35" />
+        <div className="absolute left-1/2 top-1/2 hidden h-[1373px] w-[1373px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-white/35 md:block" />
+        <div className="absolute left-1/2 top-1/2 h-[1153px] w-[1137px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-white" />
 
-      {/* Dashed ring - Ellipse 14 */}
-      <div className="absolute left-[383px] top-[-112px] h-[1153px] w-[1137px] rounded-full border border-dashed border-white" />
-
-      {/* Decorative dots - Group 1410118119 */}
-      <div className="absolute left-[559px] top-[18px] h-[30px] w-[31px] rounded-full bg-white" />
-      <div className="absolute left-[734px] top-[986px] h-[30px] w-[31px] rounded-full border border-white" />
-      <div className="absolute left-[1498px] top-[496px] h-[38px] w-[38px] rounded-full border border-white" />
-      <div className="absolute left-[1505px] top-[503px] h-[25px] w-[25px] rounded-full bg-white" />
-
-      {/* Gradient orbs at edges */}
-      <div
-        className="absolute left-[-249px] top-[2553px] h-[474px] w-[474px] rounded-full opacity-50"
-        style={{
-          background: "linear-gradient(90deg, #312E81 0%, #7D51D3 100%)",
-          filter: "blur(100px)",
-        }}
-      />
-      <div
-        className="absolute left-[1683px] top-[930px] h-[474px] w-[474px] rounded-full opacity-50"
-        style={{
-          background: "linear-gradient(90deg, #312E81 0%, #7D51D3 100%)",
-          filter: "blur(100px)",
-        }}
-      />
+        {/* Decorative dots on rings */}
+        <div className="absolute left-1/2 top-1/2 h-[30px] w-[31px] -translate-x-[401px] -translate-y-[447px] rounded-full bg-white" />
+        <div className="absolute left-1/2 top-1/2 h-[30px] w-[31px] -translate-x-[226px] translate-y-[447px] rounded-full border border-white" />
+        <div className="absolute left-1/2 top-1/2 h-[38px] w-[38px] translate-x-[538px] translate-y-[96px] rounded-full border border-white" />
+        <div className="absolute left-1/2 top-1/2 h-[25px] w-[25px] translate-x-[545px] translate-y-[103px] rounded-full bg-white" />
+      </div>
 
       {/* Top-left decorative image 129 */}
       <img
@@ -56,11 +41,11 @@ export default function Hero() {
         className="absolute left-0 top-0 h-auto w-[341px] object-contain"
       />
 
-      {/* Cube image - LIGHTEN blend */}
+      {/* Cube image - LIGHTEN blend (Centered in Row 1 over Title text) */}
       <img
         src="/images/backgrounds/Data&AI.gif"
         alt=""
-        className="absolute left-[645px] top-[149px] h-auto w-[631px] object-contain mix-blend-lighten max-lg:hidden"
+        className="absolute left-1/2 top-[300px] md:top-[400px] -translate-x-1/2 -translate-y-1/2 h-auto w-[80vw] max-w-[631px] sm:w-[55vw] md:w-[35vw] object-contain mix-blend-lighten pointer-events-none max-lg:hidden"
       />
 
       {/* Bottom wave vectors */}
@@ -78,8 +63,8 @@ export default function Hero() {
       </div>
 
       {/* Text content */}
-      <div className="relative z-10 mx-auto w-full max-w-[1920px] px-[285px] pt-[260px] text-center">
-        <p className="text-xl font-normal leading-[30px] tracking-[-1px] text-white">
+      <div className="relative z-10 mx-auto w-full max-w-[1920px] px-6 pt-[120px] text-center md:px-[285px] md:pt-[260px]">
+        <p className="text-base font-normal leading-[30px] tracking-[-1px] text-white md:text-xl">
           Empowering Your Digital Future
         </p>
         <h1 className="mt-0 flex justify-center">
@@ -109,7 +94,7 @@ export default function Hero() {
               x="465"
               y="120"
               textAnchor="middle"
-              fontFamily="Amazon Ember, sans-serif"
+              fontFamily="Poppins, sans-serif"
               fontWeight="700"
               fontSize="96"
               letterSpacing="-4.8"

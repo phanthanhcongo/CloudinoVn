@@ -22,7 +22,7 @@ export default function StatsGrid() {
         }}
       />
 
-      <div className="relative mx-auto max-w-[1920px] px-[285px]">
+      <div className="relative mx-auto max-w-[1920px] px-4 md:px-[285px]">
         {/* Heading: "Who we are" */}
         <div className="mb-[25px] flex items-center">
           <div
