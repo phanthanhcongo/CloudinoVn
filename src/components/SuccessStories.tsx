@@ -2,7 +2,7 @@ import SuccessStoriesCardGrids from "./SuccessStoriesCardGrids";
 
 export default function SuccessStories() {
   return (
-    <section className="relative overflow-hidden bg-black pt-12 sm:pt-20 lg:pt-[100px] pb-12 sm:pb-[55px]">
+    <section className="relative bg-black pt-12 sm:pt-20 lg:pt-[100px] pb-12 sm:pb-[55px]">
       <img
         src="/images/backgrounds/bg-section-6.png"
         alt=""
@@ -12,7 +12,7 @@ export default function SuccessStories() {
       <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
         <div className="mb-6 sm:mb-[25px] flex items-center gap-4">
           <div
-            className="relative flex items-center overflow-hidden rounded-full border border-accent px-4 py-2 sm:px-6 sm:py-3 shrink-0"
+            className="relative flex items-center  rounded-full border border-accent px-4 py-2 sm:px-6 sm:py-3 shrink-0"
             style={{
               background: "rgba(49,46,129,0.25)",
               backdropFilter: "blur(16px)",
