@@ -1,3 +1,5 @@
+import RotatingRings from "./RotatingRings";
+
 const industries = [
   { name: "Healthcare", x: 107, y: 0 },
   { name: "Finance", x: 498, y: 0 },
@@ -89,14 +91,16 @@ export default function IndustryGrid() {
 
       <div className="relative mx-auto max-w-[1920px] px-[285px]">
         <div className="relative mx-auto h-[724px] w-[724px]">
-          {/* Outer ring - Animation-circle Ellipse 14, offset (-103, -103) from center */}
-          <div className="absolute -left-[103px] -top-[103px] h-[930px] w-[930px] rounded-full border border-dashed border-white/40" />
+          {/* Outer ring 1 - Animation-circle Ellipse 14 */}
+          <div className="absolute -left-[103px] -top-[103px] h-[930px] w-[930px] rounded-full border border-dashed border-white/40 pointer-events-none" />
 
-          {/* Central circle */}
           <div
-            className="absolute inset-0 rounded-full border-white/40 border-dotted border-2"
+            className="absolute inset-0 rounded-full border-white/40 border-dotted border-2 pointer-events-none"
             style={{ background: "rgba(255,255,255,0.02)" }}
           />
+
+          {/* Separate RotatingRings Component */}
+          <RotatingRings />
 
           {/* Decorative dots from Animation-circle */}
           <div className="absolute left-[18px] top-[27px] h-[23px] w-[23px] rounded-full bg-white/60" />

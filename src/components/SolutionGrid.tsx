@@ -66,9 +66,7 @@ export default function SolutionGrid() {
 
         {/* Content Area - Orbital Layout on Mobile & Desktop */}
         <div className="relative h-[520px] sm:h-[640px] lg:h-[780px] flex items-center justify-center my-4 sm:my-0">
-          {/* Orbital Ring Lines behind cards */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[340px] w-[340px] sm:h-[480px] sm:w-[680px] lg:h-[580px] lg:w-[880px] rounded-full border border-dashed border-purple-500/25 pointer-events-none z-0" />
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[240px] w-[240px] sm:h-[360px] sm:w-[500px] lg:h-[420px] lg:w-[640px] rounded-full border border-purple-500/15 pointer-events-none z-0" />
+
 
           {/* 3D Purple Cubes Graphic */}
           <img
