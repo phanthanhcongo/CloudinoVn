@@ -1,3 +1,5 @@
+import PurpleOrb from "./PurpleOrb";
+
 const solutions = [
   { title: "FinOps", desc: "Optimize cloud spending", x: 550, y: 110 },
   {
@@ -51,12 +53,7 @@ export default function SolutionGrid() {
       />
 
       {/* Vibrant Purple Glow Orb centered behind 3D Cubes */}
-      <div
-        className="pointer-events-none absolute left-1/2 top-[55%] h-[300px] sm:h-[380px] w-[300px] sm:w-[380px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[130px]"
-        style={{
-          background: "linear-gradient(90deg, #312E81 0%, #7D51D3 100%)",
-        }}
-      />
+      <PurpleOrb className="top-[55%] h-[300px] sm:h-[380px] w-[300px] sm:w-[380px]" blur={130} />
 
       <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-[285px]">
         {/* Heading: "Explore Solutions" Badge & Partner Logo */}

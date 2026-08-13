@@ -1,4 +1,5 @@
 import Stats from "./Stats";
+import PurpleOrb from "./PurpleOrb";
 
 const stats = [
   { value: "1000+", label: "Khách hàng doanh nghiệp" },
@@ -17,13 +18,8 @@ export default function StatsGrid() {
         className="absolute inset-0 h-full w-full object-cover opacity-30 mix-blend-lighten pointer-events-none"
       />
 
-      {/* Ambient glowing orb */}
-      <div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-[450px] w-[450px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-30 blur-[180px]"
-        style={{
-          background: "linear-gradient(90deg, #312E81 0%, #7D51D3 100%)",
-        }}
-      />
+      {/* Ambient background glowing orb */}
+      <PurpleOrb size={450} blur={180} opacity={0.3} />
 
       <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-[285px]">
         {/* Heading: "Who we are" Badge & Partner Logo */}
@@ -61,15 +57,10 @@ export default function StatsGrid() {
 
         {/* Content Section: 3D Graphic + Text */}
         <div className="relative flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
-          {/* 3D Sphere Graphic with Figma Linear Purple Glow */}
+          {/* 3D Sphere Graphic with Purple Glow */}
           <div className="relative flex-1 flex justify-center items-center">
-            {/* Glowing purple orb with balanced diameter */}
-            <div
-              className="pointer-events-none absolute left-1/2 top-1/2 h-[260px] sm:h-[340px] w-[260px] sm:w-[340px] -translate-x-1/2 -translate-y-1/2 rounded-full blur-[110px]"
-              style={{
-                background: "linear-gradient(90deg, #312E81 0%, #7D51D3 100%)",
-              }}
-            />
+            {/* Reusable PurpleOrb component */}
+            <PurpleOrb className="h-[260px] sm:h-[340px] w-[260px] sm:w-[340px]" blur={110} />
             <img
               src="/images/hero/hero-icon-3.png"
               alt="3D Graphic"
