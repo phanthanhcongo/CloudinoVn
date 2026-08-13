@@ -1,3 +1,5 @@
+import SectionHeader from "./SectionHeader";
+
 const testimonials = [
   {
     avatar: "/images/testimonials/Mr. Khanh Cao.jpg",
@@ -43,37 +45,7 @@ export default function TestimonialCarousel() {
 
       <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
         {/* Heading */}
-        <div className="mb-6 sm:mb-[25px] flex items-center gap-4">
-          <div
-            className="relative flex items-center overflow-hidden rounded-full border border-accent px-4 py-2 sm:px-6 sm:py-3 shrink-0"
-            style={{
-              background: "rgba(49,46,129,0.25)",
-              backdropFilter: "blur(16px)",
-            }}
-          >
-            <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2">
-              <div className="h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-2 w-2 rounded-full bg-white opacity-40" />
-              </div>
-            </div>
-            <h2 className="text-xl sm:text-3xl lg:text-5xl font-light text-white whitespace-nowrap">
-              What clients say about us
-            </h2>
-            <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2">
-              <div className="h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-2 w-2 rounded-full bg-white opacity-40" />
-              </div>
-            </div>
-          </div>
-          <div className="hidden sm:block flex-1 border-dashed border border-white/20" />
-          <img
-            src="/images/partners/logo-1.png"
-            alt=""
-            className="hidden sm:block h-[35px] sm:h-[50px] w-auto object-contain shrink-0"
-          />
-        </div>
+        <SectionHeader title="What clients say about us" leftPercent={0} />
 
         {/* Cards */}
         <div className="relative mt-8 sm:mt-[36px] flex flex-col lg:flex-row gap-8 lg:gap-8 items-center lg:items-start justify-center lg:justify-between">

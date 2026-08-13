@@ -1,69 +1,174 @@
-const cards = [
-  { image: null, textColor: "text-white" },
-  { image: "/images/backgrounds/deco-1.png", textColor: "text-black" },
-  { image: "/images/backgrounds/deco-2.png", textColor: "text-white" },
-  { image: null, textColor: "text-black", white: true },
+import { useEffect, useRef, useState } from "react";
+import SectionHeader from "./SectionHeader";
+
+const baseCards = [
+  {
+    bg: "bg-gradient-to-br from-[#4c1d95] via-[#6d28d9] to-[#8b5cf6]",
+    textColor: "text-white",
+    title: "Lorem ipsum dolor sit amet",
+    image: null,
+  },
+  {
+    bg: "bg-gradient-to-br from-[#fca5a5] via-[#fde68a] via-[#a7f3d0] to-[#93c5fd]",
+    textColor: "text-[#18181b]",
+    title: "Lorem ipsum dolor sit amet",
+    image: "/images/backgrounds/deco-1.png",
+  },
+  {
+    bg: "bg-gradient-to-br from-[#064e3b] via-[#0f172a] via-[#1e1b4b] to-[#4c1d95]",
+    textColor: "text-white",
+    title: "Lorem ipsum dolor sit amet",
+    image: "/images/backgrounds/deco-2.png",
+  },
+  {
+    bg: "bg-white",
+    textColor: "text-[#18181b]",
+    title: "Lorem ipsum dolor sit amet",
+    image: null,
+  },
 ];
 
 export default function ResourceCards() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [isMouseDown, setIsMouseDown] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  // Duplicate base cards 3 times to create a seamless infinite loop
+  const items = [...baseCards, ...baseCards, ...baseCards];
+
+  // Set initial scroll position to middle set on mount
+  useEffect(() => {
+    if (containerRef.current) {
+      const scrollWidth = containerRef.current.scrollWidth;
+      containerRef.current.scrollLeft = scrollWidth / 3;
+    }
+  }, []);
+
+  const handleScroll = () => {
+    if (!containerRef.current) return;
+    const { scrollLeft, scrollWidth } = containerRef.current;
+    const singleSetWidth = scrollWidth / 3;
+
+    // Reset position seamlessly when reaching bounds
+    if (scrollLeft >= singleSetWidth * 2) {
+      containerRef.current.scrollLeft = scrollLeft - singleSetWidth;
+    } else if (scrollLeft <= 20) {
+      containerRef.current.scrollLeft = scrollLeft + singleSetWidth;
+    }
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!containerRef.current) return;
+    setIsMouseDown(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsMouseDown(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsMouseDown(false);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isMouseDown || !containerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 2;
+    containerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handlePrev = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({ left: -519, behavior: "smooth" });
+    }
+  };
+
+  const handleNext = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollBy({ left: 519, behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="relative bg-black pt-[80px] pb-[49px]">
+    <section className="relative bg-black py-12 sm:py-20 xl:pt-[80px] xl:pb-[49px] overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-px bg-white/20" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-white/20" />
 
-      <div className="mx-auto max-w-[1920px] px-[285px]">
-        <div className="mb-[25px] flex items-center">
-          <div
-            className="relative flex items-center overflow-hidden rounded-full border border-accent px-6 py-3"
-            style={{
-              background: "rgba(49,46,129,0.25)",
-              backdropFilter: "blur(16px)",
-            }}
-          >
-            <div className="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2">
-              <div className="h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-2 w-2 rounded-full bg-white opacity-40" />
-              </div>
-            </div>
-            <h2 className="text-5xl font-light text-white">Resources</h2>
-            <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2">
-              <div className="h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="h-2 w-2 rounded-full bg-white opacity-40" />
-              </div>
-            </div>
+      {/* Main Container increased width (1680px) */}
+      <div className="relative mx-auto max-w-full xl:max-w-[1680px] px-4 sm:px-8 xl:px-0">
+        {/* Header */}
+        <SectionHeader title="Resources" leftPercent={0} />
+
+        {/* Navigation Guidance & Controls Bar */}
+        <div className="flex items-center justify-between mt-6 sm:mt-8 mb-4">
+          <div className="flex items-center gap-2 text-xs sm:text-sm font-medium text-white/70 uppercase tracking-wider bg-white/5 border border-white/10 px-4 py-2 rounded-full backdrop-blur-md">
+            <span className="animate-pulse text-purple-400">●</span> Drag or use arrows to navigate
           </div>
-          <div className="ml-0 flex-1 border-dashed border border-white/20" />
-          <img
-            src="/images/partners/logo-1.png"
-            alt=""
-            className="ml-0 h-[50px] w-[296px] object-contain"
-          />
+          <div className="flex items-center gap-3">
+            <button
+              onClick={handlePrev}
+              className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur-md transition-all hover:bg-white hover:text-black hover:scale-110 active:scale-95 shadow-lg cursor-pointer"
+              aria-label="Previous Card"
+            >
+              ←
+            </button>
+            <button
+              onClick={handleNext}
+              className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur-md transition-all hover:bg-white hover:text-black hover:scale-110 active:scale-95 shadow-lg cursor-pointer"
+              aria-label="Next Card"
+            >
+              →
+            </button>
+          </div>
         </div>
 
-        <div className="mt-[100px] flex gap-[41px] overflow-x-auto -mr-120">
-          {cards.map((card, i) => (
-            <div
-              key={i}
-              className="group relative h-[503px] w-[478px] shrink-0"
-            >
+        {/* Cards Row with Infinite Drag Loop */}
+        <div
+          ref={containerRef}
+          onScroll={handleScroll}
+          onMouseDown={handleMouseDown}
+          onMouseLeave={handleMouseLeave}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          className={`relative w-full overflow-x-auto scrollbar-none select-none py-4 ${
+            isMouseDown ? "cursor-grabbing" : "cursor-grab"
+          }`}
+        >
+          <div className="flex flex-nowrap gap-4 sm:gap-8 xl:gap-[41px] min-w-max pb-6">
+            {items.map((card, i) => (
               <div
-                className={`h-[478px] w-full overflow-hidden rounded ${i % 2 === 0 ? "bg-white" : "bg-white/5"} rounded-4xl`}
-              ></div>
-              <h3
-                className={`absolute left-[79px] top-[84px] max-w-[320px] text-[40px] font-normal leading-tight ${i % 2 === 0 ? "text-black" : "text-white"} group-hover:text-primary`}
+                key={i}
+                className="group relative h-[360px] sm:h-[440px] xl:h-[503px] w-[280px] sm:w-[380px] xl:w-[478px] shrink-0"
               >
-                Lorem ipsum dolor sit amet
-              </h3>
-              <a
-                className="absolute bottom-0 left-[134px] flex h-[50px] w-[211px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black"
-                href="/resources"
-              >
-                Press Release →
-              </a>
-            </div>
-          ))}
+                <div
+                  className={`relative h-[330px] sm:h-[410px] xl:h-[478px] w-full overflow-hidden rounded-2xl sm:rounded-3xl xl:rounded-4xl ${card.bg} shadow-lg`}
+                >
+                  {card.image && (
+                    <img
+                      src={card.image}
+                      alt=""
+                      className="absolute inset-0 h-full w-full object-cover pointer-events-none opacity-80"
+                    />
+                  )}
+                  <h3
+                    className={`absolute top-8 sm:top-12 xl:top-[84px] left-6 sm:left-10 xl:left-[79px] max-w-[240px] sm:max-w-[300px] xl:max-w-[320px] text-xl sm:text-3xl xl:text-[40px] font-normal leading-[1.15] tracking-tight ${card.textColor} transition-all duration-300 group-hover:opacity-90 z-10`}
+                  >
+                    {card.title}
+                  </h3>
+                </div>
+                <a
+                  className="absolute -bottom-2 sm:bottom-0 left-1/2 -translate-x-1/2 flex h-[42px] sm:h-[48px] xl:h-[52px] px-6 sm:px-8 items-center justify-center rounded-full border border-purple-400/40 text-xs sm:text-sm xl:text-base font-medium tracking-wider text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81]/90 via-[#5b3db5]/90 to-[#7d51d3]/90 hover:bg-white hover:text-[#201048] transition-all duration-300 shadow-[0_0_20px_rgba(125,81,211,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.7)] hover:scale-105 uppercase whitespace-nowrap z-20"
+                  href="/resources"
+                >
+                  PRESS RELEASE →
+                </a>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
