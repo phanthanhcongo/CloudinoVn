@@ -22,6 +22,14 @@ export default function StatsGrid() {
       {/* Ambient background glowing orb */}
       <PurpleOrb size={450} blur={180} opacity={0.3} />
 
+      {/* Bottom-left corner 1/4 glowing PurpleOrb */}
+      <PurpleOrb
+        size={550}
+        blur={140}
+        opacity={0.55}
+        className="!left-0 !bottom-0 !top-auto -translate-x-1/2 translate-y-1/2"
+      />
+
       <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-[285px]">
         <SectionHeader title="Who we are" leftPercent={10} />
 
@@ -56,7 +64,7 @@ export default function StatsGrid() {
             </div>
             <a
               href="/about"
-              className="mt-4 sm:mt-6 inline-flex h-[46px] sm:h-[52px] px-8 items-center justify-center rounded-full text-base sm:text-lg font-normal bg-accent tracking-tight text-white transition-all duration-300 hover:text-accent hover:bg-white hover:scale-105 shadow-lg"
+              className="mt-4 sm:mt-6 inline-flex h-[46px] sm:h-[52px] px-8 items-center justify-center rounded-full border border-purple-400/50 text-base sm:text-lg font-medium tracking-wider text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81] via-[#5b3db5] to-[#7d51d3] hover:bg-white hover:text-[#201048] transition-all duration-300 shadow-[0_0_25px_rgba(168,85,247,0.45)] hover:shadow-[0_0_35px_rgba(168,85,247,0.7)] hover:scale-105 uppercase"
             >
               LEARN MORE →
             </a>

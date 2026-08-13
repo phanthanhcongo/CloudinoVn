@@ -7,6 +7,8 @@ interface PurpleOrbProps {
   className?: string;
   /** Opacity override if needed */
   opacity?: number;
+  /** Custom gradient or color (defaults to main website theme accent colors) */
+  color?: string;
 }
 
 export default function PurpleOrb({
@@ -14,6 +16,7 @@ export default function PurpleOrb({
   blur = 110,
   className = "",
   opacity,
+  color,
 }: PurpleOrbProps) {
   const sizeValue = typeof size === "number" ? `${size}px` : size;
   const blurValue = typeof blur === "number" ? `${blur}px` : blur;
@@ -25,7 +28,9 @@ export default function PurpleOrb({
         width: sizeValue,
         height: sizeValue,
         filter: `blur(${blurValue})`,
-        background: "linear-gradient(90deg, #312E81 0%, #7D51D3 100%)",
+        background:
+          color ||
+          "radial-gradient(circle at center, var(--color-accent, #7d51d3) 0%, var(--color-primary-dark, #312e81) 100%)",
         ...(opacity !== undefined ? { opacity } : {}),
       }}
     />
