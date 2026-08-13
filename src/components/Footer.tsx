@@ -1,36 +1,87 @@
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden bg-black pt-[40px] pb-[24px] md:pt-[79px]">
-      <img src="/images/aws/aws-bg.png" alt="" className="absolute right-0 top-0 hidden h-full w-[494px] object-cover opacity-30 md:block" />
-      <img src="/images/hero/hero-icon-5.png" alt="" className="absolute bottom-0 left-0 hidden h-auto w-[290px] object-contain opacity-40 md:block" />
+    <footer className="relative overflow-hidden pt-16 pb-10 md:pt-24 md:pb-14" style={{ background: "radial-gradient(ellipse at 50% 40%, #432188 0%, #201048 55%, #0F0728 100%)" }}>
+      {/* Top accent divider line */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-300/30 to-transparent" />
 
-      <div className="relative mx-auto max-w-[1920px] px-4 md:px-[285px]">
-        <div className="mb-[40px] flex justify-center md:mb-[87px]">
-          <span className="text-2xl font-bold text-white md:text-[33px]">CLOUDINO</span>
+      {/* Decorative 3D Fluid Graphics (Right & Left) */}
+      <img
+        src="/images/aws/aws-bg.png"
+        alt=""
+        className="absolute right-0 top-1/2 -translate-y-1/2 hidden h-[90%] w-auto max-w-[550px] object-contain opacity-70 mix-blend-screen pointer-events-none md:block"
+      />
+      <img
+        src="/images/hero/hero-icon-5.png"
+        alt=""
+        className="absolute bottom-0 left-0 hidden h-auto w-[320px] object-contain opacity-80 mix-blend-screen pointer-events-none md:block"
+      />
+
+      {/* Concentric Decorative Rings, Orbs & Dots Container (Half Circle Arching Up from Bottom) */}
+      <div className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2 scale-[0.55] sm:scale-[0.8] md:scale-100 origin-bottom transition-transform pointer-events-none">
+        {/* Glowing gradient center orb at bottom */}
+        <div
+          className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-50"
+          style={{
+            background: "radial-gradient(circle, #8B5CF6 0%, #4C1D95 60%, transparent 100%)",
+            filter: "blur(180px)",
+          }}
+        />
+
+        {/* Concentric dashed circles (Top half arches upward from footer bottom) */}
+        <div className="absolute left-1/2 top-1/2 h-[820px] w-[820px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-white/30" />
+        <div className="absolute left-1/2 top-1/2 hidden h-[1240px] w-[1240px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-dashed border-white/20 md:block" />
+
+        {/* White Glowing Dots on Top Arch */}
+        <div className="absolute left-1/2 top-1/2 h-[24px] w-[24px] -translate-x-[320px] -translate-y-[260px] rounded-full bg-white shadow-[0_0_20px_#fff]" />
+        <div className="absolute left-1/2 top-1/2 h-[18px] w-[18px] translate-x-[360px] -translate-y-[220px] rounded-full border-2 border-white bg-white/40" />
+      </div>
+
+      <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-[285px]">
+        {/* CLOUDINO Brand Header */}
+        <div className="mb-8 flex justify-center md:mb-14">
+          <span className="text-2xl font-bold tracking-widest text-white md:text-[34px] uppercase drop-shadow-md">
+            CLOUDINO
+          </span>
         </div>
 
-        <div className="mx-auto max-w-[1000px] text-center">
-          <h2 className="text-4xl font-bold leading-[1] text-white md:text-[96px]">
-            Let&apos;s Connect &<br />Transform Together.
+        {/* Main Title & Subtitle with Figma Color Gradients */}
+        <div className="mx-auto max-w-[1100px] text-center">
+          <h2 className="text-3xl sm:text-5xl md:text-[76px] lg:text-[88px] font-bold leading-[1.08] tracking-tight">
+            <span className="bg-gradient-to-r from-[#FFE580] via-[#FF8A65] to-[#F48FB1] bg-clip-text text-transparent drop-shadow-sm">
+              Let&apos;s Connect &
+            </span>
+            <br />
+            <span className="bg-gradient-to-r from-white via-[#E1BEE7] to-[#CE93D8] bg-clip-text text-transparent opacity-95">
+              Transform Together.
+            </span>
           </h2>
-          <p className="mt-0 text-xl font-normal text-white md:text-4xl">
+
+          <p className="mt-4 sm:mt-6 text-base sm:text-xl md:text-2xl font-normal text-white/90 max-w-[700px] mx-auto">
             Connect with us and create change together.
           </p>
 
-          <a href="/contact" className="mt-[30px] inline-flex h-[50px] w-[150px] items-center justify-center rounded-full border border-white/20 text-lg font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black md:h-[60px] md:w-[174px] md:text-xl" style={{ background: "rgba(255,255,255,0.05)" }}>
-            contact →
-          </a>
+          {/* Pill CTA Button */}
+          <div className="mt-8 sm:mt-10 flex justify-center">
+            <a
+              href="/contact"
+              className="inline-flex h-[52px] sm:h-[60px] px-10 items-center justify-center rounded-full border border-white/30 text-base sm:text-lg font-medium text-white backdrop-blur-xl bg-white/10 hover:bg-white hover:text-[#201048] transition-all duration-300 shadow-[0_0_30px_rgba(139,92,246,0.3)] hover:scale-105"
+            >
+              CONTACT →
+            </a>
+          </div>
 
-          <address className="mt-[40px] block text-base font-normal not-italic text-white/80 mx-auto text-center md:mt-[50px]">
-            <p>Tòa nhà Cloudino, 4/3 Phố Nghĩa Đô, Phường Nghĩa Đô, Hà Nội</p>
-            <p>(+84) 024 22165050</p>
-            <p>hello@18.140.63.179</p>
-            <p>8:30AM - 6:00PM</p>
+          {/* Address Info */}
+          <address className="mt-12 sm:mt-16 block text-sm sm:text-base font-normal not-italic text-white/80 mx-auto text-center leading-relaxed max-w-[600px]">
+            <p className="text-white/90">Tòa nhà Cloudino, 4/3 Phố Nghĩa Đô, Phường Nghĩa Đô, Hà Nội</p>
+            <p className="mt-1">(+84) 024 22165050</p>
+            <p className="mt-1 font-medium text-purple-200">hello@cloudino.vn</p>
+            <p className="mt-1 text-white/60">8:30AM - 6:00PM</p>
           </address>
         </div>
 
-        <div className="mt-[40px] text-center md:mt-[48px]">
-          <p className="text-[10px] font-normal text-white/40">
+        {/* Copyright Line */}
+        <div className="mt-12 text-center pt-8 border-t border-white/10">
+          <p className="text-xs font-normal text-white/50">
             Copyright 2026 Cloudino. All rights reserved
           </p>
         </div>
