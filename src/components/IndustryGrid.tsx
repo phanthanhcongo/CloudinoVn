@@ -133,7 +133,7 @@ export default function IndustryGrid() {
                 </p>
                 <a
                   href="/solutions/industries"
-                  className="mt-[30px] inline-flex h-[60px] w-[194px] items-center justify-center rounded-full text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all bg-accent hover:bg-white hover:text-accent"
+                  className="mt-6 sm:mt-[30px] inline-flex h-[48px] sm:h-[60px] w-[170px] sm:w-[194px] items-center justify-center rounded-full border border-purple-400/50 text-base sm:text-xl font-medium tracking-[-0.5px] text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81] via-[#5b3db5] to-[#7d51d3] hover:bg-white hover:text-[#201048] shadow-[0_0_25px_rgba(168,85,247,0.45)] hover:shadow-[0_0_35px_rgba(168,85,247,0.75)] hover:scale-105 transition-all duration-300 z-30"
                 >
                   LEARN MORE →
                 </a>

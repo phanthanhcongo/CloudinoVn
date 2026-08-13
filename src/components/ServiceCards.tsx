@@ -67,11 +67,7 @@ export default function ServiceCards() {
                 </div>
                 <a
                   href={s.link}
-                  className="flex h-[46px] sm:h-[50px] w-[180px] sm:w-[194px] items-center justify-center rounded-full text-lg sm:text-xl font-normal tracking-[-1px] text-white backdrop-blur-sm transition-transform hover:scale-105"
-                  style={{
-                    background:
-                      "linear-gradient(90deg, rgba(49,46,129,0.75) 0%, rgba(125,81,211,0.75) 100%)",
-                  }}
+                  className="flex h-[46px] sm:h-[50px] w-[180px] sm:w-[194px] items-center justify-center rounded-full border border-purple-400/50 text-base sm:text-xl font-medium tracking-[-0.5px] text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81] via-[#5b3db5] to-[#7d51d3] hover:bg-white hover:text-[#201048] shadow-[0_0_25px_rgba(168,85,247,0.45)] hover:shadow-[0_0_35px_rgba(168,85,247,0.75)] hover:scale-105 transition-all duration-300 z-10"
                 >
                   LEARN MORE →
                 </a>

@@ -27,25 +27,25 @@ const testimonials = [
 
 export default function TestimonialCarousel() {
   return (
-    <section className="relative overflow-hidden bg-black pt-[100px] pb-[49px]">
+    <section className="relative overflow-hidden bg-black pt-12 sm:pt-20 lg:pt-[100px] pb-12 sm:pb-[49px]">
       <img
         src="/images/backgrounds/image119.png"
         alt=""
-        className="absolute inset-0 h-full w-full object-cover mix-blend-lighten"
+        className="absolute inset-0 h-full w-full object-cover mix-blend-lighten pointer-events-none"
       />
       <div
-        className="absolute left-[738px] top-[248px] h-[444px] w-[435px] rounded-full"
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[300px] w-[300px] sm:h-[444px] sm:w-[435px] rounded-full pointer-events-none"
         style={{
           background: "linear-gradient(90deg, #312E81 0%, #7D51D3 100%)",
-          filter: "blur(284px)",
+          filter: "blur(200px)",
         }}
       />
 
-      <div className="relative mx-auto max-w-[1920px] px-[285px]">
+      <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
         {/* Heading */}
-        <div className="mb-[25px] flex items-center">
+        <div className="mb-6 sm:mb-[25px] flex items-center gap-4">
           <div
-            className="relative flex items-center overflow-hidden rounded-full border border-accent px-6 py-3"
+            className="relative flex items-center overflow-hidden rounded-full border border-accent px-4 py-2 sm:px-6 sm:py-3 shrink-0"
             style={{
               background: "rgba(49,46,129,0.25)",
               backdropFilter: "blur(16px)",
@@ -57,7 +57,7 @@ export default function TestimonialCarousel() {
                 <div className="h-2 w-2 rounded-full bg-white opacity-40" />
               </div>
             </div>
-            <h2 className="text-5xl font-light text-white">
+            <h2 className="text-xl sm:text-3xl lg:text-5xl font-light text-white whitespace-nowrap">
               What clients say about us
             </h2>
             <div className="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2">
@@ -67,23 +67,20 @@ export default function TestimonialCarousel() {
               </div>
             </div>
           </div>
-          <div className="ml-0 flex-1 border-dashed border border-white/20" />
+          <div className="hidden sm:block flex-1 border-dashed border border-white/20" />
           <img
             src="/images/partners/logo-1.png"
             alt=""
-            className="ml-0 h-[50px] w-[296px] object-contain"
+            className="hidden sm:block h-[35px] sm:h-[50px] w-auto object-contain shrink-0"
           />
         </div>
 
         {/* Cards */}
-        <div
-          className="relative mt-[36px] flex justify-between"
-          style={{ minHeight: "600px" }}
-        >
-          {/* Curved line through the dots */}
+        <div className="relative mt-8 sm:mt-[36px] flex flex-col lg:flex-row gap-8 lg:gap-8 items-center lg:items-start justify-center lg:justify-between">
+          {/* Curved line through the dots (desktop only) */}
           <svg
             viewBox="0 0 1520 300"
-            className="absolute left-0 top-0 h-full w-full opacity-20 pointer-events-none z-0"
+            className="absolute left-0 top-0 h-full w-full opacity-20 pointer-events-none z-0 hidden lg:block"
             preserveAspectRatio="none"
           >
             <path
@@ -97,15 +94,14 @@ export default function TestimonialCarousel() {
 
           {testimonials.map((t, i) => (
             <div
-              className="flex flex-col items-center"
-              style={{ marginTop: t.mt }}
+              className={`flex flex-col items-center w-full max-w-[430px] ${i === 0 ? "lg:mt-[114px]" : "lg:mt-[22px]"}`}
               key={i}
             >
               <div
                 className={`flex items-center gap-4 ${i % 2 === 1 ? "flex-col justify-center" : ""}`}
               >
                 {/* Dots here */}
-                <div className="relative -ml-4 flex items-center">
+                <div className="relative -ml-4 flex items-center hidden sm:flex">
                   <div className="flex h-[26px] w-[26px] items-center justify-center rounded-full bg-accent">
                     <div className="h-[13px] w-[13px] rounded-full bg-white" />
                   </div>
@@ -113,22 +109,22 @@ export default function TestimonialCarousel() {
                 <img
                   src={t.avatar}
                   alt={t.name}
-                  className="mb-6 h-[139px] w-[139px] rounded-full object-cover z-10"
+                  className="mb-4 sm:mb-6 h-[100px] w-[100px] sm:h-[139px] sm:w-[139px] rounded-full object-cover z-10 border-2 border-accent/40"
                 />
               </div>
               <div
                 key={t.name}
-                className="w-[430px] rounded-2xl border border-white/10 p-10 backdrop-blur-sm"
+                className="w-full rounded-2xl border border-white/10 p-6 sm:p-8 lg:p-10 backdrop-blur-sm"
                 style={{
                   background: "rgba(255,255,255,0.02)",
                 }}
               >
-                <p className="text-base font-normal leading-relaxed text-white/80">
+                <p className="text-sm sm:text-base font-normal leading-relaxed text-white/80">
                   &ldquo;{t.quote}&rdquo;
                 </p>
-                <div className="mt-8">
-                  <p className="text-4xl font-normal text-white">{t.name}</p>
-                  <p className="mt-1 text-[15px] font-normal text-white/50">
+                <div className="mt-6 sm:mt-8">
+                  <p className="text-2xl sm:text-3xl lg:text-4xl font-normal text-white">{t.name}</p>
+                  <p className="mt-1 text-xs sm:text-[15px] font-normal text-white/50">
                     {t.role}
                   </p>
                 </div>
