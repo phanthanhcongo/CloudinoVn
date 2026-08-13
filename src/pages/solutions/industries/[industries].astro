@@ -1,5 +1,12 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return [{ params: { industries: "finance" } }];
+}
+const { industries } = Astro.params;
+
+if (industries !== "finance") Astro.redirect("/solutions");
 ---
 
 <Layout title="Finance | Cloudino">

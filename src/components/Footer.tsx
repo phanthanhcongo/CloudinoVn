@@ -41,8 +41,8 @@ export default function Footer() {
 
           <address className="mt-[50px] block text-base font-normal not-italic text-white/80 mx-auto text-center tracking-tighter">
             <p>Tòa nhà Cloudino, 4/3 Phố Nghĩa Đô, Phường Nghĩa Đô, Hà Nội</p>
-            <p>(+84) 024 22165050</p>
-            <p>hello@18.140.63.179</p>
+            <p>0242 124 4844</p>
+            <p>marketing@cloudino.vn</p>
             <p>8:30AM - 6:00PM</p>
           </address>
         </div>

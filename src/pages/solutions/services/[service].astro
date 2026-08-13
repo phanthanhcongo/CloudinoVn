@@ -6,6 +6,30 @@ export function getStaticPaths() {
   return [{ params: { service: "ai-data" } }];
 }
 
+const cases = [
+  {
+    title:
+      "[ViMeeting+] Ứng dụng tự động hóa quy trình phiên âm và tóm tắt cuộc họp đa ngôn ngữ",
+    subtext:
+      "Làm chủ dữ liệu cuộc họp: Tự động hoá phiên âm và tóm tắt cuộc họp với Generative AI trên AWS",
+    image: "/images/backgrounds/ViMeeting+.jpg",
+  },
+  {
+    title:
+      "MaxcomGroup – Chatbot AI Nâng Tầm Trải Nghiệm Khách Hàng Cho AIGENX",
+    subtext:
+      "Tìm hiểu cách AIGENX tận dụng AWS GenAI để cải thiện tương tác khách hàng, nâng cao độ chính xác phản hồi và mở rộng quy mô linh hoạt mà vẫn đảm bảo bảo mật hàng đầu.",
+    image: "/images/backgrounds/MaxcomGroup.jpg",
+  },
+  {
+    title:
+      "Masan - Bứt Phá Tăng Trưởng, Tiết Kiệm Chi Phí với Hành Trình Chuyển Đổi Lên Đám Mây AWS",
+    subtext:
+      "Masan, một trong những công ty hàng tiêu dùng hàng đầu Việt Nam, đã đối mặt với nhiều thách thức về hạ tầng tại chỗ, bao gồm khả năng mở rộng hạn chế, chi phí cao và sự thiếu linh hoạt. Để giải quyết những vấn đề này, Masan đã hợp tác với Cloudino, đối tác tư vấn AWS hàng đầu tại Việt Nam, để chuyển đổi hệ thống của mình lên đám mây AWS.",
+    image: "/images/backgrounds/Masan.jpg",
+  },
+];
+
 const stats = [
   { value: "1000+", label: "Cloud-based AI/ML and data projects delivery" },
   { value: "200K+", label: "Clients served in AI & Data projects" },
@@ -263,21 +287,23 @@ const stats = [
         </div>
         <div class="grid grid-cols-3 gap-10">
           {
-            Array.from({ length: 3 }, (_, i) => (
-              <a href="/success-stories" class="group w-[480px]">
-                <div class="h-[440px] w-full overflow-hidden rounded-lg">
+            cases.map((item, i) => (
+              <a
+                href={`/success-stories/${i + 1}`}
+                class="group bg-accent/40 p-4 rounded-4xl"
+              >
+                <div class="h-[440px] overflow-hidden rounded-lg">
                   <img
-                    src={`/images/backgrounds/deco-${i + 1}.png`}
+                    src={item.image}
                     alt=""
                     class="h-full w-full object-cover"
                   />
                 </div>
                 <h3 class="mt-4 text-2xl font-bold text-white group-hover:text-primary">
-                  lorem ipsum dolor sit amet consectet adipiscing elit sed diam
+                  {item.title}
                 </h3>
                 <p class="mt-2 text-base font-normal text-white">
-                  lorem ipsum dolor sit amet consectetuer adipiscing elit sed
-                  diam nonummy nibh euismod tincidunt ut
+                  {item.subtext}
                 </p>
                 <div
                   class="mt-6 flex h-[60px] w-[194px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black"

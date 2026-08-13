@@ -1,0 +1,46 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Prose from "../../components/Prose.astro";
+export function getStaticPaths() {
+  return [
+    { params: { stories: "1" } },
+    { params: { stories: "2" } },
+    { params: { stories: "3" } },
+    { params: { stories: "4" } },
+    { params: { stories: "5" } },
+  ];
+}
+
+const { stories } = Astro.params;
+
+const details = Object.values(
+  import.meta.glob("../../success-stories/*.md", { eager: true }),
+);
+
+const page = details.find((page: any) => {
+  return page.frontmatter.id === stories;
+}) as any;
+
+if (!page) return Astro.redirect("/404");
+
+const compiled = await page.compiledContent();
+---
+
+<Layout title="Success Stories">
+  <div class="my-40 mx-auto">
+    <div class="w-full bg-accent/40 p-8 text-center">
+      <h1 class="text-4xl font-bold">
+        {page.frontmatter.name}
+      </h1>
+    </div>
+    <div class="max-w-250 mx-auto my-20 flex flex-col items-center">
+      <div class="p-8 bg-accent rounded-xl">
+        <p class="text-2xl">{page.frontmatter.title}</p>
+        <p class="italic">{page.frontmatter.subtitle}</p>
+      </div>
+      <Prose>
+        <article set:html={compiled} class="w-full" />
+      </Prose>
+    </div>
+  </div></Layout
+>

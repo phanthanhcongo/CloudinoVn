@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Prose from "../../components/Prose.astro";
 export function getStaticPaths() {
   return [
     { params: { position: "devops" } },
@@ -10,15 +11,30 @@ export function getStaticPaths() {
 
 const { position } = Astro.params;
 
-const pages = [
-  {
-    position: "",
-  },
-];
+const details = Object.values(
+  import.meta.glob("../../job-details/*.md", { eager: true }),
+);
 
-const page = pages.find(page => page.position === position);
+const page = details.find((page: any) => {
+  return page.frontmatter.simpleUrl === position;
+}) as any;
 
 if (!page) return Astro.redirect("/404");
+
+const compiled = await page.compiledContent();
 ---
 
-<Layout title="Career" />
+<Layout title="Career">
+  <div class="my-40 max-w-250 mx-auto">
+    <div class="w-full bg-accent/40 border border-accent p-8 rounded-4xl">
+      <h1 class="text-3xl font-bold">
+        {page.frontmatter.title}
+      </h1>
+      <p>Location: Hà Nội</p>
+      <p>Lương: Thỏa thuận theo năng lực</p>
+    </div>
+    <Prose>
+      <article set:html={compiled} />
+    </Prose>
+  </div></Layout
+>
