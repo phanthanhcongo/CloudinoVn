@@ -41,37 +41,39 @@ const stats = [
   <main class="bg-black">
     {/* Hero */}
     <section
-      class="relative flex h-[930px] items-center overflow-hidden bg-black"
+      class="relative flex min-h-[550px] h-auto py-16 sm:py-24 lg:min-h-[850px] items-center overflow-hidden bg-black"
     >
       <img
         src="/images/backgrounds/AICC.gif"
         alt=""
-        class="absolute inset-0 h-full w-full object-cover opacity-30 mix-blend-lighten"
+        class="absolute inset-0 h-full w-full object-cover opacity-20 sm:opacity-50 mix-blend-screen filter brightness-90 sm:brightness-125 pointer-events-none"
       />
       <img
         src="/images/backgrounds/M&M.gif"
         alt=""
-        class="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-lighten"
+        class="absolute inset-0 h-full w-full object-cover opacity-15 sm:opacity-40 mix-blend-screen filter brightness-90 sm:brightness-125 pointer-events-none"
       />
+      {/* Light black overlay layer */}
+      <div class="absolute inset-0 bg-black/20 pointer-events-none z-0" />
       <div
-        class="relative mx-auto w-full max-w-[1920px] px-[285px] text-center"
+        class="relative z-10 mx-auto w-full max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px] text-center"
       >
         <div class="mx-auto max-w-[1519px]">
           <h1
-            class="text-[128px] font-bold leading-none text-transparent bg-clip-text"
-            style="background-image:linear-gradient(45deg,#5B6FF5,#D4CB7B 52.6%,#DA3FF0)"
+            class="text-5xl sm:text-7xl md:text-9xl xl:text-[135px] font-extrabold leading-none text-transparent bg-clip-text tracking-tight uppercase"
+            style="background-image: linear-gradient(90deg, #9bb0d8 0%, #cbd2b8 15%, #ece289 35%, #d4cb7b 50%, #ea98b9 70%, #e877c8 88%, #dd65d8 100%); -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.85);"
           >
             AI & Data
           </h1>
           <p
-            class="mt-6 mx-auto max-w-[740px] text-base font-normal text-white"
+            class="mt-6 mx-auto max-w-[740px] text-sm sm:text-base md:text-xl font-normal text-white/90 leading-relaxed"
           >
             Giúp doanh nghiệp phân tích bài toán theo từng ngành và đánh giá
             toàn diện sự sẵn sàng của dữ liệu, hạ tầng.
           </p>
           <a
             href="/contact"
-            class="mt-8 mx-auto inline-flex h-[60px] w-[201px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black"
+            class="mt-8 mx-auto inline-flex h-[50px] sm:h-[60px] px-8 sm:px-10 items-center justify-center rounded-full border border-purple-400/30 text-base sm:text-xl font-medium tracking-wide text-white backdrop-blur-md transition-all hover:bg-white hover:text-black shadow-[0_0_20px_rgba(168,85,247,0.3)]"
             style="background:rgba(255,255,255,0.05)"
           >
             CONTACT US →
@@ -82,10 +84,10 @@ const stats = [
 
     {/* Tab navigation */}
     <section
-      class="sticky top-[101px] z-30 bg-black/90 backdrop-blur-xl border-b border-white/10"
+      class="sticky top-[70px] sm:top-[90px] md:top-[101px] z-30 bg-black/90 backdrop-blur-xl border-b border-white/10"
     >
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <div class="flex gap-0 justify-center">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <div class="flex overflow-x-auto scrollbar-none gap-2 sm:gap-4 md:gap-6 justify-start md:justify-center py-2 sm:py-0">
           {
             [
               "Story",
@@ -98,7 +100,7 @@ const stats = [
             ].map(tab => (
               <a
                 href={`#${tab.toLowerCase().replace(/\s+/g, "-")}`}
-                class="px-6 py-4 text-2xl font-normal text-white/70 transition-colors hover:text-white border-b-2 border-transparent hover:border-accent"
+                class="px-3 sm:px-6 py-3 sm:py-4 text-sm sm:text-lg md:text-2xl font-normal text-white/70 whitespace-nowrap transition-colors hover:text-white border-b-2 border-transparent hover:border-purple-400"
               >
                 {tab}
               </a>
@@ -109,33 +111,30 @@ const stats = [
     </section>
 
     {/* Stats */}
-    <section class="bg-black py-16">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
+    <section class="bg-black py-12 sm:py-16">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
         <Stats stats={stats} />
 
-        <div class="mt-12 flex flex-col items-center gap-8">
-          <h3 class="text-5xl font-light text-white max-w-[900px] text-center">
+        <div class="mt-8 sm:mt-12 flex flex-col items-center gap-4 sm:gap-8">
+          <h3 class="text-2xl sm:text-4xl lg:text-5xl font-light text-white max-w-[900px] text-center">
             Đối tác được tin chọn bởi hơn 80% doanh nghiệp lớn trong nước
           </h3>
           <p
-            class="text-base font-normal text-white/70 max-w-[406px] text-center"
+            class="text-sm sm:text-base font-normal text-white/70 max-w-[406px] text-center"
           >
             Khẳng định giá trị kinh doanh đột phá dựa trên những dự án thành
             công thực tiễn cùng nền tảng dữ liệu quy mô lớn.
           </p>
         </div>
 
-        <div
-          class="mt-8 flex justify-between"
-          style="marginLeft:'-60px',marginRight:'-60px'"
-        >
+        <div class="mt-8 grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-4 items-center">
           {
             Array.from({ length: 8 }, (_, i) => (
-              <div class="flex h-36 w-110 items-center justify-center">
+              <div class="flex h-24 sm:h-36 w-full items-center justify-center p-2">
                 <img
                   src={`/images/logos-cleaned/${i + 1}.png`}
                   alt=""
-                  class="max-h-full max-w-full object-fit"
+                  class="max-h-full max-w-full object-contain filter brightness-90 hover:brightness-100 transition-all"
                 />
               </div>
             ))
@@ -145,18 +144,18 @@ const stats = [
     </section>
 
     {/* Customer Success Story */}
-    <section class="bg-black py-24">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <div class="flex gap-10">
+    <section class="bg-black py-12 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <div class="flex flex-col lg:flex-row gap-8 lg:gap-10 items-center justify-between">
           <div class="flex-1 max-w-[870px]">
-            <p class="text-base font-normal text-white/70">
+            <p class="text-sm sm:text-base font-normal text-purple-400 uppercase tracking-wider">
               Customer Success Story Global Airline
             </p>
-            <h2 class="mt-2 text-5xl font-light text-white">
+            <h2 class="mt-2 text-2xl sm:text-4xl lg:text-5xl font-light text-white leading-tight">
               Proactively identify hidden attack paths and tangible risks
               through CNAPP-based integrated security governance
             </h2>
-            <p class="mt-4 text-base font-normal text-white/70 max-w-[548px]">
+            <p class="mt-4 text-sm sm:text-base font-normal text-white/70 max-w-[548px] leading-relaxed">
               By connecting dispersed cloud security information into one
               unified view, you can identify security blind spots and attack
               paths across multi-cloud environments at a glance.
@@ -165,36 +164,36 @@ const stats = [
           <img
             src="/images/hero/hero-graphic.png"
             alt=""
-            class="h-[480px] w-[480px] shrink-0 object-contain opacity-60"
+            class="h-[280px] w-[280px] sm:h-[380px] sm:w-[380px] lg:h-[480px] lg:w-[480px] shrink-0 object-contain opacity-70"
           />
         </div>
       </div>
     </section>
 
     {/* Explore Solutions */}
-    <section id="story" class="bg-black py-24">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <div class="mb-8 flex items-center">
-          <h2 class="text-5xl font-light text-white">Explore Solutions</h2>
-          <div class="ml-0 flex-1 border-t border-white/20"></div>
+    <section id="story" class="bg-black py-12 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <div class="mb-8 flex items-center gap-4">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light text-white whitespace-nowrap">Explore Solutions</h2>
+          <div class="flex-1 border-t border-white/20"></div>
         </div>
-        <div class="grid grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
           {
             Array.from({ length: 3 }, (_, i) => (
               <div
-                class="w-[480px] rounded-2xl border border-white/10 p-8 backdrop-blur-sm"
+                class="w-full rounded-2xl border border-white/10 p-6 sm:p-8 backdrop-blur-sm"
                 style="background:rgba(255,255,255,0.02)"
               >
                 <img
                   src={`/images/backgrounds/deco-${i + 1}.png`}
                   alt=""
-                  class="h-[235px] w-[418px] rounded-lg object-cover"
+                  class="h-[180px] sm:h-[235px] w-full rounded-lg object-cover"
                 />
-                <h3 class="mt-4 text-2xl font-normal text-white">
+                <h3 class="mt-4 text-xl sm:text-2xl font-normal text-white leading-snug">
                   lorem ipsum dolor sit amet consectetuer adipiscing elit sed
                   diam nonummy nibh euismod
                 </h3>
-                <p class="mt-2 text-base font-normal text-white/60">
+                <p class="mt-2 text-sm sm:text-base font-normal text-white/60 leading-relaxed">
                   lorem ipsum dolor sit amet consectetuer adipiscing elit sed
                   diam nonummy nibh euismod tincidunt ut lorem ipsum dolor sit
                   amet consectetuer adipiscing elit sed diam nonummy nibh
@@ -208,30 +207,30 @@ const stats = [
     </section>
 
     {/* Framework */}
-    <section id="framework" class="bg-black py-24">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <div class="mb-8 flex items-center">
-          <h2 class="text-5xl font-light text-white">Framework</h2>
-          <div class="ml-0 flex-1 border-t border-white/20"></div>
+    <section id="framework" class="bg-black py-12 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <div class="mb-8 flex items-center gap-4">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light text-white whitespace-nowrap">Framework</h2>
+          <div class="flex-1 border-t border-white/20"></div>
         </div>
-        <div class="grid grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
           {
             ["01", "02", "03"].map((num, i) => (
               <div
-                class="w-[480px] rounded-2xl border border-white/10 p-8 backdrop-blur-sm"
+                class="w-full rounded-2xl border border-white/10 p-6 sm:p-8 backdrop-blur-sm"
                 style="background:rgba(255,255,255,0.02)"
               >
                 <div
-                  class="flex h-[100px] w-[100px] items-center justify-center rounded-full border border-white/10"
+                  class="flex h-[70px] w-[70px] sm:h-[100px] sm:w-[100px] items-center justify-center rounded-full border border-white/10"
                   style="background:rgba(49,46,129,0.2)"
                 >
-                  <span class="text-4xl font-normal text-white">{num}</span>
+                  <span class="text-2xl sm:text-4xl font-normal text-white">{num}</span>
                 </div>
-                <h3 class="mt-6 text-2xl font-normal text-white">
+                <h3 class="mt-6 text-xl sm:text-2xl font-normal text-white leading-snug">
                   lorem ipsum dolor sit amet consectetuer adipiscing elit sed
                   diam nonummy nibh euismod
                 </h3>
-                <p class="mt-2 text-base font-normal text-white/60">
+                <p class="mt-2 text-sm sm:text-base font-normal text-white/60 leading-relaxed">
                   lorem ipsum dolor sit amet consectetuer adipiscing elit sed
                   diam nonummy nibh euismod tincidunt ut
                 </p>
@@ -243,30 +242,30 @@ const stats = [
     </section>
 
     {/* Awards */}
-    <section id="awards" class="bg-black py-24">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <div class="mb-8 flex items-center">
-          <h2 class="text-5xl font-light text-white">Awards</h2>
-          <div class="ml-0 flex-1 border-t border-white/20"></div>
+    <section id="awards" class="bg-black py-12 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <div class="mb-8 flex items-center gap-4">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light text-white whitespace-nowrap">Awards</h2>
+          <div class="flex-1 border-t border-white/20"></div>
         </div>
-        <div class="grid grid-cols-2 gap-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
           {
             Array.from({ length: 2 }, (_, i) => (
               <div
-                class="flex gap-8 rounded-2xl border border-white/10 p-8 backdrop-blur-sm"
+                class="flex flex-col sm:flex-row gap-6 sm:gap-8 rounded-2xl border border-white/10 p-6 sm:p-8 backdrop-blur-sm"
                 style="background:rgba(255,255,255,0.02)"
               >
                 <img
                   src={`/images/backgrounds/deco-${i + 1}.png`}
                   alt=""
-                  class="h-[190px] w-[285px] shrink-0 rounded-lg object-cover"
+                  class="h-[180px] sm:h-[190px] w-full sm:w-[285px] shrink-0 rounded-lg object-cover"
                 />
                 <div>
-                  <h3 class="text-2xl font-normal text-white">
+                  <h3 class="text-xl sm:text-2xl font-normal text-white leading-snug">
                     lorem ipsum dolor sit amet consectetuer adipiscing elit sed
                     diam nonummy nibh euismod
                   </h3>
-                  <p class="mt-2 text-base font-normal text-white/60">
+                  <p class="mt-2 text-sm sm:text-base font-normal text-white/60 leading-relaxed">
                     lorem ipsum dolor sit amet consectetuer adipiscing elit sed
                     diam nonummy nibh euismod tincidunt ut
                   </p>
@@ -279,34 +278,36 @@ const stats = [
     </section>
 
     {/* Case Stories */}
-    <section id="case-stories" class="bg-black py-24">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <div class="mb-8 flex items-center">
-          <h2 class="text-5xl font-light text-white">Case Stories</h2>
-          <div class="ml-0 flex-1 border-t border-white/20"></div>
+    <section id="case-stories" class="bg-black py-12 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <div class="mb-8 flex items-center gap-4">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light text-white whitespace-nowrap">Case Stories</h2>
+          <div class="flex-1 border-t border-white/20"></div>
         </div>
-        <div class="grid grid-cols-3 gap-10">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10">
           {
             cases.map((item, i) => (
               <a
                 href={`/success-stories/${i + 1}`}
-                class="group bg-accent/40 p-4 rounded-4xl"
+                class="group bg-purple-950/30 border border-purple-500/20 p-4 sm:p-6 rounded-3xl transition-all duration-300 hover:border-purple-400/50 hover:bg-purple-900/40 flex flex-col justify-between"
               >
-                <div class="h-[440px] overflow-hidden rounded-lg">
-                  <img
-                    src={item.image}
-                    alt=""
-                    class="h-full w-full object-cover"
-                  />
+                <div>
+                  <div class="h-[220px] sm:h-[300px] lg:h-[360px] overflow-hidden rounded-xl">
+                    <img
+                      src={item.image}
+                      alt=""
+                      class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                  <h3 class="mt-4 text-xl sm:text-2xl font-bold text-white group-hover:text-purple-300 transition-colors">
+                    {item.title}
+                  </h3>
+                  <p class="mt-2 text-sm sm:text-base font-normal text-white/80 line-clamp-3">
+                    {item.subtext}
+                  </p>
                 </div>
-                <h3 class="mt-4 text-2xl font-bold text-white group-hover:text-primary">
-                  {item.title}
-                </h3>
-                <p class="mt-2 text-base font-normal text-white">
-                  {item.subtext}
-                </p>
                 <div
-                  class="mt-6 flex h-[48px] sm:h-[60px] w-[170px] sm:w-[194px] items-center justify-center rounded-full border border-purple-400/50 text-base sm:text-xl font-medium tracking-[-0.5px] text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81] via-[#5b3db5] to-[#7d51d3] hover:bg-white hover:text-[#201048] shadow-[0_0_25px_rgba(168,85,247,0.45)] hover:shadow-[0_0_35px_rgba(168,85,247,0.75)] hover:scale-105 transition-all duration-300"
+                  class="mt-6 flex h-[48px] sm:h-[56px] w-[160px] sm:w-[194px] items-center justify-center rounded-full border border-purple-400/50 text-sm sm:text-lg font-medium tracking-tight text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81] via-[#5b3db5] to-[#7d51d3] hover:bg-white hover:text-[#201048] shadow-[0_0_25px_rgba(168,85,247,0.45)] hover:shadow-[0_0_35px_rgba(168,85,247,0.75)] hover:scale-105 transition-all duration-300"
                 >
                   LEARN MORE →
                 </div>
@@ -318,25 +319,25 @@ const stats = [
     </section>
 
     {/* Insights */}
-    <section id="insight" class="bg-black py-24">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <div class="mb-8 flex items-center">
-          <h2 class="text-5xl font-light text-white">Insights</h2>
-          <div class="ml-0 flex-1 border-t border-white/20"></div>
+    <section id="insight" class="bg-black py-12 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <div class="mb-8 flex items-center gap-4">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light text-white whitespace-nowrap">Insights</h2>
+          <div class="flex-1 border-t border-white/20"></div>
         </div>
-        <div class="grid grid-cols-4 gap-10">
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-10">
           {
             Array.from({ length: 4 }, (_, i) => (
-              <a href="/resources" class="group w-[350px]">
-                <p class="text-base font-normal text-white/50">26/07/2026</p>
-                <div class="mt-4 h-[200px] w-[288px] overflow-hidden rounded-lg">
+              <a href="/resources" class="group w-full">
+                <p class="text-sm font-normal text-white/50">26/07/2026</p>
+                <div class="mt-4 h-[180px] sm:h-[200px] w-full overflow-hidden rounded-lg">
                   <img
                     src={`/images/backgrounds/deco-${i + 1}.png`}
                     alt=""
-                    class="h-full w-full object-cover"
+                    class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <h3 class="mt-4 max-w-[288px] text-xl font-normal text-white group-hover:text-primary">
+                <h3 class="mt-4 text-base sm:text-xl font-normal text-white group-hover:text-purple-300 transition-colors">
                   lorem ipsum dolor sit amet consecte adipiscing elit sed...
                 </h3>
               </a>
@@ -347,11 +348,11 @@ const stats = [
     </section>
 
     {/* FAQ */}
-    <section id="faq" class="bg-black py-24">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <div class="mb-8 flex items-center">
-          <h2 class="text-5xl font-light text-white">FAQ</h2>
-          <div class="ml-0 flex-1 border-t border-white/20"></div>
+    <section id="faq" class="bg-black py-12 sm:py-20 lg:py-24">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <div class="mb-8 flex items-center gap-4">
+          <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light text-white whitespace-nowrap">FAQ</h2>
+          <div class="flex-1 border-t border-white/20"></div>
         </div>
         <div class="space-y-4 max-w-[1520px]">
           {
@@ -360,11 +361,13 @@ const stats = [
                 class="group rounded-2xl border border-white/10 backdrop-blur-sm"
                 style="background:rgba(255,255,255,0.02)"
               >
-                <summary class="flex cursor-pointer items-center justify-between px-8 py-6 text-base font-normal text-white">
-                  lorem ipsum dolor sit amet consectetuer adipiscing elit sed
-                  diam nonummy nibh euismod tincidunt ut
+                <summary class="flex cursor-pointer items-center justify-between px-4 sm:px-8 py-4 sm:py-6 text-sm sm:text-base font-normal text-white">
+                  <span>
+                    lorem ipsum dolor sit amet consectetuer adipiscing elit sed
+                    diam nonummy nibh euismod tincidunt ut
+                  </span>
                   <svg
-                    class="h-5 w-5 shrink-0 transition-transform group-open:rotate-180"
+                    class="h-5 w-5 shrink-0 ml-4 transition-transform group-open:rotate-180"
                     viewBox="0 0 20 20"
                     fill="none"
                     stroke="currentColor"
@@ -373,7 +376,7 @@ const stats = [
                     <path d="M5 7.5L10 12.5L15 7.5" />
                   </svg>
                 </summary>
-                <div class="px-8 pb-6 text-base font-normal text-white/60">
+                <div class="px-4 sm:px-8 pb-4 sm:pb-6 text-sm sm:text-base font-normal text-white/60 leading-relaxed">
                   {i === 1 ? (
                     <p>
                       lorem ipsum dolor sit amet consectetuer adipiscing elit

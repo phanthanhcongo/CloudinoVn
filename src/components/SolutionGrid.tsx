@@ -55,24 +55,22 @@ export default function SolutionGrid() {
       <img
         src="/images/backgrounds/image119.png"
         alt=""
-        className="absolute inset-0 h-full w-full object-cover opacity-30 mix-blend-lighten pointer-events-none"
+        className="absolute inset-0 h-full w-full object-cover opacity-100 mix-blend-screen filter brightness-150 contrast-125 pointer-events-none"
       />
 
       {/* Vibrant Purple Glow Orb centered behind 3D Cubes */}
-      <PurpleOrb className="top-[55%] h-[300px] sm:h-[380px] w-[300px] sm:w-[380px]" blur={130} opacity={0.2} />
+      <PurpleOrb className="top-[55%] h-[350px] sm:h-[450px] w-[350px] sm:w-[450px]" blur={120} opacity={0.6} />
 
       <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-[285px]">
         <SectionHeader title="Explore Solutions" leftPercent={10} />
 
-        {/* Content Area - Orbital Layout on Mobile & Desktop */}
-        <div className="relative h-[520px] sm:h-[640px] lg:h-[780px] flex items-center justify-center my-4 sm:my-0">
-
-
-          {/* 3D Purple Cubes Graphic */}
+        {/* Content Area - Bigger Orbital Layout */}
+        <div className="relative h-[600px] sm:h-[760px] lg:h-[920px] flex items-center justify-center my-4 sm:my-0">
+          {/* 3D Purple Cubes Graphic - Bigger size */}
           <img
             src="/images/hero/hero-graphic.png"
             alt="3D Purple Cubes"
-            className="absolute left-1/2 top-1/2 h-[180px] sm:h-[360px] lg:h-[620px] w-auto max-w-full -translate-x-1/2 -translate-y-1/2 object-contain opacity-35 lg:opacity-100 pointer-events-none transition-transform duration-500 hover:scale-105 z-10"
+            className="absolute left-1/2 top-1/2 h-[220px] sm:h-[440px] lg:h-[720px] w-auto max-w-full -translate-x-1/2 -translate-y-1/2 object-contain opacity-35 lg:opacity-100 pointer-events-none transition-transform duration-500 hover:scale-105 z-10"
             style={{
               filter: "drop-shadow(0 0 35px rgba(168, 85, 247, 0.75)) drop-shadow(0 0 70px rgba(125, 81, 211, 0.5))",
             }}
@@ -82,20 +80,20 @@ export default function SolutionGrid() {
           <div className="absolute inset-0 z-20">
             {solutions.map((s) => {
               const rad = (s.angle * Math.PI) / 180;
-              const left = 50 + 38 * Math.cos(rad);
-              const top = 50 + 38 * Math.sin(rad);
+              const left = 50 + 39 * Math.cos(rad);
+              const top = 50 + 39 * Math.sin(rad);
 
               return (
                 <a
                   href={s.link ? s.link : "/solutions"}
                   key={s.title}
-                  className="absolute text-center lg:text-left transition-all duration-300 hover:scale-110 px-2.5 py-1.5 sm:p-3.5 lg:p-4 rounded-xl backdrop-blur-xl bg-purple-950/60 lg:bg-purple-950/40 border border-purple-500/40 hover:border-purple-400/80 hover:bg-purple-900/70 hover:shadow-[0_0_25px_rgba(168,85,247,0.6)] -translate-x-1/2 -translate-y-1/2 max-w-[110px] sm:max-w-[180px] lg:min-w-[200px]"
+                  className="absolute text-center lg:text-left transition-all duration-300 hover:scale-110 px-3 py-2 sm:p-4 lg:p-4.5 rounded-xl border border-transparent hover:border-purple-400/80 hover:bg-purple-950/70 hover:backdrop-blur-xl hover:shadow-[0_0_25px_rgba(168,85,247,0.6)] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap"
                   style={{ left: `${left}%`, top: `${top}%` }}
                 >
-                  <h3 className="text-xs sm:text-base lg:text-lg font-medium text-white leading-tight">
+                  <h3 className="text-sm sm:text-lg lg:text-2xl font-medium text-white leading-tight whitespace-nowrap">
                     {s.title}
                   </h3>
-                  <p className="hidden sm:block mt-0.5 text-[10px] sm:text-xs text-white/70">
+                  <p className="hidden sm:block mt-1 text-xs sm:text-sm lg:text-base text-white/75 whitespace-nowrap">
                     {s.desc}
                   </p>
                 </a>
@@ -106,7 +104,7 @@ export default function SolutionGrid() {
           {/* Center VIEW ALL Button */}
           <a
             href="/solutions"
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-[38px] sm:h-[48px] lg:h-[54px] px-4 sm:px-8 items-center justify-center rounded-full border border-purple-400/50 text-xs sm:text-base lg:text-lg font-medium tracking-wider text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81] via-[#5b3db5] to-[#7d51d3] hover:bg-white hover:text-[#201048] transition-all duration-300 shadow-[0_0_25px_rgba(168,85,247,0.45)] hover:shadow-[0_0_35px_rgba(168,85,247,0.75)] hover:scale-105 uppercase z-30 whitespace-nowrap"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-[42px] sm:h-[52px] lg:h-[60px] px-6 sm:px-10 items-center justify-center rounded-full border border-purple-400/50 text-xs sm:text-base lg:text-xl font-medium tracking-wider text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81] via-[#5b3db5] to-[#7d51d3] hover:bg-white hover:text-[#201048] transition-all duration-300 shadow-[0_0_25px_rgba(168,85,247,0.45)] hover:shadow-[0_0_35px_rgba(168,85,247,0.75)] hover:scale-105 uppercase z-30 whitespace-nowrap"
           >
             View all →
           </a>

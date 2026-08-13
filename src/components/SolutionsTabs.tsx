@@ -34,16 +34,16 @@ export default function SolutionsTabs() {
   return (
     <>
       {/* Tab buttons */}
-      <section className="relative z-20 bg-transparent -mt-96 py-12">
-        <div className="mx-auto max-w-[1920px] px-[285px]">
-          <div className="flex justify-center gap-[105px]">
+      <section className="relative z-20 bg-transparent -mt-10 sm:-mt-24 md:-mt-36 lg:-mt-52 py-8 sm:py-12">
+        <div className="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 lg:gap-[50px] xl:gap-[105px]">
             {TABS.map(tab => (
               <button
                 key={tab.id}
                 onClick={() => setActive(tab.id)}
-                className={`flex w-[480px] flex-col items-center gap-4 rounded-2xl border p-10 text-center transition-all backdrop-blur-md ${
+                className={`flex w-full max-w-[360px] lg:max-w-[480px] flex-col items-center gap-3 sm:gap-4 rounded-2xl border p-6 sm:p-8 lg:p-10 text-center transition-all backdrop-blur-md cursor-pointer ${
                   active === tab.id
-                    ? "border-accent bg-linear-to-r from-[#312E81] to-accent text-white"
+                    ? "border-accent bg-linear-to-r from-[#312E81] to-accent text-white shadow-[0_0_30px_rgba(125,81,211,0.5)] scale-102"
                     : "border-white/10 text-white/60 hover:border-white/30 hover:text-white"
                 }`}
                 style={
@@ -56,51 +56,45 @@ export default function SolutionsTabs() {
                   <img
                     src={tab.icon}
                     alt=""
-                    className="h-60 w-60 object-contain "
+                    className="h-24 w-24 sm:h-36 sm:w-36 lg:h-52 lg:w-52 object-contain"
                   />
                 </div>
-                <span className="text-4xl font-normal">{tab.label}</span>
-                <p className="max-w-[290px] text-base font-normal opacity-70">
-                  {tab.desc}
-                </p>
+                <span className="text-2xl sm:text-3xl lg:text-4xl font-normal">{tab.label}</span>
+                {tab.desc && (
+                  <p className="max-w-[290px] text-xs sm:text-base font-normal opacity-70">
+                    {tab.desc}
+                  </p>
+                )}
               </button>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Vector 45 arrow connector */}
-      <div className="relative z-10 flex justify-center bg-transparent pb-8">
+      {/* Curved Dashed Arrow Connector - Increased Length */}
+      <div className="relative z-10 hidden md:flex justify-center -ml-56 lg:-ml-[320px] xl:-ml-[420px] -mt-4 sm:-mt-6 lg:-mt-8 mb-4 pointer-events-none">
         <svg
-          width="516"
-          height="148"
-          viewBox="0 0 516 148"
+          width="800"
+          height="220"
+          viewBox="0 0 800 220"
           fill="none"
-          className="h-auto w-full max-w-[516px]"
+          className="h-auto w-full max-w-[800px]"
         >
-          <defs>
-            <linearGradient id="v45Gradient" x1="0" y1="0.5" x2="1" y2="0.5">
-              <stop offset="0%" stopColor="#312E81" />
-              <stop offset="100%" stopColor="#7D51D3" />
-            </linearGradient>
-          </defs>
-          <line
-            x1="20"
-            y1="74"
-            x2="476"
-            y2="74"
-            stroke="url(#v45Gradient)"
-            strokeWidth="3"
-            strokeDasharray="5 5"
-            strokeLinecap="square"
-          />
+          {/* Starting Dot Node */}
+          <circle cx="40" cy="10" r="6" fill="#a855f7" />
+          <circle cx="40" cy="10" r="11" fill="#a855f7" opacity="0.35" />
+
+          {/* Smooth Long Curved Dashed Path */}
           <path
-            d="M476 74L460 60M476 74L460 88"
-            stroke="url(#v45Gradient)"
-            strokeWidth="3"
-            strokeLinecap="square"
-            strokeLinejoin="round"
+            d="M 40 10 C 40 130, 520 60, 520 180"
+            stroke="#a855f7"
+            strokeWidth="2.5"
+            strokeDasharray="6 6"
+            fill="none"
           />
+
+          {/* Downward Arrowhead Triangle */}
+          <polygon points="520,196 512,176 528,176" fill="#a855f7" />
         </svg>
       </div>
 

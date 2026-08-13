@@ -1,3 +1,5 @@
+import PurpleOrb from "./PurpleOrb";
+
 export default function Hero() {
   return (
     <section className="relative flex min-h-[500px] h-[550px] overflow-hidden bg-black sm:h-[700px] md:h-[1150px]">
@@ -9,6 +11,14 @@ export default function Hero() {
         src="/images/backgrounds/image119.png"
         alt=""
         className="absolute inset-0 h-full w-full object-cover mix-blend-lighten"
+      />
+
+      {/* Reusable PurpleOrb glowing behind the sphere */}
+      <PurpleOrb
+        size={300}
+        blur={140}
+        opacity={0.65}
+        className="!top-[240px] sm:!top-[300px] md:!top-[400px]"
       />
 
       {/* Concentric Decorative Rings, Orbs & Dots Container - Centered on Row 1 with Responsive Scaling */}

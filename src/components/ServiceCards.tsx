@@ -27,7 +27,7 @@ export default function ServiceCards() {
   ];
 
   return (
-    <section className="relative z-10 bg-transparent w-full px-4 sm:px-6 lg:px-8">
+    <section className="relative z-10 bg-transparent w-full px-4 sm:px-6 lg:px-8 mb-16 sm:mb-24 lg:mb-32 pb-8 sm:pb-16">
       <div className="mx-auto max-w-[1920px]">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-6 sm:gap-8 lg:gap-[105px]">
           {services.map(s => (

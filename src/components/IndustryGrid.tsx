@@ -17,7 +17,7 @@ export default function IndustryGrid() {
       <img
         src="/images/backgrounds/image119.png"
         alt=""
-        className="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-lighten pointer-events-none"
+        className="absolute inset-0 h-full w-full object-cover opacity-100 mix-blend-screen filter brightness-150 contrast-125 pointer-events-none"
       />
       <div className="absolute top-0 left-0 right-0 h-px bg-white/20" />
       <div className="absolute bottom-0 left-0 right-0 h-px bg-white/20" />
