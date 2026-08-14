@@ -30,7 +30,7 @@ export default function StatsGrid() {
         className="!left-0 !bottom-0 !top-auto -translate-x-1/2 translate-y-1/2"
       />
 
-      <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-[285px]">
+      <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-12 lg:px-16 2xl:px-[285px]">
         <SectionHeader title="Who we are" leftPercent={10} />
 
         {/* Content Section: 3D Graphic + Text */}

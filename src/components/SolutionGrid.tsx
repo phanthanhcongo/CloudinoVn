@@ -61,7 +61,7 @@ export default function SolutionGrid() {
       {/* Vibrant Purple Glow Orb centered behind 3D Cubes */}
       <PurpleOrb className="top-[55%] h-[350px] sm:h-[450px] w-[350px] sm:w-[450px]" blur={120} opacity={0.6} />
 
-      <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-[285px]">
+      <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-12 lg:px-16 2xl:px-[285px]">
         <SectionHeader title="Explore Solutions" leftPercent={10} />
 
         {/* Content Area - Bigger Orbital Layout */}
