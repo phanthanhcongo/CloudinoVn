@@ -104,7 +104,7 @@ export default function Hero() {
               x="465"
               y="120"
               textAnchor="middle"
-              fontFamily="Poppins, sans-serif"
+              fontFamily="'Times New Roman', Times, serif"
               fontWeight="700"
               fontSize="96"
               letterSpacing="-4.8"

@@ -3,7 +3,7 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-  --font-sans: "Poppins", sans-serif;
+  --font-sans: "Times New Roman", Times, serif;
   --color-primary: #3c4097;
   --color-primary-dark: #312e81;
   --color-accent: #7d51d3;
@@ -19,7 +19,7 @@ textarea,
 *,
 *::before,
 *::after {
-  font-family: "Poppins", sans-serif !important;
+  font-family: "Times New Roman", Times, serif !important;
 }
 
 html {
@@ -96,7 +96,7 @@ html {
 
 @keyframes line-sweep-horizontal {
   0% {
-    left: -20%;
+    left: 0%;
     opacity: 0;
   }
 
@@ -109,7 +109,7 @@ html {
   }
 
   100% {
-    left: 120%;
+    left: 100%;
     opacity: 0;
   }
 }
