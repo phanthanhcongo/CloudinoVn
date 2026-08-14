@@ -1,14 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SectionHeader from "../components/SectionHeader";
+import CaseStoriesSection from "../components/CaseStoriesSection.astro";
 import { insights } from "../data/insights";
 ---
 
-<Layout title="Resources & Insights | Cloudino">
+<Layout title="Resources | Cloudino">
   <main class="bg-black">
     {/* Hero Section */}
     <section
-      class="relative flex min-h-[420px] sm:min-h-[550px] lg:h-[700px] items-center justify-center overflow-hidden bg-[#080511]"
+      class="relative flex min-h-[450px] sm:min-h-[600px] md:min-h-[750px] lg:h-[900px] items-center justify-center overflow-hidden bg-[#080511] pt-[80px] md:pt-[100px] pb-12 sm:pb-16"
     >
       {/* Background Vertical Stripes */}
       <div
@@ -25,13 +26,13 @@ import { insights } from "../data/insights";
 
       {/* Glowing Purple Ambient Orb in Center */}
       <div
-        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[200px] w-[200px] sm:h-[320px] sm:w-[320px] md:h-[450px] md:w-[450px] rounded-full bg-gradient-to-tr from-[#312E81] via-[#6D28D9] to-[#EC4899] opacity-40 blur-[80px] pointer-events-none z-0"
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[220px] w-[220px] sm:h-[340px] sm:w-[340px] md:h-[450px] md:w-[450px] lg:h-[520px] lg:w-[520px] rounded-full bg-gradient-to-tr from-[#312E81] via-[#6D28D9] to-[#EC4899] opacity-40 blur-[80px] pointer-events-none z-0"
       >
       </div>
 
       {/* Centered Orbit Ring Container */}
       <div
-        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] sm:w-[520px] sm:h-[520px] md:w-[680px] md:h-[680px] lg:w-[780px] lg:h-[780px] aspect-square pointer-events-none z-10 flex items-center justify-center"
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[320px] h-[320px] sm:w-[480px] sm:h-[480px] md:w-[620px] md:h-[620px] lg:w-[740px] lg:h-[740px] aspect-square pointer-events-none z-10 flex items-center justify-center"
       >
         {/* Dashed Orbit Ring */}
         <div
@@ -59,7 +60,7 @@ import { insights } from "../data/insights";
           <img
             src="/images/resources/nut-3d.png"
             alt="3D Ring Nut"
-            class="h-[85px] w-[85px] sm:h-[145px] sm:w-[145px] md:h-[190px] md:w-[190px] object-contain rotate-[10deg] filter drop-shadow-[0_15px_30px_rgba(125,81,211,0.6)]"
+            class="h-[75px] w-[75px] sm:h-[120px] sm:w-[120px] md:h-[155px] md:w-[155px] lg:h-[180px] lg:w-[180px] object-contain rotate-[10deg] filter drop-shadow-[0_15px_30px_rgba(125,81,211,0.6)]"
           />
         </div>
 
@@ -70,7 +71,7 @@ import { insights } from "../data/insights";
           <img
             src="/images/resources/cone-3d.png"
             alt="3D Cone"
-            class="h-[85px] w-[85px] sm:h-[150px] sm:w-[150px] md:h-[200px] md:w-[200px] object-contain filter drop-shadow-[0_15px_30px_rgba(125,81,211,0.6)]"
+            class="h-[75px] w-[75px] sm:h-[125px] sm:w-[125px] md:h-[160px] md:w-[160px] lg:h-[190px] lg:w-[190px] object-contain filter drop-shadow-[0_15px_30px_rgba(125,81,211,0.6)]"
             style={{ transform: "rotate(120deg)" }}
           />
         </div>
@@ -82,7 +83,7 @@ import { insights } from "../data/insights";
           <img
             src="/images/resources/blob-3d.png"
             alt="3D Liquid Blob"
-            class="h-[90px] w-[90px] sm:h-[155px] sm:w-[155px] md:h-[210px] md:w-[210px] object-contain -rotate-6 filter drop-shadow-[0_15px_30px_rgba(125,81,211,0.6)]"
+            class="h-[80px] w-[80px] sm:h-[130px] sm:w-[130px] md:h-[165px] md:w-[165px] lg:h-[195px] lg:w-[195px] object-contain -rotate-6 filter drop-shadow-[0_15px_30px_rgba(125,81,211,0.6)]"
           />
         </div>
 
@@ -93,7 +94,7 @@ import { insights } from "../data/insights";
           <img
             src="/images/resources/star-3d.png"
             alt="3D Star"
-            class="h-[80px] w-[80px] sm:h-[135px] sm:w-[135px] md:h-[185px] md:w-[185px] object-contain rotate-12 filter drop-shadow-[0_15px_30px_rgba(125,81,211,0.6)]"
+            class="h-[70px] w-[70px] sm:h-[115px] sm:w-[115px] md:h-[150px] md:w-[150px] lg:h-[175px] lg:w-[175px] object-contain rotate-12 filter drop-shadow-[0_15px_30px_rgba(125,81,211,0.6)]"
           />
         </div>
       </div>
@@ -106,23 +107,20 @@ import { insights } from "../data/insights";
           class="text-5xl sm:text-7xl md:text-[88px] lg:text-[104px] font-extrabold tracking-tight text-transparent bg-clip-text select-none leading-none"
           style="background-image: linear-gradient(135deg, #c7d2fe 0%, #e9d5ff 28%, #fef08a 55%, #fbcfe8 78%, #f472b6 100%); filter: drop-shadow(0 0 30px rgba(168,85,247,0.35));"
         >
-          Resources & Insights
+          Resources
         </h1>
-        <p
-          class="mt-4 text-sm sm:text-lg md:text-xl font-normal tracking-wide text-purple-200/80 max-w-xl mx-auto"
-        >
-          Khám phá góc nhìn chuyên gia, cập nhật công nghệ và giải pháp đám mây
-          từ Cloudino
-        </p>
       </div>
     </section>
 
+    {/* Case Stories Section */}
+    <CaseStoriesSection />
+
     {/* Insights Grid Section */}
-    <section class="bg-black py-16 sm:py-24">
+    <section id="insight" class="bg-black pt-4 sm:pt-6 pb-12 sm:pb-20 lg:pb-24">
       <div
         class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-12 lg:px-16 2xl:px-[285px]"
       >
-        <SectionHeader title="Insights" leftPercent={0} />
+        <SectionHeader title="Insights" leftPercent={0} client:load />
 
         <div
           class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"

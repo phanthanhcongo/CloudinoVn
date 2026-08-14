@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import ContactModal from "../components/ContactModal";
 import "../styles/global.css";
 
 export interface Props {
@@ -34,6 +35,7 @@ const {
   <body class="bg-black text-white antialiased font-sans">
     <Header client:load />
     <slot />
+    <ContactModal client:load />
     <!--Start of Tawk.to Script-->
     <script type="text/javascript">
       var Tawk_API = Tawk_API || {},

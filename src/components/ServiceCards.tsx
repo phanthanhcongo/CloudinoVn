@@ -10,7 +10,7 @@ export default function ServiceCards() {
     },
     {
       title: "Digital Ocean",
-      desc: "Cloudino là đối tác chiến lược của DigitalOcean tại Việt Nam — giúp doanh nghiệp triển khai hạ tầng cloud nhanh hơn, với chi phí minh bạch và hỗ trợ thương mại địa phương.",
+      desc: "Cloudino là đối tác chiến lược của DigitalOcean tại Việt\u00A0Nam — giúp doanh nghiệp triển khai hạ tầng cloud nhanh hơn, với chi phí minh bạch và hỗ trợ thương mại địa phương.",
       icon: "/images/services/icon-6.png",
       link: "/solutions/platforms/digital-ocean",
       color: "bg-[#0080FF]/25",
@@ -18,7 +18,7 @@ export default function ServiceCards() {
     },
     {
       title: "Lark",
-      desc: "Cloudino là Đối tác chiến lược bậc Platinum của LarkSuite tại Việt Nam — đồng hành cùng doanh nghiệp kiến tạo không gian làm việc số toàn diện, triển khai nhanh chóng với chi phí minh bạch và dịch vụ hỗ trợ nội địa tận tâm.",
+      desc: "Cloudino là Đối tác chiến lược bậc Platinum của LarkSuite tại Việt\u00A0Nam — đồng hành cùng doanh nghiệp kiến tạo không gian làm việc số toàn diện, triển khai nhanh chóng với chi phí minh bạch và dịch vụ hỗ trợ nội địa tận tâm.",
       icon: "/images/services/icon-7.png",
       link: "/solutions/platforms/lark",
       color: "bg-[#00D6B9]/25",

@@ -1,0 +1,73 @@
+---
+import SectionHeader from "./SectionHeader";
+
+const defaultCases = [
+  {
+    title:
+      "[ViMeeting+] Ứng dụng tự động hóa quy trình phiên âm và tóm tắt cuộc họp đa ngôn ngữ",
+    subtext:
+      "Làm chủ dữ liệu cuộc họp: Tự động hoá phiên âm và tóm tắt cuộc họp với Generative AI trên AWS",
+    image: "/images/backgrounds/ViMeeting+.jpg",
+  },
+  {
+    title:
+      "MaxcomGroup – Chatbot AI Nâng Tầm Trải Nghiệm Khách Hàng Cho AIGENX",
+    subtext:
+      "Tìm hiểu cách AIGENX tận dụng AWS GenAI để cải thiện tương tác khách hàng, nâng cao độ chính xác phản hồi và mở rộng quy mô linh hoạt mà vẫn đảm bảo bảo mật hàng đầu.",
+    image: "/images/backgrounds/MaxcomGroup.jpg",
+  },
+  {
+    title:
+      "Masan - Bứt Phá Tăng Trưởng, Tiết Kiệm Chi Phí với Hành Trình Chuyển Đổi Lên Đám Mây AWS",
+    subtext:
+      "Masan, một trong những công ty hàng tiêu dùng hàng đầu Việt\u00A0Nam, đã đối mặt với nhiều thách thức về hạ tầng tại chỗ, bao gồm khả năng mở rộng hạn chế, chi phí cao và sự thiếu linh hoạt. Để giải quyết những vấn đề này, Masan đã hợp tác với Cloudino, đối tác tư vấn AWS hàng đầu tại Việt\u00A0Nam, để chuyển đổi hệ thống của mình lên đám mây AWS.",
+    image: "/images/backgrounds/Masan.jpg",
+  },
+];
+
+interface Props {
+  title?: string;
+  cases?: typeof defaultCases;
+}
+
+const { title = "Case Stories", cases = defaultCases } = Astro.props;
+---
+
+<section id="case-stories" class="bg-black pt-12 sm:pt-16 lg:pt-20 pb-4 sm:pb-6">
+  <div
+    class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[285px]"
+  >
+    <SectionHeader title={title} leftPercent={0} client:load />
+    <div
+      class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10"
+    >
+      {
+        cases.map((item, i) => (
+          <a
+            href={`/success-stories/${i + 1}`}
+            class="group bg-purple-950/30 border border-purple-500/20 p-4 sm:p-6 rounded-3xl transition-all duration-300 hover:border-purple-400/50 hover:bg-purple-900/40 flex flex-col justify-between"
+          >
+            <div>
+              <div class="h-[200px] sm:h-[260px] lg:h-[300px] overflow-hidden rounded-xl bg-white flex items-center justify-center p-4">
+                <img
+                  src={item.image}
+                  alt=""
+                  class="h-full w-full object-contain group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+              <h3 class="mt-4 text-base sm:text-lg lg:text-xl font-bold text-white group-hover:text-purple-300 transition-colors">
+                {item.title}
+              </h3>
+              <p class="mt-2 text-xs sm:text-sm font-normal text-white/80 line-clamp-3">
+                {item.subtext}
+              </p>
+            </div>
+            <div class="mt-5 flex h-[40px] sm:h-[46px] w-[140px] sm:w-[170px] items-center justify-center rounded-full border border-purple-400/50 text-xs sm:text-sm font-medium tracking-tight text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81] via-[#5b3db5] to-[#7d51d3] hover:bg-white hover:text-[#201048] shadow-[0_0_20px_rgba(168,85,247,0.4)] hover:scale-105 transition-all duration-300">
+              XEM CHI TIẾT →
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>
