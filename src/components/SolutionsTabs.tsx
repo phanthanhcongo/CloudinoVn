@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import IndustryGrid from "./IndustryGrid";
 import SolutionGrid from "./SolutionGrid";
 import ServiceCards from "./ServiceCards";
@@ -26,10 +26,34 @@ const TABS = [
   },
 ] as const;
 
+type TabId = "services" | "platforms" | "industries";
+
 export default function SolutionsTabs() {
-  const [active, setActive] = useState<"services" | "platforms" | "industries">(
-    "services",
-  );
+  const [active, setActive] = useState<TabId>("services");
+
+  useEffect(() => {
+    const updateTabFromUrl = () => {
+      if (typeof window === "undefined") return;
+      const params = new URLSearchParams(window.location.search);
+      const tabParam = params.get("tab") as TabId | null;
+      if (tabParam && ["services", "platforms", "industries"].includes(tabParam)) {
+        setActive(tabParam);
+      }
+    };
+
+    updateTabFromUrl();
+    window.addEventListener("popstate", updateTabFromUrl);
+    return () => window.removeEventListener("popstate", updateTabFromUrl);
+  }, []);
+
+  const handleTabClick = (tabId: TabId) => {
+    setActive(tabId);
+    if (typeof window !== "undefined") {
+      const url = new URL(window.location.href);
+      url.searchParams.set("tab", tabId);
+      window.history.pushState({}, "", url.toString());
+    }
+  };
 
   return (
     <>
@@ -40,7 +64,7 @@ export default function SolutionsTabs() {
             {TABS.map(tab => (
               <button
                 key={tab.id}
-                onClick={() => setActive(tab.id)}
+                onClick={() => handleTabClick(tab.id)}
                 className={`flex w-full max-w-[360px] lg:max-w-[480px] flex-col items-center gap-3 sm:gap-4 rounded-2xl border p-6 sm:p-8 lg:p-10 text-center transition-all backdrop-blur-md cursor-pointer ${
                   active === tab.id
                     ? "border-accent bg-linear-to-r from-[#312E81] to-accent text-white shadow-[0_0_30px_rgba(125,81,211,0.5)] scale-102"

@@ -1,12 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import SectionHeader from "../components/SectionHeader";
+import { insights } from "../data/insights";
 ---
 
-<Layout title="Resources | Cloudino">
+<Layout title="Resources & Insights | Cloudino">
   <main class="bg-black">
     {/* Hero Section */}
     <section
-      class="relative flex min-h-[550px] sm:min-h-[750px] md:h-[930px] items-center justify-center overflow-hidden bg-[#080511]"
+      class="relative flex min-h-[420px] sm:min-h-[550px] lg:h-[700px] items-center justify-center overflow-hidden bg-[#080511]"
     >
       {/* Background Vertical Stripes */}
       <div
@@ -35,7 +37,6 @@ import Layout from "../layouts/Layout.astro";
         <div
           class="absolute left-1/2 top-1/2 h-full w-full rounded-full border border-dashed border-purple-300/40 animate-spin-slow"
         >
-          {/* Connector Dots on Orbit Ring */}
           <div
             class="absolute top-[10%] left-[22%] -translate-x-1/2 -translate-y-1/2 h-4 w-4 rounded-full bg-[#fee2e2] border-2 border-white shadow-[0_0_14px_#ffffff]"
           >
@@ -51,7 +52,6 @@ import Layout from "../layouts/Layout.astro";
         </div>
 
         {/* 3D Floating Objects Anchored Directly On Orbit Ring Curve */}
-        {/* 1. Top-Left Hexagon Nut */}
         <div
           class="absolute top-[30%] left-[4%] -translate-x-1/4 -translate-y-1/4 animate-float"
           style={{ animationDelay: "1s" }}
@@ -63,7 +63,6 @@ import Layout from "../layouts/Layout.astro";
           />
         </div>
 
-        {/* 2. Top-Right Cone */}
         <div
           class="absolute top-[30%] right-[4%] translate-x-1/4 -translate-y-1/4 animate-float"
           style={{ animationDelay: "0s" }}
@@ -76,7 +75,6 @@ import Layout from "../layouts/Layout.astro";
           />
         </div>
 
-        {/* 3. Bottom-Left Liquid Blob */}
         <div
           class="absolute bottom-[4%] left-[4%] -translate-x-1/4 translate-y-1/4 animate-float"
           style={{ animationDelay: "1.5s" }}
@@ -88,7 +86,6 @@ import Layout from "../layouts/Layout.astro";
           />
         </div>
 
-        {/* 4. Bottom-Right 4-Point Star */}
         <div
           class="absolute bottom-[4%] right-[4%] translate-x-1/4 translate-y-1/4 animate-float"
           style={{ animationDelay: "2s" }}
@@ -101,7 +98,7 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
 
-      {/* Center Main Title & Coming Soon Note */}
+      {/* Center Main Title */}
       <div
         class="relative z-10 mx-auto w-full max-w-[1920px] px-4 sm:px-8 md:px-12 lg:px-16 2xl:px-[285px] text-center"
       >
@@ -109,59 +106,51 @@ import Layout from "../layouts/Layout.astro";
           class="text-5xl sm:text-7xl md:text-[88px] lg:text-[104px] font-extrabold tracking-tight text-transparent bg-clip-text select-none leading-none"
           style="background-image: linear-gradient(135deg, #c7d2fe 0%, #e9d5ff 28%, #fef08a 55%, #fbcfe8 78%, #f472b6 100%); filter: drop-shadow(0 0 30px rgba(168,85,247,0.35));"
         >
-          Resources
+          Resources & Insights
         </h1>
-        <p class="mt-4 text-xl sm:text-2xl md:text-3xl font-medium tracking-widest text-purple-200/80 uppercase">
-          Coming Soon
+        <p class="mt-4 text-sm sm:text-lg md:text-xl font-normal tracking-wide text-purple-200/80 max-w-xl mx-auto">
+          Khám phá góc nhìn chuyên gia, cập nhật công nghệ và giải pháp đám mây từ Cloudino
         </p>
       </div>
     </section>
 
-    <!-- <section class="bg-black pb-8">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <div class="flex gap-4">
-          {
-            ["All", "Blog", "New", "Event"].map(tag => (
-              <button class="flex flex-col items-start rounded-full border border-white/20 px-6 py-3 text-white/70 transition-all hover:border-white/40 hover:text-white">
-                <span class="text-2xl font-normal">{tag}</span>
-                <span class="text-base font-normal opacity-50">
-                  Optimize cloud spending
-                </span>
-              </button>
-            ))
-          }
+    {/* Insights Grid Section */}
+    <section class="bg-black py-16 sm:py-24">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-12 lg:px-16 2xl:px-[285px]">
+        <SectionHeader title="Insights" leftPercent={0} />
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          {insights.map((item) => (
+            <a
+              href={`/resources/${item.slug}`}
+              class="group flex flex-col justify-between rounded-3xl border border-purple-500/20 p-5 sm:p-6 bg-purple-950/20 backdrop-blur-sm transition-all duration-300 hover:border-purple-400/60 hover:bg-purple-900/40 hover:-translate-y-1.5 shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
+            >
+              <div>
+                <div class="flex items-center justify-between text-xs text-white/60 mb-3">
+                  <span>{item.date}</span>
+                  <span class="px-2.5 py-0.5 rounded-full bg-purple-900/60 text-purple-300 font-medium border border-purple-400/30">{item.category}</span>
+                </div>
+                <div class="h-[180px] sm:h-[200px] w-full overflow-hidden rounded-2xl bg-purple-950/30">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <h3 class="mt-4 text-base sm:text-lg font-bold text-white group-hover:text-purple-300 transition-colors line-clamp-2">
+                  {item.title}
+                </h3>
+                <p class="mt-2 text-xs sm:text-sm text-white/70 line-clamp-3">
+                  {item.description}
+                </p>
+              </div>
+              <div class="mt-6 flex h-10 w-[140px] items-center justify-center rounded-full border border-purple-400/50 text-xs font-medium text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81] via-[#5b3db5] to-[#7d51d3] group-hover:bg-white group-hover:text-[#201048] shadow-[0_0_15px_rgba(168,85,247,0.3)] transition-all duration-300">
+                XEM CHI TIẾT →
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </section>
-
-    {
-      ["AWS", "Digital Ocean", "Lark"].map(category => (
-        <section class="bg-black py-16">
-          <div class="mx-auto max-w-[1920px] px-[285px]">
-            <div class="mb-8 flex items-center">
-              <h2 class="text-5xl font-light text-white">{category}</h2>
-              <div class="ml-0 flex-1 border-t border-white/20" />
-            </div>
-            <div class="grid grid-cols-4 gap-10">
-              {Array.from({ length: 4 }, (_, i) => (
-                <a href={`/resources/${i + 1}`} class="group w-[350px]">
-                  <p class="text-base font-normal text-white/50">26/07/2026</p>
-                  <div class="mt-4 h-[200px] w-[288px] overflow-hidden rounded-lg">
-                    <img
-                      src={`/images/backgrounds/deco-${(i % 8) + 1}.png`}
-                      alt=""
-                      class="h-full w-full object-cover"
-                    />
-                  </div>
-                  <h3 class="mt-4 max-w-[288px] text-xl font-normal text-white group-hover:text-primary">
-                    lorem ipsum dolor sit amet consecte adipiscing elit sed...
-                  </h3>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
-      ))
-    } -->
   </main>
 </Layout>

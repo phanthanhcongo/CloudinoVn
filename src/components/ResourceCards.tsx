@@ -1,32 +1,21 @@
 import { useEffect, useRef, useState } from "react";
 import SectionHeader from "./SectionHeader";
+import { insights } from "../data/insights";
 
-const baseCards = [
-  {
-    bg: "bg-gradient-to-br from-[#4c1d95] via-[#6d28d9] to-[#8b5cf6]",
-    textColor: "text-white",
-    title: "Lorem ipsum dolor sit amet",
-    image: null,
-  },
-  {
-    bg: "bg-gradient-to-br from-[#fca5a5] via-[#fde68a] via-[#a7f3d0] to-[#93c5fd]",
-    textColor: "text-[#18181b]",
-    title: "Lorem ipsum dolor sit amet",
-    image: "/images/backgrounds/deco-1.png",
-  },
-  {
-    bg: "bg-gradient-to-br from-[#064e3b] via-[#0f172a] via-[#1e1b4b] to-[#4c1d95]",
-    textColor: "text-white",
-    title: "Lorem ipsum dolor sit amet",
-    image: "/images/backgrounds/deco-2.png",
-  },
-  {
-    bg: "bg-white",
-    textColor: "text-[#18181b]",
-    title: "Lorem ipsum dolor sit amet",
-    image: null,
-  },
+const bgVariants = [
+  "bg-gradient-to-br from-[#4c1d95] via-[#6d28d9] to-[#8b5cf6]",
+  "bg-gradient-to-br from-[#1d1442] via-[#2a1f5c] to-[#4c1d95]",
+  "bg-gradient-to-br from-[#064e3b] via-[#0f172a] via-[#1e1b4b] to-[#4c1d95]",
+  "bg-gradient-to-br from-[#1e1b4b] via-[#312e81] to-[#6d28d9]",
 ];
+
+const baseCards = insights.map((item, index) => ({
+  title: item.title,
+  slug: item.slug,
+  image: item.image,
+  bg: bgVariants[index % bgVariants.length],
+  textColor: "text-white",
+}));
 
 export default function ResourceCards() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -162,9 +151,9 @@ export default function ResourceCards() {
                 </div>
                 <a
                   className="absolute -bottom-2 sm:bottom-0 left-1/2 -translate-x-1/2 flex h-[42px] sm:h-[48px] xl:h-[52px] px-6 sm:px-8 items-center justify-center rounded-full border border-purple-400/40 text-xs sm:text-sm xl:text-base font-medium tracking-wider text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81]/90 via-[#5b3db5]/90 to-[#7d51d3]/90 hover:bg-white hover:text-[#201048] transition-all duration-300 shadow-[0_0_20px_rgba(125,81,211,0.4)] hover:shadow-[0_0_30px_rgba(168,85,247,0.7)] hover:scale-105 uppercase whitespace-nowrap z-20"
-                  href="/resources"
+                  href={`/resources/${card.slug}`}
                 >
-                  PRESS RELEASE →
+                  XEM CHI TIẾT →
                 </a>
               </div>
             ))}

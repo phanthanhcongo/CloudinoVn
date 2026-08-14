@@ -1,8 +1,8 @@
 import RotatingRings from "./RotatingRings";
 
-const industries = [
+const industries: Array<{ name: string; x: number; y: number; link?: string }> = [
   { name: "Healthcare", x: 107, y: 0 },
-  { name: "Finance", x: 498, y: 0 },
+  { name: "Finance", x: 498, y: 0, link: "/solutions/industries/finance" },
   { name: "Public Sector", x: 627, y: 169 },
   { name: "Gaming", x: -23, y: 169 },
   { name: "Telco & Media", x: 107, y: 606 },
@@ -110,15 +110,26 @@ export default function IndustryGrid() {
             <div className="absolute left-[815px] top-[391px] h-[19px] w-[19px] rounded-full bg-white/60" />
 
             {/* Industry tags */}
-            {industries.map(ind => (
-              <div
-                key={ind.name}
-                className="absolute flex h-[120px] w-[120px] z-10 items-center justify-center rounded-full border border-white/10 text-center text-base font-normal text-white backdrop-blur-sm bg-linear-to-r from-[#312E81] to-accent opacity-75 select-none"
-                style={{ left: `${ind.x}px`, top: `${ind.y}px` }}
-              >
-                {ind.name}
-              </div>
-            ))}
+            {industries.map(ind =>
+              ind.link ? (
+                <a
+                  href={ind.link}
+                  key={ind.name}
+                  className="absolute flex h-[120px] w-[120px] z-10 items-center justify-center rounded-full border border-white/10 text-center text-base font-normal text-white backdrop-blur-sm bg-linear-to-r from-[#312E81] to-accent opacity-90 select-none hover:scale-110 hover:border-purple-400 hover:shadow-[0_0_25px_rgba(168,85,247,0.6)] transition-all duration-300 cursor-pointer"
+                  style={{ left: `${ind.x}px`, top: `${ind.y}px` }}
+                >
+                  {ind.name}
+                </a>
+              ) : (
+                <div
+                  key={ind.name}
+                  className="absolute flex h-[120px] w-[120px] z-10 items-center justify-center rounded-full border border-white/10 text-center text-base font-normal text-white backdrop-blur-sm bg-linear-to-r from-[#312E81] to-accent opacity-75 select-none cursor-default"
+                  style={{ left: `${ind.x}px`, top: `${ind.y}px` }}
+                >
+                  {ind.name}
+                </div>
+              )
+            )}
 
             {/* Center text */}
             <div className="absolute inset-0 flex items-center justify-center">
@@ -131,7 +142,7 @@ export default function IndustryGrid() {
                   understanding of industry-specific characteristics.
                 </p>
                 <a
-                  href="/solutions/industries"
+                  href="/solutions?tab=platforms"
                   className="mt-6 sm:mt-[30px] inline-flex h-[48px] sm:h-[60px] w-[170px] sm:w-[194px] items-center justify-center rounded-full border border-purple-400/50 text-base sm:text-xl font-medium tracking-[-0.5px] text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81] via-[#5b3db5] to-[#7d51d3] hover:bg-white hover:text-[#201048] shadow-[0_0_25px_rgba(168,85,247,0.45)] hover:shadow-[0_0_35px_rgba(168,85,247,0.75)] hover:scale-105 transition-all duration-300 z-30"
                 >
                   LEARN MORE →

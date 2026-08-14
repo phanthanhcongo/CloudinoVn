@@ -1,0 +1,46 @@
+[
+  {
+    "id": "1",
+    "slug": "huong-dan-tao-van-ban-bang-ai-trong-lark-base",
+    "title": "Hướng Dẫn Tạo Văn Bản Bằng AI Trong Lark Base Cho Doanh Nghiệp",
+    "description": "Bạn muốn tối ưu hóa quy trình làm việc? Bạn muốn tự động hóa việc sáng tạo nội dung? Chức năng tạo văn bản bằng AI trong Lark Base sẽ giúp bạn giải quyết điều đó.",
+    "date": "14/08/2026",
+    "author": "Cloudino Expert",
+    "category": "Lark",
+    "image": "/images/backgrounds/deco-1.png",
+    "contentFile": "huong-dan-tao-van-ban-bang-ai-trong-lark-base.json"
+  },
+  {
+    "id": "2",
+    "slug": "amazon-quick-cho-microsoft-365-4-cach-dot-pha-hieu-suat-ai",
+    "title": "Amazon Quick cho Microsoft 365: 4 Cách Đột Phá Hiệu Suất AI",
+    "description": "Amazon Quick cho Microsoft 365 chính là giải pháp công nghệ mang tính bước ngoặt mà doanh nghiệp của bạn đang tìm kiếm để giải quyết bài toán phân mảnh dữ liệu.",
+    "date": "14/08/2026",
+    "author": "Cloudino Expert",
+    "category": "AWS",
+    "image": "/images/backgrounds/deco-2.png",
+    "contentFile": "amazon-quick-cho-microsoft-365-4-cach-dot-pha-hieu-suat-ai.json"
+  },
+  {
+    "id": "3",
+    "slug": "amazon-bedrock-giup-phat-hien-gian-lan-tai-lieu-trong-90-giay-nhu-the-nao",
+    "title": "Amazon Bedrock Giúp Phát Hiện Gian Lận Tài Liệu Trong 90 Giây Như Thế Nào?",
+    "description": "Trong tài chính và fintech, việc xác minh sao kê ngân hàng, bảng lương, tờ khai thuế hay giấy tờ định danh ngày càng khó khi Generative AI có thể tạo ra những tài liệu giả với độ chân thực cao.",
+    "date": "14/08/2026",
+    "author": "Cloudino Expert",
+    "category": "AWS",
+    "image": "/images/backgrounds/deco-3.png",
+    "contentFile": "amazon-bedrock-giup-phat-hien-gian-lan-tai-lieu-trong-90-giay-nhu-the-nao.json"
+  },
+  {
+    "id": "4",
+    "slug": "kubernetes-digitalocean-spaces-loi-ich-vuot-troi-de-toi-uu-luu-tru",
+    "title": "Kubernetes DigitalOcean Spaces: Lợi Ích Vượt Trội Để Tối Ưu Lưu Trữ",
+    "description": "Hiệu năng và khả năng mở rộng là hai yếu tố then chốt quyết định sự thành công của các ứng dụng chạy trên nền tảng container.",
+    "date": "14/08/2026",
+    "author": "Cloudino Expert",
+    "category": "Digital Ocean",
+    "image": "/images/backgrounds/deco-4.png",
+    "contentFile": "kubernetes-digitalocean-spaces-loi-ich-vuot-troi-de-toi-uu-luu-tru.json"
+  }
+]

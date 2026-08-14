@@ -5,6 +5,7 @@ const solutions = [
   {
     title: "FinOps",
     desc: "Optimize cloud spending",
+    link: "/solutions/services/finops",
     angle: -90,
   },
   {
@@ -16,31 +17,37 @@ const solutions = [
   {
     title: "Security",
     desc: "Protect your cloud environment",
+    link: "/solutions/services/security",
     angle: 0,
   },
   {
     title: "Digital Workplace",
     desc: "Empower modern collaboration",
+    link: "/solutions/services/digital-workplace",
     angle: 45,
   },
   {
     title: "DevOps",
     desc: "Accelerate software delivery",
+    link: "/solutions/services/devops",
     angle: 90,
   },
   {
     title: "Managed Cloud",
     desc: "24/7 monitoring & management",
+    link: "/solutions/services/managed-cloud",
     angle: 135,
   },
   {
     title: "Migration & Modernization",
     desc: "Move workloads with confidence",
+    link: "/solutions/services/migration-modernization",
     angle: 180,
   },
   {
     title: "Cloud Strategy",
     desc: "Planning your cloud journey",
+    link: "/solutions/services/cloud-strategy",
     angle: 225,
   },
 ];
@@ -83,20 +90,34 @@ export default function SolutionGrid() {
               const left = 50 + 39 * Math.cos(rad);
               const top = 50 + 39 * Math.sin(rad);
 
-              return (
-                <a
-                  href={s.link ? s.link : "/solutions"}
-                  key={s.title}
-                  className="absolute text-center lg:text-left transition-all duration-300 hover:scale-110 px-3 py-2 sm:p-4 lg:p-4.5 rounded-xl border border-transparent hover:border-purple-400/80 hover:bg-purple-950/70 hover:backdrop-blur-xl hover:shadow-[0_0_25px_rgba(168,85,247,0.6)] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap"
-                  style={{ left: `${left}%`, top: `${top}%` }}
-                >
+              const content = (
+                <>
                   <h3 className="text-sm sm:text-lg lg:text-2xl font-medium text-white leading-tight whitespace-nowrap">
                     {s.title}
                   </h3>
                   <p className="hidden sm:block mt-1 text-xs sm:text-sm lg:text-base text-white/75 whitespace-nowrap">
                     {s.desc}
                   </p>
+                </>
+              );
+
+              return s.link ? (
+                <a
+                  href={s.link}
+                  key={s.title}
+                  className="absolute text-center lg:text-left transition-all duration-300 hover:scale-110 px-3 py-2 sm:p-4 lg:p-4.5 rounded-xl border border-transparent hover:border-purple-400/80 hover:bg-purple-950/70 hover:backdrop-blur-xl hover:shadow-[0_0_25px_rgba(168,85,247,0.6)] -translate-x-1/2 -translate-y-1/2 whitespace-nowrap cursor-pointer"
+                  style={{ left: `${left}%`, top: `${top}%` }}
+                >
+                  {content}
                 </a>
+              ) : (
+                <div
+                  key={s.title}
+                  className="absolute text-center lg:text-left transition-all duration-300 px-3 py-2 sm:p-4 lg:p-4.5 rounded-xl border border-transparent -translate-x-1/2 -translate-y-1/2 whitespace-nowrap opacity-75 cursor-default"
+                  style={{ left: `${left}%`, top: `${top}%` }}
+                >
+                  {content}
+                </div>
               );
             })}
           </div>

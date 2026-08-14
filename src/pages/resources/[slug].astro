@@ -1,0 +1,32 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import InsightDetail from "../../components/InsightDetail.astro";
+import { insights, insightsArticles } from "../../data/insights";
+
+export function getStaticPaths() {
+  return insights.map((item) => ({
+    params: { slug: item.slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const item = insights.find((i) => i.slug === slug);
+
+if (!item) {
+  return Astro.redirect("/404");
+}
+
+const article = insightsArticles[slug];
+---
+
+<Layout title={`${item.title} | Cloudino Insights`}>
+  <InsightDetail
+    date={item.date}
+    category={item.category}
+    author={item.author}
+    title={item.title}
+    subtitle={item.description}
+    image={item.image}
+    article={article}
+  />
+</Layout>

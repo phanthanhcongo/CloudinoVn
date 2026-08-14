@@ -1,0 +1,202 @@
+{
+  "id": "1",
+  "slug": "huong-dan-tao-van-ban-bang-ai-trong-lark-base",
+  "title": "Hướng Dẫn Tạo Văn Bản Bằng AI Trong Lark Base Cho Doanh Nghiệp",
+  "description": "Bạn muốn tối ưu hóa quy trình làm việc? Bạn muốn tự động hóa việc sáng tạo nội dung? Chức năng tạo văn bản bằng AI trong Lark Base sẽ giúp bạn giải quyết điều đó.",
+  "date": "14/08/2026",
+  "author": "Cloudino Expert",
+  "category": "Lark",
+  "image": "/images/backgrounds/deco-1.png",
+  "intro": "Bạn muốn tối ưu hóa quy trình làm việc? Bạn muốn tự động hóa việc sáng tạo nội dung? Chức năng tạo văn bản bằng AI trong Lark Base sẽ giúp bạn giải quyết điều đó. Tính năng này giúp bạn tóm tắt dữ liệu nhanh chóng. Bạn cũng có thể viết nội dung tự động trong Lark Workflow. Hãy cùng tìm hiểu chi tiết về công cụ tuyệt vời này.",
+  "sections": [
+    {
+      "heading": "Giới Thiệu Tính Năng Tạo Văn Bản Bằng AI Trong Lark Base",
+      "paragraphs": [
+        "Tạo văn bản bằng AI trong Lark Base là một tính năng thông minh. Công cụ này cho phép bạn tạo ra các đoạn văn bản tự động. Dữ liệu đầu vào lấy trực tiếp từ bản ghi của bạn.",
+        "Bạn có thể dùng văn bản AI cho các bước tiếp theo. Ví dụ như gửi tin nhắn hoặc cập nhật bản ghi mới."
+      ],
+      "subsections": [
+        {
+          "subheading": "Các mô hình AI được hỗ trợ",
+          "list": [
+            "AI tích hợp sẵn của Lark Base: Dễ sử dụng, thiết lập nhanh chóng.",
+            "Mô hình OpenAI (GPT): Yêu cầu khóa API riêng. Mô hình này phù hợp cho nhiệm vụ phức tạp."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Hạn Ngạch Và Giới Hạn Sử Dụng AI",
+      "paragraphs": [
+        "Lark quy định hạn ngạch sử dụng dựa trên từng gói dịch vụ. Bạn cần nắm rõ để vận hành quy trình mượt mà."
+      ],
+      "subsections": [
+        {
+          "subheading": "Gói Starter",
+          "list": [
+            "Giới hạn theo ngày: 30.000 lần/ngày.",
+            "Giới hạn theo tháng: 300.000 lần/tháng."
+          ]
+        },
+        {
+          "subheading": "Gói Basic, Pro và Enterprise",
+          "list": [
+            "Giới hạn theo ngày: 200.000 lần/ngày.",
+            "Giới hạn theo tháng: 2.000.000 lần/tháng."
+          ]
+        }
+      ],
+      "note": "Hạn ngạch trên áp dụng cho tính năng AI tích hợp. Các giới hạn này áp dụng chung cho tính năng cập nhật bản ghi bằng AI."
+    },
+    {
+      "heading": "Hướng Dẫn Cấu Hình Tạo Văn Bản Bằng AI Trong Lark Base",
+      "paragraphs": [
+        "Chúng tôi sẽ hướng dẫn bạn cấu hình chi tiết qua từng bước đơn giản dưới đây."
+      ],
+      "steps": [
+        {
+          "step": "Bước 1: Tạo mới một Workflow",
+          "instructions": [
+            "Bạn mở cơ sở dữ liệu Lark Base của mình.",
+            "Nhấp vào nút Workflow ở góc dưới bên trái.",
+            "Chọn Start From Scratch để bắt đầu quy trình mới."
+          ],
+          "shortcut": "[Mở Lark Base] -> [Nhấp Workflow] -> [Chọn Start From Scratch]"
+        },
+        {
+          "step": "Bước 2: Thêm và cấu hình các nút (Nodes)",
+          "instructions": [
+            "Chọn điều kiện kích hoạt (Trigger) phù hợp với nhu cầu. Ví dụ: Bạn chọn When a new record is added.",
+            "Nhấp vào Then do this để thêm hành động.",
+            "Chọn hành động AI-generated text.",
+            "Nếu muốn dùng GPT, hãy chọn AI-generated text (GPT model)."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Cách Thiết Lập Câu Lệnh (Prompt) Chuẩn Xác",
+      "paragraphs": [
+        "Câu lệnh quyết định chất lượng văn bản đầu ra. Do đó, bạn cần thiết lập câu lệnh thật chi tiết."
+      ],
+      "subsections": [
+        {
+          "subheading": "Tích hợp khóa API OpenAI",
+          "instructions": [
+            "Nếu dùng mô hình GPT, bạn cần nhập khóa API.",
+            "Nhấp vào Switch Model ở góc dưới bên trái.",
+            "Chọn mô hình OpenAI mong muốn.",
+            "Nhập khóa API của bạn vào hệ thống."
+          ]
+        },
+        {
+          "subheading": "Nhập câu lệnh và tham chiếu dữ liệu",
+          "instructions": [
+            "Nhập nội dung yêu cầu vào ô Enter prompt.",
+            "Nhấp vào biểu tượng ⊕ để lấy dữ liệu từ bảng.",
+            "Bạn có thể lấy dữ liệu từ các trường trong bản ghi.",
+            "Muốn gộp dữ liệu nhiều bản ghi? Hãy thêm nút Find records trước nút AI."
+          ],
+          "note": "AI không thể tham chiếu tệp đính kèm và mã vạch. Hình ảnh từ máy tính cũng chưa được hỗ trợ."
+        },
+        {
+          "subheading": "Tối ưu hóa câu lệnh tự động (Optimize Prompt)",
+          "instructions": [
+            "Gõ câu lệnh ban đầu vào ô chứa văn bản.",
+            "Nhấp vào nút Optimize ở góc trên bên phải.",
+            "AI sẽ tự động sửa câu lệnh cho rõ ràng hơn.",
+            "Bạn có thể chấp nhận hoặc hủy bỏ câu lệnh mới."
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Chạy Thử Và Kiểm Tra Kết Quả AI",
+      "paragraphs": [
+        "Trước khi kích hoạt, bạn nên thử nghiệm tính năng này. Việc kiểm tra giúp tránh các lỗi không mong muốn."
+      ],
+      "steps": [
+        {
+          "step": "Cách thực hiện chạy thử",
+          "instructions": [
+            "Nhấp vào nút Test Results ở góc dưới bên trái.",
+            "Màn hình sẽ chia làm hai phần rõ rệt:"
+          ],
+          "panels": [
+            {
+              "name": "Bảng cấu hình (Configurations – Bên trái)",
+              "details": [
+                "Hiển thị câu lệnh mà bạn vừa thiết lập.",
+                "Hiển thị phần dữ liệu dùng để thử nghiệm (Data used for testing).",
+                "Nhấp Generate Test Data để đổi nguồn dữ liệu thử.",
+                "Bạn có thể nhập dữ liệu kiểm tra bằng tay."
+              ]
+            },
+            {
+              "name": "Bảng xem trước (Preview – Bên phải)",
+              "details": [
+                "Hiển thị kết quả do AI khởi tạo.",
+                "Nhấp vào Re-generate nếu muốn AI tạo lại văn bản khác."
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "heading": "Sử Dụng Văn Bản AI Cho Các Nút Tiếp Theo",
+      "paragraphs": [
+        "Văn bản AI tạo ra sẽ làm đầu vào cho bước sau. Tính năng này giúp tự động hóa Lark Base toàn diện."
+      ],
+      "example": {
+        "title": "Ví dụ cập nhật bản ghi tự động:",
+        "steps": [
+          "Thêm nút hành động Update record phía sau.",
+          "Tìm đến ô Set record content.",
+          "Nhấp vào biểu tượng ⊕.",
+          "Chọn dữ liệu từ nút AI-generated text in step 2.",
+          "Nhấp Save and Activate để hoàn tất."
+        ]
+      }
+    },
+    {
+      "heading": "Xử Lý Các Lỗi Thường Gặp",
+      "table": [
+        {
+          "error": "The input length exceeds the limit in AI-generate text",
+          "cause": "Câu lệnh dài vượt quá 8.192 ký tự UTF-8",
+          "fix": "Giảm độ dài câu lệnh input"
+        },
+        {
+          "error": "An error occurred in the prompt in AI-generate text",
+          "cause": "Câu lệnh chứa từ ngữ nhạy cảm hoặc vi phạm",
+          "fix": "Chỉnh sửa lại nội dung câu lệnh"
+        },
+        {
+          "error": "The prompt is empty in AI-generate text",
+          "cause": "Ô nhập câu lệnh đang để trống",
+          "fix": "Kiểm tra và nhập câu lệnh hợp lệ"
+        }
+      ]
+    },
+    {
+      "heading": "Lợi Ích Khi Tích Hợp AI Vào Tự Động Hóa Lark Base",
+      "paragraphs": [
+        "Việc ứng dụng tạo văn bản tự động bằng GPT mang lại lợi ích lớn. Doanh nghiệp sẽ tiết kiệm nhiều thời gian vận hành."
+      ],
+      "benefits": [
+        "Tối ưu thời gian: AI làm việc thay con người trong vài giây.",
+        "Giảm thiểu sai sót: Dữ liệu chuẩn xác, không bị nhầm lẫn.",
+        "Tăng hiệu suất: Nhân sự tập trung vào công việc quan trọng hơn.",
+        "Chăm sóc khách hàng tốt hơn: Gửi phản hồi tự động cực nhanh."
+      ]
+    },
+    {
+      "heading": "Kết Luận",
+      "paragraphs": [
+        "Tính năng tạo văn bản bằng AI trong Lark Base cực kỳ mạnh mẽ. Công cụ này giúp doanh nghiệp tối ưu quy trình tự động hóa. Hãy áp dụng ngay hôm nay để nâng cao hiệu suất làm việc.",
+        "Nếu gặp khó khăn, hãy liên hệ bộ phận Lark Support để được hỗ trợ. Chúc bạn thiết lập quy trình thành công!"
+      ]
+    }
+  ]
+}
