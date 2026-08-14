@@ -31,19 +31,290 @@ export function getStaticPaths() {
           desc: "Thành lập đội ngũ chuyên trách, quy trình vận hành chuẩn hóa, đào tạo và chuyển giao tri thức - tạo nên sự thay đổi bền vững từ bên trong.",
         },
       ],
+      faqList: [
+        {
+          question:
+            "Cloud có đáp ứng yêu cầu bảo mật và tuân thủ trong ngành tài chính không?",
+          answer:
+            "Các nền tảng Public Cloud hàng đầu hiện nay đều tuân thủ nghiêm ngặt các tiêu chuẩn bảo mật tài chính quốc tế như PCI-DSS, SOC 2 và ISO 27001. Điều này giúp doanh nghiệp tài chính đảm bảo an toàn dữ liệu và đáp ứng đầy đủ các quy định pháp lý khi triển khai hệ thống trên môi trường Cloud.",
+        },
+        {
+          question:
+            "Làm thế nào để bảo vệ dữ liệu tài chính và thông tin khách hàng trên Cloud?",
+          answer:
+            "Việc áp dụng các lớp bảo mật như mã hóa dữ liệu, quản lý danh tính và quyền truy cập (IAM) giúp bảo vệ thông tin quan trọng khỏi các truy cập trái phép. Bên cạnh đó, các giải pháp tường lửa thế hệ mới và giám sát an ninh 24/7 giúp phát hiện và ngăn chặn kịp thời các rủi ro bảo mật tiềm ẩn.",
+        },
+        {
+          question:
+            "Doanh nghiệp tài chính có thể chuyển hệ thống hiện tại lên Cloud mà không làm gián đoạn hoạt động không?",
+          answer:
+            "Với quy trình migration được lập kế hoạch kỹ lưỡng và chiến lược chuyển đổi từng giai đoạn, doanh nghiệp có thể di chuyển hệ thống lên Cloud mà vẫn duy trì tính liên tục của dịch vụ. Cloudino hỗ trợ đánh giá, xây dựng lộ trình và thực hiện chuyển đổi an toàn, giúp giảm thiểu rủi ro gián đoạn cho hoạt động kinh doanh.",
+        },
+        {
+          question:
+            "Cloud giúp tối ưu chi phí vận hành hệ thống tài chính như thế nào?",
+          answer:
+            "Cloud cho phép doanh nghiệp chuyển đổi từ mô hình đầu tư hạ tầng tốn kém (CAPEX) sang chi phí vận hành linh hoạt (OPEX) dựa trên nhu cầu thực tế sử dụng. Thông qua các công cụ quản trị tài nguyên và FinOps, doanh nghiệp có thể loại bỏ tài nguyên dư thừa, tối ưu hóa cấu hình và kiểm soát chi phí vận hành hiệu quả.",
+        },
+        {
+          question:
+            "AI và Cloud có thể hỗ trợ phát hiện gian lận và quản trị rủi ro tài chính ra sao?",
+          answer:
+            "AI trên nền tảng Cloud có khả năng phân tích khối lượng dữ liệu giao dịch khổng lồ theo thời gian thực để nhận diện các mẫu hành vi bất thường và cảnh báo sớm gian lận. Điều này không chỉ giúp ngăn chặn tổn thất tài chính mà còn hỗ trợ doanh nghiệp quản trị rủi ro hiệu quả hơn nhờ khả năng dự báo chính xác từ dữ liệu.",
+        },
+      ],
     },
     {
       service: "ai-data",
       title: "AI & Data",
       heroDesc:
         "Giúp doanh nghiệp phân tích bài toán theo từng ngành và đánh giá toàn diện sự sẵn sàng của dữ liệu, hạ tầng.",
+      faqList: [
+        {
+          question:
+            "Doanh nghiệp nên bắt đầu hành trình chuyển đổi Cloud từ đâu?",
+          answer:
+            "Doanh nghiệp nên bắt đầu bằng việc đánh giá hệ thống hiện tại, xác định mục tiêu kinh doanh, nhu cầu về hiệu suất, bảo mật và chi phí. Từ đó xây dựng Cloud Roadmap phù hợp thay vì chuyển toàn bộ hệ thống lên Cloud cùng lúc.",
+        },
+        {
+          question: "Có cần chuyển toàn bộ hệ thống lên Cloud không?",
+          answer:
+            "Không nhất thiết. Tùy vào đặc thù hệ thống và yêu cầu vận hành, doanh nghiệp có thể lựa chọn Public Cloud, Private Cloud, Hybrid Cloud hoặc mô hình kết hợp. Một số workload có thể tiếp tục vận hành On-premises trong khi các hệ thống phù hợp được chuyển lên Cloud.",
+        },
+        {
+          question: "Làm thế nào để kiểm soát và tối ưu chi phí Cloud?",
+          answer:
+            "Doanh nghiệp cần theo dõi mức sử dụng tài nguyên, loại bỏ tài nguyên dư thừa, lựa chọn cấu hình phù hợp và thiết lập cơ chế quản trị chi phí. Áp dụng FinOps cũng giúp các nhóm kỹ thuật và kinh doanh kiểm soát chi phí Cloud hiệu quả hơn.",
+        },
+        {
+          question:
+            "Chuyển hệ thống lên Cloud có ảnh hưởng đến hoạt động hiện tại không?",
+          answer:
+            "Nếu có kế hoạch migration phù hợp, quá trình chuyển đổi có thể được triển khai theo từng giai đoạn để hạn chế tối đa gián đoạn. Việc kiểm thử, sao lưu dữ liệu và xây dựng phương án rollback là những bước quan trọng trước khi chuyển đổi chính thức.",
+        },
+        {
+          question: "Cloudino hỗ trợ doanh nghiệp trong những giai đoạn nào?",
+          answer:
+            "Cloudino có thể đồng hành từ đánh giá hệ thống, tư vấn kiến trúc, xây dựng Cloud Roadmap đến migration, triển khai, tối ưu chi phí và vận hành hệ thống Cloud sau triển khai.",
+        },
+      ],
     },
-    { service: "security", title: "Security" },
-    { service: "digital-workplace", title: "Digital Workplace" },
-    { service: "devops", title: "DevOps" },
-    { service: "managed-cloud", title: "Managed Cloud" },
-    { service: "migration-modernization", title: "Migration & Modernization" },
-    { service: "cloud-strategy", title: "Cloud Strategy" },
+    {
+      service: "security",
+      title: "Security",
+      faqList: [
+        {
+          question:
+            "Làm thế nào để bảo vệ dữ liệu và ứng dụng doanh nghiệp trên Cloud?",
+          answer:
+            "Triển khai chiến lược bảo mật nhiều lớp (defense-in-depth), bao gồm mã hóa dữ liệu, quản lý danh tính (IAM) và tường lửa thế hệ mới (WAF/NGFW). Luôn giám sát an ninh 24/7.",
+        },
+        {
+          question:
+            "Doanh nghiệp có thể kiểm soát quyền truy cập vào tài nguyên Cloud như thế nào?",
+          answer:
+            "Sử dụng nguyên tắc đặc quyền tối thiểu (Least Privilege) qua IAM, áp dụng xác thực đa yếu tố (MFA) và kiểm tra định kỳ các chính sách phân quyền truy cập.",
+        },
+        {
+          question:
+            "Cloud Security hỗ trợ đáp ứng các yêu cầu về bảo mật và tuân thủ ra sao?",
+          answer:
+            "Các Cloud Provider cung cấp các chứng chỉ bảo mật toàn cầu (ISO, SOC, PCI-DSS). Doanh nghiệp sử dụng các công cụ tuân thủ tự động để giám sát và báo cáo theo thời gian thực.",
+        },
+        {
+          question:
+            "Làm thế nào để phát hiện và xử lý các mối đe dọa trên môi trường Cloud?",
+          answer:
+            "Sử dụng SIEM và các dịch vụ cảnh báo thông minh để phát hiện bất thường. Thiết lập quy trình phản ứng nhanh (Incident Response) để cô lập và xử lý sự cố ngay lập tức.",
+        },
+        {
+          question:
+            "Trách nhiệm bảo mật giữa doanh nghiệp và Cloud Provider được phân chia như thế nào?",
+          answer:
+            'Áp dụng mô hình "Shared Responsibility". Nhà cung cấp chịu trách nhiệm bảo mật hạ tầng Cloud, còn doanh nghiệp chịu trách nhiệm bảo mật dữ liệu, cấu hình và ứng dụng chạy trên đó.',
+        },
+      ],
+    },
+    {
+      service: "digital-workplace",
+      title: "Digital Workplace",
+      faqList: [
+        {
+          question:
+            "Digital Workplace giúp doanh nghiệp cải thiện hiệu suất làm việc như thế nào?",
+          answer:
+            "Tạo môi trường làm việc linh hoạt, cho phép nhân viên truy cập công cụ và dữ liệu mọi lúc mọi nơi. Tự động hóa các quy trình hành chính để tăng năng suất.",
+        },
+        {
+          question:
+            "Làm thế nào để kết nối nhân viên, dữ liệu và công cụ làm việc trên một môi trường thống nhất?",
+          answer:
+            "Sử dụng các nền tảng cộng tác tích hợp (như Microsoft 365, Google Workspace). Đồng bộ hóa dữ liệu trên Cloud để đảm bảo mọi người luôn có quyền truy cập thông tin mới nhất.",
+        },
+        {
+          question:
+            "Doanh nghiệp có thể bảo vệ dữ liệu khi nhân viên làm việc từ nhiều thiết bị và địa điểm khác nhau như thế nào?",
+          answer:
+            "Áp dụng chính sách quản lý thiết bị di động (MDM), triển khai Zero Trust Network Access và bắt buộc xác thực đa yếu tố (MFA) cho mọi phiên truy cập.",
+        },
+        {
+          question:
+            "AI có thể được tích hợp vào Digital Workplace để hỗ trợ nhân viên ra sao?",
+          answer:
+            "Sử dụng Chatbot để hỗ trợ giải đáp thắc mắc nội bộ, công cụ AI phân tích dữ liệu nhanh và gợi ý quy trình làm việc thông minh để giảm tải công việc thủ công.",
+        },
+        {
+          question:
+            "Làm thế nào để triển khai Digital Workplace mà không làm gián đoạn quy trình làm việc hiện tại?",
+          answer:
+            "Triển khai theo giai đoạn, đào tạo nhân viên bài bản và duy trì song song hệ thống cũ trong giai đoạn chuyển tiếp. Lắng nghe phản hồi để điều chỉnh phù hợp.",
+        },
+      ],
+    },
+    {
+      service: "devops",
+      title: "DevOps",
+      faqList: [
+        {
+          question:
+            "DevOps giúp doanh nghiệp rút ngắn thời gian phát triển và phát hành phần mềm như thế nào?",
+          answer:
+            "Xóa bỏ rào cản giữa đội ngũ phát triển và vận hành. Tự động hóa kiểm thử và triển khai, giúp đưa sản phẩm ra thị trường nhanh hơn và liên tục hơn.",
+        },
+        {
+          question:
+            "CI/CD giúp tự động hóa quy trình phát triển phần mềm ra sao?",
+          answer:
+            "CI (Tích hợp liên tục) giúp gộp code thường xuyên, còn CD (Triển khai liên tục) tự động đẩy code lên môi trường production sau khi vượt qua các bài test tự động.",
+        },
+        {
+          question:
+            "Làm thế nào để đảm bảo tính ổn định và bảo mật trong quy trình DevOps?",
+          answer:
+            "Tích hợp kiểm thử bảo mật vào pipeline (DevSecOps), giám sát tự động và thiết lập quy trình kiểm duyệt (review) nghiêm ngặt trước khi deployment.",
+        },
+        {
+          question:
+            "Doanh nghiệp nên bắt đầu triển khai DevOps từ đâu nếu đang sử dụng quy trình phát triển truyền thống?",
+          answer:
+            "Bắt đầu với việc thay đổi văn hóa làm việc, chọn một dự án nhỏ để làm thử nghiệm (pilot project) và áp dụng công cụ tự động hóa cơ bản trước khi mở rộng.",
+        },
+        {
+          question:
+            "Làm thế nào để theo dõi và tối ưu hiệu suất của ứng dụng sau khi triển khai?",
+          answer:
+            "Sử dụng các công cụ giám sát hiệu suất ứng dụng (APM) và thu thập log. Phân tích dữ liệu người dùng để cải thiện tính năng và tối ưu hóa tài nguyên.",
+        },
+      ],
+    },
+    {
+      service: "managed-cloud",
+      title: "Managed Cloud",
+      faqList: [
+        {
+          question:
+            "Managed Cloud Service bao gồm những hoạt động quản trị và vận hành nào?",
+          answer:
+            "Bao gồm giám sát 24/7, vá lỗi bảo mật, sao lưu dữ liệu, tối ưu hóa hiệu suất và hỗ trợ kỹ thuật chuyên sâu để hệ thống luôn ổn định.",
+        },
+        {
+          question:
+            "Doanh nghiệp có còn cần đội ngũ IT nội bộ khi sử dụng Managed Cloud không?",
+          answer:
+            "Doanh nghiệp vẫn cần đội ngũ IT để quản lý chiến lược kinh doanh và phối hợp với nhà cung cấp, nhưng giảm tải được việc bảo trì hạ tầng hàng ngày.",
+        },
+        {
+          question:
+            "Hệ thống Cloud được giám sát và xử lý sự cố 24/7 như thế nào?",
+          answer:
+            "Thông qua trung tâm điều hành (NOC/SOC) với các hệ thống cảnh báo tự động, đội ngũ chuyên gia sẽ can thiệp ngay khi phát hiện bất thường.",
+        },
+        {
+          question:
+            "Managed Cloud giúp doanh nghiệp tối ưu hiệu suất và độ ổn định của hệ thống ra sao?",
+          answer:
+            "Nhà cung cấp liên tục tinh chỉnh cấu hình dựa trên lưu lượng thực tế, đảm bảo tài nguyên được phân bổ đúng lúc, giúp hệ thống hoạt động ổn định nhất.",
+        },
+        {
+          question:
+            "Làm thế nào để đảm bảo sao lưu, khôi phục và duy trì tính liên tục của hệ thống Cloud?",
+          answer:
+            "Thiết lập quy trình sao lưu định kỳ, kiểm thử khả năng khôi phục (DR) thường xuyên và đảm bảo các giải pháp failover luôn sẵn sàng hoạt động khi cần.",
+        },
+      ],
+    },
+    {
+      service: "migration-modernization",
+      title: "Migration & Modernization",
+      faqList: [
+        {
+          question:
+            "Những hệ thống nào nên được ưu tiên di chuyển lên Cloud trước?",
+          answer:
+            "Ưu tiên các hệ thống ít rủi ro, không phụ thuộc quá nhiều vào hạ tầng cũ hoặc các ứng dụng cần khả năng mở rộng nhanh. Các ứng dụng nội bộ hoặc hệ thống hỗ trợ là bước khởi đầu tốt.",
+        },
+        {
+          question:
+            "Làm thế nào để Migration mà hạn chế tối đa gián đoạn hoạt động kinh doanh?",
+          answer:
+            "Sử dụng chiến lược chuyển đổi từng giai đoạn (phased approach), sao lưu dữ liệu toàn diện và có kế hoạch quay vòng (rollback) chi tiết. Kiểm thử kỹ lưỡng trong môi trường staging trước khi chuyển đổi thật.",
+        },
+        {
+          question:
+            "Doanh nghiệp nên lựa chọn Rehost, Replatform hay Refactor khi hiện đại hóa ứng dụng?",
+          answer:
+            "Rehost nếu cần tốc độ, Replatform để tối ưu hóa nhẹ, và Refactor nếu muốn tận dụng tối đa lợi ích Cloud-native. Lựa chọn phụ thuộc vào ngân sách và mục tiêu dài hạn.",
+        },
+        {
+          question:
+            "Dữ liệu và ứng dụng hiện tại có thể được di chuyển lên Cloud an toàn như thế nào?",
+          answer:
+            "Sử dụng các kênh truyền tải mã hóa (VPN, Direct Connect) và tuân thủ các chính sách bảo mật IAM. Mã hóa dữ liệu ở trạng thái nghỉ (at-rest) và trong quá trình truyền tải (in-transit).",
+        },
+        {
+          question:
+            "Làm thế nào để đánh giá hiệu quả sau khi hoàn tất quá trình Migration & Modernization?",
+          answer:
+            "So sánh các chỉ số về hiệu suất, chi phí vận hành và thời gian phản hồi giữa trước và sau chuyển đổi. Đánh giá mức độ cải thiện trải nghiệm người dùng và khả năng mở rộng.",
+        },
+      ],
+    },
+    {
+      service: "cloud-strategy",
+      title: "Cloud Strategy",
+      faqList: [
+        {
+          question:
+            "Doanh nghiệp nên bắt đầu xây dựng chiến lược Cloud từ đâu?",
+          answer:
+            "Doanh nghiệp nên bắt đầu bằng việc đánh giá hiện trạng hạ tầng và xác định mục tiêu kinh doanh cụ thể. Sau đó, xây dựng lộ trình (Roadmap) phù hợp để đảm bảo tính khả thi và tối ưu chi phí đầu tư.",
+        },
+        {
+          question:
+            "Làm thế nào để lựa chọn mô hình Cloud phù hợp với nhu cầu doanh nghiệp?",
+          answer:
+            "Đánh giá dựa trên yêu cầu về bảo mật, tính linh hoạt, khả năng quản trị và chi phí vận hành. Chọn Public Cloud cho sự linh hoạt, hoặc Hybrid/Private Cloud cho các hệ thống yêu cầu kiểm soát dữ liệu cao.",
+        },
+        {
+          question:
+            "Cloud Strategy cần gắn với mục tiêu kinh doanh như thế nào?",
+          answer:
+            "Chiến lược Cloud phải trực tiếp hỗ trợ tăng trưởng doanh thu, cải thiện trải nghiệm khách hàng và tối ưu hóa vận hành. Mọi triển khai kỹ thuật cần có chỉ số đo lường (KPI) liên quan đến hiệu quả kinh doanh.",
+        },
+        {
+          question:
+            "Làm thế nào để đánh giá mức độ sẵn sàng của hệ thống trước khi chuyển đổi lên Cloud?",
+          answer:
+            'Thực hiện "Cloud Readiness Assessment" để kiểm tra tính tương thích, phụ thuộc của dữ liệu và ứng dụng. Đảm bảo đội ngũ nhân sự đã sẵn sàng về kỹ năng vận hành trên môi trường mới.',
+        },
+        {
+          question:
+            "Doanh nghiệp nên xây dựng Cloud Roadmap theo những giai đoạn nào?",
+          answer:
+            "Lộ trình nên chia thành các giai đoạn: Đánh giá & Lập kế hoạch, Thử nghiệm (Pilot), Chuyển đổi (Migration), Tối ưu hóa (Optimization) và Vận hành bền vững (Managed Services).",
+        },
+      ],
+    },
   ];
 
   return services.map((s) => ({
@@ -53,11 +324,12 @@ export function getStaticPaths() {
       heroDesc: s.heroDesc,
       trustedTitle: s.trustedTitle,
       pillars: s.pillars,
+      faqList: s.faqList,
     },
   }));
 }
 
-const { title, heroDesc, trustedTitle, pillars } = Astro.props;
+const { title, heroDesc, trustedTitle, pillars, faqList = [] } = Astro.props;
 
 const cases = [
   {
@@ -133,35 +405,6 @@ const awardsList = [
   {
     desc: "Khẳng định năng lực chuyên sâu trong việc xây dựng, tối ưu hóa hệ thống dữ liệu lớn và bảo mật theo chuẩn mực quốc tế khắt khe nhất.",
     image: "/images/cert/aws-certified-badges-honeycomb.png",
-  },
-];
-
-const faqList = [
-  {
-    question: "Doanh nghiệp nên bắt đầu hành trình chuyển đổi Cloud từ đâu?",
-    answer:
-      "Doanh nghiệp nên bắt đầu bằng việc đánh giá hệ thống hiện tại, xác định mục tiêu kinh doanh, nhu cầu về hiệu suất, bảo mật và chi phí. Từ đó xây dựng Cloud Roadmap phù hợp thay vì chuyển toàn bộ hệ thống lên Cloud cùng lúc.",
-  },
-  {
-    question: "Có cần chuyển toàn bộ hệ thống lên Cloud không?",
-    answer:
-      "Không nhất thiết. Tùy vào đặc thù hệ thống và yêu cầu vận hành, doanh nghiệp có thể lựa chọn Public Cloud, Private Cloud, Hybrid Cloud hoặc mô hình kết hợp. Một số workload có thể tiếp tục vận hành On-premises trong khi các hệ thống phù hợp được chuyển lên Cloud.",
-  },
-  {
-    question: "Làm thế nào để kiểm soát và tối ưu chi phí Cloud?",
-    answer:
-      "Doanh nghiệp cần theo dõi mức sử dụng tài nguyên, loại bỏ tài nguyên dư thừa, lựa chọn cấu hình phù hợp và thiết lập cơ chế quản trị chi phí. Áp dụng FinOps cũng giúp các nhóm kỹ thuật và kinh doanh kiểm soát chi phí Cloud hiệu quả hơn.",
-  },
-  {
-    question:
-      "Chuyển hệ thống lên Cloud có ảnh hưởng đến hoạt động hiện tại không?",
-    answer:
-      "Nếu có kế hoạch migration phù hợp, quá trình chuyển đổi có thể được triển khai theo từng giai đoạn để hạn chế tối đa gián đoạn. Việc kiểm thử, sao lưu dữ liệu và xây dựng phương án rollback là những bước quan trọng trước khi chuyển đổi chính thức.",
-  },
-  {
-    question: "Cloudino hỗ trợ doanh nghiệp trong những giai đoạn nào?",
-    answer:
-      "Cloudino có thể đồng hành từ đánh giá hệ thống, tư vấn kiến trúc, xây dựng Cloud Roadmap đến migration, triển khai, tối ưu chi phí và vận hành hệ thống Cloud sau triển khai.",
   },
 ];
 ---
@@ -366,7 +609,7 @@ const faqList = [
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10"
         >
           {
-            exploreSolutions.map((item) => (
+            exploreSolutions.map((item: any) => (
               <div
                 class="w-full rounded-2xl border border-white/10 p-6 sm:p-8 backdrop-blur-sm flex flex-col justify-between hover:border-purple-400/50 transition-all duration-300"
                 style="background:rgba(255,255,255,0.02)"
@@ -424,7 +667,7 @@ const faqList = [
             class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8"
           >
             {
-              frameworkSteps.map((item) => (
+              frameworkSteps.map((item: any) => (
                 <div
                   class="group flex flex-col items-center text-center rounded-[28px] border border-purple-500/30 p-8 sm:p-10 backdrop-blur-xl transition-all duration-300 hover:border-purple-400/70 hover:shadow-[0_0_35px_rgba(168,85,247,0.3)] hover:-translate-y-1.5"
                   style="background: linear-gradient(180deg, rgba(46, 18, 68, 0.65) 0%, rgba(20, 8, 32, 0.85) 100%);"
@@ -463,7 +706,7 @@ const faqList = [
         />
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
           {
-            awardsList.map((item) => (
+            awardsList.map((item: any) => (
               <div
                 class="group flex flex-col items-center text-center rounded-[28px] border border-purple-500/30 p-8 sm:p-10 backdrop-blur-xl transition-all duration-300 hover:border-purple-400/70 hover:shadow-[0_0_35px_rgba(168,85,247,0.3)] hover:-translate-y-1.5"
                 style="background: linear-gradient(180deg, rgba(46, 18, 68, 0.65) 0%, rgba(20, 8, 32, 0.85) 100%);"
