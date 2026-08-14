@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden pt-16 pb-10 md:pt-24 md:pb-14" style={{ background: "radial-gradient(ellipse at 50% 40%, #432188 0%, #201048 55%, #0F0728 100%)" }}>
+    <footer className="relative overflow-hidden pt-10 pb-6 sm:pt-16 sm:pb-10 md:pt-24 md:pb-14" style={{ background: "radial-gradient(ellipse at 50% 40%, #432188 0%, #201048 55%, #0F0728 100%)" }}>
       {/* Top accent divider line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-300/30 to-transparent" />
 
@@ -17,7 +17,7 @@ export default function Footer() {
       />
 
       {/* Concentric Decorative Rings, Orbs & Dots Container (Half Circle Arching Up from Bottom) */}
-      <div className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2 scale-[0.55] sm:scale-[0.8] md:scale-100 origin-bottom transition-transform pointer-events-none">
+      <div className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2 scale-[0.35] sm:scale-[0.65] md:scale-100 origin-bottom transition-transform pointer-events-none">
         {/* Glowing gradient center orb at bottom */}
         <div
           className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-50"
@@ -38,15 +38,15 @@ export default function Footer() {
 
       <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-[285px]">
         {/* CLOUDINO Brand Header */}
-        <div className="mb-8 flex justify-center md:mb-14">
-          <span className="text-2xl font-bold tracking-widest text-white md:text-[34px] uppercase drop-shadow-md">
+        <div className="mb-4 sm:mb-8 flex justify-center md:mb-14">
+          <span className="text-lg sm:text-2xl font-bold tracking-widest text-white md:text-[34px] uppercase drop-shadow-md">
             CLOUDINO
           </span>
         </div>
 
         {/* Main Title & Subtitle with Figma Color Gradients */}
         <div className="mx-auto max-w-[1100px] text-center">
-          <h2 className="text-3xl sm:text-5xl md:text-[76px] lg:text-[88px] font-bold leading-[1.08] tracking-tight">
+          <h2 className="text-2xl sm:text-4xl md:text-[76px] lg:text-[88px] font-bold leading-[1.1] tracking-tight">
             <span className="bg-gradient-to-r from-[#FFE580] via-[#FF8A65] to-[#F48FB1] bg-clip-text text-transparent drop-shadow-sm">
               Let&apos;s Connect &
             </span>
@@ -56,22 +56,22 @@ export default function Footer() {
             </span>
           </h2>
 
-          <p className="mt-4 sm:mt-6 text-base sm:text-xl md:text-2xl font-normal text-white/90 max-w-[700px] mx-auto">
+          <p className="mt-2 sm:mt-4 text-xs sm:text-base md:text-2xl font-normal text-white/90 max-w-[700px] mx-auto">
             Connect with us and create change together.
           </p>
 
           {/* Pill CTA Button */}
-          <div className="mt-8 sm:mt-10 flex justify-center">
+          <div className="mt-5 sm:mt-8 flex justify-center">
             <a
               href="/contact"
-              className="inline-flex h-[52px] sm:h-[60px] px-10 items-center justify-center rounded-full border border-white/30 text-base sm:text-lg font-medium text-white backdrop-blur-xl bg-white/10 hover:bg-white hover:text-[#201048] transition-all duration-300 shadow-[0_0_30px_rgba(139,92,246,0.3)] hover:scale-105"
+              className="inline-flex h-[42px] sm:h-[54px] md:h-[60px] px-6 sm:px-10 items-center justify-center rounded-full border border-white/30 text-xs sm:text-base md:text-lg font-medium text-white backdrop-blur-xl bg-white/10 hover:bg-white hover:text-[#201048] transition-all duration-300 shadow-[0_0_30px_rgba(139,92,246,0.3)] hover:scale-105"
             >
               CONTACT →
             </a>
           </div>
 
           {/* Address Info */}
-          <address className="mt-12 sm:mt-16 block text-sm sm:text-base font-normal not-italic text-white/80 mx-auto text-center leading-relaxed max-w-[600px]">
+          <address className="mt-6 sm:mt-10 md:mt-16 block text-xs sm:text-sm md:text-base font-normal not-italic text-white/80 mx-auto text-center leading-relaxed max-w-[600px]">
             <p className="text-white/90">Tòa nhà Cloudino, 4/3 Phố Nghĩa Đô, Phường Nghĩa Đô, Hà Nội</p>
             <p className="mt-1">(+84) 024 22165050</p>
             <p className="mt-1 font-medium text-purple-200">hello@cloudino.vn</p>
@@ -80,8 +80,8 @@ export default function Footer() {
         </div>
 
         {/* Copyright Line */}
-        <div className="mt-12 text-center pt-8 border-t border-white/10">
-          <p className="text-xs font-normal text-white/50">
+        <div className="mt-6 sm:mt-10 md:mt-12 text-center pt-4 sm:pt-6 md:pt-8 border-t border-white/10">
+          <p className="text-[11px] sm:text-xs font-normal text-white/50">
             Copyright 2026 Cloudino. All rights reserved
           </p>
         </div>
