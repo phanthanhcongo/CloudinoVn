@@ -7,7 +7,7 @@
     "date": "14/08/2026",
     "author": "Cloudino Expert",
     "category": "Lark",
-    "image": "/images/backgrounds/deco-1.png",
+    "image": "/images/insight/b1/Copy of ảnh thumb.png",
     "contentFile": "huong-dan-tao-van-ban-bang-ai-trong-lark-base.json"
   },
   {
@@ -18,7 +18,7 @@
     "date": "14/08/2026",
     "author": "Cloudino Expert",
     "category": "AWS",
-    "image": "/images/backgrounds/deco-2.png",
+    "image": "/images/insight/b2/thumb.png",
     "contentFile": "amazon-quick-cho-microsoft-365-4-cach-dot-pha-hieu-suat-ai.json"
   },
   {
@@ -29,7 +29,7 @@
     "date": "14/08/2026",
     "author": "Cloudino Expert",
     "category": "AWS",
-    "image": "/images/backgrounds/deco-3.png",
+    "image": "/images/insight/b3/thumb (1).png",
     "contentFile": "amazon-bedrock-giup-phat-hien-gian-lan-tai-lieu-trong-90-giay-nhu-the-nao.json"
   },
   {
@@ -40,7 +40,7 @@
     "date": "14/08/2026",
     "author": "Cloudino Expert",
     "category": "Digital Ocean",
-    "image": "/images/backgrounds/deco-4.png",
+    "image": "/images/insight/b4/thumb.jpeg",
     "contentFile": "kubernetes-digitalocean-spaces-loi-ich-vuot-troi-de-toi-uu-luu-tru.json"
   }
 ]

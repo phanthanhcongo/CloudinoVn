@@ -6,7 +6,7 @@
   "date": "14/08/2026",
   "author": "Cloudino Expert",
   "category": "AWS",
-  "image": "/images/backgrounds/deco-3.png",
+  "image": "/images/insight/b3/thumb (1).png",
   "intro": "Trong tài chính và fintech, việc xác minh sao kê ngân hàng, bảng lương, tờ khai thuế hay giấy tờ định danh ngày càng khó khi Generative AI có thể tạo ra những tài liệu giả với độ chân thực cao.\n\nĐể giải quyết bài toán này, Inscribe đã tích hợp Amazon Bedrock vào hệ thống phân tích gian lận, kết hợp khả năng suy luận của Foundation Model với các công nghệ xử lý tài liệu và Machine Learning chuyên biệt. Nhờ đó, hệ thống có thể phát hiện các dấu hiệu bất thường trong tài liệu tài chính trong chưa đầy 90 giây.",
   "sections": [
     {

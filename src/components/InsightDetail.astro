@@ -22,13 +22,17 @@ const {
 
 <div class="bg-white text-gray-900 min-h-screen relative font-sans">
   {/* Sticky Floating Social Media Icons on Top Right (Hidden on Mobile) */}
-  <div class="hidden md:flex fixed right-4 lg:right-6 top-44 z-50 flex-col gap-3">
+  <div
+    class="hidden md:flex fixed right-4 lg:right-6 top-44 z-50 flex-col gap-3"
+  >
     <button
       aria-label="Share"
       class="w-10 h-10 rounded-full bg-purple-100 hover:bg-purple-200 text-purple-700 flex items-center justify-center shadow-md transition-all duration-200 hover:scale-110"
     >
       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z"></path>
+        <path
+          d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z"
+        ></path>
       </svg>
     </button>
     <button
@@ -36,7 +40,9 @@ const {
       class="w-10 h-10 rounded-full bg-purple-100 hover:bg-purple-200 text-purple-700 flex items-center justify-center shadow-md transition-all duration-200 hover:scale-110"
     >
       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.5C10 7.01 11.49 5.6 13.78 5.6c1.1 0 2.25.2 2.25.2v2.47h-1.27c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 3h-2.33v6.8c4.56-.93 8-4.96 8-9.8z"></path>
+        <path
+          d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H7.5v-3H10V9.5C10 7.01 11.49 5.6 13.78 5.6c1.1 0 2.25.2 2.25.2v2.47h-1.27c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 3h-2.33v6.8c4.56-.93 8-4.96 8-9.8z"
+        ></path>
       </svg>
     </button>
     <button
@@ -44,17 +50,24 @@ const {
       class="w-10 h-10 rounded-full bg-purple-100 hover:bg-purple-200 text-purple-700 flex items-center justify-center shadow-md transition-all duration-200 hover:scale-110"
     >
       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.05c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.58 8.58 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"></path>
+        <path
+          d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.05c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.58 8.58 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"
+        ></path>
       </svg>
     </button>
   </div>
 
   {/* Top Dark Background Section matching exact Header height */}
   <div class="w-full bg-black relative z-0 h-[66px] md:h-[103px]">
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(125,81,211,0.3)_0%,transparent_75%)] pointer-events-none"></div>
+    <div
+      class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(125,81,211,0.3)_0%,transparent_75%)] pointer-events-none"
+    >
+    </div>
   </div>
 
-  <div class="mx-auto max-w-[1280px] px-4 sm:px-8 lg:px-12 pt-4 sm:pt-6 pb-16 sm:pb-24">
+  <div
+    class="mx-auto max-w-[1280px] px-4 sm:px-8 lg:px-12 pt-4 sm:pt-6 pb-16 sm:pb-24"
+  >
     {/* Back Button */}
     <div class="mb-6 sm:mb-8">
       <a
@@ -71,7 +84,9 @@ const {
       style="background: linear-gradient(135deg, #e6deff 0%, #d8cefc 100%);"
     >
       {/* 3D Glass Graphic centered behind/beside text */}
-      <div class="absolute left-1/2 md:left-[45%] top-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[420px] lg:w-[580px] h-[220px] sm:h-[420px] lg:h-[580px] pointer-events-none opacity-20 sm:opacity-25 mix-blend-multiply z-0">
+      <div
+        class="absolute left-1/2 md:left-[45%] top-1/2 -translate-x-1/2 -translate-y-1/2 w-[220px] sm:w-[420px] lg:w-[580px] h-[220px] sm:h-[420px] lg:h-[580px] pointer-events-none opacity-20 sm:opacity-25 mix-blend-multiply z-0"
+      >
         <img
           src="/images/hero/hero-icon-3.png"
           alt=""
@@ -80,25 +95,37 @@ const {
       </div>
 
       <div class="relative z-10 max-w-4xl">
-        <div class="flex items-center gap-3 text-xs sm:text-sm font-medium text-purple-900 tracking-tight mb-3 sm:mb-6">
+        <div
+          class="flex items-center gap-3 text-xs sm:text-sm font-medium text-purple-900 tracking-tight mb-3 sm:mb-6"
+        >
           <span>{date}</span>
-          {category && (
-            <>
-              <span>•</span>
-              <span class="px-3 py-1 rounded-full bg-purple-200/80 text-purple-900 font-semibold">{category}</span>
-            </>
-          )}
-          {author && (
-            <>
-              <span>•</span>
-              <span class="text-gray-700">{author}</span>
-            </>
-          )}
+          {
+            category && (
+              <>
+                <span>•</span>
+                <span class="px-3 py-1 rounded-full bg-purple-200/80 text-purple-900 font-semibold">
+                  {category}
+                </span>
+              </>
+            )
+          }
+          {
+            author && (
+              <>
+                <span>•</span>
+                <span class="text-gray-700">{author}</span>
+              </>
+            )
+          }
         </div>
-        <h1 class="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-gray-900 leading-[1.2] sm:leading-[1.15] tracking-tight mb-4 sm:mb-8 font-sans">
+        <h1
+          class="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-gray-900 leading-[1.2] sm:leading-[1.15] tracking-tight mb-4 sm:mb-8 font-sans"
+        >
           {title}
         </h1>
-        <p class="text-sm sm:text-base md:text-lg font-normal text-gray-800 leading-relaxed max-w-2xl font-sans">
+        <p
+          class="text-sm sm:text-base md:text-lg font-normal text-gray-800 leading-relaxed max-w-2xl font-sans"
+        >
           {subtitle}
         </p>
       </div>
@@ -106,234 +133,287 @@ const {
 
     {/* Main Article Content Layout */}
     <div class="relative max-w-4xl mx-auto">
-      <div class="w-full font-sans text-gray-800 text-base sm:text-lg leading-relaxed">
+      <div
+        class="w-full font-sans text-gray-800 text-base sm:text-lg leading-relaxed"
+      >
         {/* Intro */}
-        {article?.intro && (
-          <div class="mb-8 space-y-4 text-lg sm:text-xl font-normal text-gray-800 leading-relaxed">
-            {article.intro.split('\n\n').map((p: string) => (
-              <p>{p}</p>
-            ))}
-          </div>
-        )}
+        {
+          article?.intro && (
+            <div class="mb-8 space-y-4 text-lg sm:text-xl font-normal text-gray-800 leading-relaxed">
+              {article.intro.split("\n\n").map((p: string) => (
+                <p>{p}</p>
+              ))}
+            </div>
+          )
+        }
 
         {/* Featured Article Image */}
-        {image && (
-          <div
-            class="my-8 sm:my-14 w-full h-[220px] sm:h-[380px] lg:h-[500px] rounded-2xl sm:rounded-[32px] shadow-xl sm:shadow-2xl border border-purple-100 bg-cover bg-center overflow-hidden"
-            style={`background-image: url('${image}');`}
-          ></div>
-        )}
+        {
+          image && (
+            <div class="my-8 sm:my-14 w-full h-[260px] sm:h-[420px] lg:h-[540px] rounded-2xl sm:rounded-[32px] overflow-hidden shadow-2xl border border-purple-200/40">
+              <img src={image} alt={title} class="w-full h-full object-cover" />
+            </div>
+          )
+        }
 
         {/* Header Related Links (if any) */}
-        {article?.relatedLinksHeader && article.relatedLinksHeader.length > 0 && (
-          <div class="my-6 p-5 rounded-2xl bg-purple-50 border border-purple-200">
-            <p class="font-semibold text-purple-900 mb-2">Xem thêm:</p>
-            <ul class="space-y-2">
-              {article.relatedLinksHeader.map((link: any) => (
-                <li>
-                  <a href={link.url} target="_blank" rel="noopener noreferrer" class="text-purple-700 hover:text-purple-900 underline font-medium inline-flex items-center gap-1.5">
-                    🔗 {link.text}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+        {
+          article?.relatedLinksHeader &&
+            article.relatedLinksHeader.length > 0 && (
+              <div class="my-6 p-5 rounded-2xl bg-purple-50 border border-purple-200">
+                <p class="font-semibold text-purple-900 mb-2">Xem thêm:</p>
+                <ul class="space-y-2">
+                  {article.relatedLinksHeader.map((link: any) => (
+                    <li>
+                      <a
+                        href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-purple-700 hover:text-purple-900 underline font-medium inline-flex items-center gap-1.5"
+                      >
+                        🔗 {link.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
+        }
 
         {/* Sections */}
-        {article?.sections && article.sections.map((section: any) => (
-          <div class="my-10 sm:my-14">
-            {section.heading && (
-              <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
-                {section.heading}
-              </h2>
-            )}
-
-            {section.paragraphs && section.paragraphs.map((p: string) => (
-              <p class="my-4 text-gray-700 leading-relaxed">{p}</p>
-            ))}
-
-            {/* Features / Main Lists */}
-            {(section.features || section.list) && (
-              <ul class="my-6 space-y-3 pl-2">
-                {(section.features || section.list).map((item: string) => (
-                  <li class="flex items-start gap-3 text-gray-700">
-                    <span class="inline-flex h-2 w-2 rounded-full bg-purple-600 mt-2.5 shrink-0"></span>
-                    <span class="flex-1">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            )}
-
-            {/* Subsections */}
-            {section.subsections && section.subsections.map((sub: any) => (
-              <div class="my-8 pl-0 sm:pl-4 border-l-0 sm:border-l-2 border-purple-200">
-                {sub.subheading && (
-                  <h3 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 tracking-tight">
-                    {sub.subheading}
-                  </h3>
+        {
+          article?.sections &&
+            article.sections.map((section: any) => (
+              <div class="my-10 sm:my-14">
+                {section.heading && (
+                  <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-6 tracking-tight leading-tight">
+                    {section.heading}
+                  </h2>
                 )}
 
-                {sub.paragraphs && sub.paragraphs.map((p: string) => (
-                  <p class="my-3 text-gray-700 leading-relaxed">{p}</p>
-                ))}
+                {section.paragraphs &&
+                  section.paragraphs.map((p: string) => (
+                    <p class="my-4 text-gray-700 leading-relaxed">{p}</p>
+                  ))}
 
-                {sub.list && (
-                  <ul class="my-4 space-y-2.5 pl-2">
-                    {sub.list.map((item: string) => (
+                {/* Features / Main Lists */}
+                {(section.features || section.list) && (
+                  <ul class="my-6 space-y-3 pl-2">
+                    {(section.features || section.list).map((item: string) => (
                       <li class="flex items-start gap-3 text-gray-700">
-                        <span class="inline-flex h-2 w-2 rounded-full bg-purple-500 mt-2.5 shrink-0"></span>
+                        <span class="inline-flex h-2 w-2 rounded-full bg-purple-600 mt-2.5 shrink-0" />
                         <span class="flex-1">{item}</span>
                       </li>
                     ))}
                   </ul>
                 )}
 
-                {sub.instructions && (
-                  <ol class="my-4 space-y-2 pl-6 list-decimal text-gray-700">
-                    {sub.instructions.map((inst: string) => (
-                      <li class="pl-1">{inst}</li>
-                    ))}
-                  </ol>
-                )}
+                {/* Subsections */}
+                {section.subsections &&
+                  section.subsections.map((sub: any) => (
+                    <div class="my-8 pl-0 sm:pl-4 border-l-0 sm:border-l-2 border-purple-200">
+                      {sub.subheading && (
+                        <h3 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-4 tracking-tight">
+                          {sub.subheading}
+                        </h3>
+                      )}
 
-                {sub.note && (
-                  <div class="my-4 p-4 rounded-xl bg-amber-50 border-l-4 border-amber-400 text-amber-900 text-sm sm:text-base font-normal">
-                    {sub.note}
-                  </div>
-                )}
-
-                {sub.relatedLinks && sub.relatedLinks.map((link: any) => (
-                  <div class="my-3">
-                    <a href={link.url} target="_blank" rel="noopener noreferrer" class="text-purple-700 hover:text-purple-900 underline font-medium inline-flex items-center gap-1.5">
-                      📌 {link.text}
-                    </a>
-                  </div>
-                ))}
-              </div>
-            ))}
-
-            {/* Steps */}
-            {section.steps && (
-              <div class="my-8 space-y-6">
-                {section.steps.map((stepItem: any) => (
-                  <div class="p-6 rounded-2xl bg-purple-50/60 border border-purple-100 shadow-sm">
-                    <h4 class="text-lg sm:text-xl font-bold text-purple-950 mb-3">
-                      {stepItem.step}
-                    </h4>
-                    {stepItem.instructions && (
-                      <ul class="space-y-2 text-gray-700">
-                        {stepItem.instructions.map((inst: string) => (
-                          <li class="flex items-start gap-2">
-                            <span class="text-purple-600 font-bold">•</span>
-                            <span>{inst}</span>
-                          </li>
+                      {sub.paragraphs &&
+                        sub.paragraphs.map((p: string) => (
+                          <p class="my-3 text-gray-700 leading-relaxed">{p}</p>
                         ))}
-                      </ul>
-                    )}
-                    {stepItem.shortcut && (
-                      <div class="mt-3 p-3 rounded-lg bg-white border border-purple-200 text-purple-900 font-mono text-xs sm:text-sm">
-                        {stepItem.shortcut}
-                      </div>
-                    )}
-                    {stepItem.panels && (
-                      <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {stepItem.panels.map((panel: any) => (
-                          <div class="p-4 rounded-xl bg-white border border-purple-200">
-                            <p class="font-bold text-purple-900 mb-2">{panel.name}</p>
-                            <ul class="space-y-1.5 text-xs sm:text-sm text-gray-700">
-                              {panel.details.map((detail: string) => (
-                                <li>• {detail}</li>
-                              ))}
-                            </ul>
+
+                      {sub.list && (
+                        <ul class="my-4 space-y-2.5 pl-2">
+                          {sub.list.map((item: string) => (
+                            <li class="flex items-start gap-3 text-gray-700">
+                              <span class="inline-flex h-2 w-2 rounded-full bg-purple-500 mt-2.5 shrink-0" />
+                              <span class="flex-1">{item}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+
+                      {sub.instructions && (
+                        <ol class="my-4 space-y-2 pl-6 list-decimal text-gray-700">
+                          {sub.instructions.map((inst: string) => (
+                            <li class="pl-1">{inst}</li>
+                          ))}
+                        </ol>
+                      )}
+
+                      {sub.note && (
+                        <div class="my-4 p-4 rounded-xl bg-amber-50 border-l-4 border-amber-400 text-amber-900 text-sm sm:text-base font-normal">
+                          {sub.note}
+                        </div>
+                      )}
+
+                      {sub.relatedLinks &&
+                        sub.relatedLinks.map((link: any) => (
+                          <div class="my-3">
+                            <a
+                              href={link.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              class="text-purple-700 hover:text-purple-900 underline font-medium inline-flex items-center gap-1.5"
+                            >
+                              📌 {link.text}
+                            </a>
                           </div>
                         ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            )}
-
-            {/* Tables */}
-            {section.table && (
-              <div class="my-8 overflow-x-auto rounded-2xl border border-purple-200 shadow-sm">
-                <table class="w-full text-left text-sm sm:text-base border-collapse">
-                  <thead>
-                    <tr class="bg-purple-900 text-white font-semibold">
-                      {Object.keys(section.table[0]).map((key) => (
-                        <th class="p-4 capitalize">
-                          {key.replace(/([A-Z])/g, ' $1').trim()}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                  <tbody class="divide-y divide-purple-100 bg-white">
-                    {section.table.map((row: any, idx: number) => (
-                      <tr class={idx % 2 === 0 ? "bg-white" : "bg-purple-50/30"}>
-                        {Object.values(row).map((val: any) => (
-                          <td class="p-4 font-normal text-gray-800">{val}</td>
-                        ))}
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            )}
-
-            {/* Example Box */}
-            {section.example && (
-              <div class="my-6 p-6 rounded-2xl bg-indigo-50 border border-indigo-200">
-                <p class="font-bold text-indigo-950 mb-3">{section.example.title}</p>
-                <ol class="space-y-2 pl-5 list-decimal text-gray-700">
-                  {section.example.steps.map((st: string) => (
-                    <li>{st}</li>
+                    </div>
                   ))}
-                </ol>
-              </div>
-            )}
 
-            {/* Benefits */}
-            {section.benefits && (
-              <div class="my-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                {section.benefits.map((b: string) => (
-                  <div class="p-4 rounded-xl bg-purple-50 border border-purple-100 flex items-start gap-3">
-                    <span class="text-purple-600 text-xl font-bold">✓</span>
-                    <span class="text-gray-800 font-medium text-sm sm:text-base">{b}</span>
+                {/* Steps */}
+                {section.steps && (
+                  <div class="my-8 space-y-6">
+                    {section.steps.map((stepItem: any) => (
+                      <div class="p-6 rounded-2xl bg-purple-50/60 border border-purple-100 shadow-sm">
+                        <h4 class="text-lg sm:text-xl font-bold text-purple-950 mb-3">
+                          {stepItem.step}
+                        </h4>
+                        {stepItem.instructions && (
+                          <ul class="space-y-2 text-gray-700">
+                            {stepItem.instructions.map((inst: string) => (
+                              <li class="flex items-start gap-2">
+                                <span class="text-purple-600 font-bold">•</span>
+                                <span>{inst}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                        {stepItem.shortcut && (
+                          <div class="mt-3 p-3 rounded-lg bg-white border border-purple-200 text-purple-900 font-mono text-xs sm:text-sm">
+                            {stepItem.shortcut}
+                          </div>
+                        )}
+                        {stepItem.panels && (
+                          <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                            {stepItem.panels.map((panel: any) => (
+                              <div class="p-4 rounded-xl bg-white border border-purple-200">
+                                <p class="font-bold text-purple-900 mb-2">
+                                  {panel.name}
+                                </p>
+                                <ul class="space-y-1.5 text-xs sm:text-sm text-gray-700">
+                                  {panel.details.map((detail: string) => (
+                                    <li>• {detail}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
-            )}
+                )}
 
-            {/* Notes */}
-            {section.notes && section.notes.map((note: string) => (
-              <div class="my-4 p-4 rounded-xl bg-purple-50 border-l-4 border-purple-500 text-purple-950 font-normal">
-                {note}
-              </div>
-            ))}
-
-            {/* Section Related Links */}
-            {section.relatedLinks && (
-              <div class="my-6 space-y-2">
-                <p class="font-bold text-gray-900">Đọc thêm:</p>
-                {section.relatedLinks.map((link: any) => (
-                  <div>
-                    <a href={link.url} target="_blank" rel="noopener noreferrer" class="text-purple-700 hover:text-purple-900 underline font-medium inline-flex items-center gap-1.5">
-                      👉 {link.text}
-                    </a>
+                {/* Tables */}
+                {section.table && (
+                  <div class="my-8 overflow-x-auto rounded-2xl border border-purple-200 shadow-sm">
+                    <table class="w-full text-left text-sm sm:text-base border-collapse">
+                      <thead>
+                        <tr class="bg-purple-900 text-white font-semibold">
+                          {Object.keys(section.table[0]).map((key) => (
+                            <th class="p-4 capitalize">
+                              {key.replace(/([A-Z])/g, " $1").trim()}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                      <tbody class="divide-y divide-purple-100 bg-white">
+                        {section.table.map((row: any, idx: number) => (
+                          <tr
+                            class={
+                              idx % 2 === 0 ? "bg-white" : "bg-purple-50/30"
+                            }
+                          >
+                            {Object.values(row).map((val: any) => (
+                              <td class="p-4 font-normal text-gray-800">
+                                {val}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
                   </div>
-                ))}
+                )}
+
+                {/* Example Box */}
+                {section.example && (
+                  <div class="my-6 p-6 rounded-2xl bg-indigo-50 border border-indigo-200">
+                    <p class="font-bold text-indigo-950 mb-3">
+                      {section.example.title}
+                    </p>
+                    <ol class="space-y-2 pl-5 list-decimal text-gray-700">
+                      {section.example.steps.map((st: string) => (
+                        <li>{st}</li>
+                      ))}
+                    </ol>
+                  </div>
+                )}
+
+                {/* Benefits */}
+                {section.benefits && (
+                  <div class="my-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {section.benefits.map((b: string) => (
+                      <div class="p-4 rounded-xl bg-purple-50 border border-purple-100 flex items-start gap-3">
+                        <span class="text-purple-600 text-xl font-bold">✓</span>
+                        <span class="text-gray-800 font-medium text-sm sm:text-base">
+                          {b}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Notes */}
+                {section.notes &&
+                  section.notes.map((note: string) => (
+                    <div class="my-4 p-4 rounded-xl bg-purple-50 border-l-4 border-purple-500 text-purple-950 font-normal">
+                      {note}
+                    </div>
+                  ))}
+
+                {/* Section Related Links */}
+                {section.relatedLinks && (
+                  <div class="my-6 space-y-2">
+                    <p class="font-bold text-gray-900">Đọc thêm:</p>
+                    {section.relatedLinks.map((link: any) => (
+                      <div>
+                        <a
+                          href={link.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="text-purple-700 hover:text-purple-900 underline font-medium inline-flex items-center gap-1.5"
+                        >
+                          👉 {link.text}
+                        </a>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-        ))}
+            ))
+        }
       </div>
     </div>
   </div>
 </div>
 
 <style>
-  div, h1, h2, h3, h4, p, span, li, strong, em, article {
-    font-family: 'Poppins', sans-serif !important;
+  div,
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  span,
+  li,
+  strong,
+  em,
+  article {
+    font-family: "Poppins", sans-serif !important;
   }
 </style>

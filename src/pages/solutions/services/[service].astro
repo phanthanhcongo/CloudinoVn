@@ -6,8 +6,37 @@ import { insights } from "../../../data/insights";
 
 export function getStaticPaths() {
   const services = [
-    { service: "finops", title: "FinOps" },
-    { service: "ai-data", title: "AI & Data" },
+    {
+      service: "finops",
+      title: "FinOps",
+      heroDesc:
+        "Cloudino thúc đẩy quá trình chuyển đổi số trong lĩnh vực tài chính, tăng cường tính tuân thủ và bảo mật, đồng thời mang đến những trải nghiệm đột phá cho khách hàng.",
+      trustedTitle: "Đối tác Tin cậy cho Chuyển đổi Số ngành Tài chính",
+      pillars: [
+        {
+          title: "Minh bạch và phân bổ chi phí",
+          desc: "Xây dựng nguồn dữ liệu đáng tin cậy, cung cấp báo cáo trực quan và triển khai chiến lược gắn thẻ thông minh — đảm bảo minh bạch chi phí toàn diện.",
+        },
+        {
+          title: "Tối ưu hóa Chi phí & Hiệu năng",
+          desc: "Rightsizing, quản lý tài nguyên nhàn rỗi, tối ưu hóa hợp đồng (Savings Plans, RI, CUDs), tái kiến trúc hiệu quả – đảm bảo hiệu suất tối đa với chi phí tối thiểu.",
+        },
+        {
+          title: "Quản trị & Kiểm soát Chủ động",
+          desc: "Quản lý ngân sách thông minh, dự báo AI/ML, thực thi chính sách tự động (SCPs, Cloud Custodian) – kiểm soát chặt chẽ, ngăn ngừa lãng phí.",
+        },
+        {
+          title: "Xây dựng văn hóa & đội ngũ",
+          desc: "Thành lập đội ngũ chuyên trách, quy trình vận hành chuẩn hóa, đào tạo và chuyển giao tri thức - tạo nên sự thay đổi bền vững từ bên trong.",
+        },
+      ],
+    },
+    {
+      service: "ai-data",
+      title: "AI & Data",
+      heroDesc:
+        "Giúp doanh nghiệp phân tích bài toán theo từng ngành và đánh giá toàn diện sự sẵn sàng của dữ liệu, hạ tầng.",
+    },
     { service: "security", title: "Security" },
     { service: "digital-workplace", title: "Digital Workplace" },
     { service: "devops", title: "DevOps" },
@@ -18,11 +47,16 @@ export function getStaticPaths() {
 
   return services.map((s) => ({
     params: { service: s.service },
-    props: { title: s.title },
+    props: {
+      title: s.title,
+      heroDesc: s.heroDesc,
+      trustedTitle: s.trustedTitle,
+      pillars: s.pillars,
+    },
   }));
 }
 
-const { title } = Astro.props;
+const { title, heroDesc, trustedTitle, pillars } = Astro.props;
 
 const cases = [
   {
@@ -160,10 +194,12 @@ const faqList = [
             {title}
           </h1>
           <p
-            class="mt-4 mx-auto max-w-[680px] text-xs sm:text-sm md:text-base lg:text-lg font-normal text-white/90 leading-relaxed"
+            class="mt-4 mx-auto max-w-[780px] text-xs sm:text-sm md:text-base lg:text-lg font-normal text-white/90 leading-relaxed"
           >
-            Giúp doanh nghiệp phân tích bài toán theo từng ngành và đánh giá
-            toàn diện sự sẵn sàng của dữ liệu, hạ tầng.
+            {
+              heroDesc ||
+                "Giúp doanh nghiệp phân tích bài toán theo từng ngành và đánh giá toàn diện sự sẵn sàng của dữ liệu, hạ tầng."
+            }
           </p>
           <a
             href="/contact"
@@ -191,7 +227,7 @@ const faqList = [
               { label: "Giải pháp", href: "#story" },
               { label: "Khung triển khai", href: "#framework" },
               { label: "Giải thưởng", href: "#awards" },
-              { label: "Câu chuyện thành công", href: "#case-stories" },
+              { label: "Case Stories", href: "#case-stories" },
               { label: "Insights", href: "#insight" },
               { label: "Hỏi đáp", href: "#faq" },
             ].map((tab) => (
@@ -245,6 +281,41 @@ const faqList = [
         </div>
       </div>
     </section>
+
+    {/* Trusted Partner / Key Pillars */}
+    {
+      pillars && (
+        <section class="bg-black py-12 sm:py-20 lg:py-24 border-t border-white/10">
+          <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[285px]">
+            <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
+              <div class="w-full lg:w-[480px] shrink-0">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-light text-white leading-snug">
+                  {trustedTitle || "Đối tác Tin cậy cho Chuyển đổi Số"}
+                </h2>
+                <a
+                  href="/contact"
+                  class="mt-6 sm:mt-8 inline-flex h-[50px] sm:h-[60px] w-[180px] sm:w-[201px] items-center justify-center rounded-full border border-purple-400/80 text-base sm:text-xl font-normal tracking-tight text-white backdrop-blur-md transition-all hover:bg-white hover:text-black bg-purple-900/40 shadow-[0_0_25px_rgba(125,81,211,0.4)] hover:scale-105"
+                >
+                  CONTACT US →
+                </a>
+              </div>
+              <div class="flex-1 space-y-8 sm:space-y-10">
+                {pillars.map((item: any) => (
+                  <div>
+                    <h3 class="text-2xl sm:text-3xl lg:text-4xl font-normal text-white leading-snug">
+                      {item.title}
+                    </h3>
+                    <p class="mt-2 text-sm sm:text-base font-normal text-white/70 leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )
+    }
 
     {/* Customer Success Story */}
     <section class="bg-black py-12 sm:py-20 lg:py-24">
@@ -422,11 +493,7 @@ const faqList = [
       <div
         class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[285px]"
       >
-        <SectionHeader
-          title="Câu chuyện thành công"
-          leftPercent={0}
-          client:load
-        />
+        <SectionHeader title="Case Stories" leftPercent={0} client:load />
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-10"
         >
@@ -483,7 +550,7 @@ const faqList = [
                       {item.category}
                     </span>
                   </div>
-                  <div class="h-[180px] sm:h-[200px] w-full overflow-hidden rounded-2xl bg-purple-950/30">
+                  <div class="aspect-video w-full overflow-hidden rounded-2xl">
                     <img
                       src={item.image}
                       alt={item.title}
