@@ -11,8 +11,11 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <div className={`relative mb-6 sm:mb-8 flex items-center w-full ${className}`}>
-      {/* Dashed Purple Line starting from left extending to right screen edge */}
-      <div className="absolute left-0 -right-4 sm:-right-8 md:-right-[285px] top-1/2 -translate-y-1/2 hidden sm:block pointer-events-none z-0">
+      {/* Dashed Purple Line starting from title badge extending to right screen edge */}
+      <div
+        className="absolute -right-4 sm:-right-8 md:-right-[285px] top-1/2 -translate-y-1/2 hidden sm:block pointer-events-none z-0"
+        style={{ left: leftPercent > 0 ? `${leftPercent}%` : "0px" }}
+      >
         <div className="w-full border-t border-dashed border-purple-500/70" />
         {/* Extended Long Bright Light Flare on the right edge */}
         <div className="absolute right-0 top-1/2 -translate-y-1/2 h-[2px] w-48 sm:w-80 lg:w-[480px] bg-gradient-to-r from-purple-500/0 via-white to-transparent blur-[1px] shadow-[0_0_15px_rgba(255,255,255,1)] opacity-95" />

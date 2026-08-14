@@ -83,6 +83,34 @@ const awardsList = [
     image: "/images/cert/aws-certified-badges-honeycomb.png",
   },
 ];
+
+const faqList = [
+  {
+    question: "Doanh nghiệp nên bắt đầu hành trình chuyển đổi Cloud từ đâu?",
+    answer:
+      "Doanh nghiệp nên bắt đầu bằng việc đánh giá hệ thống hiện tại, xác định mục tiêu kinh doanh, nhu cầu về hiệu suất, bảo mật và chi phí. Từ đó xây dựng Cloud Roadmap phù hợp thay vì chuyển toàn bộ hệ thống lên Cloud cùng lúc.",
+  },
+  {
+    question: "Có cần chuyển toàn bộ hệ thống lên Cloud không?",
+    answer:
+      "Không nhất thiết. Tùy vào đặc thù hệ thống và yêu cầu vận hành, doanh nghiệp có thể lựa chọn Public Cloud, Private Cloud, Hybrid Cloud hoặc mô hình kết hợp. Một số workload có thể tiếp tục vận hành On-premises trong khi các hệ thống phù hợp được chuyển lên Cloud.",
+  },
+  {
+    question: "Làm thế nào để kiểm soát và tối ưu chi phí Cloud?",
+    answer:
+      "Doanh nghiệp cần theo dõi mức sử dụng tài nguyên, loại bỏ tài nguyên dư thừa, lựa chọn cấu hình phù hợp và thiết lập cơ chế quản trị chi phí. Áp dụng FinOps cũng giúp các nhóm kỹ thuật và kinh doanh kiểm soát chi phí Cloud hiệu quả hơn.",
+  },
+  {
+    question: "Chuyển hệ thống lên Cloud có ảnh hưởng đến hoạt động hiện tại không?",
+    answer:
+      "Nếu có kế hoạch migration phù hợp, quá trình chuyển đổi có thể được triển khai theo từng giai đoạn để hạn chế tối đa gián đoạn. Việc kiểm thử, sao lưu dữ liệu và xây dựng phương án rollback là những bước quan trọng trước khi chuyển đổi chính thức.",
+  },
+  {
+    question: "Cloudino hỗ trợ doanh nghiệp trong những giai đoạn nào?",
+    answer:
+      "Cloudino có thể đồng hành từ đánh giá hệ thống, tư vấn kiến trúc, xây dựng Cloud Roadmap đến migration, triển khai, tối ưu chi phí và vận hành hệ thống Cloud sau triển khai.",
+  },
+];
 ---
 
 <Layout title="AI & Data | Cloudino">
@@ -439,18 +467,16 @@ const awardsList = [
         <SectionHeader title="Câu hỏi thường gặp" leftPercent={0} client:load />
         <div class="space-y-4 max-w-[1520px]">
           {
-            Array.from({ length: 8 }, (_, i) => (
+            faqList.map((item, i) => (
               <details
                 class="group rounded-2xl border border-white/10 backdrop-blur-sm"
                 style="background:rgba(255,255,255,0.02)"
+                open={i === 0}
               >
-                <summary class="flex cursor-pointer items-center justify-between px-4 sm:px-6 py-3.5 sm:py-5 text-xs sm:text-sm font-normal text-white">
-                  <span>
-                    lorem ipsum dolor sit amet consectetuer adipiscing elit sed
-                    diam nonummy nibh euismod tincidunt ut
-                  </span>
+                <summary class="flex cursor-pointer items-center justify-between px-4 sm:px-6 py-3.5 sm:py-5 text-sm sm:text-base md:text-lg font-medium text-white hover:text-purple-300 transition-colors">
+                  <span>{item.question}</span>
                   <svg
-                    class="h-4 w-4 shrink-0 ml-4 transition-transform group-open:rotate-180"
+                    class="h-5 w-5 shrink-0 ml-4 transition-transform group-open:rotate-180 text-purple-400"
                     viewBox="0 0 20 20"
                     fill="none"
                     stroke="currentColor"
@@ -459,25 +485,8 @@ const awardsList = [
                     <path d="M5 7.5L10 12.5L15 7.5" />
                   </svg>
                 </summary>
-                <div class="px-4 sm:px-6 pb-4 sm:pb-5 text-xs sm:text-sm font-normal text-white/60 leading-relaxed">
-                  {i === 1 ? (
-                    <p>
-                      lorem ipsum dolor sit amet consectetuer adipiscing elit
-                      sed diam nonummy nibh euismod tincidunt ut lorem ipsum
-                      dolor sit amet consectetuer adipiscing elit sed diam
-                      nonummy nibh euismod tincidunt ut lorem ipsum dolor sit
-                      amet consectetuer adipiscing elit sed diam nonummy nibh
-                      euismod tincidunt ut
-                    </p>
-                  ) : (
-                    <p>
-                      Bộ nhận diện thương hiệu là hệ thống các yếu tố hình ảnh
-                      và ứng dụng thể hiện thương hiệu trên mọi điểm chạm. Mỗi
-                      dự án tại Sao Kim đều trải qua 5 giai đoạn chuẩn: Nghiên
-                      cứu, Chiến lược, Thiết kế concept, Hiện thực hóa và Bàn
-                      giao.
-                    </p>
-                  )}
+                <div class="px-4 sm:px-6 pb-4 sm:pb-5 text-xs sm:text-sm md:text-base font-normal text-white/70 leading-relaxed">
+                  <p>{item.answer}</p>
                 </div>
               </details>
             ))

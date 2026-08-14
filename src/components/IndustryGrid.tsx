@@ -111,14 +111,13 @@ export default function IndustryGrid() {
 
             {/* Industry tags */}
             {industries.map(ind => (
-              <a
-                href={`/solutions/industries/${ind.name.toLowerCase()}`}
+              <div
                 key={ind.name}
-                className="absolute flex h-[120px] w-[120px] z-10 items-center justify-center rounded-full border border-white/10 text-center text-base font-normal text-white backdrop-blur-sm transition-colors hover:border-white/30 hover:text-white bg-linear-to-r from-[#312E81] to-accent opacity-75"
+                className="absolute flex h-[120px] w-[120px] z-10 items-center justify-center rounded-full border border-white/10 text-center text-base font-normal text-white backdrop-blur-sm bg-linear-to-r from-[#312E81] to-accent opacity-75 select-none"
                 style={{ left: `${ind.x}px`, top: `${ind.y}px` }}
               >
                 {ind.name}
-              </a>
+              </div>
             ))}
 
             {/* Center text */}

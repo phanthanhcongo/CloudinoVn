@@ -115,14 +115,17 @@ const pages = [
         {
           title: "Bộ dịch vụ nền tảng hoàn chỉnh",
           text: "Dịch vụ linh hoạt, tích hợp toàn bộ giải pháp cho các nhu cầu điện toán, mạng, lưu trữ và cơ sở dữ liệu của ứng dụng",
+          image: "/images/homepage/digitalOcean (1).png",
         },
         {
           title: "Nền tảng tích hợp AI",
           text: "Cung cấp khả năng truy cập liền mạch vào các GPU và TPU mạnh mẽ cùng với các công cụ và dịch vụ AI toàn diện.",
+          image: "/images/homepage/digitalOcean (2).jpg",
         },
         {
           title: "Hệ thống quản lý nội dung (CMS)",
           text: "Nền tảng thương mại điện tử, khung phát triển ứng dụng web và công cụ dành cho nhà phát triển để đẩy nhanh quá trình xây dựng ứng dụng.",
+          image: "/images/homepage/digitalOcean (1).jpg",
         },
       ],
     },
@@ -180,14 +183,17 @@ const pages = [
         {
           title: "Đối tác chiến lược bậc cao nhất",
           text: "Cloudino làm việc trực tiếp với hãng — mang đến cho bạn chính sách giá tốt nhất, đặc quyền hỗ trợ ưu tiên và cơ hội tiếp cận sớm các tính năng mới.",
+          image: "/images/homepage/lark (1).png",
         },
         {
           title: "Hỗ trợ thanh toán nội địa",
           text: "Thanh toán bằng VND, xuất hóa đơn VAT hợp lệ đầy đủ — không cần thẻ ngoại tệ hay đau đầu với thủ tục thanh toán quốc tế. Chúng tôi xử lý mọi hồ sơ thương mại để đội ngũ kế toán của bạn luôn an tâm.",
+          image: "/images/homepage/lark (2).png",
         },
         {
           title: "Đồng hành phát triển dài hạn",
           text: "Có ngay một đầu mối hỗ trợ chuyên trách trực tiếp bằng tiếng Việt. Chúng tôi liên tục đồng hành đào tạo và tối ưu hệ thống khi doanh nghiệp mở rộng quy mô — cam kết thành công cùng bạn trong dài hạn.",
+          image: "/images/homepage/lark (1).png",
         },
       ],
     },
@@ -338,23 +344,22 @@ if (!page) return Astro.redirect("/404");
       <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
           {
-            page.features.cards.map((card, i) => {
+            page.features.cards.map((card: { title: string; text: string; image?: string }, i) => {
               const platformImages = [
                 "/images/solutionPlatforms/ManagedServices.png",
                 "/images/solutionPlatforms/AWS_Billing.png",
                 "/images/solutionPlatforms/AI.png",
               ];
-              const imageSrc = platformImages[i % platformImages.length];
+              const imageSrc = card.image || platformImages[i % platformImages.length];
               return (
                 <div
                   class="group rounded-2xl sm:rounded-[28px] border border-purple-400/50 p-5 sm:p-8 flex flex-col justify-between backdrop-blur-xl shadow-[0_0_30px_rgba(147,51,234,0.25)] transition-all duration-300 hover:border-purple-300 hover:shadow-[0_0_45px_rgba(168,85,247,0.45)] hover:-translate-y-1"
                   style="background: linear-gradient(135deg, rgba(55, 38, 115, 0.65) 0%, rgba(26, 16, 60, 0.85) 100%);"
                 >
                   <div class="h-[160px] sm:h-[220px] w-full overflow-hidden rounded-xl mb-4 sm:mb-5 border border-white/10 shadow-md">
-                    <img
-                      src={imageSrc}
-                      alt={card.title}
-                      class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    <div
+                      class="h-full w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
+                      style={`background-image: url('${imageSrc}');`}
                     />
                   </div>
                   <div class="flex-1 flex flex-col text-center">

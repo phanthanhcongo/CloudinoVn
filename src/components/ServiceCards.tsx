@@ -3,7 +3,7 @@ export default function ServiceCards() {
     {
       title: "AWS",
       desc: "Cloudino – Đội ngũ kiến trúc sư giải pháp cloud dày dạn kinh nghiệm từ 2010, được bảo chứng bởi chứng chỉ quốc tế từ Amazon Web Services (AWS). ",
-      icon: "/images/services/icon-8.png",
+      icon: "/images/homepage/awsLogo.png",
       link: "/solutions/platforms/aws",
       color: "bg-[#FF9900]/25",
       border: "border-[#FF9900]",
