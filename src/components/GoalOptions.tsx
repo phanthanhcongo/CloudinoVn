@@ -4,19 +4,19 @@ export default function GoalOptions() {
   const goals = [
     {
       icon: "/images/services/icon-2.png",
-      text: "Modernize my digital workplace",
+      text: "TẠO DỰNG MÔI TRƯỜNG LÀM VIỆC SỐ HIỆN ĐẠI",
     },
     {
       icon: "/images/services/icon-3.png",
-      text: "Reduce cloud infrastructure costs",
+      text: "TỐI ƯU CHI PHÍ HẠ TẦNG ĐÁM MÂY",
     },
     {
       icon: "/images/services/icon-1.png",
-      text: "Build enterprise cloud infrastructure",
+      text: "XÂY DỰNG NỀN TẢNG ĐÁM MÂY MỞ RỘNG LINH HOẠT",
     },
     {
       icon: "/images/services/icon-4.png",
-      text: "Migrate existing systems to the cloud",
+      text: "HIỆN ĐẠI HÓA VÀ CHUYỂN ĐỔI CÁC HỆ THỐNG CŨ",
     },
   ];
 
@@ -40,17 +40,19 @@ export default function GoalOptions() {
 
       <div className="relative z-20 mx-auto max-w-[1920px] px-3 sm:px-8 md:px-16 xl:px-[285px] text-center">
         <h2 className="relative z-30 text-xl sm:text-3xl lg:text-4xl font-normal text-white tracking-tighter">
-          What are you looking to achieve?
+          GIẢI PHÁP ĐIỆN TOÁN ĐÁM MÂY CHO HÀNH TRÌNH CHUYỂN ĐỔI SỐ TOÀN DIỆN 
         </h2>
 
         <div className="relative mx-auto mt-10 sm:mt-16 lg:mt-[84px] max-w-[1340px]">
-          {/* Center decorative element (Dino in the middle across all screens) */}
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none">
-            <img
-              src="/images/icons/Dino.svg"
-              alt=""
-              className="h-10 w-10 min-[400px]:h-14 min-[400px]:w-14 sm:h-24 sm:w-24 md:h-36 md:w-36 lg:h-[221px] lg:w-[221px] object-contain drop-shadow-[0_0_15px_rgba(125,81,211,0.6)]"
-            />
+          {/* Center decorative element (Cloudino icon crop inside purple circle frame without glow effects) */}
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 pointer-events-none flex items-center justify-center">
+            <div className="relative flex items-center justify-center rounded-full border-2 border-[#7D51D3] bg-[#0A0A1A] h-20 w-20 min-[400px]:h-28 min-[400px]:w-28 sm:h-44 sm:w-44 md:h-52 md:w-52 lg:h-[220px] lg:w-[220px] aspect-square p-3 sm:p-5 lg:p-8">
+              <img
+                src="/images/logos-cleaned/logoCrop.png"
+                alt="Cloudino Icon"
+                className="w-full h-full object-contain"
+              />
+            </div>
           </div>
 
           {/* Connecting lines SVG for tablet and desktop */}

@@ -1,5 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import PurpleOrb from "../../components/PurpleOrb";
 
 const positions = [
   {
@@ -28,25 +29,34 @@ const positions = [
     <section
       class="relative flex flex-col items-center overflow-hidden bg-[#080808] border-b border-accent/40 py-8 sm:py-12 md:py-16 px-4 sm:px-6"
     >
+      {/* Background image 119 - LIGHTEN blend */}
       <img
         src="/images/backgrounds/image119.png"
         alt=""
-        class="absolute inset-0 h-full w-full object-cover mix-blend-lighten -z-10"
+        class="absolute inset-0 h-full w-full object-cover mix-blend-lighten pointer-events-none"
       />
       <div
-        class="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 text-center"
+        class="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 text-center py-8 sm:py-12 md:py-16"
       >
-        <div class="mx-auto max-w-[740px]">
+        {/* Vibrant Purple Glow Orb centered directly behind Hero Title */}
+        <PurpleOrb size={340} blur={110} opacity={0.8} className="sm:hidden pointer-events-none z-0" />
+        <PurpleOrb size={650} blur={140} opacity={0.85} className="hidden sm:block pointer-events-none z-0" />
+
+    
+
+        <div class="relative z-10 mx-auto max-w-[740px]">
           <h1
             class="text-3xl sm:text-5xl md:text-7xl lg:text-8xl xl:text-[96px] font-bold leading-tight md:leading-none text-transparent bg-clip-text uppercase tracking-tight"
             style="background-image:linear-gradient(45deg,#5B6FF5,#D4CB7B 52.6%,#DA3FF0)"
           >
             Cơ hội nghề nghiệp
           </h1>
-          <p class="mt-4 sm:mt-6 text-sm sm:text-lg md:text-2xl font-normal text-white/90 leading-relaxed sm:leading-normal">
+          <p
+            class="mt-4 sm:mt-6 text-sm sm:text-lg md:text-2xl font-normal text-white/90 leading-relaxed sm:leading-normal"
+          >
             Chúng tôi đang tìm kiếm những cộng sự cùng chia sẻ tầm nhìn: Đổi mới
-            Tương lai, Cùng nhau kiến tạo. <br class="hidden sm:inline" /> Hãy trở thành một phần trong hành
-            trình tiếp theo tại Cloudino.
+            Tương lai, Cùng nhau kiến tạo. <br class="hidden sm:inline" /> Hãy trở
+            thành một phần trong hành trình tiếp theo tại Cloudino.
           </p>
         </div>
       </div>
@@ -56,7 +66,9 @@ const positions = [
         class="mx-auto my-8 sm:my-16 md:my-28 max-w-full h-auto object-contain px-4"
       />
       <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-4 sm:mt-8">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+        >
           {
             positions.map((item) => (
               <div class="group rounded-2xl border border-accent bg-accent/40 p-6 sm:p-8 flex flex-col justify-between hover:border-white/50 transition-all duration-300 shadow-lg">

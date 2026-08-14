@@ -38,19 +38,32 @@ const compiled = await page.compiledContent();
       </div>
 
       {/* Header card */}
-      <div class="w-full bg-accent/40 border border-accent p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-xl">
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
+      <div
+        class="w-full bg-accent/40 border border-accent p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-xl"
+      >
+        <h1
+          class="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight"
+        >
           {page.frontmatter.title}
         </h1>
-        <div class="mt-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-white/80 text-sm sm:text-base">
-          <p><strong class="text-white font-semibold">Location:</strong> Hà Nội</p>
+        <div
+          class="mt-4 flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 text-white/80 text-sm sm:text-base"
+        >
+          <p>
+            <strong class="text-white font-semibold">Location:</strong> Hà Nội
+          </p>
           <span class="hidden sm:inline text-white/30">•</span>
-          <p><strong class="text-white font-semibold">Lương:</strong> Thỏa thuận theo năng lực</p>
+          <p>
+            <strong class="text-white font-semibold">Lương:</strong> Thỏa thuận theo
+            năng lực
+          </p>
         </div>
       </div>
 
       {/* Detail description */}
-      <div class="mt-6 sm:mt-8 bg-[#080808] border border-accent/40 rounded-2xl p-6 sm:p-8 shadow-xl">
+      <div
+        class="mt-6 sm:mt-8 bg-[#080808] border border-accent/40 rounded-2xl p-6 sm:p-8 shadow-xl"
+      >
         <Prose>
           <article set:html={compiled} />
         </Prose>
