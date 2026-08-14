@@ -33,7 +33,7 @@ export default function TestimonialCarousel() {
       <img
         src="/images/backgrounds/image119.png"
         alt=""
-        className="absolute inset-0 h-full w-full object-cover mix-blend-lighten pointer-events-none"
+        className="absolute inset-0 h-full w-full object-cover mix-blend-lighten pointer-events-none brightness-[2.2] contrast-[1.4]"
       />
       <div
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[300px] w-[300px] sm:h-[444px] sm:w-[435px] rounded-full pointer-events-none"
@@ -78,11 +78,13 @@ export default function TestimonialCarousel() {
                     <div className="h-[13px] w-[13px] rounded-full bg-white" />
                   </div>
                 </div>
-                <img
-                  src={t.avatar}
-                  alt={t.name}
-                  className="mb-4 sm:mb-6 h-[100px] w-[100px] sm:h-[139px] sm:w-[139px] rounded-full object-cover z-10 border-2 border-accent/40"
-                />
+                <div className="relative mb-4 sm:mb-6 rounded-full border-4 sm:border-[8px] border-white p-1 sm:p-1.5 shadow-lg z-10">
+                  <img
+                    src={t.avatar}
+                    alt={t.name}
+                    className="h-[100px] w-[100px] sm:h-[139px] sm:w-[139px] rounded-full object-cover"
+                  />
+                </div>
               </div>
               <div
                 key={t.name}
