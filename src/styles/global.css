@@ -94,6 +94,30 @@ html {
   animation: line-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
+@keyframes line-sweep-horizontal {
+  0% {
+    left: -20%;
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 120%;
+    opacity: 0;
+  }
+}
+
+@utility animate-line-sweep {
+  animation: line-sweep-horizontal 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
 @layer base {
 
   p,

@@ -27,7 +27,13 @@ const testimonials = [
   // },
 ];
 
-export default function TestimonialCarousel() {
+interface TestimonialCarouselProps {
+  title?: string;
+}
+
+export default function TestimonialCarousel({
+  title = "Khách hàng nói gì về CLOUDINO",
+}: TestimonialCarouselProps) {
   return (
     <section className="relative overflow-hidden bg-black py-16 sm:py-20 md:py-28">
       <img
@@ -45,7 +51,7 @@ export default function TestimonialCarousel() {
 
       <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
         {/* Heading */}
-        <SectionHeader title="What clients say about us" leftPercent={0} />
+        <SectionHeader title={title} leftPercent={0} />
 
         {/* Cards */}
         <div className="relative mt-8 sm:mt-[36px]">

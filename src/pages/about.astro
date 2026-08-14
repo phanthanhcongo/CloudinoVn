@@ -258,28 +258,47 @@ const whyCloudino = [
       <div
         class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px] mt-12 sm:mt-16 md:mt-24"
       >
-        <div
-          class="relative flex flex-col md:flex-row justify-start gap-8 md:gap-12 border-t border-white/20 pt-8"
-        >
+        <div class="relative pt-4 overflow-hidden">
+          {/* Horizontal timeline line */}
+          <div class="absolute top-4 left-0 right-0 border-t border-white/20 pointer-events-none z-0"></div>
+
+          {/* Animated Light Beam sweeping across the timeline line every 2s */}
+          <div
+            class="animate-line-sweep hidden md:block absolute top-4 -translate-y-1/2 h-[3px] w-[150px] sm:w-[250px] rounded-full pointer-events-none z-10"
+            style="background: linear-gradient(to right, transparent, #ffffff, #a855f7, transparent); filter: drop-shadow(0 0 8px #ffffff) drop-shadow(0 0 16px #a855f7);"
+          >
+          </div>
+
+          <div
+            class="relative flex flex-col md:flex-row justify-start gap-8 md:gap-12 pt-8 z-20"
+          >
           {
             [
               {
-                year: "2010",
-                text: "CLOUDINO được vận hành bởi đội ngũ sở hữu chứng chỉ quốc tế cấp bởi Amazon Web Services, đảm bảo mang lại giải pháp điện toán đám mây tốt nhất cho khách hàng. Hỗ trợ doanh nghiệp xây dựng chiến lược, thiết kế kiến trúc, triển khai, tối ưu và quản lý hệ thống hạ tầng điện toán đám mây.",
+                year: "2017",
+                text: "Thành lập Công ty TNHH Quốc tế Cloudino, công ty đầu tiên cung cấp và tư vấn về các dịch vụ điện toán đám mây hàng đầu tại Châu Á.",
+              },
+              {
+                year: "2018",
+                text: "Cloudino chính thức trở thành Đối tác Cấp cao (Advanced Partner) của AWS và là Đối tác AWS Well-Architected đầu tiên tại Việt Nam.",
+              },
+              {
+                year: "2024",
+                text: "Trở thành Đối tác Cấp Chiến lược (Strategic Level Partner) đầu tiên và duy nhất của Digital Ocean tại Việt Nam, đồng thời là Đối tác Bạch kim (Platinum Partner) của LarkSuite.",
               },
               {
                 year: "2026",
-                text: "Đánh dấu một bước tiến vượt bậc trong hành trình phát triển của CLOUDINO. Chúng tôi tự hào khẳng định vị thế là đối tác phân phối chính thức (Retail Partner) của 3 thương hiệu công nghệ hàng đầu toàn cầu, bao phủ toàn diện từ hạ tầng điện toán đám mây (IaaS) đến phần mềm dịch vụ (SaaS): AWS, DigitalOcean và Lark Suite. ",
+                text: "Đánh dấu một bước tiến vượt bậc trong hành trình phát triển của CLOUDINO. Chúng tôi tự hào khẳng định vị thế là đối tác phân phối chính thức (Retail Partner) của 3 thương hiệu công nghệ hàng đầu toàn cầu, bao phủ toàn diện từ hạ tầng điện toán đám mây (IaaS) đến phần mềm dịch vụ (SaaS): AWS, DigitalOcean và Lark Suite.",
               },
             ].map((item) => (
-              <div class="relative flex flex-col items-center text-center md:text-left">
+              <div class="relative flex flex-col items-center md:items-start text-center md:text-left flex-1">
                 <p class="mt-2 text-xl sm:text-2xl font-normal text-white">
                   {item.year}
                 </p>
-                <p class="mt-2 sm:mt-4 max-w-full md:max-w-[350px] text-sm sm:text-base font-normal text-white">
+                <p class="mt-2 sm:mt-4 max-w-full text-sm sm:text-base font-normal text-white">
                   {item.text}
                 </p>
-                <div class="hidden md:flex absolute -top-4 left-1/2 -translate-x-1/2 h-7 w-7 items-center justify-center rounded-full border border-white/30 bg-black">
+                <div class="hidden md:flex absolute -top-8 left-0 -translate-x-1/2 -translate-y-1/2 h-7 w-7 items-center justify-center rounded-full border border-white/30 bg-black z-20">
                   <div class="h-5 w-5 rounded-full bg-white" />
                 </div>
               </div>
@@ -287,7 +306,8 @@ const whyCloudino = [
           }
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
     {/* Why Cloudino */}
     <WhyCloudino client:load />
@@ -337,12 +357,12 @@ const whyCloudino = [
                     text: "Nâng tầm trí tuệ doanh nghiệp thông qua việc ra quyết định dựa trên dữ liệu và triển khai các mô hình AI",
                   },
                   {
-                    title: "Bảo mật",
-                    text: "Cung cấp hệ thống bảo mật cấp doanh nghiệp, từ thiết kế kiến trúc an toàn trên đám mây đến đáp ứng các tiêu chuẩn tuân thủ. ",
-                  },
-                  {
                     title: "Điện toán đám mây",
                     text: "Triển khai các dự án nền tảng Dữ liệu / Học máy (ML) / AI trên nền tảng đám mây.",
+                  },
+                  {
+                    title: "Bảo mật",
+                    text: "Cung cấp hệ thống bảo mật cấp doanh nghiệp, từ thiết kế kiến trúc an toàn trên đám mây đến đáp ứng các tiêu chuẩn tuân thủ.",
                   },
                   {
                     title: "Sản phẩm",

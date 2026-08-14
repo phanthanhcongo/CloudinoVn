@@ -6,40 +6,23 @@ const whyCloudinoList = [
 ];
 
 interface WhyCloudinoProps {
+  title?: string;
   items?: string[];
   className?: string;
 }
 
 export default function WhyCloudino({
+  title = "Vì sao lựa chọn Cloudino?",
   items = whyCloudinoList,
   className = "",
 }: WhyCloudinoProps) {
   return (
     <section
-      className={`relative overflow-hidden bg-white pt-20 sm:pt-32 md:pt-40 pb-12 sm:pb-16 lg:pb-24 min-h-[850px] sm:min-h-[1000px] lg:min-h-[1200px] flex flex-col justify-end ${className}`}
+      className={`relative overflow-hidden bg-white pt-20 sm:pt-32 md:pt-40 pb-12 sm:pb-16 lg:pb-24 min-h-[1000px] sm:min-h-[1100px] lg:min-h-[1300px] flex flex-col justify-start ${className}`}
     >
-      <img
-        src="/images/backgrounds/image119.png"
-        alt=""
-        className="absolute inset-0 top-0 left-0 object-cover mix-blend-lighten pointer-events-none"
-      />
-      {/* arm */}
-      <img
-        src="/images/backgrounds/image 143.png"
-        alt=""
-        className="absolute top-1/2 -translate-y-1/2 left-0 max-h-full object-contain pointer-events-none z-0"
-      />
-      <div className="absolute right-0 top-8 sm:top-14 hidden md:flex h-[260px] w-[260px] sm:h-[340px] sm:w-[340px] items-center justify-center pointer-events-none z-20">
-        {/* rectangle / 3D object top right */}
-        <img
-          src="/images/backgrounds/image 114.png"
-          alt=""
-          className="h-full w-full object-contain -rotate-45 origin-center"
-        />
-      </div>
       <div className="relative z-10 mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px] w-full">
         <h2 className="text-4xl sm:text-6xl md:text-[76px] font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#3730A3] via-[#5B55E0] to-[#6D28D9] text-center">
-          Why Cloudino
+          {title}
         </h2>
 
         {/* Engineer cards */}
@@ -86,6 +69,50 @@ export default function WhyCloudino({
           ))}
         </div>
       </div>
+      <img
+        src="/images/backgrounds/image119.png"
+        alt=""
+        className="absolute inset-0 top-0 left-0 object-cover mix-blend-lighten pointer-events-none"
+      />
+      {/* Arm decoration & 3D Star embedded in the glowing orb */}
+      <div className="absolute bottom-0 left-0 max-h-full pointer-events-none z-0">
+        <style>{`
+          @keyframes starFloat {
+            0%, 100% {
+              transform: translate(-50%, -50%) translateY(0px);
+            }
+            50% {
+              transform: translate(-50%, -50%) translateY(-16px);
+            }
+          }
+          .animate-star-float {
+            animation: starFloat 3.2s ease-in-out infinite;
+          }
+        `}</style>
+        <div className="relative inline-block">
+          {/* 3D Star asset placed behind arm with smooth up-and-down float animation */}
+          <img
+            src="/images/resources/star-3d.png"
+            alt=""
+            className="absolute left-[49%] top-[22%] h-[32%] w-auto object-contain pointer-events-none z-0 drop-shadow-2xl animate-star-float"
+          />
+          {/* Arm decoration placed in front of star (z-10) */}
+          <img
+            src="/images/backgrounds/image 143.png"
+            alt=""
+            className="relative z-10 max-h-[500px] sm:max-h-[650px] md:max-h-[850px] lg:max-h-[1000px] w-auto object-contain pointer-events-none"
+          />
+        </div>
+      </div>
+      <div className="absolute right-0 top-8 sm:top-14 hidden md:flex h-[260px] w-[260px] sm:h-[340px] sm:w-[340px] items-center justify-center pointer-events-none z-20">
+        {/* rectangle / 3D object top right */}
+        <img
+          src="/images/backgrounds/image 114.png"
+          alt=""
+          className="h-full w-full object-contain -rotate-45 origin-center"
+        />
+      </div>
+      
     </section>
   );
 }
