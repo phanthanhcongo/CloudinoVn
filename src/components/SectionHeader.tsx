@@ -10,25 +10,14 @@ export default function SectionHeader({
   className = "",
 }: SectionHeaderProps) {
   return (
-    <div className={`relative mb-6 sm:mb-8 flex items-center w-full ${className}`}>
-      {/* Dashed Purple Line starting from title badge extending to right screen edge */}
-      <div
-        className="absolute -right-4 sm:-right-8 md:-right-[285px] top-1/2 -translate-y-1/2 hidden sm:block pointer-events-none z-0"
-        style={{ left: leftPercent > 0 ? `${leftPercent}%` : "0px" }}
-      >
-        <div className="w-full border-t border-dashed border-purple-500/70" />
-        {/* Extended Long Bright Light Flare on the right edge */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 h-[2px] w-48 sm:w-80 lg:w-[480px] bg-gradient-to-r from-purple-500/0 via-white to-transparent blur-[1px] shadow-[0_0_15px_rgba(255,255,255,1)] opacity-95" />
-      </div>
-
-      {/* Column offset wrapper */}
-      <div
-        className="relative z-10 flex items-center shrink-0"
-        style={{
-          marginLeft: leftPercent > 0 ? `${leftPercent}%` : "0px",
-        }}
-      >
-        {/* Title Pill Badge */}
+    <div
+      className={`relative mb-6 sm:mb-8 flex items-center w-full ${className}`}
+      style={{
+        paddingLeft: leftPercent > 0 ? `${leftPercent}%` : "0px",
+      }}
+    >
+      {/* Title Pill Badge */}
+      <div className="relative z-10 flex items-center shrink-0">
         <div
           className="relative flex items-center overflow-hidden rounded-full border border-purple-500/40 px-4 py-1.5 sm:px-5 sm:py-2 shrink-0 shadow-[0_0_20px_rgba(168,85,247,0.3),_inset_0_0_12px_rgba(168,85,247,0.15)] transition-all duration-300"
           style={{
@@ -52,6 +41,13 @@ export default function SectionHeader({
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Dashed Purple Line starting from right of title badge extending to right screen edge */}
+      <div className="relative flex-1 hidden sm:block pointer-events-none z-0 -mr-4 sm:-mr-8 md:-mr-[285px]">
+        <div className="w-full border-t border-dashed border-purple-500/70" />
+        {/* Extended Long Bright Light Flare on the right edge */}
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 h-[2px] w-48 sm:w-80 lg:w-[480px] bg-gradient-to-r from-purple-500/0 via-white to-transparent blur-[1px] shadow-[0_0_15px_rgba(255,255,255,1)] opacity-95" />
       </div>
     </div>
   );
