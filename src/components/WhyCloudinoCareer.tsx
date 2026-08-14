@@ -7,53 +7,53 @@ const whyCloudinoList = [
 
 const benefitColumns = [
   {
-    title: "We TRANSFORM through",
+    title: "Chúng tôi KIẾN TẠO CHUYỂN ĐỔI thông qua",
     items: [
       {
-        subtitle: "Customer-First Innovation:",
-        desc: "Every decision starts with customer impact",
+        subtitle: "Lấy khách hàng làm trung tâm:",
+        desc: "Mọi quyết định của chúng tôi đều khởi nguồn từ những giá trị thiết thực mang lại cho khách hàng.",
       },
       {
-        subtitle: "Continuous Asset Creation:",
-        desc: "Converting insights into reusable solutions",
+        subtitle: "Không ngừng kiến tạo giá trị:",
+        desc: "Chuyển hóa những hiểu biết sâu sắc (insights) thành các giải pháp có tính ứng dụng và khả năng tái sử dụng cao.",
       },
       {
-        subtitle: "Excellence in Execution:",
-        desc: "Setting new standards in digital transformation",
+        subtitle: "Thực thi xuất sắc:",
+        desc: "Thiết lập những chuẩn mực mới trong hành trình chuyển đổi số.",
       },
     ],
   },
   {
-    title: "We shape TOMORROW by",
+    title: "Chúng tôi ĐỊNH HÌNH TƯƠNG LAI bằng cách:",
     items: [
       {
-        subtitle: "Active Learning:",
-        desc: "Turning every customer engagement into shared knowledge",
+        subtitle: "Chủ động học hỏi:",
+        desc: "Biến mỗi lần tương tác và làm việc cùng khách hàng thành nguồn tri thức chung vô giá.",
       },
       {
-        subtitle: "Forward Thinking:",
-        desc: "Building solutions that scale for future needs",
+        subtitle: "Tư duy đón đầu:",
+        desc: "Xây dựng các giải pháp linh hoạt, sẵn sàng mở rộng để đáp ứng mọi nhu cầu trong tương lai.",
       },
       {
-        subtitle: "Speed with Impact:",
-        desc: "Delivering quick wins while building long-term value",
+        subtitle: "Tốc độ đi đôi với hiệu quả:",
+        desc: "Mang lại những thành quả nhanh chóng, đồng thời xây dựng nền tảng giá trị bền vững lâu dài.",
       },
     ],
   },
   {
-    title: "We succeed TOGETHER through",
+    title: "Chúng ta CÙNG NHAU THÀNH CÔNG nhờ vào:",
     items: [
       {
-        subtitle: "Power of Three:",
-        desc: "Uniting customers, partners, and our team",
+        subtitle: "Sức mạnh của sự hợp lực:",
+        desc: "Gắn kết chặt chẽ ba nhân tố cốt lõi: Khách hàng, Đối tác và Đội ngũ của chúng tôi.",
       },
       {
-        subtitle: "Trust & Growth:",
-        desc: "Supporting each other's development",
+        subtitle: "Niềm tin & Tăng trưởng:",
+        desc: "Luôn đồng hành và hỗ trợ lẫn nhau trên chặng đường phát triển.",
       },
       {
-        subtitle: "Global Perspective:",
-        desc: "Bridging cultures and markets",
+        subtitle: "Tầm nhìn toàn cầu:",
+        desc: "Trở thành cầu nối hội nhập, xóa nhòa ranh giới giữa các nền văn hóa và thị trường.",
       },
     ],
   },
@@ -119,7 +119,7 @@ export default function WhyCloudinoCareer({
         <div>
           {/* Why Cloudino Section */}
           <h2 className="text-4xl sm:text-6xl md:text-[76px] font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#3730A3] via-[#5B55E0] to-[#6D28D9] text-center">
-            Why Cloudino
+            Vì sao lựa chọn Cloudino?
           </h2>
 
           {/* Engineer cards */}
@@ -173,7 +173,7 @@ export default function WhyCloudinoCareer({
         {/* Row 3: Benefit Section */}
         <div>
           <h2 className="text-4xl sm:text-6xl md:text-[76px] font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-[#3730A3] via-[#5B55E0] to-[#6D28D9] text-center">
-            Benefit
+            Giá trị vượt trội
           </h2>
 
           <div className="mt-12 sm:mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-14">

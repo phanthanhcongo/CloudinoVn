@@ -1,5 +1,5 @@
 ---
-title: "AI Engineer"
+title: "AI Engineer (Junior/Middle)"
 simpleUrl: "ai-engineer"
 ---
 

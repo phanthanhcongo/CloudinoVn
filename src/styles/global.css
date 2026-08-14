@@ -15,8 +15,11 @@ body,
 button,
 input,
 select,
-textarea {
-  font-family: "Poppins", sans-serif;
+textarea,
+*,
+*::before,
+*::after {
+  font-family: "Poppins", sans-serif !important;
 }
 
 html {
