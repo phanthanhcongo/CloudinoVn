@@ -48,65 +48,80 @@ export default function TestimonialCarousel() {
         <SectionHeader title="What clients say about us" leftPercent={0} />
 
         {/* Cards */}
-        <div className="relative mt-8 sm:mt-[36px] flex flex-col lg:flex-row gap-8 lg:gap-8 items-center lg:items-start justify-center lg:justify-between">
-          {/* Curved line through the dots (desktop only) */}
+        <div className="relative mt-8 sm:mt-[36px]">
+          {/* Curved line through the dots (desktop) */}
           <svg
-            viewBox="0 0 1520 300"
-            className="absolute left-0 top-0 h-full w-full opacity-20 pointer-events-none z-0 hidden lg:block"
+            viewBox="0 0 1000 220"
+            className="absolute left-0 top-0 h-[220px] w-full opacity-40 pointer-events-none z-0 hidden lg:block"
             preserveAspectRatio="none"
           >
             <path
-              d="M0 90 Q380 75 760 96 q280 0 420 -60 q100 -40 350 -10"
+              d="M 0 160 C 100 150, 170 127, 250 127 C 400 127, 600 35, 750 35 C 850 35, 930 50, 1000 60"
               stroke="#7D51D3"
-              strokeWidth="1"
+              strokeWidth="1.5"
               fill="none"
               strokeDasharray="8 4"
             />
           </svg>
 
-          {testimonials.map((t, i) => (
-            <div
-              className={`flex flex-col items-center w-full max-w-[430px] ${i === 0 ? "lg:mt-[114px]" : "lg:mt-[22px]"}`}
-              key={i}
-            >
+          {/* Vertical dashed line through the dots (mobile & tablet) */}
+          <svg
+            viewBox="0 0 100 1000"
+            className="absolute left-1/2 top-0 h-full w-4 -translate-x-1/2 opacity-40 pointer-events-none z-0 lg:hidden"
+            preserveAspectRatio="none"
+          >
+            <path
+              d="M 50 0 L 50 1000"
+              stroke="#7D51D3"
+              strokeWidth="2"
+              fill="none"
+              strokeDasharray="8 4"
+            />
+          </svg>
+
+          <div className="w-full lg:w-[80%] mx-auto flex flex-col lg:flex-row gap-8 items-center lg:items-start justify-between">
+            {testimonials.map((t, i) => (
               <div
-                className={`flex items-center gap-4 ${i % 2 === 1 ? "flex-col justify-center" : ""}`}
+                className={`flex flex-col items-center w-full max-w-[430px] ${i === 0 ? "lg:mt-[114px]" : "lg:mt-[22px]"}`}
+                key={i}
               >
-                {/* Dots here */}
-                <div className="relative -ml-4 flex items-center hidden sm:flex">
-                  <div className="flex h-[26px] w-[26px] items-center justify-center rounded-full bg-accent">
-                    <div className="h-[13px] w-[13px] rounded-full bg-white" />
+                <div className="flex flex-col items-center">
+                  {/* Dots here */}
+                  <div className="relative mb-3 flex items-center justify-center flex z-20">
+                    <div className="flex h-[26px] w-[26px] items-center justify-center rounded-full bg-accent">
+                      <div className="h-[13px] w-[13px] rounded-full bg-white" />
+                    </div>
+                  </div>
+                  <div className="relative mb-4 sm:mb-6 rounded-full border-4 sm:border-[8px] border-white shadow-lg z-10">
+                    <img
+                      src={t.avatar}
+                      alt={t.name}
+                      className="h-[100px] w-[100px] sm:h-[139px] sm:w-[139px] rounded-full object-cover"
+                    />
+                    {/* Pointed tail at bottom */}
+                    <div className="absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] sm:border-l-[14px] border-l-transparent border-r-[10px] sm:border-r-[14px] border-r-transparent border-t-[12px] sm:border-t-[16px] border-t-white pointer-events-none" />
                   </div>
                 </div>
-                <div className="relative mb-4 sm:mb-6 rounded-full border-4 sm:border-[8px] border-white shadow-lg z-10">
-                  <img
-                    src={t.avatar}
-                    alt={t.name}
-                    className="h-[100px] w-[100px] sm:h-[139px] sm:w-[139px] rounded-full object-cover"
-                  />
-                  {/* Pointed tail at bottom */}
-                  <div className="absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] sm:border-l-[14px] border-l-transparent border-r-[10px] sm:border-r-[14px] border-r-transparent border-t-[12px] sm:border-t-[16px] border-t-white pointer-events-none" />
-                </div>
-              </div>
-              <div
-                key={t.name}
-                className="w-full rounded-2xl border border-white/10 p-6 sm:p-8 lg:p-10 backdrop-blur-sm"
-                style={{
-                  background: "rgba(255,255,255,0.02)",
-                }}
-              >
-                <p className="text-sm sm:text-base font-normal leading-relaxed text-white/80">
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div className="mt-6 sm:mt-8">
-                  <p className="text-2xl sm:text-3xl lg:text-4xl font-normal text-white">{t.name}</p>
-                  <p className="mt-1 text-xs sm:text-[15px] font-normal text-white/50">
-                    {t.role}
+                <div
+                  key={t.name}
+                  className="w-full rounded-2xl border border-white/10 p-6 sm:p-8 lg:p-10 backdrop-blur-sm"
+                  style={{
+                    background: "rgba(255,255,255,0.02)",
+                  }}
+                >
+                  <p className="text-sm sm:text-base font-normal leading-relaxed text-white/80">
+                    &ldquo;{t.quote}&rdquo;
                   </p>
+                  <div className="mt-6 sm:mt-8">
+                    <p className="text-2xl sm:text-3xl lg:text-4xl font-normal text-white">{t.name}</p>
+                    <p className="mt-1 text-xs sm:text-[15px] font-normal text-white/50">
+                      {t.role}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
