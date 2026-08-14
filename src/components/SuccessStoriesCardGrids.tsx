@@ -62,14 +62,14 @@ export default function SuccessStoriesCardGrids() {
       onMouseLeave={handleMouseLeave}
       onMouseUp={handleMouseUp}
       onMouseMove={handleMouseMove}
-      className={`relative mt-2 sm:mt-8 w-full overflow-x-auto scrollbar-none select-none py-8 sm:py-12 ${isMouseDown ? "cursor-grabbing" : "cursor-grab"
+      className={`relative mt-2 sm:mt-8 w-full overflow-x-auto scrollbar-none select-none py-4 sm:py-6 ${isMouseDown ? "cursor-grabbing" : "cursor-grab"
         }`}
     >
-      <div className="flex flex-nowrap px-4 sm:px-8 md:px-16 xl:px-[285px] gap-3 sm:gap-4 lg:gap-0 min-w-max items-end min-h-[420px] min-[400px]:min-h-[460px] sm:min-h-[600px] lg:min-h-[760px]">
+      <div className="flex flex-nowrap px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[285px] gap-3 sm:gap-4 lg:gap-0 min-w-max items-end min-h-[300px] min-[400px]:min-h-[330px] sm:min-h-[450px] lg:min-h-[580px]">
         {items.map((i, index) => (
           <div
             key={index}
-            className="group relative block h-[420px] min-[400px]:h-[480px] sm:h-[600px] lg:h-[720px] w-[155px] min-[400px]:w-[176px] sm:w-[220px] lg:w-[265px] shrink-0 transition-all duration-300 rotate-y-30 hover:rotate-y-0"
+            className="group relative block h-[300px] min-[400px]:h-[350px] sm:h-[450px] lg:h-[540px] w-[110px] min-[400px]:w-[130px] sm:w-[165px] lg:w-[200px] shrink-0 transition-all duration-300 rotate-y-30 hover:rotate-y-0"
           >
             <div className="absolute bottom-0 left-0 right-0 flex items-end justify-center h-[88.888%]">
               <img

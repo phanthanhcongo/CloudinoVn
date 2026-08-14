@@ -57,7 +57,7 @@ export default function SolutionGrid() {
   const radiusY = 38; // % vertical radius
 
   return (
-    <section className="relative overflow-hidden bg-black pt-16 pb-12 sm:pt-24 sm:pb-16">
+    <section className="relative overflow-hidden bg-black pt-12 pb-8 sm:pt-16 sm:pb-12">
       {/* Background Graphic */}
       <img
         src="/images/backgrounds/image119.png"
@@ -66,18 +66,18 @@ export default function SolutionGrid() {
       />
 
       {/* Vibrant Purple Glow Orb centered behind 3D Cubes */}
-      <PurpleOrb className="top-[55%] h-[350px] sm:h-[450px] w-[350px] sm:w-[450px]" blur={120} opacity={0.6} />
+      <PurpleOrb className="top-[55%] h-[260px] sm:h-[350px] w-[260px] sm:w-[350px]" blur={120} opacity={0.6} />
 
-      <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-12 lg:px-16 2xl:px-[285px]">
+      <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[285px]">
         <SectionHeader title="Explore Solutions" leftPercent={10} />
 
         {/* Content Area - Bigger Orbital Layout */}
-        <div className="relative h-[600px] sm:h-[760px] lg:h-[920px] flex items-center justify-center my-4 sm:my-0">
+        <div className="relative h-[400px] sm:h-[580px] lg:h-[760px] flex items-center justify-center my-4 sm:my-0">
           {/* 3D Purple Cubes Graphic - Bigger size */}
           <img
             src="/images/hero/hero-graphic.png"
             alt="3D Purple Cubes"
-            className="absolute left-1/2 top-1/2 h-[220px] sm:h-[440px] lg:h-[720px] w-auto max-w-full -translate-x-1/2 -translate-y-1/2 object-contain opacity-35 lg:opacity-100 pointer-events-none transition-transform duration-500 hover:scale-105 z-10"
+            className="absolute left-1/2 top-1/2 h-[160px] sm:h-[300px] lg:h-[480px] xl:h-[580px] w-auto max-w-full -translate-x-1/2 -translate-y-1/2 object-contain opacity-35 lg:opacity-100 pointer-events-none transition-transform duration-500 hover:scale-105 z-10"
             style={{
               filter: "drop-shadow(0 0 35px rgba(168, 85, 247, 0.75)) drop-shadow(0 0 70px rgba(125, 81, 211, 0.5))",
             }}
@@ -87,15 +87,15 @@ export default function SolutionGrid() {
           <div className="absolute inset-0 z-20">
             {solutions.map((s) => {
               const rad = (s.angle * Math.PI) / 180;
-              const left = 50 + 39 * Math.cos(rad);
-              const top = 50 + 39 * Math.sin(rad);
+              const left = 50 + 34 * Math.cos(rad);
+              const top = 50 + 34 * Math.sin(rad);
 
               const content = (
                 <>
-                  <h3 className="text-sm sm:text-lg lg:text-2xl font-medium text-white leading-tight whitespace-nowrap">
+                  <h3 className="text-xs sm:text-base lg:text-lg xl:text-xl font-medium text-white leading-tight whitespace-nowrap">
                     {s.title}
                   </h3>
-                  <p className="hidden sm:block mt-1 text-xs sm:text-sm lg:text-base text-white/75 whitespace-nowrap">
+                  <p className="hidden sm:block mt-1 text-xs lg:text-sm text-white/75 whitespace-nowrap">
                     {s.desc}
                   </p>
                 </>
@@ -125,7 +125,7 @@ export default function SolutionGrid() {
           {/* Center VIEW ALL Button */}
           <a
             href="/solutions"
-            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-[42px] sm:h-[52px] lg:h-[60px] px-6 sm:px-10 items-center justify-center rounded-full border border-purple-400/50 text-xs sm:text-base lg:text-xl font-medium tracking-wider text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81] via-[#5b3db5] to-[#7d51d3] hover:bg-white hover:text-[#201048] transition-all duration-300 shadow-[0_0_25px_rgba(168,85,247,0.45)] hover:shadow-[0_0_35px_rgba(168,85,247,0.75)] hover:scale-105 uppercase z-30 whitespace-nowrap"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex h-[28px] sm:h-[36px] lg:h-[42px] px-4 sm:px-6 items-center justify-center rounded-full border border-purple-400/50 text-[10px] sm:text-xs lg:text-sm font-medium tracking-wider text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81] via-[#5b3db5] to-[#7d51d3] hover:bg-white hover:text-[#201048] transition-all duration-300 shadow-[0_0_15px_rgba(168,85,247,0.4)] hover:shadow-[0_0_25px_rgba(168,85,247,0.6)] hover:scale-105 uppercase z-30 whitespace-nowrap"
           >
             View all →
           </a>

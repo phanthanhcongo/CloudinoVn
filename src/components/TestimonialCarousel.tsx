@@ -35,7 +35,7 @@ export default function TestimonialCarousel({
   title = "Khách hàng nói gì về CLOUDINO",
 }: TestimonialCarouselProps) {
   return (
-    <section className="relative overflow-hidden bg-black py-16 sm:py-20 md:py-28">
+    <section className="relative overflow-hidden bg-black py-12 sm:py-16 lg:py-20">
       <img
         src="/images/backgrounds/image119.png"
         alt=""
@@ -49,7 +49,7 @@ export default function TestimonialCarousel({
         }}
       />
 
-      <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+      <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[285px]">
         {/* Heading */}
         <SectionHeader title={title} leftPercent={0} />
 
@@ -85,10 +85,10 @@ export default function TestimonialCarousel({
             />
           </svg>
 
-          <div className="w-full lg:w-[80%] mx-auto flex flex-col lg:flex-row gap-8 items-center lg:items-start justify-between">
+          <div className="w-full lg:w-[90%] xl:w-[85%] 2xl:w-[75%] mx-auto flex flex-col lg:flex-row gap-6 xl:gap-8 items-center lg:items-start justify-center lg:justify-between">
             {testimonials.map((t, i) => (
               <div
-                className={`flex flex-col items-center w-full max-w-[430px] ${i === 0 ? "lg:mt-[114px]" : "lg:mt-[22px]"}`}
+                className={`flex flex-col items-center w-full max-w-[440px] ${i === 0 ? "lg:mt-[96px]" : "lg:mt-[20px]"}`}
                 key={i}
               >
                 <div className="flex flex-col items-center">
@@ -98,29 +98,29 @@ export default function TestimonialCarousel({
                       <div className="h-[13px] w-[13px] rounded-full bg-white" />
                     </div>
                   </div>
-                  <div className="relative mb-4 sm:mb-6 rounded-full border-4 sm:border-[8px] border-white shadow-lg z-10">
+                  <div className="relative mb-3 sm:mb-5 rounded-full border-4 sm:border-[6px] border-white shadow-lg z-10">
                     <img
                       src={t.avatar}
                       alt={t.name}
-                      className="h-[100px] w-[100px] sm:h-[139px] sm:w-[139px] rounded-full object-cover"
+                      className="h-[80px] w-[80px] sm:h-[110px] sm:w-[110px] rounded-full object-cover"
                     />
                     {/* Pointed tail at bottom */}
-                    <div className="absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] sm:border-l-[14px] border-l-transparent border-r-[10px] sm:border-r-[14px] border-r-transparent border-t-[12px] sm:border-t-[16px] border-t-white pointer-events-none" />
+                    <div className="absolute -bottom-2.5 sm:-bottom-3.5 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[8px] sm:border-l-[12px] border-l-transparent border-r-[8px] sm:border-r-[12px] border-r-transparent border-t-[10px] sm:border-t-[14px] border-t-white pointer-events-none" />
                   </div>
                 </div>
                 <div
                   key={t.name}
-                  className="w-full rounded-2xl border border-white/10 p-6 sm:p-8 lg:p-10 backdrop-blur-sm"
+                  className="w-full rounded-2xl border border-white/10 p-5 sm:p-6 lg:p-7 backdrop-blur-sm"
                   style={{
                     background: "rgba(255,255,255,0.02)",
                   }}
                 >
-                  <p className="text-sm sm:text-base font-normal leading-relaxed text-white/80">
+                  <p className="text-xs sm:text-sm lg:text-[15px] font-normal leading-relaxed text-white/80">
                     &ldquo;{t.quote}&rdquo;
                   </p>
-                  <div className="mt-6 sm:mt-8">
-                    <p className="text-2xl sm:text-3xl lg:text-4xl font-normal text-white">{t.name}</p>
-                    <p className="mt-1 text-xs sm:text-[15px] font-normal text-white/50">
+                  <div className="mt-4 sm:mt-5">
+                    <p className="text-lg sm:text-xl lg:text-2xl font-normal text-white">{t.name}</p>
+                    <p className="mt-1 text-[11px] sm:text-xs lg:text-sm font-normal text-white/50">
                       {t.role}
                     </p>
                   </div>

@@ -20,7 +20,7 @@ export default function PartnerLogos() {
             Trusted by Global Partners
           </h2>
           <p className="mx-auto mt-3 max-w-[680px] text-xs sm:text-sm md:text-base font-normal text-white/70 leading-relaxed">
-            Experience the best synergy that has led to the success of over 8,000 customers with the world&apos;s best technology partners.
+            Trải nghiệm sự cộng hưởng tuyệt vời mang lại thành công cho hơn 8.000 khách hàng cùng các đối tác công nghệ hàng đầu thế giới.
           </p>
         </div>
 

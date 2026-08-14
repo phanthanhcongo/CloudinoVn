@@ -31,15 +31,21 @@ import CertificationsGrid from "../components/CertificationsGrid";
     <SuccessStories client:load />
     <TestimonialCarousel client:load />
     <!-- <ResourceCards client:load /> -->
-    
-    <section id="certifications-section" class="scroll-mt-28 relative bg-black py-12 sm:py-16 md:py-24">
-      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[285px] text-center">
+
+    <section
+      id="certifications-section"
+      class="scroll-mt-28 relative bg-black py-10 sm:py-14 md:py-16"
+    >
+      <div
+        class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[285px] text-center"
+      >
         <SectionHeader title="Certification" leftPercent={0} />
-        <h2 class="text-2xl sm:text-4xl md:text-5xl font-light text-white">
+        <h2 class="text-xl sm:text-3xl md:text-4xl font-light text-white">
           Global Partnerships and Certifications
         </h2>
-        <p class="mt-2 mb-10 text-sm sm:text-base font-normal text-white/70">
-          We possess globally recognized technical expertise and service quality.
+        <p class="mt-2 mb-6 text-xs sm:text-sm font-normal text-white/70">
+          We possess globally recognized technical expertise and service
+          quality.
         </p>
 
         <CertificationsGrid client:load />
