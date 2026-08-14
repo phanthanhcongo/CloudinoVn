@@ -99,27 +99,74 @@ const cases = [
       </div>
     </section>
 
-    <section class="bg-black pb-8">
-      <!-- <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
-        <div class="flex flex-wrap gap-2 sm:gap-4 justify-center">
+    {/* Tag Navigation Bar matching screenshot design */}
+    <section class="relative bg-black pb-6 pt-4">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <div class="flex items-center justify-center gap-6 sm:gap-10 md:gap-14 pb-8">
           {
-            ["All", "Service", "Platform", "Industry"].map((tag) => (
-              <button class="flex flex-col items-start rounded-full px-4 py-2 sm:px-6 sm:py-3 text-white/70 transition-all hover:border-white/40 hover:text-white">
-                <span class="text-base sm:text-xl md:text-2xl font-normal">
-                  {tag}
-                </span>
-              </button>
+            [
+              { label: "All", target: "featured-stories", active: false },
+              { label: "Service", target: "all-case-stories", active: true },
+              { label: "Platform", target: "featured-stories", active: false },
+              { label: "Industry", target: "certifications-section", active: false },
+            ].map((item) => (
+              <a
+                href={`#${item.target}`}
+                data-tag={item.label}
+                class={`tag-nav-btn text-base sm:text-xl md:text-2xl font-normal transition-all duration-300 rounded-xl px-5 py-2.5 ${
+                  item.active
+                    ? "bg-[#1d1442] border border-purple-500/50 text-white shadow-[0_0_20px_rgba(125,81,211,0.3)]"
+                    : "text-white/70 hover:text-white hover:bg-white/5"
+                }`}
+              >
+                {item.label}
+              </a>
             ))
           }
         </div>
-      </div> -->
+
+        {/* Dashed Purple Horizontal Line across bottom */}
+        <div class="w-full border-t border-dashed border-purple-500/40 opacity-70"></div>
+      </div>
     </section>
-    <SuccessStories
-      title="Featured case stories"
-      showLearnMore={false}
-      client:load
-    />
-    <section class="relative bg-black py-12 sm:py-16">
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const tagBtns = document.querySelectorAll(".tag-nav-btn");
+        tagBtns.forEach((btn) => {
+          btn.addEventListener("click", () => {
+            tagBtns.forEach((b) => {
+              b.classList.remove(
+                "bg-[#1d1442]",
+                "border",
+                "border-purple-500/50",
+                "text-white",
+                "shadow-[0_0_20px_rgba(125,81,211,0.3)]"
+              );
+              b.classList.add("text-white/70");
+            });
+            btn.classList.add(
+              "bg-[#1d1442]",
+              "border",
+              "border-purple-500/50",
+              "text-white",
+              "shadow-[0_0_20px_rgba(125,81,211,0.3)]"
+            );
+            btn.classList.remove("text-white/70");
+          });
+        });
+      });
+    </script>
+
+    <div id="featured-stories" class="scroll-mt-28">
+      <SuccessStories
+        title="Featured case stories"
+        showLearnMore={false}
+        client:load
+      />
+    </div>
+
+    <section id="all-case-stories" class="scroll-mt-28 relative bg-black py-12 sm:py-16">
       <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
         <SectionHeader title="All Case Stories (5)" leftPercent={0} />
 
@@ -169,7 +216,7 @@ const cases = [
       </div>
     </section>
 
-    <section class="relative bg-black py-12 sm:py-16 md:py-24">
+    <section id="certifications-section" class="scroll-mt-28 relative bg-black py-12 sm:py-16 md:py-24">
       <div
         class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px] text-center"
       >
