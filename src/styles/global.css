@@ -18,16 +18,19 @@ html {
   0% {
     transform: translateX(-100%);
   }
+
   100% {
     transform: translateX(100%);
   }
 }
 
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(-50%) translateY(0);
   }
+
   50% {
     transform: translateY(-50%) translateY(-20px);
   }
@@ -37,6 +40,7 @@ html {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
   }
+
   to {
     transform: translate(-50%, -50%) rotate(360deg);
   }
@@ -47,12 +51,15 @@ html {
     top: -20%;
     opacity: 0;
   }
+
   20% {
     opacity: 1;
   }
+
   80% {
     opacity: 1;
   }
+
   100% {
     top: 120%;
     opacity: 0;
@@ -76,6 +83,7 @@ html {
 }
 
 @layer base {
+
   p,
   a,
   div,
