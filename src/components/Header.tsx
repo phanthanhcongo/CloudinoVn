@@ -16,7 +16,7 @@ export default function Header() {
       >
         <div className="absolute inset-0 bg-gradient-to-b from-white/[0.04] to-transparent pointer-events-none" />
 
-        <div className="relative mx-auto flex h-[64px] md:h-[101px] max-w-[1922px] items-center justify-between px-4 sm:px-6 md:justify-center md:px-8">
+        <div className="relative mx-auto flex h-[56px] md:h-[70px] max-w-[1922px] items-center justify-between px-4 sm:px-6 md:justify-center md:px-8">
           {/* Mobile Logo - Left Aligned */}
           <a
             href="/"
@@ -25,7 +25,7 @@ export default function Header() {
             <img
               src="/images/logos-cleaned/CloudinoLogoFinal.png"
               alt="Cloudino Logo"
-              className="h-8 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(168,85,247,0.4)] transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(168,85,247,0.7)]"
+              className="h-6 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(168,85,247,0.4)] transition-all duration-300 hover:scale-105"
             />
           </a>
 
@@ -33,18 +33,18 @@ export default function Header() {
           <nav className="hidden items-center md:flex">
             <a
               href="/solutions"
-              className="rounded-full px-3 py-1.5 text-base font-normal text-white transition-all hover:bg-[#7D51D3]/60 hover:shadow-[0_0_15px_rgba(255,255,255,0.12)]"
+              className="rounded-full px-3 py-1 text-sm md:text-base font-normal text-white transition-all hover:bg-[#7D51D3]/60 hover:shadow-[0_0_15px_rgba(255,255,255,0.12)]"
             >
               Solutions
             </a>
-            <div className="mx-3 h-5 w-px bg-white/40" />
+            <div className="mx-3 h-4 w-px bg-white/40" />
             <a
               href="/success-stories"
-              className="rounded-full px-3 py-1.5 text-base font-normal text-white transition-all hover:bg-[#7D51D3]/60 hover:shadow-[0_0_15px_rgba(255,255,255,0.12)]"
+              className="rounded-full px-3 py-1 text-sm md:text-base font-normal text-white transition-all hover:bg-[#7D51D3]/60 hover:shadow-[0_0_15px_rgba(255,255,255,0.12)]"
             >
               Success stories
             </a>
-            <div className="mx-3 h-5 w-px bg-white/40" />
+            <div className="mx-3 h-4 w-px bg-white/40" />
 
             <a
               href="/"
@@ -53,21 +53,21 @@ export default function Header() {
               <img
                 src="/images/logos-cleaned/CloudinoLogoFinal.png"
                 alt="Cloudino Logo"
-                className="h-10 lg:h-12 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(168,85,247,0.4)] transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(168,85,247,0.7)]"
+                className="h-7 md:h-9 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(168,85,247,0.4)] transition-all duration-300 hover:scale-105"
               />
             </a>
 
-            <div className="mx-3 h-5 w-px bg-white/40" />
+            <div className="mx-3 h-4 w-px bg-white/40" />
             <a
               href="/resources"
-              className="rounded-full px-3 py-1.5 text-base font-normal text-white transition-all hover:bg-[#7D51D3]/60 hover:shadow-[0_0_15px_rgba(255,255,255,0.12)]"
+              className="rounded-full px-3 py-1 text-sm md:text-base font-normal text-white transition-all hover:bg-[#7D51D3]/60 hover:shadow-[0_0_15px_rgba(255,255,255,0.12)]"
             >
               Resources
             </a>
-            <div className="mx-3 h-5 w-px bg-white/40" />
+            <div className="mx-3 h-4 w-px bg-white/40" />
             <a
               href="/about"
-              className="rounded-full px-3 py-1.5 text-base font-normal text-white transition-all hover:bg-[#7D51D3]/60 hover:shadow-[0_0_15px_rgba(255,255,255,0.12)]"
+              className="rounded-full px-3 py-1 text-sm md:text-base font-normal text-white transition-all hover:bg-[#7D51D3]/60 hover:shadow-[0_0_15px_rgba(255,255,255,0.12)]"
             >
               About us
             </a>

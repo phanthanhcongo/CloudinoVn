@@ -38,7 +38,7 @@ export default function GoalOptions() {
         className="!top-0 !left-0 !bottom-auto -translate-x-1/2 -translate-y-1/2"
       />
 
-      <div className="relative z-20 mx-auto max-w-[1920px] px-3 sm:px-8 md:px-16 xl:px-[285px] text-center">
+      <div className="relative z-20 mx-auto max-w-[1920px] px-4 sm:px-8 md:px-12 lg:px-16 2xl:px-[285px] text-center">
         <h2 className="relative z-30 text-xl sm:text-3xl lg:text-4xl font-normal text-white tracking-tighter">
           GIẢI PHÁP ĐIỆN TOÁN ĐÁM MÂY CHO HÀNH TRÌNH CHUYỂN ĐỔI SỐ TOÀN DIỆN 
         </h2>
@@ -138,18 +138,18 @@ export default function GoalOptions() {
           </div>
 
           {/* Cards grid: 4 cards at 4 corners around Dino in center */}
-          <div className="relative z-10 grid grid-cols-2 gap-x-2 gap-y-4 min-[400px]:gap-x-4 min-[400px]:gap-y-6 sm:gap-x-12 sm:gap-y-12 md:gap-x-24 lg:gap-x-[740px] lg:gap-y-[83px] justify-items-center">
+          <div className="relative z-10 grid grid-cols-2 gap-x-4 gap-y-4 min-[400px]:gap-x-6 min-[400px]:gap-y-6 sm:gap-x-12 sm:gap-y-12 md:gap-x-24 lg:gap-x-[380px] xl:gap-x-[540px] 2xl:gap-x-[740px] lg:gap-y-[83px] justify-items-center">
             {goals.map((g, i) => (
               <div
                 key={i}
-                className="flex w-full max-w-[135px] min-[400px]:max-w-[160px] sm:max-w-[200px] lg:max-w-[240px] flex-col items-center rounded-xl sm:rounded-2xl border border-accent p-2 min-[400px]:p-2.5 sm:p-3.5 bg-accent/40 backdrop-blur-xl backdrop-saturate-180 backdrop-brightness-105 transition-transform duration-300 hover:scale-[1.03]"
+                className="flex w-full max-w-[150px] min-[400px]:max-w-[175px] sm:max-w-[210px] lg:max-w-[250px] flex-col items-center rounded-xl sm:rounded-2xl border border-accent p-3 sm:p-4 bg-accent/40 backdrop-blur-xl backdrop-saturate-180 backdrop-brightness-105 transition-transform duration-300 hover:scale-[1.03]"
               >
                 <img
                   src={g.icon}
                   alt=""
-                  className="h-16 w-16 min-[400px]:h-20 min-[400px]:w-20 sm:h-28 sm:w-28 lg:h-[150px] lg:w-[150px] object-contain"
+                  className="h-14 w-14 min-[400px]:h-18 min-[400px]:w-18 sm:h-24 sm:w-24 lg:h-[130px] lg:w-[130px] object-contain"
                 />
-                <span className="mt-1 sm:mt-1.5 text-[11px] min-[400px]:text-xs sm:text-sm font-normal text-white text-center leading-tight">
+                <span className="mt-2 text-xs sm:text-sm font-medium text-white text-center leading-snug tracking-normal">
                   {g.text}
                 </span>
               </div>
