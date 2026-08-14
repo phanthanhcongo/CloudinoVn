@@ -20,9 +20,13 @@ export default function Header() {
           {/* Mobile Logo - Left Aligned */}
           <a
             href="/"
-            className="flex items-center text-xl font-bold tracking-wider text-white transition-colors hover:text-[#7D51D3] md:hidden"
+            className="flex items-center transition-opacity hover:opacity-80 md:hidden"
           >
-            CLOUDINO
+            <img
+              src="/images/logos-cleaned/CloudinoLogoFinal.png"
+              alt="Cloudino Logo"
+              className="h-8 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(168,85,247,0.4)] transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(168,85,247,0.7)]"
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -44,9 +48,13 @@ export default function Header() {
 
             <a
               href="/"
-              className="mx-4 text-2xl font-bold tracking-wider text-white transition-colors hover:text-[#7D51D3]"
+              className="mx-4 flex items-center transition-opacity hover:opacity-80"
             >
-              CLOUDINO
+              <img
+                src="/images/logos-cleaned/CloudinoLogoFinal.png"
+                alt="Cloudino Logo"
+                className="h-10 lg:h-12 w-auto object-contain brightness-0 invert drop-shadow-[0_0_10px_rgba(168,85,247,0.4)] transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(168,85,247,0.7)]"
+              />
             </a>
 
             <div className="mx-3 h-5 w-px bg-white/40" />

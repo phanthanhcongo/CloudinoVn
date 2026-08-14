@@ -1,5 +1,7 @@
 ---
-import SuccessStoriesCardGrids from "../../components/SuccessStoriesCardGrids";
+import SuccessStories from "../../components/SuccessStories";
+import SectionHeader from "../../components/SectionHeader";
+import CertificationsGrid from "../../components/CertificationsGrid";
 import Layout from "../../layouts/Layout.astro";
 
 const cases = [
@@ -42,22 +44,54 @@ const cases = [
 <Layout title="Success Stories | Cloudino">
   <main class="bg-black">
     <section
-      class="relative flex h-[930px] items-center overflow-hidden bg-black"
+      class="relative flex min-h-[480px] sm:min-h-[650px] lg:h-[800px] xl:h-[930px] items-center overflow-hidden bg-black py-16 lg:py-0"
     >
+      {/* Background Vertical Grid Lines */}
+      <div
+        class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:40px_100%] sm:bg-[size:60px_100%] pointer-events-none opacity-40 z-0"
+      >
+      </div>
+
+      {/* Ambient Glowing Orbs */}
+      <div
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[350px] w-[350px] sm:h-[500px] sm:w-[500px] md:h-[650px] md:w-[650px] rounded-full bg-gradient-to-tr from-[#312E81] via-[#7D51D3] to-[#EC4899] opacity-60 blur-[120px] pointer-events-none z-0"
+      >
+      </div>
+      <div
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-[200px] w-[200px] sm:h-[320px] sm:w-[320px] rounded-full bg-gradient-to-r from-[#60A5FA] to-[#C084FC] opacity-40 blur-[80px] pointer-events-none z-0"
+      >
+      </div>
+
+      {/* 3D Crystal Sphere Centered in Section 1 */}
+      <img
+        src="/images/successStories/Orange.png"
+        alt=""
+        class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 h-auto w-[280px] sm:w-[440px] md:w-[600px] lg:w-[720px] max-w-full object-contain pointer-events-none opacity-100 brightness-110 contrast-105 drop-shadow-[0_10px_40px_rgba(168,85,247,0.4)] z-0"
+      />
+
       <img
         src="/images/backgrounds/M&M.gif"
         alt=""
-        class="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-lighten"
+        class="absolute inset-0 h-full w-full object-cover opacity-60 sm:opacity-75 mix-blend-lighten brightness-110 contrast-110 pointer-events-none z-0"
       />
+
+      {/* Dark Overlay Layers for Section 1 */}
+      <div class="absolute inset-0 bg-black/20 pointer-events-none z-0"></div>
       <div
-        class="relative mx-auto w-full max-w-[1920px] px-[285px] text-center"
+        class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50 pointer-events-none z-0"
       >
-        <p class="text-2xl font-normal text-white">
+      </div>
+      <div
+        class="relative z-10 mx-auto w-full max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px] text-center"
+      >
+        <p
+          class="text-base sm:text-xl md:text-2xl font-medium tracking-wide text-purple-100/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.8)]"
+        >
           We accompany our customers on their innovation journey
         </p>
         <h1
-          class="mt-4 mx-auto max-w-[1151px] text-[64px] font-bold leading-[1.5] text-transparent bg-clip-text uppercase"
-          style="background-image:linear-gradient(45deg,#5B6FF5,#D4CB7B 52.6%,#DA3FF0)"
+          class="mt-4 mx-auto max-w-[1151px] text-2xl sm:text-4xl md:text-5xl lg:text-[64px] font-bold leading-tight sm:leading-snug lg:leading-[1.4] text-transparent bg-clip-text uppercase"
+          style="background-image:linear-gradient(45deg, #5B6FF5, #D4CB7B 52.6%, #DA3FF0)"
         >
           Explore cloudino&apos;s DX capabilities through customer success
           stories across industries
@@ -66,147 +100,89 @@ const cases = [
     </section>
 
     <section class="bg-black pb-8">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <div class="flex gap-4 justify-center">
+      <!-- <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <div class="flex flex-wrap gap-2 sm:gap-4 justify-center">
           {
-            ["All", "Service", "Platform", "Industry"].map(tag => (
-              <button class="flex flex-col items-start rounded-full px-6 py-3 text-white/70 transition-all hover:border-white/40 hover:text-white">
-                <span class="text-2xl font-normal">{tag}</span>
+            ["All", "Service", "Platform", "Industry"].map((tag) => (
+              <button class="flex flex-col items-start rounded-full px-4 py-2 sm:px-6 sm:py-3 text-white/70 transition-all hover:border-white/40 hover:text-white">
+                <span class="text-base sm:text-xl md:text-2xl font-normal">
+                  {tag}
+                </span>
               </button>
             ))
           }
         </div>
-      </div>
+      </div> -->
     </section>
-    <section class="relative bg-black pt-[100px] pb-[55px]">
-      <img
-        src="/images/backgrounds/bg-section-6.png"
-        alt=""
-        class="absolute inset-0 h-full w-full object-cover opacity-60"
-      />
+    <SuccessStories
+      title="Featured case stories"
+      showLearnMore={false}
+      client:load
+    />
+    <section class="relative bg-black py-12 sm:py-16">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <SectionHeader title="All Case Stories (5)" leftPercent={0} />
 
-      <div class="mb-[25px] flex items-center">
         <div
-          class="relative flex items-center overflow-hidden rounded-full border border-accent px-6 py-3"
-          style={{
-            background: "rgba(49,46,129,0.25)",
-            backdropFilter: "blur(16px)",
-          }}
+          class="mt-8 sm:mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
         >
-          <div
-            class="absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2"
-          >
-            <div class="h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]">
-            </div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="h-2 w-2 rounded-full bg-white opacity-40"></div>
-            </div>
-          </div>
-          <h2 class="text-5xl font-light text-white">Featured case stories</h2>
-          <div
-            class="absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2"
-          >
-            <div class="h-4 w-4 rounded-full bg-white opacity-30 blur-[2px]">
-            </div>
-            <div class="absolute inset-0 flex items-center justify-center">
-              <div class="h-2 w-2 rounded-full bg-white opacity-40"></div>
-            </div>
-          </div>
-        </div>
-        <div class="ml-0 flex-1 border-dashed border border-white/20"></div>
-        <img
-          src="/images/partners/logo-1.png"
-          alt=""
-          class="ml-0 h-[50px] w-[296px] object-contain"
-        />
-      </div>
-      <SuccessStoriesCardGrids />
-    </section>
-    <section class="bg-black pb-8">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <div class="mb-8 flex items-center">
-          <h2 class="text-5xl font-light text-white">All Case Stories(5)</h2>
-          <div class="ml-0 flex-1 border-t border-white/20"></div>
-        </div>
-        <div class="grid grid-cols-3 gap-10">
           {
             cases.map((item, i) => (
               <a
                 href={`/success-stories/${i + 1}`}
-                class="group bg-accent/40 p-4 rounded-4xl"
+                class="group relative flex flex-col justify-between overflow-hidden rounded-3xl border-2 border-purple-400/70 bg-gradient-to-b from-[#2a1f5c]/90 via-[#1a1240]/95 to-[#120a2e] p-5 sm:p-6 backdrop-blur-md shadow-[0_4px_25px_rgba(125,81,211,0.25)] transition-all duration-300 hover:-translate-y-1.5 hover:border-purple-300 hover:shadow-[0_10px_35px_rgba(168,85,247,0.5)]"
               >
-                <div class="h-[440px] overflow-hidden rounded-lg">
-                  <img
-                    src={item.image}
-                    alt=""
-                    class="h-full w-full object-cover"
-                  />
+                <div>
+                  {/* Card Image Container */}
+                  <div class="relative h-[200px] sm:h-[240px] w-full overflow-hidden rounded-2xl bg-purple-950/20">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      class="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                    />
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#080511]/80 via-transparent to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-40" />
+                  </div>
+
+                  {/* Card Content */}
+                  <h3 class="mt-5 text-lg sm:text-xl font-bold leading-snug text-white transition-colors duration-300 group-hover:text-purple-200 line-clamp-2">
+                    {item.title}
+                  </h3>
+
+                  {item.subtext && (
+                    <p class="mt-2.5 text-xs sm:text-sm font-normal leading-relaxed text-white/70 line-clamp-3">
+                      {item.subtext}
+                    </p>
+                  )}
                 </div>
-                <h3 class="mt-4 text-2xl font-bold text-white group-hover:text-primary">
-                  {item.title}
-                </h3>
-                <p class="mt-2 text-base font-normal text-white">
-                  {item.subtext}
-                </p>
-                <div
-                  class="mt-6 flex h-[48px] sm:h-[60px] w-[170px] sm:w-[194px] items-center justify-center rounded-full border border-purple-400/50 text-base sm:text-xl font-medium tracking-[-0.5px] text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81] via-[#5b3db5] to-[#7d51d3] hover:bg-white hover:text-[#201048] shadow-[0_0_25px_rgba(168,85,247,0.45)] hover:shadow-[0_0_35px_rgba(168,85,247,0.75)] hover:scale-105 transition-all duration-300"
-                >
-                  LEARN MORE →
+
+                {/* Card Footer / Action Button */}
+                <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+                  <span class="inline-flex items-center gap-2 rounded-full border border-purple-400/40 bg-gradient-to-r from-[#312e81]/60 to-[#5b3db5]/60 px-4 py-2 text-xs sm:text-sm font-medium tracking-wide text-white backdrop-blur-md shadow-[0_0_15px_rgba(168,85,247,0.3)] transition-all duration-300 group-hover:border-purple-300/60 group-hover:shadow-[0_0_22px_rgba(168,85,247,0.5)]">
+                    LEARN MORE
+                    <span class="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
+                  </span>
                 </div>
               </a>
             ))
           }
         </div>
-
-        <!-- <div class="mt-12 flex items-center justify-center gap-6">
-          <button
-            class="text-5xl font-light text-white/40 hover:text-white transition-colors"
-            >&larr;</button
-          >
-          {
-            ["1", "2", "3", "4", "..."].map(p => (
-              <button
-                class={`text-2xl font-normal transition-colors ${p === "1" ? "text-white" : "text-white/40 hover:text-white"}`}
-              >
-                {p}
-              </button>
-            ))
-          }
-          <button
-            class="text-5xl font-light text-white/40 hover:text-white transition-colors"
-            >&rarr;</button
-          >
-        </div> -->
       </div>
     </section>
 
-    <section class="bg-black py-24">
-      <div class="mx-auto max-w-[1920px] px-[285px] text-center">
-        <div class="mb-8 flex items-center">
-          <h2 class="text-5xl font-light text-white">Certification</h2>
-          <div class="ml-0 flex-1 border-t border-white/20"></div>
-        </div>
-        <h2 class="text-5xl font-light text-white">
+    <section class="relative bg-black py-12 sm:py-16 md:py-24">
+      <div
+        class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px] text-center"
+      >
+        <SectionHeader title="Certification" leftPercent={0} />
+        <h2 class="text-2xl sm:text-4xl md:text-5xl font-light text-white">
           Global Partnerships and Certifications
         </h2>
-        <p class="mt-2 text-base font-normal text-white/70">
+        <p class="mt-2 mb-10 text-sm sm:text-base font-normal text-white/70">
           We possess globally recognized technical expertise and service
           quality.
         </p>
-        <div class="relative flex shrink-0 items-start">
-          <div class="p-2 bg-linear-to-r from-[#312E81] to-accent rounded-2xl">
-            <img
-              src="/images/aws/aws-badge.png"
-              alt="AWS Badge"
-              class="h-64 w-48 object-contain"
-            />
-          </div>
-          <img
-            src="/images/aws/aws-icon.png"
-            alt=""
-            class="mt-[200px] -ml-[90px] h-32 w-32 object-contain"
-          />
-        </div>
+
+        <CertificationsGrid client:load />
       </div>
     </section>
   </main>

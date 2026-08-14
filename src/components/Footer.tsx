@@ -39,9 +39,13 @@ export default function Footer() {
       <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-[285px]">
         {/* CLOUDINO Brand Header */}
         <div className="mb-4 sm:mb-8 flex justify-center md:mb-14">
-          <span className="text-lg sm:text-2xl font-bold tracking-widest text-white md:text-[34px] uppercase drop-shadow-md">
-            CLOUDINO
-          </span>
+          <a href="/" className="transition-opacity hover:opacity-90">
+            <img
+              src="/images/logos-cleaned/CloudinoLogoFinal.png"
+              alt="Cloudino Logo"
+              className="h-10 sm:h-14 md:h-16 w-auto object-contain brightness-0 invert drop-shadow-[0_0_12px_rgba(168,85,247,0.45)] transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_18px_rgba(168,85,247,0.7)]"
+            />
+          </a>
         </div>
 
         {/* Main Title & Subtitle with Figma Color Gradients */}
