@@ -14,7 +14,7 @@ if (industries !== "finance") Astro.redirect("/solutions");
   <main class="bg-black">
     {/* Hero */}
     <section
-      class="relative flex h-[500px] sm:h-[700px] lg:h-[930px] items-center overflow-hidden bg-black"
+      class="relative flex h-[280px] sm:h-[380px] md:h-[480px] lg:h-[580px] xl:h-[650px] items-center overflow-hidden bg-black"
     >
       <img
         src="/images/backgrounds/A&D.gif"
@@ -22,22 +22,22 @@ if (industries !== "finance") Astro.redirect("/solutions");
         class="absolute inset-0 h-full w-full object-cover opacity-50 mix-blend-screen filter brightness-125 pointer-events-none"
       />
       <div
-        class="relative mx-auto w-full max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px] text-center z-10"
+        class="relative mx-auto w-full max-w-[1920px] px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[285px] text-center z-10"
       >
         <div class="mx-auto max-w-[1519px]">
           <h1
-            class="text-5xl sm:text-7xl md:text-8xl xl:text-[128px] font-extrabold leading-tight text-transparent bg-clip-text uppercase tracking-tight"
+            class="text-2xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-[80px] font-extrabold leading-tight text-transparent bg-clip-text uppercase tracking-tight"
             style="background-image:linear-gradient(45deg,#5B6FF5,#D4CB7B 52.6%,#DA3FF0)"
           >
             Finance
           </h1>
           <p
-            class="mt-4 sm:mt-6 mx-auto max-w-[740px] text-base sm:text-lg font-normal text-white/80"
+            class="mt-2 sm:mt-3 mx-auto max-w-[740px] text-xs sm:text-sm md:text-base font-normal text-white/80"
           >
             Cloud Innovation for the Finance Industry
           </p>
           <h2
-            class="mt-4 sm:mt-6 mx-auto text-white text-lg sm:text-2xl lg:text-3xl font-light max-w-[900px] leading-relaxed"
+            class="mt-2 sm:mt-3 mx-auto text-white text-xs sm:text-sm lg:text-base font-light max-w-[900px] leading-relaxed"
           >
             Cloudino thúc đẩy quá trình chuyển đổi số trong lĩnh vực tài chính,
             tăng cường tính tuân thủ và bảo mật, đồng thời mang đến những trải
@@ -48,18 +48,18 @@ if (industries !== "finance") Astro.redirect("/solutions");
     </section>
 
     {/* Trusted Partner */}
-    <section class="bg-black py-12 sm:py-20 lg:py-24">
-      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+    <section class="bg-black py-8 sm:py-12 lg:py-16">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[285px]">
         <div class="flex flex-col lg:flex-row gap-8 lg:gap-16 items-start">
           <div class="w-full lg:w-[480px] shrink-0">
             <h2
-              class="text-3xl sm:text-4xl lg:text-5xl font-light text-white leading-snug"
+              class="text-lg sm:text-xl lg:text-2xl xl:text-3xl font-light text-white leading-snug"
             >
               Đối tác Tin cậy cho Chuyển đổi Số ngành Tài chính
             </h2>
             <a
               href="/contact"
-              class="mt-6 sm:mt-8 inline-flex h-[50px] sm:h-[60px] w-[180px] sm:w-[201px] items-center justify-center rounded-full border border-accent/80 text-base sm:text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-accent bg-accent/40 shadow-[0_0_25px_rgba(125,81,211,0.4)] hover:scale-105"
+              class="mt-4 sm:mt-5 inline-flex h-[38px] sm:h-[44px] w-[130px] sm:w-[150px] items-center justify-center rounded-full border border-accent/80 text-xs font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-accent bg-accent/40 shadow-[0_0_25px_rgba(125,81,211,0.4)] hover:scale-105"
             >
               CONTACT US →
             </a>
@@ -85,10 +85,10 @@ if (industries !== "finance") Astro.redirect("/solutions");
                 },
               ].map((item) => (
                 <div>
-                  <h3 class="text-2xl sm:text-3xl lg:text-4xl font-normal text-white leading-snug">
+                  <h3 class="text-base sm:text-lg lg:text-xl xl:text-2xl font-normal text-white leading-snug">
                     {item.title}
                   </h3>
-                  <p class="mt-2 text-sm sm:text-base font-normal text-white/70 leading-relaxed">
+                  <p class="mt-1 text-xs sm:text-sm font-normal text-white/70 leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -100,8 +100,8 @@ if (industries !== "finance") Astro.redirect("/solutions");
     </section>
 
     {/* Case Stories */}
-    <section class="bg-black py-12 sm:py-16 lg:py-24">
-      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+    <section class="bg-black py-8 sm:py-12">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[285px]">
         <div class="mb-8 flex items-center gap-4">
           <div class="flex items-center gap-3">
             <div class="relative flex h-4 w-4 items-center justify-center">
@@ -113,7 +113,7 @@ if (industries !== "finance") Astro.redirect("/solutions");
               </div>
             </div>
             <h2
-              class="text-2xl sm:text-4xl lg:text-5xl font-light text-white whitespace-nowrap"
+              class="text-base sm:text-xl lg:text-2xl font-light text-white whitespace-nowrap"
             >
               Case Stories
             </h2>
@@ -135,24 +135,24 @@ if (industries !== "finance") Astro.redirect("/solutions");
             Array.from({ length: 3 }, (_, i) => (
               <a
                 href="/success-stories"
-                class="group w-full rounded-2xl border border-white/10 p-6 sm:p-8 backdrop-blur-sm flex flex-col justify-between"
+                class="group w-full rounded-2xl border border-white/10 p-5 sm:p-6 backdrop-blur-sm flex flex-col justify-between"
                 style="background:linear-gradient(135deg,rgba(49,46,129,0.1),rgba(125,81,211,0.05))"
               >
-                <div class="h-[220px] sm:h-[320px] lg:h-[440px] w-full overflow-hidden rounded-lg">
+                <div class="h-[160px] sm:h-[200px] lg:h-[260px] w-full overflow-hidden rounded-lg">
                   <img
                     src={`/images/backgrounds/deco-${i + 1}.png`}
                     alt=""
                     class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <h3 class="mt-4 text-xl sm:text-2xl font-bold text-white group-hover:text-primary leading-tight">
+                <h3 class="mt-4 text-sm sm:text-base lg:text-lg font-bold text-white group-hover:text-primary leading-tight">
                   lorem ipsum dolor sit amet consectet adipiscing elit sed diam
                 </h3>
-                <p class="mt-2 text-xs sm:text-base font-normal text-white/70">
+                <p class="mt-2 text-xs sm:text-sm font-normal text-white/70">
                   lorem ipsum dolor sit amet consectetuer adipiscing elit sed
                   diam nonummy nibh euismod tincidunt ut
                 </p>
-                <div class="mt-6 flex h-[44px] sm:h-[54px] w-[160px] sm:w-[194px] items-center justify-center rounded-full border border-purple-400/50 text-sm sm:text-xl font-medium tracking-[-0.5px] text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81] via-[#5b3db5] to-[#7d51d3] group-hover:bg-white group-hover:text-[#201048] shadow-[0_0_25px_rgba(168,85,247,0.45)] group-hover:shadow-[0_0_35px_rgba(168,85,247,0.75)] transition-all duration-300">
+                <div class="mt-4 flex h-[36px] sm:h-[42px] w-[130px] sm:w-[150px] items-center justify-center rounded-full border border-purple-400/50 text-xs font-medium tracking-[-0.5px] text-white backdrop-blur-xl bg-gradient-to-r from-[#312e81] via-[#5b3db5] to-[#7d51d3] group-hover:bg-white group-hover:text-[#201048] shadow-[0_0_25px_rgba(168,85,247,0.45)] group-hover:shadow-[0_0_35px_rgba(168,85,247,0.75)] transition-all duration-300">
                   LEARN MORE →
                 </div>
               </a>
@@ -163,8 +163,8 @@ if (industries !== "finance") Astro.redirect("/solutions");
     </section>
 
     {/* Insights */}
-    <section class="bg-black py-12 sm:py-16 lg:py-24">
-      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+    <section class="bg-black py-8 sm:py-12">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[285px]">
         <div class="mb-8 flex items-center gap-4">
           <div class="flex items-center gap-3">
             <div class="relative flex h-4 w-4 items-center justify-center">
@@ -176,7 +176,7 @@ if (industries !== "finance") Astro.redirect("/solutions");
               </div>
             </div>
             <h2
-              class="text-2xl sm:text-4xl lg:text-5xl font-light text-white whitespace-nowrap"
+              class="text-base sm:text-xl lg:text-2xl font-light text-white whitespace-nowrap"
             >
               Insights
             </h2>
@@ -201,7 +201,7 @@ if (industries !== "finance") Astro.redirect("/solutions");
                 class="group w-full flex flex-col justify-between"
               >
                 <div>
-                  <p class="text-xs sm:text-base font-normal text-white/50">
+                  <p class="text-xs sm:text-sm font-normal text-white/50">
                     {item.date}
                   </p>
                   <div class="mt-3 aspect-video w-full overflow-hidden rounded-lg">
@@ -211,7 +211,7 @@ if (industries !== "finance") Astro.redirect("/solutions");
                       class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
-                  <h3 class="mt-4 text-base sm:text-xl font-normal text-white group-hover:text-purple-300 transition-colors leading-tight line-clamp-2">
+                  <h3 class="mt-4 text-xs sm:text-sm font-normal text-white group-hover:text-purple-300 transition-colors leading-tight line-clamp-2">
                     {item.title}
                   </h3>
                 </div>
@@ -223,36 +223,36 @@ if (industries !== "finance") Astro.redirect("/solutions");
     </section>
 
     {/* CTA - Spaced out cleanly from Footer (pb-24 sm:pb-36 lg:pb-48) */}
-    <section class="relative bg-black py-16 sm:py-24 pb-24 sm:pb-36 lg:pb-48">
+    <section class="relative bg-black py-10 sm:py-12 pb-12 sm:pb-16 lg:pb-24">
       <img
         src="/images/backgrounds/image119.png"
         alt=""
         class="absolute inset-0 h-full w-full object-cover opacity-80 mix-blend-screen filter brightness-125 pointer-events-none"
       />
       <div
-        class="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px] text-center"
+        class="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[285px] text-center"
       >
         <div
           class="mx-auto max-w-[1258px] flex flex-col items-center justify-center text-center"
         >
-          <p class="text-xs sm:text-base font-normal text-white/70 text-center">
+          <p class="text-xs sm:text-sm font-normal text-white/70 text-center">
             Sẵn sàng nâng tầm hạ tầng đám mây cho ngành Tài chính?
           </p>
           <h2
-            class="mt-2 text-2xl sm:text-4xl lg:text-5xl font-light text-white text-center leading-snug"
+            class="mt-2 text-base sm:text-lg lg:text-xl xl:text-2xl font-light text-white text-center leading-snug"
           >
             Cùng Cloudino kiến tạo giải pháp đám mây an toàn, bảo mật và tối ưu
             chi phí cho doanh nghiệp của bạn.
           </h2>
           <p
-            class="mt-4 mx-auto max-w-[548px] text-sm sm:text-base font-normal text-white/70 text-center"
+            class="mt-3 mx-auto max-w-[548px] text-xs sm:text-sm font-normal text-white/70 text-center"
           >
             Liên hệ ngay với đội ngũ chuyên gia của chúng tôi để được tư vấn
             chiến lược chuyển đổi số toàn diện.
           </p>
           <a
             href="/contact"
-            class="mt-8 mx-auto inline-flex h-[50px] sm:h-[60px] w-[180px] sm:w-[201px] items-center justify-center rounded-full border border-white/20 text-base sm:text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black bg-white/5 shadow-[0_0_25px_rgba(255,255,255,0.15)] hover:scale-105"
+            class="mt-5 mx-auto inline-flex h-[38px] sm:h-[44px] w-[130px] sm:w-[150px] items-center justify-center rounded-full border border-white/20 text-xs font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-black bg-white/5 shadow-[0_0_25px_rgba(255,255,255,0.15)] hover:scale-105"
           >
             CONTACT US →
           </a>

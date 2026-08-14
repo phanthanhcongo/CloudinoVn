@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="relative overflow-hidden pt-10 pb-6 sm:pt-16 sm:pb-10 md:pt-24 md:pb-14" style={{ background: "radial-gradient(ellipse at 50% 40%, #432188 0%, #201048 55%, #0F0728 100%)" }}>
+    <footer className="relative overflow-hidden pt-8 pb-4 sm:pt-12 sm:pb-8 md:pt-16 md:pb-10" style={{ background: "radial-gradient(ellipse at 50% 40%, #432188 0%, #201048 55%, #0F0728 100%)" }}>
       {/* Top accent divider line */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-300/30 to-transparent" />
 
@@ -8,16 +8,16 @@ export default function Footer() {
       <img
         src="/images/aws/aws-bg.png"
         alt=""
-        className="absolute right-0 top-1/2 -translate-y-1/2 hidden h-[90%] w-auto max-w-[550px] object-contain opacity-70 mix-blend-screen pointer-events-none md:block"
+        className="absolute right-0 top-1/2 -translate-y-1/2 hidden h-[80%] w-auto max-w-[450px] object-contain opacity-70 mix-blend-screen pointer-events-none md:block"
       />
       <img
         src="/images/hero/hero-icon-5.png"
         alt=""
-        className="absolute bottom-0 left-0 hidden h-auto w-[320px] object-contain opacity-80 mix-blend-screen pointer-events-none md:block"
+        className="absolute bottom-0 left-0 hidden h-auto w-[240px] object-contain opacity-80 mix-blend-screen pointer-events-none md:block"
       />
 
       {/* Concentric Decorative Rings, Orbs & Dots Container (Half Circle Arching Up from Bottom) */}
-      <div className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2 scale-[0.35] sm:scale-[0.65] md:scale-100 origin-bottom transition-transform pointer-events-none">
+      <div className="absolute left-1/2 bottom-0 -translate-x-1/2 translate-y-1/2 scale-[0.3] sm:scale-[0.55] md:scale-[0.8] origin-bottom transition-transform pointer-events-none">
         {/* Glowing gradient center orb at bottom */}
         <div
           className="absolute left-1/2 top-1/2 h-[500px] w-[500px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-50"
@@ -36,21 +36,21 @@ export default function Footer() {
         <div className="absolute left-1/2 top-1/2 h-[18px] w-[18px] translate-x-[360px] -translate-y-[220px] rounded-full border-2 border-white bg-white/40" />
       </div>
 
-      <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-[285px]">
+      <div className="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[285px]">
         {/* CLOUDINO Brand Header */}
-        <div className="mb-4 sm:mb-8 flex justify-center md:mb-14">
+        <div className="mb-4 sm:mb-6 flex justify-center md:mb-8">
           <a href="/" className="transition-opacity hover:opacity-90">
             <img
               src="/images/logos-cleaned/CloudinoLogoFinal.png"
               alt="Cloudino Logo"
-              className="h-10 sm:h-14 md:h-16 w-auto object-contain brightness-0 invert drop-shadow-[0_0_12px_rgba(168,85,247,0.45)] transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_18px_rgba(168,85,247,0.7)]"
+              className="h-8 sm:h-10 md:h-12 w-auto object-contain brightness-0 invert drop-shadow-[0_0_12px_rgba(168,85,247,0.45)] transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_18px_rgba(168,85,247,0.7)]"
             />
           </a>
         </div>
 
         {/* Main Title & Subtitle with Figma Color Gradients */}
         <div className="mx-auto max-w-[1100px] text-center">
-          <h2 className="text-2xl sm:text-4xl md:text-[76px] lg:text-[88px] font-bold leading-[1.1] tracking-tight">
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-[72px] font-bold leading-[1.1] tracking-tight">
             <span className="bg-gradient-to-r from-[#FFE580] via-[#FF8A65] to-[#F48FB1] bg-clip-text text-transparent drop-shadow-sm">
               Let&apos;s Connect &
             </span>
@@ -75,7 +75,7 @@ export default function Footer() {
           </div> */}
 
           {/* Address Info */}
-          <address className="mt-6 sm:mt-10 md:mt-16 block text-xs sm:text-sm md:text-base font-normal not-italic text-white/80 mx-auto text-center leading-relaxed max-w-[600px]">
+          <address className="mt-4 sm:mt-6 md:mt-10 block text-xs sm:text-sm md:text-base font-normal not-italic text-white/80 mx-auto text-center leading-relaxed max-w-[600px]">
             <p className="text-white/90">Tòa nhà Cloudino, 4/3 Phố Nghĩa Đô, Phường Nghĩa Đô, Hà Nội</p>
             <p className="mt-1">(+84) 024 22165050</p>
             <p className="mt-1 font-medium text-purple-200">hello@cloudino.vn</p>
@@ -84,7 +84,7 @@ export default function Footer() {
         </div>
 
         {/* Copyright Line */}
-        <div className="mt-6 sm:mt-10 md:mt-12 text-center pt-4 sm:pt-6 md:pt-8 border-t border-white/10">
+        <div className="mt-4 sm:mt-6 md:mt-8 text-center pt-3 sm:pt-4 md:pt-5 border-t border-white/10">
           <p className="text-[11px] sm:text-xs font-normal text-white/50">
             Copyright 2026 Cloudino. All rights reserved
           </p>

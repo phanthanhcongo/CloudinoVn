@@ -59,7 +59,7 @@ export default function SolutionsTabs() {
     <>
       {/* Tab buttons */}
       <section className="relative z-20 bg-transparent -mt-10 sm:-mt-24 md:-mt-36 lg:-mt-52 py-8 sm:py-12">
-        <div className="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <div className="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-[285px]">
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 lg:gap-[50px] xl:gap-[105px]">
             {TABS.map(tab => (
               <button
@@ -83,7 +83,7 @@ export default function SolutionsTabs() {
                     className="h-24 w-24 sm:h-36 sm:w-36 lg:h-52 lg:w-52 object-contain"
                   />
                 </div>
-                <span className="text-2xl sm:text-3xl lg:text-4xl font-normal">{tab.label}</span>
+                <span className="text-xl sm:text-2xl lg:text-3xl font-normal">{tab.label}</span>
                 {tab.desc && (
                   <p className="max-w-[290px] text-xs sm:text-base font-normal opacity-70">
                     {tab.desc}

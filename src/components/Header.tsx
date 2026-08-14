@@ -17,10 +17,10 @@ export default function Header() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/[0.04] to-transparent pointer-events-none" />
 
         <div className="relative mx-auto flex h-[56px] md:h-[70px] max-w-[1922px] items-center justify-between px-4 sm:px-6 md:justify-center md:px-8">
-          {/* Mobile Logo - Left Aligned */}
+          {/* Mobile Logo - Centered */}
           <a
             href="/"
-            className="flex items-center transition-opacity hover:opacity-80 md:hidden"
+            className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center transition-opacity hover:opacity-80 md:hidden"
           >
             <img
               src="/images/logos-cleaned/CloudinoLogoFinal.png"
@@ -75,7 +75,7 @@ export default function Header() {
 
           {/* Mobile Hamburger Button */}
           <button
-            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10 focus:outline-none md:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-white transition-colors hover:bg-white/10 focus:outline-none md:hidden ml-auto"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle Menu"
           >
