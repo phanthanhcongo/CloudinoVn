@@ -56,19 +56,19 @@ export default function Footer() {
             </span>
           </h2>
 
-          <p className="mt-2 sm:mt-4 text-xs sm:text-base md:text-2xl font-normal text-white/90 max-w-[700px] mx-auto">
+          {/* <p className="mt-2 sm:mt-4 text-xs sm:text-base md:text-2xl font-normal text-white/90 max-w-[700px] mx-auto">
             Connect with us and create change together.
-          </p>
+          </p> */}
 
           {/* Pill CTA Button */}
-          <div className="mt-5 sm:mt-8 flex justify-center">
+          {/* <div className="mt-5 sm:mt-8 flex justify-center">
             <a
               href="/contact"
               className="inline-flex h-[42px] sm:h-[54px] md:h-[60px] px-6 sm:px-10 items-center justify-center rounded-full border border-white/30 text-xs sm:text-base md:text-lg font-medium text-white backdrop-blur-xl bg-white/10 hover:bg-white hover:text-[#201048] transition-all duration-300 shadow-[0_0_30px_rgba(139,92,246,0.3)] hover:scale-105"
             >
               CONTACT →
             </a>
-          </div>
+          </div> */}
 
           {/* Address Info */}
           <address className="mt-6 sm:mt-10 md:mt-16 block text-xs sm:text-sm md:text-base font-normal not-italic text-white/80 mx-auto text-center leading-relaxed max-w-[600px]">

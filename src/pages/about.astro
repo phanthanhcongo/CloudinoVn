@@ -34,7 +34,7 @@ const whyCloudino = [
   <main class="bg-black">
     {/* Hero */}
     <section
-      class="relative flex h-[930px] items-center overflow-hidden bg-[#080808] border-b border-accent"
+      class="relative flex min-h-[480px] sm:min-h-[700px] md:h-[930px] items-center overflow-hidden bg-[#080808] border-b border-accent py-16 sm:py-24 md:py-0"
     >
       <img
         src="/images/backgrounds/image119.png"
@@ -53,17 +53,42 @@ const whyCloudino = [
           class="h-full w-1/2 object-cover -rotate-90 mix-blend-lighten"
         />
       </div>
+
       <div
-        class="relative mx-auto w-full max-w-[1920px] px-[285px] text-center"
+        class="relative z-20 mx-auto w-full max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px] text-center flex flex-col items-center justify-between h-full py-6 sm:py-10 md:py-12"
       >
-        <div class="mx-auto max-w-[740px]">
-          <h1
-            class="text-[96px] font-bold leading-none text-transparent bg-clip-text"
-            style="background-image:linear-gradient(45deg,#5B6FF5,#D4CB7B 52.6%,#DA3FF0)"
-          >
-            About us
-          </h1>
-          <p class="mt-0 text-2xl font-normal text-white">
+        {/* Top Vertical Dashed Line from header to text with 2s light pulse (Hidden on Mobile) */}
+        <div
+          class="hidden sm:block relative w-[1px] flex-1 min-h-[30px] sm:min-h-[50px] pointer-events-none opacity-80 overflow-hidden"
+          style="background: repeating-linear-gradient(to bottom, #7d51d3 0, #7d51d3 8px, transparent 8px, transparent 14px);"
+        >
+          {/* Animated Light Beam */}
+          <div
+            class="animate-line-pulse absolute left-1/2 -translate-x-1/2 w-[3px] h-[60px] sm:h-[90px] rounded-full"
+            style="background: linear-gradient(to bottom, transparent, #ffffff, #a855f7, transparent); filter: drop-shadow(0 0 8px #ffffff) drop-shadow(0 0 16px #a855f7);"
+          ></div>
+        </div>
+
+        {/* 100% Transparent Text Block */}
+        <div class="mx-auto max-w-[740px] my-4 sm:my-8">
+          <div class="relative inline-block">
+            {/* Main Title */}
+            <h1
+              class="text-4xl sm:text-7xl md:text-[96px] font-bold leading-none text-transparent bg-clip-text relative z-10"
+              style="background-image:linear-gradient(45deg,#5B6FF5,#D4CB7B 52.6%,#DA3FF0)"
+            >
+              About us
+            </h1>
+            {/* Inverted Mirror Reflection */}
+            <h1
+              aria-hidden="true"
+              class="text-4xl sm:text-7xl md:text-[96px] font-bold leading-none text-transparent bg-clip-text select-none pointer-events-none -scale-y-100 opacity-30 mt-[-8px] sm:mt-[-16px] md:mt-[-20px] filter blur-[0.5px]"
+              style="background-image:linear-gradient(45deg,#5B6FF5,#D4CB7B 52.6%,#DA3FF0); mask-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent 75%); -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.9), transparent 75%);"
+            >
+              About us
+            </h1>
+          </div>
+          <p class="mt-4 sm:mt-6 text-sm sm:text-lg md:text-2xl font-normal text-white">
             Cloudino là nhà cung cấp giải pháp đám mây thế hệ mới, mang đến các
             dịch vụ linh hoạt, tiết kiệm chi phí và dễ dàng tích hợp cho mọi quy
             mô doanh nghiệp. Chúng tôi hướng đến việc thúc đẩy chuyển đổi số, hỗ
@@ -71,31 +96,55 @@ const whyCloudino = [
             hạ tầng IT ổn định, bền vững ở quy mô lớn.
           </p>
         </div>
+
+        {/* Bottom Vertical Dashed Line from text down to brand badge with 2s light pulse (Hidden on Mobile) */}
+        <div
+          class="hidden sm:block relative w-[1px] flex-1 min-h-[30px] sm:min-h-[50px] pointer-events-none opacity-80 overflow-hidden"
+          style="background: repeating-linear-gradient(to bottom, #7d51d3 0, #7d51d3 8px, transparent 8px, transparent 14px);"
+        >
+          {/* Animated Light Beam */}
+          <div
+            class="animate-line-pulse absolute left-1/2 -translate-x-1/2 w-[3px] h-[60px] sm:h-[90px] rounded-full"
+            style="background: linear-gradient(to bottom, transparent, #ffffff, #a855f7, transparent); filter: drop-shadow(0 0 8px #ffffff) drop-shadow(0 0 16px #a855f7); animation-delay: 0.8s;"
+          ></div>
+        </div>
       </div>
     </section>
 
     {/* Cloudino Brand */}
-    <section class="bg-black py-8 mx-auto -mt-20 z-10">
-      <div class="mx-auto max-w-[1920px] px-[285px] flex justify-center">
-        <div
-          class="relative overflow-hidden text-5xl font-bold text-white text-center uppercase rounded-[48px] px-8 py-4 backdrop-blur-xl border border-accent/80 bg-accent/20"
-        >
-          {/* Liquid highlight */}
+    <section class="bg-black py-4 sm:py-8 w-full -mt-10 sm:-mt-20 z-10 relative">
+      {/* Full width horizontal solid line (Hidden on Mobile) */}
+      <div class="hidden sm:block absolute left-0 right-0 top-1/2 -translate-y-1/2 h-[3px] bg-accent opacity-90 shadow-[0_0_12px_rgba(125,81,211,0.8)] pointer-events-none z-0"></div>
+
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px] flex items-center justify-center relative z-10">
+        {/* Center Brand Badge Container */}
+        <div class="relative flex flex-col items-center mx-4 sm:mx-8">
+          {/* Vertical dashed line connecting to badge (Hidden on Mobile) */}
           <div
-            class="absolute inset-0 rounded-4xl"
-            style={{
-              background:
-                "linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 40%)",
-            }}
+            class="hidden sm:block absolute bottom-full left-1/2 -translate-x-1/2 w-[1px] h-10 pointer-events-none"
+            style="background: repeating-linear-gradient(to bottom, #7d51d3 0, #7d51d3 8px, transparent 8px, transparent 14px);"
+          ></div>
+
+          <div
+            class="relative overflow-hidden text-2xl sm:text-4xl md:text-5xl font-bold text-white text-center uppercase rounded-3xl sm:rounded-[48px] px-6 py-3 sm:px-8 sm:py-4 backdrop-blur-xl border border-accent/80 bg-black/90 shadow-[0_0_30px_rgba(125,81,211,0.3)]"
           >
+            {/* Liquid highlight */}
+            <div
+              class="absolute inset-0 rounded-4xl"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 40%)",
+              }}
+            >
+            </div>
+            <span class="relative">Cloudino</span>
           </div>
-          <span class="relative">Cloudino</span>
         </div>
       </div>
     </section>
 
     {/* Our Mission & Vision */}
-    <section class="relative overflow-hidden bg-black py-24">
+    <section class="relative overflow-hidden bg-black py-12 sm:py-16 md:py-24">
       <img
         src="/images/backgrounds/image119.png"
         alt=""
@@ -103,22 +152,22 @@ const whyCloudino = [
       />
       {/* Background decorations */}
       <div
-        class="absolute -right-40 top-1/2 h-[761px] w-[761px] -translate-y-1/2 rounded-full border border-white/[0.04]"
+        class="absolute -right-40 top-1/2 hidden md:block h-[761px] w-[761px] -translate-y-1/2 rounded-full border border-white/[0.04]"
       >
       </div>
-      <img src="/images/backgrounds/about-bg-2.png" class="mx-auto my-36" />
+      <img src="/images/backgrounds/about-bg-2.png" class="mx-auto my-12 sm:my-24 md:my-36 max-w-full h-auto" />
       <img
         src="/images/hero/hero-graphic.png"
         alt=""
-        class="absolute right-0 -bottom-96 h-[1075px] w-[1075px] object-contain opacity-80"
+        class="absolute right-0 -bottom-96 hidden md:block h-[1075px] w-[1075px] object-contain opacity-80"
       />
       <div
-        class="absolute right-[200px] top-[-100px] flex h-[420px] w-[420px] items-center justify-center rounded-2xl border border-white/[0.06] opacity-40"
+        class="absolute right-[200px] top-[-100px] hidden md:flex h-[420px] w-[420px] items-center justify-center rounded-2xl border border-white/[0.06] opacity-40"
       >
         <div class="h-[216px] w-[216px] rounded-full bg-white/5"></div>
       </div>
       {/* Big Cloudino text above content */}
-      <div class="relative mb-12 flex w-full justify-between -ml-24 gap-12">
+      <div class="relative mb-8 sm:mb-12 hidden md:flex w-full justify-between -ml-24 gap-12 overflow-hidden">
         {
           ["Cloudino", "Cloudino", "Cloudino", "Cloudino"].map((w, i) => (
             <span class="flex-1 text-center text-[150px] font-bold leading-none tracking-tighter text-accent/20">
@@ -127,20 +176,20 @@ const whyCloudino = [
           ))
         }
       </div>
-      <div class="relative mx-auto max-w-[1920px] px-[285px]">
-        <h2 class="text-5xl font-light text-white">Sứ mệnh và tầm nhìn</h2>
+      <div class="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <h2 class="text-2xl sm:text-4xl md:text-5xl font-light text-white">Sứ mệnh và tầm nhìn</h2>
         <h3
-          class="mt-4 text-[64px] font-bold leading-tight text-transparent bg-clip-text max-w-[876px] uppercase"
+          class="mt-2 sm:mt-4 text-3xl sm:text-5xl md:text-[64px] font-bold leading-tight text-transparent bg-clip-text max-w-[876px] uppercase"
           style="background-image:linear-gradient(90deg,#312E81,#7D51D3)"
         >
           ĐỒNG HÀNH CHUYỂN ĐỔI, KIẾN TẠO TƯƠNG LAI
         </h3>
-        <p class="mt-6 max-w-[740px] text-2xl font-normal text-white/80">
+        <p class="mt-4 sm:mt-6 max-w-[740px] text-sm sm:text-lg md:text-2xl font-normal text-white/80">
           Trở thành đối tác phân phối công nghệ đáng tin cậy, giúp doanh nghiệp
           trên toàn thế giới tiếp cận các giải pháp số linh hoạt, an toàn và dễ
           triển khai.
         </p>
-        <p class="mt-4 max-w-[740px] text-2xl font-normal text-white/80">
+        <p class="mt-3 sm:mt-4 max-w-[740px] text-sm sm:text-lg md:text-2xl font-normal text-white/80">
           Mang các giải pháp đám mây đáng tin cậy trở nên dễ tiếp cận và đơn
           giản hơn, giúp doanh nghiệp tự tin thúc đẩy hành trình chuyển đổi số.
         </p>
@@ -148,22 +197,22 @@ const whyCloudino = [
     </section>
 
     {/* A Journey of Innovation */}
-    <section class="bg-accent/60 py-24">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <div class="flex items-start gap-20">
-          <h3 class="text-5xl font-light text-white max-w-[613px]">
+    <section class="bg-accent/60 py-12 sm:py-16 md:py-24">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <div class="flex flex-col md:flex-row items-start gap-6 md:gap-20">
+          <h3 class="text-2xl sm:text-4xl md:text-5xl font-light text-white max-w-full md:max-w-[613px]">
             Hành trình Đổi mới: Từ Điện toán Đám mây đến Trí tuệ Nhân tạo.
           </h3>
-          <p class="max-w-[480px] text-2xl font-normal text-white/80">
+          <p class="max-w-full md:max-w-[480px] text-sm sm:text-lg md:text-2xl font-normal text-white/80">
             Kế thừa bề dày kinh nghiệm về công nghệ đám mây, Cloudino tự hào là
             đối tác đáng tin cậy, giúp khách hàng đón đầu xu hướng và tăng
             trưởng vượt bậc trong kỷ nguyên AI.
           </p>
         </div>
       </div>
-      <div class="mx-auto max-w-[1920px] px-[285px] mt-24">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px] mt-12 sm:mt-16 md:mt-24">
         <div
-          class="relative flex justify-start gap-12 border-t border-white/20 pt-8"
+          class="relative flex flex-col md:flex-row justify-start gap-8 md:gap-12 border-t border-white/20 pt-8"
         >
           {
             [
@@ -176,12 +225,12 @@ const whyCloudino = [
                 text: "Đánh dấu một bước tiến vượt bậc trong hành trình phát triển của CLOUDINO. Chúng tôi tự hào khẳng định vị thế là đối tác phân phối chính thức (Retail Partner) của 3 thương hiệu công nghệ hàng đầu toàn cầu, bao phủ toàn diện từ hạ tầng điện toán đám mây (IaaS) đến phần mềm dịch vụ (SaaS): AWS, DigitalOcean và Lark Suite. ",
               },
             ].map(item => (
-              <div class="relative flex flex-col items-center">
-                <p class="mt-2 text-2xl font-normal text-white">{item.year}</p>
-                <p class="mt-4 max-w-[350px] text-base font-normal text-white">
+              <div class="relative flex flex-col items-center text-center md:text-left">
+                <p class="mt-2 text-xl sm:text-2xl font-normal text-white">{item.year}</p>
+                <p class="mt-2 sm:mt-4 max-w-full md:max-w-[350px] text-sm sm:text-base font-normal text-white">
                   {item.text}
                 </p>
-                <div class="absolute -top-4 flex h-7 w-7 items-center justify-center rounded-full border border-white/30 bg-black">
+                <div class="hidden md:flex absolute -top-4 left-1/2 -translate-x-1/2 h-7 w-7 items-center justify-center rounded-full border border-white/30 bg-black">
                   <div class="h-5 w-5 rounded-full bg-white" />
                 </div>
               </div>
@@ -192,7 +241,7 @@ const whyCloudino = [
     </section>
 
     {/* Why Cloudino */}
-    <section class="relative overflow-hidden bg-black py-24 min-h-[1280px]">
+    <section class="relative overflow-hidden bg-black py-12 sm:py-16 md:py-24 min-h-auto md:min-h-[1280px]">
       <img
         src="/images/backgrounds/image119.png"
         alt=""
@@ -204,7 +253,7 @@ const whyCloudino = [
         class="absolute bottom-0 object-cover"
       />
       <div
-        class="absolute right-[200px] top-0 left-0 flex h-[420px] w-[420px] items-center justify-center rounded-2xl object-cover mix-blend-lighten"
+        class="absolute right-[200px] top-0 left-0 hidden md:flex h-[420px] w-[420px] items-center justify-center rounded-2xl object-cover mix-blend-lighten"
       >
         <img
           src="/images/backgrounds/image 114.png"
@@ -212,46 +261,33 @@ const whyCloudino = [
           class="h-full w-full object-contain"
         />
       </div>
-      <div class="relative mx-auto max-w-[1920px] px-[285px]">
-        <h2 class="text-[96px] font-light text-white">Why Cloudino</h2>
+      <div class="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <h2 class="text-4xl sm:text-6xl md:text-[96px] font-light text-white text-center md:text-left">Why Cloudino</h2>
 
         {/* Engineer cards */}
-        <div class="mt-16 flex justify-between gap-10">
+        <div class="mt-8 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 justify-items-center">
           {
             whyCloudino.map((item, i) => (
-              <div class="w-[300px] rounded-2xl p-6 backdrop-blur-sm bg-accent/20 border-2 border-accent/80 flex flex-col items-center">
+              <div class="w-full max-w-[320px] rounded-2xl p-6 backdrop-blur-sm bg-accent/20 border-2 border-accent/80 flex flex-col items-center text-center">
                 <img
                   src="/images/icons/service-card.png"
                   alt=""
-                  class="h-24 object-contain "
+                  class="h-20 sm:h-24 object-contain"
                 />
-                <p class="mt-6 max-w-[288px] text-base font-normal text-white/70">
+                <p class="mt-4 sm:mt-6 text-sm sm:text-base font-normal text-white/70">
                   {item}
                 </p>
               </div>
             ))
           }
         </div>
-        <!-- <div class="mt-16 flex justify-between gap-10">
-          {
-            Array.from({ length: 2 }, (_, i) => (
-              <div class="w-[300px] rounded-2xl p-6 backdrop-blur-sm bg-accent/20 border-2 border-accent/80 flex flex-col items-center">
-                <div class="flex h-[60px] w-[60px] items-center justify-center rounded-full bg-white/10" />
-                <p class="mt-6 max-w-[288px] text-base font-normal text-white/70">
-                  Certified engineers with deep expertise across AWS,
-                  DigitalOcean, and Lark Suite.
-                </p>
-              </div>
-            ))
-          }
-        </div> -->
       </div>
     </section>
 
     {/* Cloud In Numbers */}
-    <section class="bg-black py-24">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <h2 class="text-[96px] font-light text-white text-center">Thành tựu</h2>
+    <section class="bg-black py-12 sm:py-16 md:py-24">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <h2 class="text-4xl sm:text-6xl md:text-[96px] font-light text-white text-center">Thành tựu</h2>
         <div class="">
           <Stats stats={stats} />
         </div>
@@ -264,22 +300,22 @@ const whyCloudino = [
     </section>
 
     {/* Solutions Provided */}
-    <section class="bg-black py-24">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <div class="grid grid-cols-2 gap-8">
+    <section class="bg-black py-12 sm:py-16 md:py-24">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12">
           <h2
-            class="text-[96px] font-light leading-tight text-white max-w-[480px]"
+            class="text-3xl sm:text-5xl md:text-7xl lg:text-[96px] font-light leading-tight text-white max-w-full lg:max-w-[480px]"
           >
             Các giải pháp từ CLOUDINO
           </h2>
           <div>
-            <p class="text-2xl font-normal text-white/80">
+            <p class="text-sm sm:text-lg md:text-2xl font-normal text-white/80">
               Từ việc ứng dụng và vận hành điện toán đám mây cho đến chuyển đổi
               thông minh tích hợp AI, CLOUDINO mang đến hệ sinh thái giải pháp
               toàn diện, đồng hành cùng hành trình chuyển đổi số của khách hàng
               đi đến thành công.
             </p>
-            <div class="mt-16 grid grid-cols-2 gap-10">
+            <div class="mt-8 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-10">
               {
                 [
                   {
@@ -299,11 +335,11 @@ const whyCloudino = [
                     text: "Cung cấp các giải pháp phần mềm dạng dịch vụ (SaaS) nhằm tự động hóa quy trình làm việc, tối ưu hiệu suất cộng tác, nâng tầm trải nghiệm khách hàng và tối ưu hóa chi phí.",
                   },
                 ].map(item => (
-                  <div class="p-4">
-                    <h3 class="text-4xl font-normal text-white">
+                  <div class="p-3 sm:p-4 border sm:border-0 border-white/10 rounded-xl sm:rounded-none bg-white/[0.02] sm:bg-transparent">
+                    <h3 class="text-xl sm:text-3xl md:text-4xl font-normal text-white">
                       {item.title}
                     </h3>
-                    <p class="mt-2 text-base font-normal text-white/60">
+                    <p class="mt-2 text-xs sm:text-base font-normal text-white/60">
                       {item.text}
                     </p>
                   </div>
@@ -316,43 +352,45 @@ const whyCloudino = [
     </section>
 
     {/* Promise beyond Technology */}
-    <section class="bg-black py-24">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <div class="flex gap-20">
-          <div class="max-w-[629px]">
-            <h2 class="text-5xl font-light text-white">
+    <section class="bg-black py-12 sm:py-16 md:py-24">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-20">
+          <div class="max-w-full lg:max-w-[629px]">
+            <h2 class="text-2xl sm:text-4xl md:text-5xl font-light text-white">
               Lời cam kết hơn cả một giải pháp công nghệ
             </h2>
-            <p class="mt-6 text-base font-normal text-white/70">
-              Trong kỷ nguyên của Đám mây và AI, dữ liệu khách hàng cùng hạ tầng
-              CNTT là những tài sản quan trọng và nhạy cảm nhất. Cloudino tự hào
-              là đối tác kỹ thuật số đáng tin cậy. Chúng tôi không chỉ cung cấp
-              các lớp bảo mật kỹ thuật thông thường mà còn cam kết bảo vệ an
-              toàn tuyệt đối tài sản của khách hàng bằng ý thức đạo đức nghề
-              nghiệp khắt khe nhất.
-              <p class="mt-4 text-base font-normal text-white/70">
+            <div class="mt-4 sm:mt-6 text-sm sm:text-base font-normal text-white/70 space-y-4">
+              <p>
+                Trong kỷ nguyên của Đám mây và AI, dữ liệu khách hàng cùng hạ tầng
+                CNTT là những tài sản quan trọng và nhạy cảm nhất. Cloudino tự hào
+                là đối tác kỹ thuật số đáng tin cậy. Chúng tôi không chỉ cung cấp
+                các lớp bảo mật kỹ thuật thông thường mà còn cam kết bảo vệ an
+                toàn tuyệt đối tài sản của khách hàng bằng ý thức đạo đức nghề
+                nghiệp khắt khe nhất.
+              </p>
+              <p>
                 Tại Cloudino, "Đạo đức" luôn được đặt làm tôn chỉ ưu tiên hàng
                 đầu trong mọi hoạt động quản trị và vận hành.
               </p>
-            </p>
+            </div>
           </div>
           <img
             src="/images/backgrounds/image 146.png"
             alt=""
-            class="w-150 h-auto rounded-lg object-cover"
+            class="w-full max-w-[500px] lg:w-150 h-auto rounded-lg object-cover"
           />
         </div>
       </div>
 
       {/* Global Network */}
-      <section class="relative bg-black py-24 min-h-[600px] flex items-center">
+      <section class="relative bg-black py-12 sm:py-16 md:py-24 min-h-[300px] sm:min-h-[450px] md:min-h-[600px] flex items-center">
         <img
           src="/images/backgrounds/about-bg-3.png"
           alt=""
           class="absolute inset-0 h-full w-full object-cover mix-blend-lighten"
         />
-        <div class="relative mx-auto max-w-[1920px] px-[285px]">
-          <h2 class="text-5xl font-light text-white text-center">
+        <div class="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+          <h2 class="text-xl sm:text-3xl md:text-5xl font-light text-white text-center leading-relaxed">
             Nhằm đáp ứng nhu cầu kinh doanh toàn cầu, Cloudino vận hành mạng
             lưới kết nối trực tiếp trải rộng khắp các khu vực.
           </h2>
@@ -361,12 +399,12 @@ const whyCloudino = [
     </section>
 
     {/* Leadership team */}
-    <section class="bg-black py-24">
-      <div class="mx-auto max-w-[1920px] px-[285px]">
-        <h2 class="text-[96px] font-light text-white text-center">
+    <section class="bg-black py-12 sm:py-16 md:py-24">
+      <div class="mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px]">
+        <h2 class="text-4xl sm:text-6xl md:text-[96px] font-light text-white text-center">
           Đội ngũ lãnh đạo
         </h2>
-        <div class="mt-16 flex justify-around gap-10">
+        <div class="mt-8 sm:mt-16 flex flex-col sm:flex-row justify-center items-center gap-8 md:gap-10">
           {
             [
               {
@@ -380,10 +418,10 @@ const whyCloudino = [
                 role: "Chief Executive Officer",
               },
             ].map((item, i) => (
-              <div class="w-[350px] border-2 border-accent rounded-4xl bg-linear-to-r from-[#312E81] to-accent flex flex-col items-center p-2">
-                <img src={item.image} class="w-full h-auto" />
-                <div>{item.name}</div>
-                <div>{item.role}</div>
+              <div class="w-full max-w-[320px] sm:w-[350px] border-2 border-accent rounded-4xl bg-linear-to-r from-[#312E81] to-accent flex flex-col items-center p-4 text-center">
+                <img src={item.image} class="w-full h-auto rounded-3xl" />
+                <div class="mt-4 text-xl font-semibold text-white">{item.name}</div>
+                <div class="text-sm font-normal text-white/70">{item.role}</div>
               </div>
             ))
           }
@@ -392,28 +430,28 @@ const whyCloudino = [
     </section>
 
     {/* Careers CTA */}
-    <section class="relative bg-black py-32">
+    <section class="relative bg-black py-16 sm:py-24 md:py-32">
       <img
         src="/images/backgrounds/image119.png"
         alt=""
         class="absolute inset-0 h-full w-full object-cover mix-blend-lighten"
       />
       <div
-        class="relative mx-auto max-w-[1920px] px-[285px] flex flex-col items-center"
+        class="relative mx-auto max-w-[1920px] px-4 sm:px-8 md:px-16 xl:px-[285px] flex flex-col items-center text-center"
       >
-        <h2 class="text-[96px] font-light text-white">Cơ hội nghề nghiệp</h2>
-        <p class="mt-8 text-base font-normal text-white/70">
+        <h2 class="text-3xl sm:text-6xl md:text-[96px] font-light text-white">Cơ hội nghề nghiệp</h2>
+        <p class="mt-4 sm:mt-8 text-sm sm:text-base font-normal text-white/70">
           Nơi hội tụ của sự Đổi mới và Tinh thần hợp tác
         </p>
-        <h3 class="mt-4 text-5xl font-light text-white">
+        <h3 class="mt-2 sm:mt-4 text-2xl sm:text-4xl md:text-5xl font-light text-white">
           Chúng tôi đang tuyển dụng
         </h3>
-        <p class="mt-2 text-base font-normal text-white/70">
+        <p class="mt-2 text-sm sm:text-base font-normal text-white/70">
           Cùng tài năng của bạn kiến tạo tương lai doanh nghiệp.
         </p>
         <a
           href="/career"
-          class="mt-8 inline-flex h-[60px] w-[266px] items-center justify-center rounded-full border border-white/20 text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-accent bg-accent"
+          class="mt-6 sm:mt-8 inline-flex h-[50px] sm:h-[60px] w-full max-w-[266px] items-center justify-center rounded-full border border-white/20 text-base sm:text-xl font-normal tracking-[-1px] text-white backdrop-blur-md transition-all hover:bg-white hover:text-accent bg-accent"
         >
           Tìm kiếm cơ hội →
         </a>

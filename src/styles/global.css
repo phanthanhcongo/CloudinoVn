@@ -42,6 +42,23 @@ html {
   }
 }
 
+@keyframes line-pulse {
+  0% {
+    top: -20%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    top: 120%;
+    opacity: 0;
+  }
+}
+
 @utility animate-shimmer {
   animation: shimmer 3s ease-in-out infinite;
 }
@@ -52,6 +69,10 @@ html {
 
 @utility animate-spin-slow {
   animation: spin-slow 20s linear infinite;
+}
+
+@utility animate-line-pulse {
+  animation: line-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 @layer base {
