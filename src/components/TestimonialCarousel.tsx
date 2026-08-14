@@ -29,7 +29,7 @@ const testimonials = [
 
 export default function TestimonialCarousel() {
   return (
-    <section className="relative overflow-hidden bg-black pt-12 sm:pt-20 lg:pt-[100px] pb-12 sm:pb-[49px]">
+    <section className="relative overflow-hidden bg-black py-16 sm:py-20 md:py-28">
       <img
         src="/images/backgrounds/image119.png"
         alt=""
@@ -78,12 +78,14 @@ export default function TestimonialCarousel() {
                     <div className="h-[13px] w-[13px] rounded-full bg-white" />
                   </div>
                 </div>
-                <div className="relative mb-4 sm:mb-6 rounded-full border-4 sm:border-[8px] border-white p-1 sm:p-1.5 shadow-lg z-10">
+                <div className="relative mb-4 sm:mb-6 rounded-full border-4 sm:border-[8px] border-white shadow-lg z-10">
                   <img
                     src={t.avatar}
                     alt={t.name}
                     className="h-[100px] w-[100px] sm:h-[139px] sm:w-[139px] rounded-full object-cover"
                   />
+                  {/* Pointed tail at bottom */}
+                  <div className="absolute -bottom-3 sm:-bottom-4 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[10px] sm:border-l-[14px] border-l-transparent border-r-[10px] sm:border-r-[14px] border-r-transparent border-t-[12px] sm:border-t-[16px] border-t-white pointer-events-none" />
                 </div>
               </div>
               <div
