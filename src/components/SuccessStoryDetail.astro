@@ -96,10 +96,10 @@ if (image && compiledContent) {
         <span class="text-xs sm:text-sm font-normal text-gray-900 tracking-tight block mb-3 sm:mb-6">
           {date}
         </span>
-        <h1 class="text-2xl sm:text-4xl lg:text-6xl font-light text-gray-900 leading-[1.2] sm:leading-[1.12] tracking-tight mb-4 sm:mb-8">
+        <h1 class="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-semibold text-gray-900 leading-[1.2] sm:leading-[1.15] tracking-tight mb-4 sm:mb-8 font-sans">
           {title}
         </h1>
-        <p class="text-xs sm:text-sm font-normal text-gray-800 leading-relaxed max-w-md">
+        <p class="text-sm sm:text-base md:text-lg font-normal text-gray-800 leading-relaxed max-w-2xl font-sans">
           {subtitle}
         </p>
       </div>
@@ -109,8 +109,8 @@ if (image && compiledContent) {
     <div class="relative max-w-4xl mx-auto">
       {/* Article Body */}
       <div class="w-full">
-        <div class="prose prose-base sm:prose-lg max-w-none text-gray-800 prose-headings:font-bold prose-headings:text-gray-900 prose-h1:text-xl sm:prose-h1:text-3xl prose-h1:mt-8 sm:prose-h1:mt-10 prose-h1:mb-3 sm:prose-h1:mb-4 prose-p:text-gray-700 prose-p:leading-relaxed prose-p:text-sm sm:prose-p:text-base prose-p:my-4 sm:prose-p:my-5 prose-li:text-gray-700 prose-li:text-sm sm:prose-li:text-base prose-strong:text-gray-900 prose-img:rounded-2xl sm:prose-img:rounded-3xl prose-img:shadow-xl prose-img:my-6 sm:prose-img:my-8">
-          <article set:html={contentFirstPart} class="w-full" />
+        <div class="prose prose-base sm:prose-lg max-w-none font-sans text-gray-800 prose-headings:font-sans prose-headings:font-bold prose-headings:text-gray-900 prose-h1:text-2xl sm:prose-h1:text-3xl prose-h1:font-bold prose-h1:mt-8 sm:prose-h1:mt-10 prose-h1:mb-4 prose-h2:text-xl sm:prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-6 prose-h2:mb-3 prose-h3:text-lg sm:prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-5 prose-h3:mb-2 prose-p:font-sans prose-p:text-gray-700 prose-p:leading-relaxed prose-p:text-base sm:prose-p:text-lg prose-p:my-4 sm:prose-p:my-5 prose-li:font-sans prose-li:text-gray-700 prose-li:text-base sm:prose-li:text-lg prose-strong:font-sans prose-strong:font-semibold prose-strong:text-gray-900 prose-em:font-sans prose-em:italic prose-img:rounded-2xl sm:prose-img:rounded-3xl prose-img:shadow-xl prose-img:my-6 sm:prose-img:my-8">
+          <article set:html={contentFirstPart} class="w-full font-sans" />
 
           {/* Featured Article Image in Middle */}
           {image && (
@@ -120,9 +120,15 @@ if (image && compiledContent) {
             ></div>
           )}
 
-          {contentSecondPart && <article set:html={contentSecondPart} class="w-full" />}
+          {contentSecondPart && <article set:html={contentSecondPart} class="w-full font-sans" />}
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+  div, h1, h2, h3, h4, p, span, li, strong, em, article {
+    font-family: 'Poppins', sans-serif !important;
+  }
+</style>
