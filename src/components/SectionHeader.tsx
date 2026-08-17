@@ -44,7 +44,7 @@ export default function SectionHeader({
       </div>
 
       {/* Dashed Purple Line starting from right of title badge extending to right screen edge */}
-      <div className="relative flex-1 hidden sm:block pointer-events-none z-0 -mr-4 sm:-mr-8 md:-mr-[285px]">
+      <div className="relative flex-1 hidden sm:block pointer-events-none z-0 -mr-4 sm:-mr-8 md:-mr-10 lg:-mr-12 xl:-mr-16 2xl:-mr-[285px]">
         <div className="w-full border-t border-dashed border-purple-500/70" />
         {/* Extended Long Bright Light Flare on the right edge */}
         <div className="absolute right-0 top-1/2 -translate-y-1/2 h-[2px] w-48 sm:w-80 lg:w-[480px] bg-gradient-to-r from-purple-500/0 via-white to-transparent blur-[1px] shadow-[0_0_15px_rgba(255,255,255,1)] opacity-95" />
